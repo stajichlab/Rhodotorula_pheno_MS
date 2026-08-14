@@ -30,7 +30,7 @@ Per feature:
 
 Usage:
     python3 scripts/import_sirius_annotations.py \
-        [--merged-dir analysis/sirius_annotation/sirius_project_container/merged]
+        [--merged-dir analysis/sirius_annotation/sirius_results/merged]
     (then re-run build_compound_summary.py to push the annotations into
     every comparison's compound_summary.tsv)
 """
@@ -43,7 +43,7 @@ from pathlib import Path
 import pandas as pd
 
 REPO = Path(__file__).resolve().parent.parent
-DEFAULT_MERGED_DIR = REPO / "analysis" / "sirius_annotation" / "sirius_project_container" / "merged"
+DEFAULT_MERGED_DIR = REPO / "analysis" / "sirius_annotation" / "sirius_results" / "merged"
 OUT_PATH = REPO / "analysis" / "sirius_annotation" / "sirius_annotations.tsv"
 
 

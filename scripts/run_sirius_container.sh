@@ -31,7 +31,7 @@ AFTER_JOBID="${2:-}"
 SIF=/bigdata/stajichlab/shared/singularity/sirius-6.3.12-linux-x64.sif
 MGF=analysis/sirius_annotation/sirius_targets.mgf
 SHARD_DIR=analysis/sirius_annotation/shards
-OUT_DIR=analysis/sirius_annotation/sirius_project_container
+OUT_DIR=analysis/sirius_annotation/sirius_results
 PIPELINE_SCRIPTS="$PWD/scripts/sirius_container_pipeline"
 
 [[ -f "$SIF" ]] || { echo "Container image not found: $SIF" >&2; exit 1; }
