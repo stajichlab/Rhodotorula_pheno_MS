@@ -103,6 +103,14 @@ def distill_one_run(merged_dir: Path, label: str) -> pd.DataFrame:
                 "ConfidenceScoreExact": "sirius_structure_confidence",
             })
         )
+        # SIRIUS reports -Infinity for some rows (a structure candidate
+        # exists but confidence was uncomputable) -- treat that the same
+        # as "no confidence available" rather than propagating a literal
+        # +/-Infinity float downstream (breaks strict JSON consumers,
+        # prints oddly, and isn't a meaningful confidence value either way).
+        best_structure["sirius_structure_confidence"] = best_structure["sirius_structure_confidence"].replace(
+            [float("inf"), float("-inf")], pd.NA
+        )
         parts.append(best_structure)
 
     canopus = canopus_structure if canopus_structure is not None else canopus_formula
