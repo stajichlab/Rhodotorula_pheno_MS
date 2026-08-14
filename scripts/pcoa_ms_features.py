@@ -132,8 +132,8 @@ def species_color_map(order: list[str]) -> dict:
 def savefig_multi(fig, png_path: Path):
     """Save both a PNG (raster, dpi=150) and a PDF (vector) of the figure,
     same basename."""
-    fig.savefig(png_path, dpi=150)
-    fig.savefig(png_path.with_suffix(".pdf"))
+    fig.savefig(png_path, dpi=150, bbox_inches="tight")
+    fig.savefig(png_path.with_suffix(".pdf"), bbox_inches="tight")
 
 
 def plot_combined(axes: pd.DataFrame, meta: pd.DataFrame, prop, out_path: Path):
