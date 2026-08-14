@@ -113,8 +113,18 @@ def derive_blocks_from_tree(
         )
 
     tree = Phylo.read(str(tree_path), "newick")
-    tip_names_in_tree = {t.name for t in tree.get_terminals()}
-    usable = {sid: tip for sid, tip in tip_by_sample.items() if tip in tip_names_in_tree}
+    # Tree-building tools commonly suffix tip names with the input file
+    # extension (phyling's protein trees use "<bfd_match>.proteins"); strip
+    # any single trailing ".<word>" so bfd_match strings (which never
+    # contain a dot) still match.
+    def strip_suffix(name: str) -> str:
+        stem, dot, suffix = name.rpartition(".")
+        return stem if dot and suffix.isalpha() else name
+
+    norm_to_real_tip = {strip_suffix(t.name): t.name for t in tree.get_terminals()}
+    usable = {
+        sid: norm_to_real_tip[tip] for sid, tip in tip_by_sample.items() if tip in norm_to_real_tip
+    }
     n_not_in_tree = len(tip_by_sample) - len(usable)
     if n_not_in_tree:
         print(
