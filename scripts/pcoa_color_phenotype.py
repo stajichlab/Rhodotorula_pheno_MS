@@ -50,8 +50,33 @@ from pcoa_ms_features import (
     species_color_map,
 )
 
-# Fixed shape assignment, same order as bucket_species' top-N + Other + Unknown.
-SPECIES_MARKERS = ["o", "^", "s", "D", "v", "P", "X", "*"]
+# One shape per species (ab_plane_swatches only -- fill already carries the
+# strain's actual color there, so shape is free to give every species its
+# own symbol instead of lumping the rare ones into "Other"). Rhodotorula
+# species draw from the first block (ordinary polygons, most-common
+# species first); non-Rhodotorula genera get the star-family shapes at
+# the end, so a different genus reads as visually distinct at a glance.
+RHODOTORULA_MARKERS = [
+    "o", "^", "s", "D", "v", "p", "h", "8", "<", ">", "P", "d", "H",
+    (7, 0, 0), (9, 0, 0),
+]
+OTHER_GENUS_MARKERS = ["*", (6, 1, 0), (5, 1, 0), (4, 1, 0)]
+UNKNOWN_MARKER = "X"
+
+
+def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
+    """All species individually (no 'Other' bucket), Rhodotorula sorted by
+    descending count first (drawing from RHODOTORULA_MARKERS), then other
+    genera by descending count (drawing from OTHER_GENUS_MARKERS), then
+    'Unknown' for missing Species. Returns (order, marker_map)."""
+    counts = species.value_counts()
+    rhodo = [s for s in counts.index if s.startswith("Rhodotorula")]
+    other_genus = [s for s in counts.index if not s.startswith("Rhodotorula")]
+    order = rhodo + other_genus + (["Unknown"] if species.isna().any() else [])
+    markers = dict(zip(rhodo, RHODOTORULA_MARKERS))
+    markers.update(dict(zip(other_genus, OTHER_GENUS_MARKERS)))
+    markers["Unknown"] = UNKNOWN_MARKER
+    return order, markers
 
 REPO = Path(__file__).resolve().parent.parent
 YPD2_FIXED = REPO / "data" / "metadata" / "EXFAB_UCR-005" / "YPD2_phenotypic.20260702.fixed.csv.gz"
@@ -127,11 +152,10 @@ def plot_swatches(df, prop, out_path: Path):
 
 
 def plot_ab_plane(df, out_path: Path):
-    labels, order = bucket_species(df["Species"])
-    df = df.assign(species_label=labels)
-    markers = dict(zip(order, SPECIES_MARKERS))
+    order, markers = full_species_order(df["Species"])
+    df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
-    fig, ax = plt.subplots(figsize=(7.5, 6))
+    fig, ax = plt.subplots(figsize=(8.5, 7))
     ax.axhline(0, color="#DDDDDD", linewidth=0.8, zorder=0)
     ax.axvline(0, color="#DDDDDD", linewidth=0.8, zorder=0)
     for sp in order:
@@ -153,12 +177,15 @@ def plot_ab_plane(df, out_path: Path):
         if (df["species_label"] == sp).any()
     ]
     ax.legend(
-        handles=handles, title="Species (shape)", frameon=False, fontsize=8,
-        loc="center left", bbox_to_anchor=(1.0, 0.5),
+        handles=handles, title="Species (shape)", frameon=False, fontsize=7,
+        loc="center left", bbox_to_anchor=(1.0, 0.5), labelspacing=0.6,
     )
     ax.set_xlabel("a*  (green- / red+)")
     ax.set_ylabel("b*  (blue- / yellow+)")
-    ax.set_title("CIELAB chromaticity plane -- fill = strain's own color, shape = species")
+    ax.set_title(
+        "CIELAB chromaticity plane -- fill = strain's own color, shape = species\n"
+        "(star-family shapes = non-Rhodotorula genera)"
+    )
     ax.set_aspect("equal", adjustable="datalim")
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
