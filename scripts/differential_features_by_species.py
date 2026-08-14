@@ -35,24 +35,31 @@ Output (analysis/differential_features/<fraction>_<groupA>_vs_<groupB>/):
 Optionally also runs a block-constrained permutation test alongside the
 Mann-Whitney test (see block_permutation.py for why and how), to check how
 much of the Mann-Whitney "significant feature" count survives once a known
-confound (MS batch, collection site, or -- once available -- phylogenetic
-clade) is controlled for:
+confound is controlled for. Two independent block sources, either or both
+may be given at once:
   --block-by "Library Plate"   block on a sample_metadata.csv.gz column
+                                (MS batch, collection site, ...)
   --tree path/to/tree.nwk      block on clades cut from a phylogeny (needs
                                 BFD/strain_coverage_summary.tsv for the
                                 strain<->tree-tip mapping; see
-                                block_permutation.py's module docstring for
-                                current status)
-When either is given, the output table gains p_value_perm/q_value_perm
-columns alongside the Mann-Whitney p_value/q_value, and the summary line
-reports both significant-feature counts plus their overlap.
+                                block_permutation.py's module docstring)
+Each adds its own p_value_perm_<tag>/q_value_perm_<tag> columns
+(tag=plate or clade) alongside the Mann-Whitney p_value/q_value, and its
+own summary line. Clade-blocking a comparison between two well-separated
+(monophyletic, non-overlapping) species is a *degenerate* test -- species
+identity and clade membership are then the same partition, so there is no
+within-block contrast left to permute, and the run says so explicitly
+(rather than reporting a spurious "0 significant") instead of spending
+--n-perm permutations rediscovering it. Check the printed "mixed blocks"
+count (or DEGENERATE flag) before trusting a --tree result: it's only
+informative when the two groups actually mix within at least one clade.
 
 Usage:
     python3 scripts/differential_features_by_species.py \
         [--species-a "Rhodotorula diobovata"] \
         [--species-b "Rhodotorula mucilaginosa"] \
         [--fraction cell|supernatant] [--prevalence-min 0.10] [--fdr 0.05] \
-        [--block-by "Library Plate" | --tree tree.nwk [--n-clades 20 | --clade-height 0.05]] \
+        [--block-by "Library Plate"] [--tree tree.nwk [--n-clades 20 | --clade-height 0.05]] \
         [--n-perm 2000]
 """
 import argparse
@@ -197,59 +204,104 @@ def plot_top_features(
     plt.close(fig)
 
 
-def add_block_permutation(args, meta, sub_meta, ids_a, ids_b, mat_a, mat_b, result):
-    """If --block-by or --tree was given, compute block-permutation p/q-values
-    and merge them into `result` as p_value_perm/q_value_perm. Returns the
-    updated result and a summary dict for the stderr report, or (result, None)
-    if no blocking was requested."""
-    if not args.block_by and not args.tree:
+def run_one_block_test(tag, block_desc, blocks, args, ids_a, ids_b, mat_a, mat_b, result):
+    """Shared machinery for one block-permutation test (plate or clade).
+    `tag` names the output columns (p_value_perm_<tag>, q_value_perm_<tag>).
+    blocks: sample_id -> block label, possibly missing some ids (e.g. clade
+    blocking drops samples with no tree tip).
+
+    Detects the degenerate case a stats-expert review flagged as a real risk
+    for clade-blocking a clean two-species comparison: if every block that
+    survives is 100% one group (no block contains both A and B), the
+    permutation test has *zero* power by construction -- not because there's
+    no signal, but because "which group" and "which block" are the same
+    partition, so there's no within-block A/B contrast left to permute. That
+    is reported explicitly (mixed_blocks=0, degenerate=True) rather than
+    left to be misread as "no real difference found"."""
+    n_features = mat_a.shape[1]
+    kept_ids_a = [s for s in ids_a if s in blocks]
+    kept_ids_b = [s for s in ids_b if s in blocks]
+    n_dropped = (len(ids_a) - len(kept_ids_a)) + (len(ids_b) - len(kept_ids_b))
+    if n_dropped:
+        print(f"{tag}: {n_dropped} sample(s) with no block assignment dropped", file=sys.stderr)
+
+    if len(kept_ids_a) < 2 or len(kept_ids_b) < 2:
+        print(
+            f"WARNING: {tag} ({block_desc}) -- only {len(kept_ids_a)}/{len(kept_ids_b)} "
+            "samples with a block assignment, skipping",
+            file=sys.stderr,
+        )
         return result, None
 
-    n_features = mat_a.shape[1]
+    blocks_a = [blocks[s] for s in kept_ids_a]
+    blocks_b = [blocks[s] for s in kept_ids_b]
+    all_blocks_used = set(blocks_a) | set(blocks_b)
+    n_mixed = sum(1 for b in all_blocks_used if b in set(blocks_a) and b in set(blocks_b))
+    degenerate = n_mixed == 0
+
+    mat_a_sub = mat_a[[ids_a.index(s) for s in kept_ids_a]]
+    mat_b_sub = mat_b[[ids_b.index(s) for s in kept_ids_b]]
+
+    if degenerate:
+        # Every block is single-group -- permuting within blocks can never
+        # move a sample from A to B, so p-values would trivially all be 1.
+        # Report that plainly instead of spending n_perm permutations to
+        # rediscover it.
+        p_perm = np.ones(n_features)
+        q_perm = np.ones(n_features)
+    else:
+        p_perm = block_permutation_pvalues(mat_a_sub, mat_b_sub, blocks_a, blocks_b, n_perm=args.n_perm)
+        _, q_perm, _, _ = multipletests(p_perm, method="fdr_bh")
+
+    p_col, q_col = f"p_value_perm_{tag}", f"q_value_perm_{tag}"
+    p_series = pd.Series(p_perm, index=range(n_features))
+    q_series = pd.Series(q_perm, index=range(n_features))
+    result = result.assign(**{
+        p_col: p_series.loc[result.index].values,
+        q_col: q_series.loc[result.index].values,
+    })
+    summary = {
+        "tag": tag,
+        "block_desc": block_desc,
+        "n_blocks": len(all_blocks_used),
+        "n_mixed_blocks": n_mixed,
+        "degenerate": degenerate,
+        "n_a": len(kept_ids_a),
+        "n_b": len(kept_ids_b),
+        "n_sig_perm": 0 if degenerate else int((q_perm < args.fdr).sum()),
+        "q_col": q_col,
+    }
+    return result, summary
+
+
+def add_block_permutation(args, meta, sub_meta, ids_a, ids_b, mat_a, mat_b, result):
+    """Runs whichever of --block-by / --tree were given (both is fine --
+    they produce independently-suffixed columns). Returns the updated
+    result and a list of summary dicts (one per block test actually run,
+    possibly empty)."""
+    summaries = []
+
     if args.block_by:
         blocks = derive_blocks_from_metadata(meta, ids_a + ids_b, args.block_by)
-        kept_ids_a, kept_ids_b = ids_a, ids_b  # metadata blocking never drops samples
-        block_desc = f"metadata column '{args.block_by}'"
-    else:
+        result, summary = run_one_block_test(
+            "plate", f"metadata column '{args.block_by}'", blocks, args, ids_a, ids_b, mat_a, mat_b, result
+        )
+        if summary:
+            summaries.append(summary)
+
+    if args.tree:
         strain_by_id = sub_meta.set_index("sample_id")["canonical_strain"]
         sample_to_strain = {sid: strain_by_id[sid] for sid in ids_a + ids_b}
         blocks = derive_blocks_from_tree(
             Path(args.tree), sample_to_strain, n_clades=args.n_clades, clade_height=args.clade_height
         )
-        kept_ids_a = [s for s in ids_a if s in blocks]
-        kept_ids_b = [s for s in ids_b if s in blocks]
-        block_desc = f"tree '{args.tree}'"
-
-    if len(kept_ids_a) < 2 or len(kept_ids_b) < 2:
-        print(
-            f"WARNING: only {len(kept_ids_a)}/{len(kept_ids_b)} samples with a "
-            f"block assignment from {block_desc} -- skipping block-permutation test",
-            file=sys.stderr,
+        result, summary = run_one_block_test(
+            "clade", f"tree '{args.tree}'", blocks, args, ids_a, ids_b, mat_a, mat_b, result
         )
-        return result, None
+        if summary:
+            summaries.append(summary)
 
-    mat_a_sub = mat_a[[ids_a.index(s) for s in kept_ids_a]]
-    mat_b_sub = mat_b[[ids_b.index(s) for s in kept_ids_b]]
-    blocks_a = [blocks[s] for s in kept_ids_a]
-    blocks_b = [blocks[s] for s in kept_ids_b]
-    n_blocks_used = len(set(blocks_a) | set(blocks_b))
-
-    p_perm = block_permutation_pvalues(mat_a_sub, mat_b_sub, blocks_a, blocks_b, n_perm=args.n_perm)
-    _, q_perm, _, _ = multipletests(p_perm, method="fdr_bh")
-    p_perm_series = pd.Series(p_perm, index=range(n_features))
-    q_perm_series = pd.Series(q_perm, index=range(n_features))
-    result = result.assign(
-        p_value_perm=p_perm_series.loc[result.index].values,
-        q_value_perm=q_perm_series.loc[result.index].values,
-    )
-    summary = {
-        "block_desc": block_desc,
-        "n_blocks": n_blocks_used,
-        "n_a": len(kept_ids_a),
-        "n_b": len(kept_ids_b),
-        "n_sig_perm": int((q_perm < args.fdr).sum()),
-    }
-    return result, summary
+    return result, summaries
 
 
 def main():
@@ -259,9 +311,8 @@ def main():
     ap.add_argument("--fraction", choices=["cell", "supernatant"], default="cell")
     ap.add_argument("--prevalence-min", type=float, default=0.10)
     ap.add_argument("--fdr", type=float, default=0.05)
-    block_group = ap.add_mutually_exclusive_group()
-    block_group.add_argument("--block-by", help="sample_metadata.csv.gz column to block the permutation test on, e.g. 'Library Plate'")
-    block_group.add_argument("--tree", help="Newick tree path; block the permutation test on clades cut from it")
+    ap.add_argument("--block-by", help="sample_metadata.csv.gz column to block-permutation-test on, e.g. 'Library Plate'")
+    ap.add_argument("--tree", help="Newick tree path; also block-permutation-test on clades cut from it (independent of --block-by, both may be given)")
     ap.add_argument("--n-clades", type=int, help="with --tree: cut into this many clades (maxclust)")
     ap.add_argument("--clade-height", type=float, help="with --tree: cut at this patristic distance instead of --n-clades")
     ap.add_argument("--n-perm", type=int, default=2000, help="permutations for the block test")
@@ -286,7 +337,7 @@ def main():
     result = result.assign(_abs_log2fc=result["log2FC_a_over_b"].abs()).sort_values(
         ["q_value", "_abs_log2fc"], ascending=[True, False]
     ).drop(columns="_abs_log2fc")
-    result, block_summary = add_block_permutation(args, meta, sub_meta, ids_a, ids_b, mat_a, mat_b, result)
+    result, block_summaries = add_block_permutation(args, meta, sub_meta, ids_a, ids_b, mat_a, mat_b, result)
 
     out_dir = REPO / "analysis" / "differential_features" / f"{args.fraction}_{slugify(args.species_a)}_vs_{slugify(args.species_b)}"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -298,14 +349,22 @@ def main():
     plot_top_features(result, mat_a, mat_b, args.species_a, args.species_b, out_dir / "top_features.png")
 
     n_sig = (stats["q_value"] < args.fdr).sum()
-    if block_summary:
-        overlap = int(
-            ((result["q_value"] < args.fdr) & (result["q_value_perm"] < args.fdr)).sum()
-        )
+    for s in block_summaries:
+        if s["degenerate"]:
+            print(
+                f"block-permutation [{s['tag']}] ({s['block_desc']}): DEGENERATE -- "
+                f"{s['n_blocks']} blocks, 0 contain both groups ({s['n_a']} vs {s['n_b']} samples). "
+                "Species/group identity and block membership are the same partition here, so this "
+                "test has zero power by construction -- not a real negative result, don't report it "
+                "as one.",
+                file=sys.stderr,
+            )
+            continue
+        overlap = int(((result["q_value"] < args.fdr) & (result[s["q_col"]] < args.fdr)).sum())
         print(
-            f"block-permutation ({block_summary['block_desc']}, {block_summary['n_blocks']} blocks, "
-            f"{block_summary['n_a']} vs {block_summary['n_b']} samples, {args.n_perm} permutations): "
-            f"{block_summary['n_sig_perm']} significant at FDR < {args.fdr:.0%} "
+            f"block-permutation [{s['tag']}] ({s['block_desc']}, {s['n_blocks']} blocks, "
+            f"{s['n_mixed_blocks']} mixed, {s['n_a']} vs {s['n_b']} samples, {args.n_perm} permutations): "
+            f"{s['n_sig_perm']} significant at FDR < {args.fdr:.0%} "
             f"({overlap} overlap with the {n_sig} Mann-Whitney hits)",
             file=sys.stderr,
         )
