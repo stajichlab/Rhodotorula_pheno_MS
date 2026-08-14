@@ -47,56 +47,11 @@ from scipy.spatial.distance import pdist, squareform
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pcoa_ms_features import (
-    SPECIES_PALETTE,
-    UNKNOWN_COLOR,
     classical_pcoa,
+    full_species_color_map,
+    full_species_order,
     savefig_multi,
 )
-
-# One shape per species (ab_plane_swatches only -- fill already carries the
-# strain's actual color there, so shape is free to give every species its
-# own symbol instead of lumping the rare ones into "Other"). Rhodotorula
-# species draw from the first block (ordinary polygons, most-common
-# species first); non-Rhodotorula genera get the star-family shapes at
-# the end, so a different genus reads as visually distinct at a glance.
-RHODOTORULA_MARKERS = [
-    "o", "^", "s", "D", "v", "p", "h", "8", "<", ">", "P", "d", "H",
-    (7, 0, 0), (9, 0, 0),
-]
-OTHER_GENUS_MARKERS = ["*", (6, 1, 0), (5, 1, 0), (4, 1, 0)]
-UNKNOWN_MARKER = "X"
-
-
-def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
-    """All species individually (no 'Other' bucket), Rhodotorula sorted by
-    descending count first (drawing from RHODOTORULA_MARKERS), then other
-    genera by descending count (drawing from OTHER_GENUS_MARKERS), then
-    'Unknown' for missing Species. Returns (order, marker_map)."""
-    counts = species.value_counts()
-    rhodo = [s for s in counts.index if s.startswith("Rhodotorula")]
-    other_genus = [s for s in counts.index if not s.startswith("Rhodotorula")]
-    order = rhodo + other_genus + (["Unknown"] if species.isna().any() else [])
-    markers = dict(zip(rhodo, RHODOTORULA_MARKERS))
-    markers.update(dict(zip(other_genus, OTHER_GENUS_MARKERS)))
-    markers["Unknown"] = UNKNOWN_MARKER
-    return order, markers
-
-
-def full_species_color_map(order: list[str]) -> dict:
-    """Color is a secondary channel here (shape already makes every
-    species unique) -- cycle the 6-color categorical palette across
-    Rhodotorula species so nearby ranks don't share a color, give the
-    non-Rhodotorula genera a fixed black to match their star shapes'
-    'stands apart' reading, and Unknown its usual neutral gray."""
-    colors = {}
-    rhodo = [s for s in order if s != "Unknown" and s.startswith("Rhodotorula")]
-    other_genus = [s for s in order if s != "Unknown" and not s.startswith("Rhodotorula")]
-    for i, sp in enumerate(rhodo):
-        colors[sp] = SPECIES_PALETTE[i % len(SPECIES_PALETTE)]
-    for sp in other_genus:
-        colors[sp] = "#000000"
-    colors["Unknown"] = UNKNOWN_COLOR
-    return colors
 
 REPO = Path(__file__).resolve().parent.parent
 YPD2_FIXED = REPO / "data" / "metadata" / "EXFAB_UCR-005" / "YPD2_phenotypic.20260702.fixed.csv.gz"

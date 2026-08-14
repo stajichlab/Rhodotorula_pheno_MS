@@ -8,8 +8,10 @@ Three ordinations, per the project's request:
                   with a thin line joining each strain's cell/supernatant
                   pair (AGENTS.md: the cell-vs-supernatant contrast for a
                   given strain is a specific interest).
-  2. cell      -- cell-pellet samples only, colored by species.
-  3. supernatant -- supernatant samples only, colored by species.
+  2. cell      -- cell-pellet samples only, one marker shape per species
+                  (no "Other" bucket) with a cycled color as a secondary
+                  channel.
+  3. supernatant -- same, supernatant samples only.
 
 Preprocessing per ordination (features are independently filtered/
 normalized within each sample subset, since prevalence depends on which
@@ -39,6 +41,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.lines import Line2D
 from scipy.spatial.distance import pdist, squareform
 
 REPO = Path(__file__).resolve().parent.parent
@@ -58,6 +61,51 @@ SPECIES_PALETTE = [
 ]
 OTHER_COLOR = "#F0E442"  # yellow, reserved for the "Other species" bucket
 UNKNOWN_COLOR = "#999999"  # neutral gray, reserved for missing species
+
+# One shape per species, no "Other" bucket -- color alone caps out at the
+# 8-hue colorblind-safe palette, but shape has no such limit, so every
+# species gets its own marker. Rhodotorula species draw from the plain-
+# polygon set (most-common species first); non-Rhodotorula genera get
+# the star-family shapes so a different genus reads as visually distinct
+# at a glance; "Unknown" (missing Species) is always a bold X.
+RHODOTORULA_MARKERS = [
+    "o", "^", "s", "D", "v", "p", "h", "8", "<", ">", "P", "d", "H",
+    (7, 0, 0), (9, 0, 0),
+]
+OTHER_GENUS_MARKERS = ["*", (6, 1, 0), (5, 1, 0), (4, 1, 0)]
+UNKNOWN_MARKER = "X"
+
+
+def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
+    """All species individually (no 'Other' bucket), Rhodotorula sorted by
+    descending count first (drawing from RHODOTORULA_MARKERS), then other
+    genera by descending count (drawing from OTHER_GENUS_MARKERS), then
+    'Unknown' for missing Species. Returns (order, marker_map)."""
+    counts = species.value_counts()
+    rhodo = [s for s in counts.index if s.startswith("Rhodotorula")]
+    other_genus = [s for s in counts.index if not s.startswith("Rhodotorula")]
+    order = rhodo + other_genus + (["Unknown"] if species.isna().any() else [])
+    markers = dict(zip(rhodo, RHODOTORULA_MARKERS))
+    markers.update(dict(zip(other_genus, OTHER_GENUS_MARKERS)))
+    markers["Unknown"] = UNKNOWN_MARKER
+    return order, markers
+
+
+def full_species_color_map(order: list[str]) -> dict:
+    """Color is a secondary channel here (shape already makes every
+    species unique) -- cycle the 6-color categorical palette across
+    Rhodotorula species so nearby ranks don't share a color, give the
+    non-Rhodotorula genera a fixed black to match their star shapes'
+    'stands apart' reading, and Unknown its usual neutral gray."""
+    colors = {}
+    rhodo = [s for s in order if s != "Unknown" and s.startswith("Rhodotorula")]
+    other_genus = [s for s in order if s != "Unknown" and not s.startswith("Rhodotorula")]
+    for i, sp in enumerate(rhodo):
+        colors[sp] = SPECIES_PALETTE[i % len(SPECIES_PALETTE)]
+    for sp in other_genus:
+        colors[sp] = "#000000"
+    colors["Unknown"] = UNKNOWN_COLOR
+    return colors
 
 
 def prep_matrix(feature_df: pd.DataFrame, sample_cols: list[str]):
@@ -108,27 +156,6 @@ def run_ordination(name: str, sample_ids: list[str], feature_df: pd.DataFrame):
     return axes, prop
 
 
-def bucket_species(species: pd.Series) -> tuple[pd.Series, list[str]]:
-    top = species.value_counts().index[: len(SPECIES_PALETTE)].tolist()
-    order = top + ["Other", "Unknown"]
-
-    def label(sp):
-        if pd.isna(sp):
-            return "Unknown"
-        return sp if sp in top else "Other"
-
-    return species.map(label), order
-
-
-def species_color_map(order: list[str]) -> dict:
-    colors = {}
-    for sp, c in zip(order, SPECIES_PALETTE):
-        colors[sp] = c
-    colors["Other"] = OTHER_COLOR
-    colors["Unknown"] = UNKNOWN_COLOR
-    return colors
-
-
 def savefig_multi(fig, png_path: Path):
     """Save both a PNG (raster, dpi=150) and a PDF (vector) of the figure,
     same basename."""
@@ -170,29 +197,36 @@ def plot_combined(axes: pd.DataFrame, meta: pd.DataFrame, prop, out_path: Path):
 
 def plot_by_species(axes: pd.DataFrame, meta: pd.DataFrame, prop, title: str, out_path: Path):
     df = axes.merge(meta[["sample_id", "Species"]], on="sample_id")
-    labels, order = bucket_species(df["Species"])
-    df = df.assign(species_label=labels)
-    colors = species_color_map(order)
+    order, markers = full_species_order(df["Species"])
+    colors = full_species_color_map(order)
+    df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
-    fig, ax = plt.subplots(figsize=(7.5, 6))
+    fig, ax = plt.subplots(figsize=(8.5, 6.5))
     for sp in order:
         sub = df[df["species_label"] == sp]
         if sub.empty:
             continue
         ax.scatter(
-            sub["PCoA1"],
-            sub["PCoA2"],
-            s=22,
-            color=colors[sp],
-            edgecolor="white",
-            linewidth=0.4,
-            label=f"{sp} (n={len(sub)})",
+            sub["PCoA1"], sub["PCoA2"], marker=markers[sp], s=28, color=colors[sp],
+            edgecolor="white", linewidth=0.4,
         )
+    handles = [
+        Line2D(
+            [0], [0], marker=markers[sp], linestyle="none", markerfacecolor=colors[sp],
+            markeredgecolor="white", markersize=8,
+            label=f"{sp} (n={(df['species_label'] == sp).sum()})",
+        )
+        for sp in order
+        if (df["species_label"] == sp).any()
+    ]
 
     ax.set_xlabel(f"PCoA1 ({prop[0]:.1%})")
     ax.set_ylabel(f"PCoA2 ({prop[1]:.1%})")
-    ax.set_title(title)
-    ax.legend(title="Species", frameon=False, fontsize=8, loc="center left", bbox_to_anchor=(1.0, 0.5))
+    ax.set_title(f"{title}\n(star-family shapes = non-Rhodotorula genera)")
+    ax.legend(
+        handles=handles, title="Species", frameon=False, fontsize=7,
+        loc="center left", bbox_to_anchor=(1.0, 0.5), labelspacing=0.6,
+    )
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
     savefig_multi(fig, out_path)
