@@ -87,10 +87,19 @@ def match_bfd(strain_code: str, bfd_norm_index: dict):
 
 def load_phenotype_metadata():
     """Strain codes from every metadata csv(.gz) that has a 'Strain' column,
-    excluding files that primarily crosswalk to MS sample IDs (Cu_AUC*)."""
+    excluding files that primarily crosswalk to MS sample IDs (Cu_AUC*).
+    When both "<name>.csv" and a corrected "<name>.fixed.csv" exist (see
+    scripts/fix_metadata_strain_ids.py), only the fixed one is used."""
+    all_paths = sorted(METADATA_DIR.rglob("*.csv*"))
+    fixed_stems = {p.name.replace(".fixed.", ".") for p in all_paths if ".fixed." in p.name}
+
     strains = {}
-    for path in sorted(METADATA_DIR.rglob("*.csv*")):
+    for path in all_paths:
         if "cu_auc" in path.name.lower():
+            continue
+        if "review_needed" in path.name.lower():
+            continue
+        if ".fixed." not in path.name and path.name in fixed_stems:
             continue
         try:
             rows = list(open_csv_rows(path))
@@ -110,6 +119,10 @@ def load_eb_ms_strains():
     as peak-area columns in aligned_features_ms2.csv.zst, via the Cu_AUC
     crosswalk (SAMPLE_NAME <-> MS2_SAMPLE_Cell/Supernatant)."""
     cu_auc_files = sorted(METADATA_DIR.rglob("Cu_AUC*.csv*"))
+    fixed_stems = {p.name.replace(".fixed.", ".") for p in cu_auc_files if ".fixed." in p.name}
+    cu_auc_files = [
+        p for p in cu_auc_files if ".fixed." in p.name or p.name not in fixed_stems
+    ]
     if not cu_auc_files or not EB_FEATURES.exists():
         return {}
 
