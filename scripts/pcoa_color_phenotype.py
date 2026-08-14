@@ -14,8 +14,12 @@ right choice here because the whole point of CIELAB is that its units are
 already perceptually comparable across axes.
 
 Three plots are written:
-  - pcoa_color_by_species.png/.pdf : PCoA points colored by species (same
-    palette/convention as the MS feature ordinations).
+  - pcoa_color_by_species.png/.pdf : PCoA points by species, one shape
+    per species (no "Other" bucket -- see full_species_order) with a
+    cycled color as a secondary channel; the MS feature ordinations still
+    bucket rare species into "Other" because those are color-only (no
+    shape channel) and a fixed 8-hue colorblind-safe palette is the hard
+    cap there.
   - pcoa_color_swatches.png/.pdf   : PCoA points colored by the strain's
     own measured color (Lab -> sRGB, D65, clipped to gamut) -- lets you
     see directly whether nearby points in the ordination actually look
@@ -44,10 +48,9 @@ from scipy.spatial.distance import pdist, squareform
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pcoa_ms_features import (
     SPECIES_PALETTE,
-    bucket_species,
+    UNKNOWN_COLOR,
     classical_pcoa,
     savefig_multi,
-    species_color_map,
 )
 
 # One shape per species (ab_plane_swatches only -- fill already carries the
@@ -77,6 +80,23 @@ def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
     markers.update(dict(zip(other_genus, OTHER_GENUS_MARKERS)))
     markers["Unknown"] = UNKNOWN_MARKER
     return order, markers
+
+
+def full_species_color_map(order: list[str]) -> dict:
+    """Color is a secondary channel here (shape already makes every
+    species unique) -- cycle the 6-color categorical palette across
+    Rhodotorula species so nearby ranks don't share a color, give the
+    non-Rhodotorula genera a fixed black to match their star shapes'
+    'stands apart' reading, and Unknown its usual neutral gray."""
+    colors = {}
+    rhodo = [s for s in order if s != "Unknown" and s.startswith("Rhodotorula")]
+    other_genus = [s for s in order if s != "Unknown" and not s.startswith("Rhodotorula")]
+    for i, sp in enumerate(rhodo):
+        colors[sp] = SPECIES_PALETTE[i % len(SPECIES_PALETTE)]
+    for sp in other_genus:
+        colors[sp] = "#000000"
+    colors["Unknown"] = UNKNOWN_COLOR
+    return colors
 
 REPO = Path(__file__).resolve().parent.parent
 YPD2_FIXED = REPO / "data" / "metadata" / "EXFAB_UCR-005" / "YPD2_phenotypic.20260702.fixed.csv.gz"
@@ -113,23 +133,38 @@ def lab_to_srgb(lab: np.ndarray) -> np.ndarray:
 
 
 def plot_by_species(df, prop, out_path: Path):
-    labels, order = bucket_species(df["Species"])
-    df = df.assign(species_label=labels)
-    colors = species_color_map(order)
+    order, markers = full_species_order(df["Species"])
+    colors = full_species_color_map(order)
+    df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
-    fig, ax = plt.subplots(figsize=(7.5, 6))
+    fig, ax = plt.subplots(figsize=(8.5, 6.5))
     for sp in order:
         sub = df[df["species_label"] == sp]
         if sub.empty:
             continue
         ax.scatter(
-            sub["PCoA1"], sub["PCoA2"], s=26, color=colors[sp],
-            edgecolor="white", linewidth=0.4, label=f"{sp} (n={len(sub)})",
+            sub["PCoA1"], sub["PCoA2"], marker=markers[sp], s=32, color=colors[sp],
+            edgecolor="white", linewidth=0.4,
         )
+    handles = [
+        Line2D(
+            [0], [0], marker=markers[sp], linestyle="none", markerfacecolor=colors[sp],
+            markeredgecolor="white", markersize=8,
+            label=f"{sp} (n={(df['species_label'] == sp).sum()})",
+        )
+        for sp in order
+        if (df["species_label"] == sp).any()
+    ]
     ax.set_xlabel(f"PCoA1 ({prop[0]:.1%})")
     ax.set_ylabel(f"PCoA2 ({prop[1]:.1%})")
-    ax.set_title("PCoA of CIELAB color phenotype (L*, a*, b*) -- by species")
-    ax.legend(title="Species", frameon=False, fontsize=8, loc="center left", bbox_to_anchor=(1.0, 0.5))
+    ax.set_title(
+        "PCoA of CIELAB color phenotype (L*, a*, b*) -- by species\n"
+        "(star-family shapes = non-Rhodotorula genera)"
+    )
+    ax.legend(
+        handles=handles, title="Species", frameon=False, fontsize=7,
+        loc="center left", bbox_to_anchor=(1.0, 0.5), labelspacing=0.6,
+    )
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
     savefig_multi(fig, out_path)
