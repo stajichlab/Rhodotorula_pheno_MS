@@ -60,6 +60,14 @@ REPO = Path(__file__).resolve().parent.parent
 YPD2_FIXED = REPO / "data" / "metadata" / "EXFAB_UCR-005" / "YPD2_phenotypic.20260702.fixed.csv.gz"
 OUT_DIR = REPO / "analysis" / "color_phenotype_ordination"
 LAB_COLS = ["Median_ColorLab_L*Mean", "Median_ColorLab_a*Mean", "Median_ColorLab_b*Mean"]
+# This dataset's a*/b* chroma is genuinely low (a* mostly 0-14, b* -1 to 9,
+# L*~74), so the true-color swatches read as near-monochrome pale pink --
+# real biology, not a bug, but it hides structure visually. The companion
+# "chroma-amplified" plots scale a*/b* (not L*, and not the point's actual
+# plotted position) by this factor before Lab->sRGB conversion, purely to
+# make hue/chroma differences between strains easier to see; they are
+# clearly labeled as not true color.
+CHROMA_GAIN = 3.0
 
 
 def lab_to_srgb(lab: np.ndarray) -> np.ndarray:
@@ -129,22 +137,25 @@ def plot_by_species(df, prop, out_path: Path):
     plt.close(fig)
 
 
-def plot_swatches(df, prop, out_path: Path):
+def plot_swatches(df, prop, out_path: Path, swatch_col="swatch", chroma_gain=None):
     fig, ax = plt.subplots(figsize=(7, 6))
     ax.scatter(
-        df["PCoA1"], df["PCoA2"], s=60, c=df["swatch"].tolist(),
+        df["PCoA1"], df["PCoA2"], s=60, c=df[swatch_col].tolist(),
         edgecolor="#333333", linewidth=0.4,
     )
     ax.set_xlabel(f"PCoA1 ({prop[0]:.1%})")
     ax.set_ylabel(f"PCoA2 ({prop[1]:.1%})")
-    ax.set_title("PCoA of CIELAB color phenotype (L*, a*, b*) -- point = strain's own color")
+    title = "PCoA of CIELAB color phenotype (L*, a*, b*) -- point = strain's own color"
+    if chroma_gain:
+        title += f"\n(a*/b* amplified {chroma_gain:.0f}x for visibility -- NOT true color)"
+    ax.set_title(title)
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
     savefig_multi(fig, out_path)
     plt.close(fig)
 
 
-def plot_ab_plane(df, out_path: Path):
+def plot_ab_plane(df, out_path: Path, swatch_col="swatch", chroma_gain=None):
     order, markers = canonical_species_order()
     df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
@@ -157,7 +168,7 @@ def plot_ab_plane(df, out_path: Path):
             continue
         ax.scatter(
             sub["a"], sub["b"], marker=markers[sp], s=55,
-            c=sub["swatch"].tolist(), edgecolor="#333333", linewidth=0.5, zorder=2,
+            c=sub[swatch_col].tolist(), edgecolor="#333333", linewidth=0.5, zorder=2,
         )
 
     handles = [
@@ -175,10 +186,13 @@ def plot_ab_plane(df, out_path: Path):
     )
     ax.set_xlabel("a*  (green- / red+)")
     ax.set_ylabel("b*  (blue- / yellow+)")
-    ax.set_title(
+    title = (
         "CIELAB chromaticity plane -- fill = strain's own color, shape = species\n"
         "(star-family shapes = non-Rhodotorula genera)"
     )
+    if chroma_gain:
+        title += f"\n(fill a*/b* amplified {chroma_gain:.0f}x for visibility -- point position is still true a*/b*)"
+    ax.set_title(title)
     ax.set_aspect("equal", adjustable="datalim")
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
@@ -216,11 +230,24 @@ def main():
         }
     )
     df["swatch"] = list(lab_to_srgb(lab))
+    lab_amplified = lab.copy()
+    lab_amplified[:, 1:] *= CHROMA_GAIN  # scale a*/b* only, leave L* alone
+    df["swatch_chroma_amp"] = list(lab_to_srgb(lab_amplified))
 
-    df.drop(columns=["swatch"]).to_csv(OUT_DIR / "pcoa_axes_color_phenotype.csv", index=False)
+    df.drop(columns=["swatch", "swatch_chroma_amp"]).to_csv(
+        OUT_DIR / "pcoa_axes_color_phenotype.csv", index=False
+    )
     plot_by_species(df, prop, OUT_DIR / "pcoa_color_by_species.png")
     plot_swatches(df, prop, OUT_DIR / "pcoa_color_swatches.png")
+    plot_swatches(
+        df, prop, OUT_DIR / "pcoa_color_swatches_chroma_amplified.png",
+        swatch_col="swatch_chroma_amp", chroma_gain=CHROMA_GAIN,
+    )
     plot_ab_plane(df, OUT_DIR / "ab_plane_swatches.png")
+    plot_ab_plane(
+        df, OUT_DIR / "ab_plane_swatches_chroma_amplified.png",
+        swatch_col="swatch_chroma_amp", chroma_gain=CHROMA_GAIN,
+    )
     print(f"wrote plots + axis coordinates to {OUT_DIR}", file=sys.stderr)
 
 
