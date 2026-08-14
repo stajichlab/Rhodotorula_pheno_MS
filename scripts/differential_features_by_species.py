@@ -31,6 +31,14 @@ Output (analysis/differential_features/<fraction>_<groupA>_vs_<groupB>/):
     multiples) for the top 12 features by q-value, so you can eyeball
     that the statistical hits are actually clean separations and not
     driven by one outlier sample.
+  - compound_summary.tsv          : the plate-blocking-robust significant
+    subset, joined to whatever compound identity is available (EB/GNPS
+    library search now, SIRIUS predictions too once
+    scripts/import_sirius_annotations.py has run) -- see
+    build_compound_summary.py, called automatically at the end of this
+    script so every run gets this "more expressive" table for free.
+  Also updates the cross-comparison rollup,
+  analysis/differential_features/all_significant_features_summary.tsv.
 
 Optionally also runs a block-constrained permutation test alongside the
 Mann-Whitney test (see block_permutation.py for why and how), to check how
@@ -77,6 +85,7 @@ from statsmodels.stats.multitest import multipletests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from block_permutation import block_permutation_pvalues, derive_blocks_from_metadata, derive_blocks_from_tree
+from build_compound_summary import ANALOG_SEARCH, LIBRARY_SEARCH, load_gnps, load_sirius, summarize_one
 from pcoa_ms_features import savefig_multi
 
 REPO = Path(__file__).resolve().parent.parent
@@ -316,6 +325,10 @@ def main():
     ap.add_argument("--n-clades", type=int, help="with --tree: cut into this many clades (maxclust)")
     ap.add_argument("--clade-height", type=float, help="with --tree: cut at this patristic distance instead of --n-clades")
     ap.add_argument("--n-perm", type=int, default=2000, help="permutations for the block test")
+    ap.add_argument(
+        "--skip-compound-summary", action="store_true",
+        help="skip writing compound_summary.tsv (see build_compound_summary.py)",
+    )
     args = ap.parse_args()
     if args.tree and not (args.n_clades or args.clade_height):
         ap.error("--tree requires --n-clades or --clade-height")
@@ -375,6 +388,20 @@ def main():
         file=sys.stderr,
     )
     print(f"wrote outputs to {out_dir}", file=sys.stderr)
+
+    if not args.skip_compound_summary:
+        # Per-comparison only (safe to run from a parallel SLURM array task --
+        # each task writes only its own out_dir/compound_summary.tsv). The
+        # cross-comparison rollup (all_significant_features_summary.tsv) is
+        # NOT rebuilt here on purpose: many array tasks writing that single
+        # shared file concurrently would race. Run
+        # `python3 scripts/build_compound_summary.py` once, separately,
+        # after a batch of comparisons finishes to (re)build it -- also the
+        # right time to pick up SIRIUS annotations once those exist.
+        library = load_gnps(LIBRARY_SEARCH, "library")
+        analog = load_gnps(ANALOG_SEARCH, "analog")
+        sirius = load_sirius()
+        summarize_one(out_dir, library, analog, sirius, args.fdr)
 
 
 if __name__ == "__main__":
