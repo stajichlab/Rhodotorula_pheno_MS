@@ -20,14 +20,33 @@ samples are included):
      of the samples in that subset.
   2. Total-sum-scaling (TSS): divide each sample's feature vector by its
      own total, so every sample's kept-feature abundances sum to 1.
-  3. Bray-Curtis distance between all sample pairs.
-  4. Classical (Torgerson/Gower) PCoA: double-center the squared distance
+  3. Fourth-root power transform (variance-stabilizing): without it, the
+     top ~20 of ~13,500 kept features carry ~28% of the TSS-normalized
+     mass, so Bray-Curtis is effectively ordinating a few hundred
+     high-intensity ions rather than the whole feature set. A log
+     transform would work too but would produce negative values (TSS
+     proportions are all < 1) that Bray-Curtis can't take; a power
+     transform stays non-negative while still compressing the dynamic
+     range.
+  4. Bray-Curtis distance between all sample pairs.
+  5. Classical (Torgerson/Gower) PCoA: double-center the squared distance
      matrix and eigendecompose; report axes 1-2 and the fraction of
      variance they explain (of the *positive* eigenvalues only -- Bray-
      Curtis is non-Euclidean, so a classical PCoA typically has some
      small negative eigenvalues; the standard convention is to exclude
      them from the variance-explained denominator, which is noted on
-     each plot).
+     each plot). This differs from scikit-bio's `pcoa()`, which divides
+     by the sum of *all* eigenvalues including negative ones -- ours
+     reads slightly higher for the same distance matrix; both are
+     defensible, just don't mix the two conventions when comparing.
+
+Species shapes/colors are assigned once from the *full* 318-strain YPD2
+phenotype table (canonical_species_order(), memoized) rather than
+per-subset, so a given species draws the same marker and color in every
+plot in this project (MS cell/supernatant here, color-phenotype PCoA and
+ab_plane in pcoa_color_phenotype.py) -- ranking a subset's own
+value_counts() would let two plots disagree on which shape means which
+species whenever their sample composition differs.
 
 Usage:
     python3 scripts/pcoa_ms_features.py
@@ -59,7 +78,6 @@ SPECIES_PALETTE = [
     "#CC79A7",  # reddish purple
     "#56B4E9",  # sky blue
 ]
-OTHER_COLOR = "#F0E442"  # yellow, reserved for the "Other species" bucket
 UNKNOWN_COLOR = "#999999"  # neutral gray, reserved for missing species
 
 # One shape per species, no "Other" bucket -- color alone caps out at the
@@ -67,23 +85,43 @@ UNKNOWN_COLOR = "#999999"  # neutral gray, reserved for missing species
 # species gets its own marker. Rhodotorula species draw from the plain-
 # polygon set (most-common species first); non-Rhodotorula genera get
 # the star-family shapes so a different genus reads as visually distinct
-# at a glance; "Unknown" (missing Species) is always a bold X.
+# at a glance; "Unknown" (missing Species) is always a bold X. Ordered so
+# that stepping through by color (mod len(SPECIES_PALETTE) = 6) never
+# lands two of the roundish, easy-to-confuse shapes (h/8/H/heptagon/
+# nonagon) on the same color -- they're deliberately spread >=6 apart.
 RHODOTORULA_MARKERS = [
-    "o", "^", "s", "D", "v", "p", "h", "8", "<", ">", "P", "d", "H",
-    (7, 0, 0), (9, 0, 0),
+    "o", "^", "s", "D", "v", "P", "<", ">", "d", "p",
+    "h", (7, 0, 0), "8", "H", (9, 0, 0),
 ]
 OTHER_GENUS_MARKERS = ["*", (6, 1, 0), (5, 1, 0), (4, 1, 0)]
 UNKNOWN_MARKER = "X"
 
+_canonical_order_cache = None
+
 
 def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
     """All species individually (no 'Other' bucket), Rhodotorula sorted by
-    descending count first (drawing from RHODOTORULA_MARKERS), then other
-    genera by descending count (drawing from OTHER_GENUS_MARKERS), then
-    'Unknown' for missing Species. Returns (order, marker_map)."""
+    descending count (ties broken alphabetically, so the order is
+    deterministic) first (drawing from RHODOTORULA_MARKERS), then other
+    genera the same way (drawing from OTHER_GENUS_MARKERS), then 'Unknown'
+    for missing Species. Returns (order, marker_map).
+
+    Raises if a subset has more species in either group than there are
+    markers for it, rather than silently truncating (the old `zip`-based
+    version would drop the excess species from `markers` and KeyError
+    later when the plot code looked one up)."""
     counts = species.value_counts()
-    rhodo = [s for s in counts.index if s.startswith("Rhodotorula")]
-    other_genus = [s for s in counts.index if not s.startswith("Rhodotorula")]
+
+    def ranked(names):
+        return sorted(names, key=lambda s: (-counts[s], s))
+
+    rhodo = ranked([s for s in counts.index if s.startswith("Rhodotorula")])
+    other_genus = ranked([s for s in counts.index if not s.startswith("Rhodotorula")])
+    if len(rhodo) > len(RHODOTORULA_MARKERS):
+        raise ValueError(f"{len(rhodo)} Rhodotorula species but only {len(RHODOTORULA_MARKERS)} markers")
+    if len(other_genus) > len(OTHER_GENUS_MARKERS):
+        raise ValueError(f"{len(other_genus)} non-Rhodotorula genera but only {len(OTHER_GENUS_MARKERS)} markers")
+
     order = rhodo + other_genus + (["Unknown"] if species.isna().any() else [])
     markers = dict(zip(rhodo, RHODOTORULA_MARKERS))
     markers.update(dict(zip(other_genus, OTHER_GENUS_MARKERS)))
@@ -91,12 +129,31 @@ def full_species_order(species: pd.Series) -> tuple[list[str], dict]:
     return order, markers
 
 
+def canonical_species_order() -> tuple[list[str], dict]:
+    """The full_species_order() computed once from every phenotyped strain
+    (YPD2, 318 rows, one per strain) and memoized, so every plot in this
+    project draws a given species with the *same* shape regardless of
+    which sample subset (MS cell-only, supernatant-only, all 318
+    color-phenotyped strains, ...) it happens to be plotting -- computing
+    the order fresh from each subset's own value_counts() would let two
+    plots disagree whenever their species composition differs."""
+    global _canonical_order_cache
+    if _canonical_order_cache is None:
+        ypd2_species_path = (
+            REPO / "data" / "metadata" / "EXFAB_UCR-005" / "YPD2_phenotypic.20260702.fixed.csv.gz"
+        )
+        species = pd.read_csv(ypd2_species_path, usecols=["Species"])["Species"]
+        _canonical_order_cache = full_species_order(species)
+    return _canonical_order_cache
+
+
 def full_species_color_map(order: list[str]) -> dict:
     """Color is a secondary channel here (shape already makes every
     species unique) -- cycle the 6-color categorical palette across
-    Rhodotorula species so nearby ranks don't share a color, give the
-    non-Rhodotorula genera a fixed black to match their star shapes'
-    'stands apart' reading, and Unknown its usual neutral gray."""
+    Rhodotorula species (spaced so shape-confusable species never also
+    share a color, see RHODOTORULA_MARKERS), give the non-Rhodotorula
+    genera a fixed black to match their star shapes' 'stands apart'
+    reading, and Unknown its usual neutral gray."""
     colors = {}
     rhodo = [s for s in order if s != "Unknown" and s.startswith("Rhodotorula")]
     other_genus = [s for s in order if s != "Unknown" and not s.startswith("Rhodotorula")]
@@ -109,8 +166,8 @@ def full_species_color_map(order: list[str]) -> dict:
 
 
 def prep_matrix(feature_df: pd.DataFrame, sample_cols: list[str]):
-    """Prevalence-filter then TSS-normalize. Returns (samples x features
-    ndarray, n_features_kept, n_features_total)."""
+    """Prevalence-filter, TSS-normalize, then fourth-root transform.
+    Returns (samples x features ndarray, n_features_kept, n_features_total)."""
     mat = feature_df[sample_cols].to_numpy(dtype=float)
     prevalence = (mat > 0).mean(axis=1)
     keep = prevalence >= PREVALENCE_MIN
@@ -120,6 +177,7 @@ def prep_matrix(feature_df: pd.DataFrame, sample_cols: list[str]):
         empty = [s for s, ok in zip(sample_cols, col_sums == 0) if ok]
         sys.exit(f"sample(s) with zero total abundance after filtering: {empty}")
     mat_norm = mat / col_sums
+    mat_norm = mat_norm**0.25
     return mat_norm.T, int(keep.sum()), len(keep)
 
 
@@ -133,7 +191,7 @@ def classical_pcoa(dist_matrix: np.ndarray):
     eigvals, eigvecs = np.linalg.eigh(b)
     order = np.argsort(eigvals)[::-1]
     eigvals, eigvecs = eigvals[order], eigvecs[:, order]
-    pos = eigvals > 1e-8
+    pos = eigvals > 1e-8 * eigvals[0]  # relative, not absolute -- scale-independent
     coords = eigvecs[:, pos] * np.sqrt(eigvals[pos])
     prop = eigvals[pos] / eigvals[pos].sum()
     return coords, prop, eigvals
@@ -164,11 +222,16 @@ def savefig_multi(fig, png_path: Path):
 
 
 def plot_combined(axes: pd.DataFrame, meta: pd.DataFrame, prop, out_path: Path):
-    df = axes.merge(meta[["sample_id", "fraction", "canonical_strain"]], on="sample_id")
+    df = axes.merge(meta[["sample_id", "fraction", "Strain ID"]], on="sample_id")
     fig, ax = plt.subplots(figsize=(7, 6))
 
-    # thin gray line joining each strain's cell/supernatant pair
-    for _, g in df.groupby("canonical_strain"):
+    # Thin gray line joining each strain's cell/supernatant pair. Grouped by
+    # the numeric Strain ID, not canonical_strain -- a strain *code* can be
+    # legitimately reused across two different Strain IDs (e.g. DBVPG_3853
+    # at ids 192 and 195; see build_analysis_table.py), which would silently
+    # 4-way-group and skip those pairs (or worse, cross-wire them) under a
+    # text-based groupby.
+    for _, g in df.groupby("Strain ID"):
         if len(g) == 2:
             ax.plot(g["PCoA1"], g["PCoA2"], color="#BBBBBB", linewidth=0.5, zorder=1)
 
@@ -197,7 +260,7 @@ def plot_combined(axes: pd.DataFrame, meta: pd.DataFrame, prop, out_path: Path):
 
 def plot_by_species(axes: pd.DataFrame, meta: pd.DataFrame, prop, title: str, out_path: Path):
     df = axes.merge(meta[["sample_id", "Species"]], on="sample_id")
-    order, markers = full_species_order(df["Species"])
+    order, markers = canonical_species_order()
     colors = full_species_color_map(order)
     df = df.assign(species_label=df["Species"].fillna("Unknown"))
 

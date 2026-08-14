@@ -13,13 +13,16 @@ PCA on the raw (unstandardized) L*/a*/b* values -- unstandardized is the
 right choice here because the whole point of CIELAB is that its units are
 already perceptually comparable across axes.
 
+Species shapes/colors come from pcoa_ms_features.canonical_species_order(),
+computed once from the full 318-strain phenotype table and shared with
+the MS feature ordinations, so a given species draws the same marker
+everywhere in this project rather than each plot re-ranking its own
+sample subset.
+
 Three plots are written:
   - pcoa_color_by_species.png/.pdf : PCoA points by species, one shape
-    per species (no "Other" bucket -- see full_species_order) with a
-    cycled color as a secondary channel; the MS feature ordinations still
-    bucket rare species into "Other" because those are color-only (no
-    shape channel) and a fixed 8-hue colorblind-safe palette is the hard
-    cap there.
+    per species (no "Other" bucket) with a cycled color as a secondary
+    channel.
   - pcoa_color_swatches.png/.pdf   : PCoA points colored by the strain's
     own measured color (Lab -> sRGB, D65, clipped to gamut) -- lets you
     see directly whether nearby points in the ordination actually look
@@ -47,9 +50,9 @@ from scipy.spatial.distance import pdist, squareform
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pcoa_ms_features import (
+    canonical_species_order,
     classical_pcoa,
     full_species_color_map,
-    full_species_order,
     savefig_multi,
 )
 
@@ -88,7 +91,7 @@ def lab_to_srgb(lab: np.ndarray) -> np.ndarray:
 
 
 def plot_by_species(df, prop, out_path: Path):
-    order, markers = full_species_order(df["Species"])
+    order, markers = canonical_species_order()
     colors = full_species_color_map(order)
     df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
@@ -142,7 +145,7 @@ def plot_swatches(df, prop, out_path: Path):
 
 
 def plot_ab_plane(df, out_path: Path):
-    order, markers = full_species_order(df["Species"])
+    order, markers = canonical_species_order()
     df = df.assign(species_label=df["Species"].fillna("Unknown"))
 
     fig, ax = plt.subplots(figsize=(8.5, 7))
