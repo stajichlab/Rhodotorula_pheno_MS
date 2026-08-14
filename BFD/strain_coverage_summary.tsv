@@ -1,4 +1,5 @@
 strain	in_phenotype_metadata	in_eb_ms_data	in_bfd_sequences	bfd_match	rsynced
+DBVPG_10056	yes	no	no		no
 DBVPG_10075	yes	yes	yes	Cystobasidium_sp._DBVPG_10075	yes
 DBVPG_10348	yes	yes	yes	Rhodotorula_sp._clade_XI_DBVPG_10348	yes
 DBVPG_10383	yes	yes	yes	Rhodotorula_kratochvilovae_DBVPG_10383	yes
@@ -121,6 +122,7 @@ NRRL_Y-17376	yes	yes	yes	Rhodotorula_araucariae_NRRL_Y-17376	yes
 NRRL_Y-2474	yes	yes	yes	Rhodotorula_graminis_NRRL_Y-2474	yes
 NRRL_Y-2504	yes	yes	yes	Rhodotorula_dairenensis_NRRL_Y-2504	yes
 NRRL_Y-2510	yes	yes	yes	Rhodotorula_mucilaginosa_NRRL_Y-2510	yes
+NRRL_Y-48721	yes	no	no		no
 NRRL_Y-7192	yes	yes	yes	Rhodotorula_sphaerocarpa_NRRL_Y-7192	yes
 NRRL_Y-7196	yes	no	yes	Rhodotorula_diobovata_NRRL_Y-7196	yes
 TFCN_0520-4-2-1	yes	yes	yes	Rhodotorula_taiwanensis_TFCN_0520-4-2-1	yes
@@ -155,6 +157,7 @@ TFCN_152C-2	yes	yes	no		no
 TFCN_152C-3	yes	yes	yes	Rhodotorula_toruloides_TFCN_152C-3	yes
 TFCN_152C-5	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_152C-5	yes
 TFCN_152C-6	yes	yes	yes	Rhodotorula_toruloides_TFCN_152C-6	yes
+TFCN_152D-2	yes	no	no		no
 TFCN_152D-4	yes	yes	yes	Rhodotorula_toruloides_TFCN_152D-4	yes
 TFCN_152D-6	yes	yes	yes	Rhodotorula_toruloides_TFCN_152D-6	yes
 TFCN_17-0-2E329-4	yes	no	no		no
@@ -171,16 +174,22 @@ TFCN_17-325P-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-325P-1	yes
 TFCN_17-328C-3	yes	yes	yes	Rhodotorula_sp._clade_I_TFCN_17-328C-3	yes
 TFCN_17-328P-3	yes	no	yes	Rhodotorula_sp._clade_I_TFCN_17-328P-3	yes
 TFCN_17-329Y-4	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-329Y-4	yes
+TFCN_17-331Y-5	yes	no	no		no
 TFCN_17-332C-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332C-1	yes
 TFCN_17-332C-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332C-2	yes
+TFCN_17-332D-2	yes	no	no		no
 TFCN_17-332M-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332M-1	yes
 TFCN_17-332M-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332M-2	yes
 TFCN_17-332P-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332P-1	yes
 TFCN_17-332P-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-332P-2	yes
+TFCN_17-332Y-1	yes	no	no		no
 TFCN_17-333D-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-333D-2	yes
+TFCN_17-333M-1	yes	yes	no		no
 TFCN_17-333P-6	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-333P-6	yes
+TFCN_17-333P-8	yes	no	no		no
 TFCN_17-334C-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-334C-1	yes
 TFCN_17-334D-6	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-334D-6	yes
+TFCN_17-334P-4	yes	no	no		no
 TFCN_17-334Y-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-334Y-2	yes
 TFCN_17-334Y-3	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-334Y-3	yes
 TFCN_17-334Y-5	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-334Y-5	yes
@@ -190,7 +199,6 @@ TFCN_17-338D-3	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-338D-3	yes
 TFCN_17-390M-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17-390M-1	yes
 TFCN_172A-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_172A-1	yes
 TFCN_17Y-278-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_17Y-278-1	yes
-TFCN_17_332M_1	yes	no	yes	Rhodotorula_mucilaginosa_TFCN_17-332M-1	yes
 TFCN_181A-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_181A-1	yes
 TFCN_186CL4_2	yes	no	no		no
 TFCN_186DK3-2	yes	yes	yes	Rhodotorula_sp._clade_XI_TFCN_186DK3-2	yes
@@ -213,6 +221,7 @@ TFCN_212C-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_212C-2	yes
 TFCN_213-6-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_213-6-2	yes
 TFCN_213-6-4	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_213-6-4	yes
 TFCN_222A-2	yes	yes	yes	Rhodotorula_sp._clade_I_TFCN_222A-2	yes
+TFCN_223D-8	yes	no	no		no
 TFCN_22C-4	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_22C-4	yes
 TFCN_25-0-2E332-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E332-1	yes
 TFCN_25-0-2E333-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E333-1	yes
@@ -221,7 +230,9 @@ TFCN_25-0-2E333-7	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E333-7	yes
 TFCN_25-0-2E333-9	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E333-9	yes
 TFCN_25-0-2E334-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E334-1	yes
 TFCN_25-0-2E390-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-0-2E390-1	yes
+TFCN_25-325P-1	yes	no	no		no
 TFCN_25-325Y-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-325Y-1	yes
+TFCN_25-327C-3	yes	no	no		no
 TFCN_25-327D-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-327D-1	yes
 TFCN_25-331D-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-331D-1	yes
 TFCN_25-332C-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_25-332C-1	yes
@@ -261,12 +272,14 @@ TFCN_357-1	yes	yes	yes	Rhodotorula_taiwanensis_TFCN_357-1	yes
 TFCN_363-1-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_363-1-2	yes
 TFCN_3M-1-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_3M-1-1	yes
 TFCN_404D-1	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_404D-1	yes
+TFCN_43A-22	yes	no	no		no
 TFCN_43A-4	yes	yes	yes	Rhodotorula_paludigena_TFCN_43A-4	yes
 TFCN_48A-10	yes	no	yes	Rhodotorula_paludigena_TFCN_48A-10	yes
 TFCN_48A-15	yes	yes	yes	Rhodotorula_paludigena_TFCN_48A-15	yes
 TFCN_48A-2	yes	yes	yes	Rhodotorula_paludigena_TFCN_48A-2	yes
 TFCN_48A-3	yes	no	yes	Rhodotorula_paludigena_TFCN_48A-3	yes
 TFCN_48C-3	yes	no	yes	Rhodotorula_paludigena_TFCN_48C-3	yes
+TFCN_48D-1	yes	no	no		no
 TFCN_48D-10	yes	yes	yes	Rhodotorula_paludigena_TFCN_48D-10	yes
 TFCN_48D-4	yes	no	yes	Rhodotorula_paludigena_TFCN_48D-4	yes
 TFCN_49A-1	yes	no	yes	Rhodotorula_paludigena_TFCN_49A-1	yes
@@ -274,12 +287,14 @@ TFCN_4M-1-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_4M-1-2	yes
 TFCN_4M-1-3	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_4M-1-3	yes
 TFCN_4M-1-4	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_4M-1-4	yes
 TFCN_4M-1-5	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_4M-1-5	yes
+TFCN_51A-3	yes	no	no		no
 TFCN_54D-1	yes	no	yes	Rhodotorula_mucilaginosa_TFCN_54D-1	yes
 TFCN_54D-2	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_54D-2	yes
+TFCN_7-6-2003	yes	no	no		no
 TFCN_7-9-2	yes	yes	yes	Rhodotorula_diobovata_TFCN_7-9-2	yes
 TFCN_7-9-3	yes	yes	yes	Rhodotorula_diobovata_TFCN_7-9-3	yes
 TFCN_7W-292-3	yes	yes	yes	Rhodotorula_dairenensis_TFCN_7W-292-3	yes
-TFCN_7_6_3	yes	no	no		no
+TFCN_83E1	yes	no	no		no
 TFCN_86A-12	yes	no	yes	Rhodotorula_mucilaginosa_TFCN_86A-12	yes
 TFCN_86A-3	yes	yes	yes	Rhodotorula_mucilaginosa_TFCN_86A-3	yes
 TFCN_86A-6	yes	yes	yes	Rhodotorula_sphaerocarpa_TFCN_86A-6	yes
