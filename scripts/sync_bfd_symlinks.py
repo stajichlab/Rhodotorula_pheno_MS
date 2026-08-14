@@ -220,6 +220,7 @@ def main():
                 "rsynced",
             ],
             delimiter="\t",
+            lineterminator="\n",
         )
         writer.writeheader()
         writer.writerows(rows)
