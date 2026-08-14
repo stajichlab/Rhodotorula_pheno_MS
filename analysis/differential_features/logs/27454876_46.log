@@ -1,0 +1,5 @@
+task 46: fraction=cell  A='Rhodotorula paludigena'  B='Rhodotorula sp. clade I'
+block-permutation [plate] (metadata column 'Library Plate', 4 blocks, 2 mixed, 10 vs 5 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 0 Mann-Whitney hits)
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile'): DEGENERATE -- 13 blocks, 0 contain both groups (10 vs 5 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+cell: 10 Rhodotorula paludigena vs 5 Rhodotorula sp. clade I samples, 10374/16332 features tested (prevalence >= 10%), 0 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/cell_paludigena_vs_sp_clade_I

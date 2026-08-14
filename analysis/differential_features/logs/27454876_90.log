@@ -1,0 +1,7 @@
+task 90: fraction=supernatant  A='Rhodotorula mucilaginosa'  B='Rhodotorula pacifica'
+derive_blocks_from_tree: 16/212 samples have no BFD sequence -> no tree tip -> dropped from blocked test
+clade: 16 sample(s) with no block assignment dropped
+block-permutation [plate] (metadata column 'Library Plate', 4 blocks, 2 mixed, 209 vs 3 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 1 Mann-Whitney hits)
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile', 30 blocks, 1 mixed, 194 vs 2 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 1 Mann-Whitney hits)
+supernatant: 209 Rhodotorula mucilaginosa vs 3 Rhodotorula pacifica samples, 11044/16332 features tested (prevalence >= 10%), 1 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/supernatant_mucilaginosa_vs_pacifica

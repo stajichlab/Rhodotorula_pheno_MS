@@ -1,0 +1,7 @@
+task 77: fraction=supernatant  A='Rhodotorula graminis'  B='Rhodotorula pacifica'
+derive_blocks_from_tree: 1/6 samples have no BFD sequence -> no tree tip -> dropped from blocked test
+clade: 1 sample(s) with no block assignment dropped
+block-permutation [plate] (metadata column 'Library Plate', 2 blocks, 1 mixed, 3 vs 3 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 0 Mann-Whitney hits)
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile'): DEGENERATE -- 3 blocks, 0 contain both groups (3 vs 2 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+supernatant: 3 Rhodotorula graminis vs 3 Rhodotorula pacifica samples, 11385/16332 features tested (prevalence >= 10%), 0 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/supernatant_graminis_vs_pacifica

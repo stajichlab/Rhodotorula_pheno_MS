@@ -1,0 +1,7 @@
+task 50: fraction=cell  A='Rhodotorula sp. clade I'  B='Rhodotorula sphaerocarpa'
+derive_blocks_from_tree: 2/11 samples have no BFD sequence -> no tree tip -> dropped from blocked test
+clade: 2 sample(s) with no block assignment dropped
+block-permutation [plate] (metadata column 'Library Plate', 3 blocks, 2 mixed, 5 vs 6 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 0 Mann-Whitney hits)
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile'): DEGENERATE -- 7 blocks, 0 contain both groups (5 vs 4 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+cell: 5 Rhodotorula sp. clade I vs 6 Rhodotorula sphaerocarpa samples, 8724/16332 features tested (prevalence >= 10%), 0 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/cell_sp_clade_I_vs_sphaerocarpa

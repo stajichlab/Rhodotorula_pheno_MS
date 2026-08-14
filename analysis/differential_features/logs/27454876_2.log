@@ -1,0 +1,5 @@
+task 2: fraction=cell  A='Rhodotorula dairenensis'  B='Rhodotorula graminis'
+block-permutation [plate] (metadata column 'Library Plate', 3 blocks, 1 mixed, 7 vs 3 samples, 2000 permutations): 0 significant at FDR < 5% (0 overlap with the 0 Mann-Whitney hits)
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile'): DEGENERATE -- 8 blocks, 0 contain both groups (7 vs 3 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+cell: 7 Rhodotorula dairenensis vs 3 Rhodotorula graminis samples, 9984/16332 features tested (prevalence >= 10%), 0 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/cell_dairenensis_vs_graminis

@@ -1,0 +1,7 @@
+task 44: fraction=cell  A='Rhodotorula pacifica'  B='Rhodotorula taiwanensis'
+derive_blocks_from_tree: 1/9 samples have no BFD sequence -> no tree tip -> dropped from blocked test
+clade: 1 sample(s) with no block assignment dropped
+block-permutation [plate] (metadata column 'Library Plate'): DEGENERATE -- 4 blocks, 0 contain both groups (3 vs 6 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+block-permutation [clade] (tree 'BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile'): DEGENERATE -- 6 blocks, 0 contain both groups (2 vs 6 samples). Species/group identity and block membership are the same partition here, so this test has zero power by construction -- not a real negative result, don't report it as one.
+cell: 3 Rhodotorula pacifica vs 6 Rhodotorula taiwanensis samples, 9795/16332 features tested (prevalence >= 10%), 0 significant at FDR < 5%
+wrote outputs to /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/differential_features/cell_pacifica_vs_taiwanensis

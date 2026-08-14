@@ -1,0 +1,111 @@
+task	fraction	species_a	species_b	n_features_total	mw_sig	plate_sig	clade_sig
+1	cell	Rhodotorula dairenensis (n=7)	Rhodotorula diobovata (n=9)	16332	85	0	DEGENERATE
+2	cell	Rhodotorula dairenensis (n=7)	Rhodotorula graminis (n=3)	16332	0	0	DEGENERATE
+3	cell	Rhodotorula dairenensis (n=7)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+4	cell	Rhodotorula dairenensis (n=7)	Rhodotorula mucilaginosa (n=209)	16332	203	268	DEGENERATE
+5	cell	Rhodotorula dairenensis (n=7)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+6	cell	Rhodotorula dairenensis (n=7)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+7	cell	Rhodotorula dairenensis (n=7)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+8	cell	Rhodotorula dairenensis (n=7)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+9	cell	Rhodotorula dairenensis (n=7)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+10	cell	Rhodotorula dairenensis (n=7)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+11	cell	Rhodotorula diobovata (n=9)	Rhodotorula graminis (n=3)	16332	0	0	DEGENERATE
+12	cell	Rhodotorula diobovata (n=9)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+13	cell	Rhodotorula diobovata (n=9)	Rhodotorula mucilaginosa (n=209)	16332	3951	2085	DEGENERATE
+14	cell	Rhodotorula diobovata (n=9)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+15	cell	Rhodotorula diobovata (n=9)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+16	cell	Rhodotorula diobovata (n=9)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+17	cell	Rhodotorula diobovata (n=9)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+18	cell	Rhodotorula diobovata (n=9)	Rhodotorula taiwanensis (n=6)	16332	1331	0	DEGENERATE
+19	cell	Rhodotorula diobovata (n=9)	Rhodotorula toruloides (n=10)	16332	3711	0	DEGENERATE
+20	cell	Rhodotorula graminis (n=3)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+21	cell	Rhodotorula graminis (n=3)	Rhodotorula mucilaginosa (n=209)	16332	200	0	DEGENERATE
+22	cell	Rhodotorula graminis (n=3)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+23	cell	Rhodotorula graminis (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+24	cell	Rhodotorula graminis (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+25	cell	Rhodotorula graminis (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+26	cell	Rhodotorula graminis (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+27	cell	Rhodotorula graminis (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+28	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula mucilaginosa (n=209)	16332	118	0	DEGENERATE
+29	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+30	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+31	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+32	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+33	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+34	cell	Rhodotorula kratochvilovae (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+35	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula pacifica (n=3)	16332	0	0	0
+36	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula paludigena (n=10)	16332	1638	1270	DEGENERATE
+37	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+38	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula sphaerocarpa (n=6)	16332	964	642	DEGENERATE
+39	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula taiwanensis (n=6)	16332	1369	961	DEGENERATE
+40	cell	Rhodotorula mucilaginosa (n=209)	Rhodotorula toruloides (n=10)	16332	2255	2600	DEGENERATE
+41	cell	Rhodotorula pacifica (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+42	cell	Rhodotorula pacifica (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+43	cell	Rhodotorula pacifica (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+44	cell	Rhodotorula pacifica (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+45	cell	Rhodotorula pacifica (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+46	cell	Rhodotorula paludigena (n=10)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+47	cell	Rhodotorula paludigena (n=10)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+48	cell	Rhodotorula paludigena (n=10)	Rhodotorula taiwanensis (n=6)	16332	114	0	DEGENERATE
+49	cell	Rhodotorula paludigena (n=10)	Rhodotorula toruloides (n=10)	16332	500	0	DEGENERATE
+50	cell	Rhodotorula sp. clade I (n=5)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+51	cell	Rhodotorula sp. clade I (n=5)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+52	cell	Rhodotorula sp. clade I (n=5)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+53	cell	Rhodotorula sphaerocarpa (n=6)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+54	cell	Rhodotorula sphaerocarpa (n=6)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+55	cell	Rhodotorula taiwanensis (n=6)	Rhodotorula toruloides (n=10)	16332	1662	0	DEGENERATE
+56	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula diobovata (n=9)	16332	0	0	DEGENERATE
+57	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula graminis (n=3)	16332	0	0	DEGENERATE
+58	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+59	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula mucilaginosa (n=209)	16332	19	0	DEGENERATE
+60	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+61	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+62	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+63	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+64	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+65	supernatant	Rhodotorula dairenensis (n=8)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+66	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula graminis (n=3)	16332	0	0	DEGENERATE
+67	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+68	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula mucilaginosa (n=209)	16332	1109	1706	DEGENERATE
+69	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+70	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+71	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+72	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+73	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+74	supernatant	Rhodotorula diobovata (n=9)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+75	supernatant	Rhodotorula graminis (n=3)	Rhodotorula kratochvilovae (n=3)	16332	0	0	DEGENERATE
+76	supernatant	Rhodotorula graminis (n=3)	Rhodotorula mucilaginosa (n=209)	16332	14	0	DEGENERATE
+77	supernatant	Rhodotorula graminis (n=3)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+78	supernatant	Rhodotorula graminis (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+79	supernatant	Rhodotorula graminis (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+80	supernatant	Rhodotorula graminis (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+81	supernatant	Rhodotorula graminis (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+82	supernatant	Rhodotorula graminis (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+83	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula mucilaginosa (n=209)	16332	13	0	DEGENERATE
+84	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula pacifica (n=3)	16332	0	0	DEGENERATE
+85	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+86	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+87	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+88	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+89	supernatant	Rhodotorula kratochvilovae (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+90	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula pacifica (n=3)	16332	1	0	0
+91	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula paludigena (n=10)	16332	224	782	DEGENERATE
+92	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+93	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula sphaerocarpa (n=6)	16332	220	780	DEGENERATE
+94	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula taiwanensis (n=6)	16332	989	859	DEGENERATE
+95	supernatant	Rhodotorula mucilaginosa (n=209)	Rhodotorula toruloides (n=10)	16332	79	0	DEGENERATE
+96	supernatant	Rhodotorula pacifica (n=3)	Rhodotorula paludigena (n=10)	16332	0	0	DEGENERATE
+97	supernatant	Rhodotorula pacifica (n=3)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+98	supernatant	Rhodotorula pacifica (n=3)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+99	supernatant	Rhodotorula pacifica (n=3)	Rhodotorula taiwanensis (n=6)	16332	0	NA	DEGENERATE
+100	supernatant	Rhodotorula pacifica (n=3)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+101	supernatant	Rhodotorula paludigena (n=10)	Rhodotorula sp. clade I (n=5)	16332	0	0	DEGENERATE
+102	supernatant	Rhodotorula paludigena (n=10)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+103	supernatant	Rhodotorula paludigena (n=10)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+104	supernatant	Rhodotorula paludigena (n=10)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+105	supernatant	Rhodotorula sp. clade I (n=5)	Rhodotorula sphaerocarpa (n=6)	16332	0	0	DEGENERATE
+106	supernatant	Rhodotorula sp. clade I (n=5)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+107	supernatant	Rhodotorula sp. clade I (n=5)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+108	supernatant	Rhodotorula sphaerocarpa (n=6)	Rhodotorula taiwanensis (n=6)	16332	0	0	DEGENERATE
+109	supernatant	Rhodotorula sphaerocarpa (n=6)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
+110	supernatant	Rhodotorula taiwanensis (n=6)	Rhodotorula toruloides (n=10)	16332	0	0	DEGENERATE
