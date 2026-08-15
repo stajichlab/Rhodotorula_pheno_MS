@@ -185,6 +185,48 @@ def build_dashboard(diff_dir: Path) -> str | None:
 </html>"""
 
 
+INDEX_CSS = """
+  :root {
+    --bg: #ffffff; --surface: #f7f7f8; --border: #e2e2e6;
+    --ink: #1a1a1e; --ink-muted: #6b6b74; --accent: #0072B2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a; --surface: #1e1e23; --border: #303038;
+      --ink: #eaeaef; --ink-muted: #9a9aa5; --accent: #56B4E9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 14px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 10px; }
+  .subtitle { color: var(--ink-muted); margin: 0 0 20px; font-size: 13px; }
+  .stats { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 8px; }
+  .stat .num { font-size: 22px; font-weight: 600; color: var(--accent); }
+  .stat .label { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  thead th { background: var(--surface); text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--border); font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  tbody td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: var(--surface); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .frac { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; }
+  code { background: var(--surface); padding: 1px 4px; border-radius: 3px; font-size: 12px; }
+"""
+
+
+def _row(name: str, n_total: int, n_identified: int) -> str:
+    return (
+        f'<tr><td>{html.escape(_label(name))}</td>'
+        f'<td>{n_total:,}</td><td>{n_identified:,}</td>'
+        f'<td><a href="./{name}/dashboard.html">dashboard</a> &middot; '
+        f'<a href="./{name}/compound_summary.html">table</a></td></tr>'
+    )
+
+
 def build_readme(dashboards: list[tuple[str, int, int, int]]) -> str:
     """Generate README.md index."""
     lines = [
@@ -234,6 +276,74 @@ def build_readme(dashboards: list[tuple[str, int, int, int]]) -> str:
     return "\n".join(lines)
 
 
+def build_readme_html(dashboards: list[tuple[str, int, int, int]]) -> str:
+    """Generate README.html — same content as README.md but rendered as
+    a self-contained HTML page, since .nojekyll disables Jekyll markdown
+    processing on GitHub Pages."""
+    total = sum(d[1] for d in dashboards)
+    cell_dirs = sorted([d for d in dashboards if d[0].startswith("cell_")], key=lambda x: -x[1])
+    sup_dirs = sorted([d for d in dashboards if d[0].startswith("supernatant_")], key=lambda x: -x[1])
+
+    rows_html = []
+    if cell_dirs:
+        rows_html.append("<h2>Cell pellet comparisons</h2>")
+        rows_html.append("<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>")
+        for name, n_total, n_identified, _ in cell_dirs:
+            rows_html.append(_row(name, n_total, n_identified))
+        rows_html.append("</tbody></table>")
+    if sup_dirs:
+        rows_html.append("<h2>Supernatant comparisons</h2>")
+        rows_html.append("<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>")
+        for name, n_total, n_identified, _ in sup_dirs:
+            rows_html.append(_row(name, n_total, n_identified))
+        rows_html.append("</tbody></table>")
+
+    body_rows = "\n".join(rows_html)
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Differential Features Analysis</title>
+<style>{INDEX_CSS}</style>
+</head>
+<body>
+<h1>Differential Features Analysis</h1>
+<p class="subtitle">Pairwise species comparisons of MS2 features, annotated with
+GNPS library matches and SIRIUS/CANOPUS predictions.</p>
+
+<div class="stats">
+  <div class="stat"><div class="num">{total:,}</div><div class="label">Significant features</div></div>
+  <div class="stat"><div class="num">{len(dashboards)}</div><div class="label">Comparisons with hits</div></div>
+  <div class="stat"><div class="num">110</div><div class="label">Total comparisons</div></div>
+  <div class="stat"><div class="num">790</div><div class="label">SIRIUS annotations</div></div>
+</div>
+
+<h2>Cross-comparison rollup</h2>
+<table>
+<thead><tr><th>View</th><th>Features</th><th>Link</th></tr></thead>
+<tbody>
+<tr><td>All significant features (every comparison concatenated)</td><td>{total:,}</td>
+<td><a href="all_significant_features_summary.html">open</a></td></tr>
+</tbody>
+</table>
+
+{body_rows}
+
+<h2>Individual comparison files</h2>
+<p>Each comparison directory also contains:</p>
+<ul>
+<li><code>compound_summary.html</code> — sortable/filterable table of significant features</li>
+<li><code>volcano.pdf</code> / <code>volcano.png</code> — volcano plot</li>
+<li><code>top_features.pdf</code> / <code>top_features.png</code> — top features plot</li>
+<li><code>differential_features.csv.gz</code> — full differential features table</li>
+</ul>
+
+</body>
+</html>"""
+
+
 def main():
     diff_dirs = sorted(p.parent for p in DIFF_ROOT.glob("*/compound_summary.tsv"))
 
@@ -257,10 +367,13 @@ def main():
 
         dashboards.append((name, n_total, n_identified, n_robust))
 
-    readme = build_readme(dashboards)
-    readme_path = DIFF_ROOT / "README.md"
-    readme_path.write_text(readme)
-    print(f"README index -> {readme_path} ({len(dashboards)} comparisons)", file=sys.stderr)
+    readme_md = build_readme(dashboards)
+    readme_html = build_readme_html(dashboards)
+    md_path = DIFF_ROOT / "README.md"
+    html_path = DIFF_ROOT / "README.html"
+    md_path.write_text(readme_md)
+    html_path.write_text(readme_html)
+    print(f"README index -> {md_path} + {html_path} ({len(dashboards)} comparisons)", file=sys.stderr)
 
 
 if __name__ == "__main__":

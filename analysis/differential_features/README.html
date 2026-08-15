@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Differential Features Analysis</title>
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f7f7f8; --border: #e2e2e6;
+    --ink: #1a1a1e; --ink-muted: #6b6b74; --accent: #0072B2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a; --surface: #1e1e23; --border: #303038;
+      --ink: #eaeaef; --ink-muted: #9a9aa5; --accent: #56B4E9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 14px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 10px; }
+  .subtitle { color: var(--ink-muted); margin: 0 0 20px; font-size: 13px; }
+  .stats { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 8px; }
+  .stat .num { font-size: 22px; font-weight: 600; color: var(--accent); }
+  .stat .label { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  thead th { background: var(--surface); text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--border); font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  tbody td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: var(--surface); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .frac { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; }
+  code { background: var(--surface); padding: 1px 4px; border-radius: 3px; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>Differential Features Analysis</h1>
+<p class="subtitle">Pairwise species comparisons of MS2 features, annotated with
+GNPS library matches and SIRIUS/CANOPUS predictions.</p>
+
+<div class="stats">
+  <div class="stat"><div class="num">11,953</div><div class="label">Significant features</div></div>
+  <div class="stat"><div class="num">10</div><div class="label">Comparisons with hits</div></div>
+  <div class="stat"><div class="num">110</div><div class="label">Total comparisons</div></div>
+  <div class="stat"><div class="num">790</div><div class="label">SIRIUS annotations</div></div>
+</div>
+
+<h2>Cross-comparison rollup</h2>
+<table>
+<thead><tr><th>View</th><th>Features</th><th>Link</th></tr></thead>
+<tbody>
+<tr><td>All significant features (every comparison concatenated)</td><td>11,953</td>
+<td><a href="all_significant_features_summary.html">open</a></td></tr>
+</tbody>
+</table>
+
+<h2>Cell pellet comparisons</h2>
+<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>
+<tr><td>Cell pellet: R. mucilaginosa vs R. toruloides</td><td>2,600</td><td>953</td><td><a href="./cell_mucilaginosa_vs_toruloides/dashboard.html">dashboard</a> &middot; <a href="./cell_mucilaginosa_vs_toruloides/compound_summary.html">table</a></td></tr>
+<tr><td>Cell pellet: R. diobovata vs R. mucilaginosa</td><td>2,085</td><td>676</td><td><a href="./cell_diobovata_vs_mucilaginosa/dashboard.html">dashboard</a> &middot; <a href="./cell_diobovata_vs_mucilaginosa/compound_summary.html">table</a></td></tr>
+<tr><td>Cell pellet: R. mucilaginosa vs R. paludigena</td><td>1,270</td><td>358</td><td><a href="./cell_mucilaginosa_vs_paludigena/dashboard.html">dashboard</a> &middot; <a href="./cell_mucilaginosa_vs_paludigena/compound_summary.html">table</a></td></tr>
+<tr><td>Cell pellet: R. mucilaginosa vs R. taiwanensis</td><td>961</td><td>276</td><td><a href="./cell_mucilaginosa_vs_taiwanensis/dashboard.html">dashboard</a> &middot; <a href="./cell_mucilaginosa_vs_taiwanensis/compound_summary.html">table</a></td></tr>
+<tr><td>Cell pellet: R. mucilaginosa vs R. sphaerocarpa</td><td>642</td><td>201</td><td><a href="./cell_mucilaginosa_vs_sphaerocarpa/dashboard.html">dashboard</a> &middot; <a href="./cell_mucilaginosa_vs_sphaerocarpa/compound_summary.html">table</a></td></tr>
+<tr><td>Cell pellet: R. dairenensis vs R. mucilaginosa</td><td>268</td><td>66</td><td><a href="./cell_dairenensis_vs_mucilaginosa/dashboard.html">dashboard</a> &middot; <a href="./cell_dairenensis_vs_mucilaginosa/compound_summary.html">table</a></td></tr>
+</tbody></table>
+<h2>Supernatant comparisons</h2>
+<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>
+<tr><td>Supernatant: R. diobovata vs R. mucilaginosa</td><td>1,706</td><td>512</td><td><a href="./supernatant_diobovata_vs_mucilaginosa/dashboard.html">dashboard</a> &middot; <a href="./supernatant_diobovata_vs_mucilaginosa/compound_summary.html">table</a></td></tr>
+<tr><td>Supernatant: R. mucilaginosa vs R. taiwanensis</td><td>859</td><td>264</td><td><a href="./supernatant_mucilaginosa_vs_taiwanensis/dashboard.html">dashboard</a> &middot; <a href="./supernatant_mucilaginosa_vs_taiwanensis/compound_summary.html">table</a></td></tr>
+<tr><td>Supernatant: R. mucilaginosa vs R. paludigena</td><td>782</td><td>238</td><td><a href="./supernatant_mucilaginosa_vs_paludigena/dashboard.html">dashboard</a> &middot; <a href="./supernatant_mucilaginosa_vs_paludigena/compound_summary.html">table</a></td></tr>
+<tr><td>Supernatant: R. mucilaginosa vs R. sphaerocarpa</td><td>780</td><td>231</td><td><a href="./supernatant_mucilaginosa_vs_sphaerocarpa/dashboard.html">dashboard</a> &middot; <a href="./supernatant_mucilaginosa_vs_sphaerocarpa/compound_summary.html">table</a></td></tr>
+</tbody></table>
+
+<h2>Individual comparison files</h2>
+<p>Each comparison directory also contains:</p>
+<ul>
+<li><code>compound_summary.html</code> — sortable/filterable table of significant features</li>
+<li><code>volcano.pdf</code> / <code>volcano.png</code> — volcano plot</li>
+<li><code>top_features.pdf</code> / <code>top_features.png</code> — top features plot</li>
+<li><code>differential_features.csv.gz</code> — full differential features table</li>
+</ul>
+
+</body>
+</html>
