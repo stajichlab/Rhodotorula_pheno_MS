@@ -1,0 +1,739 @@
+Running full SIRIUS chain serially over 3 shards in /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards
+=== shard_000 ===
+WARNING: While bind mounting '/bigdata:/bigdata': destination is already in the mount point list
+Aug 15, 2026 3:01:19 PM org.apache.commons.beanutils.FluentPropertyBeanIntrospector introspect
+INFO: Error when creating PropertyDescriptor for public final void org.apache.commons.configuration2.AbstractConfiguration.setProperty(java.lang.String,java.lang.Object)! Ignoring this property.
+INFO    15:01:19 - Sirius Workspace Successfully initialized at: /rhome/jstajich/.sirius-6.3
+INFO    15:01:20 - You run SIRIUS 6.3.12 on linux_amd64
+INFO    15:01:20 - You run SIRIUS in 'CLI' mode.
+INFO    15:01:20 - Sirius was compiled with the following ILP solvers: GLPK-v1.7.0 (included), Gurobi-v9.1.1, CPLEX-v12.7.1, COIN-OR-v2.10.12.1
+INFO    15:01:20 - Treebuilder priorities loaded from 'sirius.properties' are: [CLP, GUROBI, CPLEX]
+INFO    15:01:20 - CPU check done. 2 cores that handle 4 threads were found.
+INFO    15:01:20 - Job manager successful initialized with 3 CPU thread(s) and 3 IO thread(s).
+INFO    15:01:20 - Starting http Client with MaxPerRoute=3 / maxTotal=5 (CPU-Threads=3).
+INFO    15:01:23 - Custom databases loaded.
+INFO    15:01:23 - Web API initialized in 00:00:03.099. Started loading active subscription in background...
+FINE    15:01:23 - <0>[JJob-0] Running post processing
+FINE    15:01:23 - <0>[JJob-0] Running cleanup
+INFO    15:01:23 - Running with following arguments: [--cores, 4, --input, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_000.mgf, --output, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/sirius_results/shard_000, formula, --ppm-max, 15, --ppm-max-ms2, 15, --candidates, 10, fingerprint, canopus, structures, write-summaries]
+INFO    15:01:23 - Shutting down JobManager
+INFO    15:01:23 - Awaiting termination of JobManager
+INFO    15:01:23 - JobManager is shut down
+INFO    15:01:23 - Adjusted JobManager CPU threads to '4' by command line.
+FINE    15:01:23 - <1>[InputExpanderJJob-1] Running post processing
+FINE    15:01:23 - <1>[InputExpanderJJob-1] Running cleanup
+INFO    15:01:23 - <2>[InputExpanderJJob-2] Expanding Input Files: '/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_000.mgf'...
+INFO    15:01:23 - <2>[InputExpanderJJob-2] ...Input Files successfully expanded!
+FINE    15:01:23 - <2>[InputExpanderJJob-2] Running post processing
+FINE    15:01:23 - <2>[InputExpanderJJob-2] Running cleanup
+WARNING 15:01:23 - Given project file 'shard_000' does not contain the `.sirius` file extension. Renamed file to 'shard_000.sirius'.
+INFO    15:01:23 - (Re)building index: [key]
+INFO    15:01:23 - (Re)building index: [type, charge]
+INFO    15:01:23 - (Re)building index: [ionPairId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId1]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId2]
+INFO    15:01:23 - (Re)building index: [type]
+INFO    15:01:23 - (Re)building index: [formulaId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, formulaRank]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [sourceTraceId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:01:23 - (Re)building index: [id]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:01:23 - (Re)building index: [runId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [id]
+INFO    15:01:23 - (Re)building index: [compoundId]
+INFO    15:01:23 - (Re)building index: [formulaId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [formulaId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [networkId]
+INFO    15:01:23 - (Re)building index: [alignedIsotopeFeatureId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [featureId]
+INFO    15:01:23 - (Re)building index: [scanId]
+INFO    15:01:23 - (Re)building index: [runId, scanTime]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, type]
+INFO    15:01:23 - (Re)building index: [parametersId]
+INFO    15:01:23 - (Re)building index: [name]
+INFO    15:01:23 - (Re)building index: [runId]
+INFO    15:01:23 - (Re)building index: [retentionTime.middle]
+INFO    15:01:23 - (Re)building index: [averageMass]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [compoundId]
+INFO    15:01:23 - (Re)building index: [traceRef.traceId]
+INFO    15:01:23 - (Re)building index: [tagId]
+INFO    15:01:23 - (Re)building index: [taggedObjectClass, tagName]
+INFO    15:01:23 - (Re)building index: [taggedObjectClass, taggedObjectId, tagName]
+INFO    15:01:23 - (Re)building index: [tagName]
+INFO    15:01:23 - (Re)building index: [inchikey]
+INFO    15:01:23 - (Re)building index: [formulaId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:01:23 - (Re)building index: [id]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:01:23 - (Re)building index: [mergedTraceId]
+INFO    15:01:23 - (Re)building index: [name]
+INFO    15:01:23 - (Re)building index: [runId]
+INFO    15:01:23 - (Re)building index: [rt.middle]
+INFO    15:01:23 - (Re)building index: [name]
+INFO    15:01:23 - (Re)building index: [neutralMass]
+INFO    15:01:23 - (Re)building index: [compoundId]
+INFO    15:01:23 - (Re)building index: [scanId]
+INFO    15:01:23 - (Re)building index: [runId, scanTime]
+INFO    15:01:23 - (Re)building index: [precursorScanId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, searchResult.rank]
+INFO    15:01:23 - (Re)building index: [specMatchId]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId, searchResult.candidateInChiKey, searchResult.rank]
+INFO    15:01:23 - (Re)building index: [tagDefId]
+INFO    15:01:23 - (Re)building index: [tagType]
+INFO    15:01:23 - (Re)building index: [tagName]
+INFO    15:01:23 - (Re)building index: [groupName]
+INFO    15:01:23 - (Re)building index: [groupType]
+INFO    15:01:23 - (Re)building index: [id]
+INFO    15:01:23 - (Re)building index: [alignedFeatureId]
+INFO    15:01:23 - (Re)building index: [id]
+INFO    15:01:23 - Updating project type information...
+INFO    15:01:23 - Updating project type information done in 00:00:00.015.
+INFO    15:01:23 - Updating project source information...
+INFO    15:01:23 - Updating project source information done in 00:00:00.000.
+WARNING 15:01:24 - Compound 12369 ignored because of: Do not support multiple charges yet.
+WARNING 15:01:25 - Compound 44201 ignored because of: Do not support multiple charges yet.
+INFO    15:01:25 - Creating Toolchain InstanceBuffer of size 20
+INFO    15:01:28 - Loading CBC libs for detected architecture `linux-amd64` from prefix '/linux-x86-64/' with '11' jar and '11' path dependencies.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by cz.adamh.utils.NativeUtils in an unnamed module (file:/opt/sirius/lib/app/lib/native-utils-1.3.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING 15:01:39 - <1158>[FingerprintPreprocessingJJob-1158 | SCAN=4253@822.5585m/z] Ignore fragmentation tree for C42H75N7O9 because it contains less than 2 fragments.
+WARNING 15:01:39 - <1158>[FingerprintPreprocessingJJob-1158 | SCAN=4253@822.5585m/z] Ignore fragmentation tree for C49H71N7O4 because it contains less than 2 fragments.
+WARNING 15:01:39 - <1158>[FingerprintPreprocessingJJob-1158 | SCAN=4253@822.5585m/z] Ignore fragmentation tree for C53H75NO6 because it contains less than 2 fragments.
+WARNING 15:01:39 - <1158>[FingerprintPreprocessingJJob-1158 | SCAN=4253@822.5585m/z] Ignore fragmentation tree for C45H76FN3O9 because it contains less than 2 fragments.
+INFO    15:01:39 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+INFO    15:01:40 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+WARNING 15:01:45 - <1157>[FingerprintPreprocessingJJob-1157 | SCAN=47124@869.5775m/z] Ignore fragmentation tree for C42H86O16 because it contains less than 2 fragments.
+WARNING 15:01:45 - <1157>[FingerprintPreprocessingJJob-1157 | SCAN=47124@869.5775m/z] No suitable fragmentation tree left.
+########################################
+## Computed 13 instances in 00:03:08.541(4.14 instances/minute).
+########################################
+INFO    15:04:33 - Workflow has been finished in 00:03:10.078
+INFO    15:04:33 - Executing Postprocessing...
+INFO    15:04:33 - Summaries written in: 00:00:00.090
+INFO    15:04:33 - Nitrite database has been closed successfully.
+INFO    15:04:33 - CLI shut down hook: SIRIUS is cleaning up threads and shuts down...
+WARNING 15:04:33 - <3157>[WebJobSubmitterJJob-3157] JobSubmitter thread was interrupted unexpectedly but state should be clean.  Try to recover!
+WARNING 15:04:33 - <3158>[WebJobWatcherJJob-3158] JobWatcher thread was interrupted unexpectedly. State should be clean. Try to recover!
+
+
+Please cite the following publications when using our tool:
+
+When using the SIRIUS Software please cite the following paper:
+
+Kai D?hrkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu and Sebastian B?cker
+SIRIUS4: a rapid tool for turning tandem mass spectra into metabolite structure information
+Nat Methods, 16, 2019.  https://doi.org/10.1038/s41592-019-0344-8
+
+
+Depending on the tools you have used please also cite:
+
+Wishart, David S and Tian, Siyang and Allen, Dana and Oler, Eponine and Peters, Harrison and Lui, Vicki W and Gautam, Vasuk and Djoumbou-Feunang, Yannick and Greiner, Russell and Metz, Thomas O
+BioTransformer 3.0?a web server for accurately predicting metabolic transformation products
+Nucleic Acids Res, 50, 2022.  https://doi.org/10.1093/nar/gkac313
+(Cite if you are using: Biotransformer for structure database generation)
+
+Xing, Shipei and Shen, Sam and Xu, Banghua and Li, Xiaoxiao and Huan, Tao
+BUDDY: molecular formula discovery via bottom-up MS/MS interrogation.
+Nat Methods, 2023.  https://doi.org/10.1038/s41592-023-01850-x
+(Cite if you are using: Bottom-up molecular formula generation)
+
+Kai D?hrkop, Louis-F?lix Nothias, Markus Fleischauer, Raphael Reher, Marcus Ludwig, Martin A. Hoffmann, Daniel Petras, William H. Gerwick, Juho Rousu, Pieter C. Dorrestein and Sebastian B?cker
+Systematic classification of unknown metabolites using high-resolution fragmentation mass spectra
+Nat Biotechnol, 39, 2021.  https://doi.org/10.1038/s41587-020-0740-8
+(Cite if you are using: CANOPUS)
+
+Yannick Djoumbou Feunang, Roman Eisner, Craig Knox, Leonid Chepelev, Janna Hastings, Gareth Owen, Eoin Fahy, Christoph Steinbeck, Shankar Subramanian, Evan Bolton, Russell Greiner, David S. Wishart
+ClassyFire: automated chemical classification with a comprehensive, computable taxonomy
+J Cheminf, 8, 2016.  https://doi.org/10.1186/s13321-016-0174-y
+(Cite if you are using: CANOPUS)
+
+Kim, Hyun Woo and Wang, Mingxun and Leber, Christopher A. and Nothias, Louis-F?lix and Reher, Raphael and Kang, Kyo Bin and van der Hooft, Justin J. J. and Dorrestein, Pieter C. and Gerwick, William H. and Cottrell, Garrison W.
+NPClassifier: A Deep Neural Network-Based Structural Classification Tool for Natural Products
+Journal of Natural Products, 84, 2021.  https://doi.org/10.1021/acs.jnatprod.1c00399
+(Cite if you are using: CANOPUS)
+
+Kai D?hrkop, Huibin Shen, Marvin Meusel, Juho Rousu and Sebastian B?cker
+Searching molecular structure databases with tandem mass spectra using CSI:FingerID
+Proc Natl Acad Sci U S A, 112, 2015.  https://doi.org/10.1073/pnas.1509788112
+(Cite if you are using: CSI:FingerID)
+
+Hoffmann, Martin A. and Nothias, Louis-F?lix and Ludwig, Marcus and Fleischauer, Markus and Gentry, Emily C. and Witting, Michael and Dorrestein, Pieter C. and D?hrkop, Kai and B?cker, Sebastian
+High-confidence structural annotation of metabolites absent from spectral libraries
+Nat Biotechnol, 40, 2022.  https://doi.org/10.1038/s41587-021-01045-9
+(Cite if you are using: CSI:FingerID, COSMIC)
+
+Sebastian B?cker and Kai D?hrkop
+Fragmentation trees reloaded
+J Cheminform, 8, 2016.  https://doi.org/10.1186/s13321-016-0116-8
+(Cite if you are using: Fragmentation Trees)
+
+Sebastian B?cker, Matthias Letzel, Zsuzsanna Lipt?k and Anton Pervukhin
+SIRIUS: Decomposing isotope patterns for metabolite identification
+Bioinformatics, 25, 2009.  https://doi.org/10.1093/bioinformatics/btn603
+(Cite if you are using: Isotope Pattern analysis)
+
+Stravs, Michael A. and D?hrkop, Kai and B?cker, Sebastian and Zamboni, Nicola
+MSNovelist: de novo structure generation from mass spectra
+Nat Methods, 19, 2022.  https://doi.org/10.1038/s41592-022-01486-3
+(Cite if you are using: MSNovelist)
+
+Ludwig, Marcus and Nothias, Louis-F?lix and D?hrkop, Kai and Koester, Irina and Fleischauer, Markus and Hoffmann, Martin A. and Petras, Daniel and Vargas, Fernando and Morsy, Mustafa and Aluwihare, Lihini and Dorrestein, Pieter C. and B?cker, Sebastian
+Database-independent molecular formula annotation using Gibbs sampling through ZODIAC
+Nat Mach Intell, 2, 2020.  https://doi.org/10.1038/s42256-020-00234-6
+(Cite if you are using: ZODIAC)
+
+
+=== shard_001 ===
+WARNING: While bind mounting '/bigdata:/bigdata': destination is already in the mount point list
+Aug 15, 2026 3:04:35 PM org.apache.commons.beanutils.FluentPropertyBeanIntrospector introspect
+INFO: Error when creating PropertyDescriptor for public final void org.apache.commons.configuration2.AbstractConfiguration.setProperty(java.lang.String,java.lang.Object)! Ignoring this property.
+INFO    15:04:35 - Sirius Workspace Successfully initialized at: /rhome/jstajich/.sirius-6.3
+INFO    15:04:35 - You run SIRIUS 6.3.12 on linux_amd64
+INFO    15:04:35 - You run SIRIUS in 'CLI' mode.
+INFO    15:04:35 - Sirius was compiled with the following ILP solvers: GLPK-v1.7.0 (included), Gurobi-v9.1.1, CPLEX-v12.7.1, COIN-OR-v2.10.12.1
+INFO    15:04:35 - Treebuilder priorities loaded from 'sirius.properties' are: [CLP, GUROBI, CPLEX]
+INFO    15:04:35 - CPU check done. 2 cores that handle 4 threads were found.
+INFO    15:04:35 - Job manager successful initialized with 3 CPU thread(s) and 3 IO thread(s).
+INFO    15:04:36 - Starting http Client with MaxPerRoute=3 / maxTotal=5 (CPU-Threads=3).
+INFO    15:04:38 - Custom databases loaded.
+INFO    15:04:38 - Web API initialized in 00:00:02.106. Started loading active subscription in background...
+FINE    15:04:38 - <0>[JJob-0] Running post processing
+FINE    15:04:38 - <0>[JJob-0] Running cleanup
+INFO    15:04:38 - Running with following arguments: [--cores, 4, --input, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_001.mgf, --output, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/sirius_results/shard_001, formula, --ppm-max, 15, --ppm-max-ms2, 15, --candidates, 10, fingerprint, canopus, structures, write-summaries]
+INFO    15:04:38 - Shutting down JobManager
+INFO    15:04:38 - Awaiting termination of JobManager
+INFO    15:04:38 - JobManager is shut down
+INFO    15:04:38 - Adjusted JobManager CPU threads to '4' by command line.
+FINE    15:04:38 - <1>[InputExpanderJJob-1] Running post processing
+FINE    15:04:38 - <1>[InputExpanderJJob-1] Running cleanup
+INFO    15:04:38 - <2>[InputExpanderJJob-2] Expanding Input Files: '/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_001.mgf'...
+INFO    15:04:38 - <2>[InputExpanderJJob-2] ...Input Files successfully expanded!
+FINE    15:04:38 - <2>[InputExpanderJJob-2] Running post processing
+FINE    15:04:38 - <2>[InputExpanderJJob-2] Running cleanup
+WARNING 15:04:38 - Given project file 'shard_001' does not contain the `.sirius` file extension. Renamed file to 'shard_001.sirius'.
+INFO    15:04:38 - (Re)building index: [key]
+INFO    15:04:38 - (Re)building index: [type, charge]
+INFO    15:04:38 - (Re)building index: [tagId]
+INFO    15:04:38 - (Re)building index: [taggedObjectClass, tagName]
+INFO    15:04:38 - (Re)building index: [taggedObjectClass, taggedObjectId, tagName]
+INFO    15:04:38 - (Re)building index: [tagName]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:04:38 - (Re)building index: [id]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:04:38 - (Re)building index: [rt.middle]
+INFO    15:04:38 - (Re)building index: [name]
+INFO    15:04:38 - (Re)building index: [neutralMass]
+INFO    15:04:38 - (Re)building index: [compoundId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:04:38 - (Re)building index: [id]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:04:38 - (Re)building index: [ionPairId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId1]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId2]
+INFO    15:04:38 - (Re)building index: [type]
+INFO    15:04:38 - (Re)building index: [formulaId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, formulaRank]
+INFO    15:04:38 - (Re)building index: [id]
+INFO    15:04:38 - (Re)building index: [compoundId]
+INFO    15:04:38 - (Re)building index: [formulaId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, type]
+INFO    15:04:38 - (Re)building index: [parametersId]
+INFO    15:04:38 - (Re)building index: [alignedIsotopeFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, searchResult.rank]
+INFO    15:04:38 - (Re)building index: [specMatchId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId, searchResult.candidateInChiKey, searchResult.rank]
+INFO    15:04:38 - (Re)building index: [inchikey]
+INFO    15:04:38 - (Re)building index: [name]
+INFO    15:04:38 - (Re)building index: [runId]
+INFO    15:04:38 - (Re)building index: [groupName]
+INFO    15:04:38 - (Re)building index: [groupType]
+INFO    15:04:38 - (Re)building index: [id]
+INFO    15:04:38 - (Re)building index: [mergedTraceId]
+INFO    15:04:38 - (Re)building index: [networkId]
+INFO    15:04:38 - (Re)building index: [formulaId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [formulaId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [id]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [name]
+INFO    15:04:38 - (Re)building index: [runId]
+INFO    15:04:38 - (Re)building index: [sourceTraceId]
+INFO    15:04:38 - (Re)building index: [tagDefId]
+INFO    15:04:38 - (Re)building index: [tagType]
+INFO    15:04:38 - (Re)building index: [tagName]
+INFO    15:04:38 - (Re)building index: [scanId]
+INFO    15:04:38 - (Re)building index: [runId, scanTime]
+INFO    15:04:38 - (Re)building index: [scanId]
+INFO    15:04:38 - (Re)building index: [runId, scanTime]
+INFO    15:04:38 - (Re)building index: [precursorScanId]
+INFO    15:04:38 - (Re)building index: [retentionTime.middle]
+INFO    15:04:38 - (Re)building index: [averageMass]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [compoundId]
+INFO    15:04:38 - (Re)building index: [traceRef.traceId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [runId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [alignedFeatureId]
+INFO    15:04:38 - (Re)building index: [featureId]
+INFO    15:04:38 - Updating project type information...
+INFO    15:04:38 - Updating project type information done in 00:00:00.015.
+INFO    15:04:38 - Updating project source information...
+INFO    15:04:38 - Updating project source information done in 00:00:00.000.
+WARNING 15:04:39 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+INFO    15:04:39 - Creating Toolchain InstanceBuffer of size 20
+WARNING 15:04:40 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+INFO    15:04:52 - Loading CBC libs for detected architecture `linux-amd64` from prefix '/linux-x86-64/' with '11' jar and '11' path dependencies.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by cz.adamh.utils.NativeUtils in an unnamed module (file:/opt/sirius/lib/app/lib/native-utils-1.3.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C48H75N3O9 because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C53H73N3O4 because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C44H82NO10P because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C46H80NO10P because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C46H77N3O9 because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C43H81N3O10 because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C48H81NO8 because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C40H78N7O8P because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C39H82N3O12P because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] Ignore fragmentation tree for C37H76N9O10P because it contains less than 2 fragments.
+WARNING 15:05:25 - <7734>[FingerprintPreprocessingJJob-7734 | SCAN=11526@838.5547m/z] No suitable fragmentation tree left.
+INFO    15:05:26 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+WARNING 15:05:26 - SCAN=2739 is estimated to be LPC(43:15) but the corresponding molecular formula C51H74NO7P is not part of the candidate set. Compound name = SCAN=2739
+INFO    15:05:27 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:05:28 - Ion mass specified in input deviates from ion mass found in MS2. Correct ion mass from 844.53 to 844.5273
+WARNING 15:06:00 - <12082>[FingerprintPreprocessingJJob-12082 | SCAN=5307@737.4995m/z] Ignore fragmentation tree for C45H68O8 because it contains less than 2 fragments.
+WARNING 15:06:00 - <12082>[FingerprintPreprocessingJJob-12082 | SCAN=5307@737.4995m/z] No suitable fragmentation tree left.
+WARNING 15:06:00 - <9383>[FingerprintPreprocessingJJob-9383 | SCAN=17764@615.4939m/z] Ignore fragmentation tree for C39H66O5 because it contains less than 2 fragments.
+WARNING 15:06:00 - <9383>[FingerprintPreprocessingJJob-9383 | SCAN=17764@615.4939m/z] No suitable fragmentation tree left.
+########################################
+## Computed 15 instances in 00:04:29.591(3.34 instances/minute).
+########################################
+INFO    15:09:09 - Workflow has been finished in 00:04:30.899
+INFO    15:09:09 - Executing Postprocessing...
+INFO    15:09:09 - Summaries written in: 00:00:00.092
+INFO    15:09:09 - Nitrite database has been closed successfully.
+INFO    15:09:09 - CLI shut down hook: SIRIUS is cleaning up threads and shuts down...
+WARNING 15:09:09 - <9163>[WebJobSubmitterJJob-9163] JobSubmitter thread was interrupted unexpectedly but state should be clean.  Try to recover!
+WARNING 15:09:09 - <9163>[WebJobSubmitterJJob-9163] =====================> Close Job Submitter!
+java.io.InterruptedIOException
+	at okhttp3.internal.http2.Http2Stream.waitForIo$okhttp(Http2Stream.kt:716)
+	at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:156)
+	at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:101)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:114)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:98)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:101)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:85)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:74)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:208)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.executeWithResponse(AbstractClient.java:138)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:145)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:167)
+	at de.unijena.bioinf.ms.rest.client.jobs.JobsClient.deleteJobs(JobsClient.java:143)
+	at de.unijena.bioinf.webapi.rest.RestAPI.lambda$deleteJobs$0(RestAPI.java:358)
+	at de.unijena.bioinf.rest.ProxyManager.consumeClient(ProxyManager.java:437)
+	at de.unijena.bioinf.webapi.rest.RestAPI.deleteJobs(RestAPI.java:358)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.lambda$compute$5(WebJobWatcher.java:337)
+	at de.unijena.bioinf.rest.NetUtils.lambda$tryAndWait$0(NetUtils.java:79)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:93)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:78)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:74)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.compute(WebJobWatcher.java:336)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.compute(WebJobWatcher.java:254)
+	at de.unijena.bioinf.jjobs.BasicJJob.call(BasicJJob.java:124)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+java.io.InterruptedIOException
+	at okhttp3.internal.http2.Http2Stream.waitForIo$okhttp(Http2Stream.kt:716)
+	at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:156)
+	at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:101)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:114)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:98)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:101)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:85)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:74)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:208)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.executeWithResponse(AbstractClient.java:138)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:145)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:167)
+	at de.unijena.bioinf.ms.rest.client.jobs.JobsClient.deleteJobs(JobsClient.java:143)
+	at de.unijena.bioinf.webapi.rest.RestAPI.lambda$deleteJobs$0(RestAPI.java:358)
+	at de.unijena.bioinf.rest.ProxyManager.consumeClient(ProxyManager.java:437)
+	at de.unijena.bioinf.webapi.rest.RestAPI.deleteJobs(RestAPI.java:358)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobSubmitterJJob.lambda$cancelAllNonSubmitted$0(WebJobWatcher.java:243)
+	at de.unijena.bioinf.rest.NetUtils.lambda$tryAndWait$0(NetUtils.java:79)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:93)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:78)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobSubmitterJJob.cancelAllNonSubmitted(WebJobWatcher.java:243)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobSubmitterJJob.cleanup(WebJobWatcher.java:233)
+	at de.unijena.bioinf.jjobs.BasicJJob.call(BasicJJob.java:152)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+
+Please cite the following publications when using our tool:
+
+When using the SIRIUS Software please cite the following paper:
+
+Kai D?hrkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu and Sebastian B?cker
+SIRIUS4: a rapid tool for turning tandem mass spectra into metabolite structure information
+Nat Methods, 16, 2019.  https://doi.org/10.1038/s41592-019-0344-8
+
+
+Depending on the tools you have used please also cite:
+
+Wishart, David S and Tian, Siyang and Allen, Dana and Oler, Eponine and Peters, Harrison and Lui, Vicki W and Gautam, Vasuk and Djoumbou-Feunang, Yannick and Greiner, Russell and Metz, Thomas O
+BioTransformer 3.0?a web server for accurately predicting metabolic transformation products
+Nucleic Acids Res, 50, 2022.  https://doi.org/10.1093/nar/gkac313
+(Cite if you are using: Biotransformer for structure database generation)
+
+Xing, Shipei and Shen, Sam and Xu, Banghua and Li, Xiaoxiao and Huan, Tao
+BUDDY: molecular formula discovery via bottom-up MS/MS interrogation.
+Nat Methods, 2023.  https://doi.org/10.1038/s41592-023-01850-x
+(Cite if you are using: Bottom-up molecular formula generation)
+
+Kai D?hrkop, Louis-F?lix Nothias, Markus Fleischauer, Raphael Reher, Marcus Ludwig, Martin A. Hoffmann, Daniel Petras, William H. Gerwick, Juho Rousu, Pieter C. Dorrestein and Sebastian B?cker
+Systematic classification of unknown metabolites using high-resolution fragmentation mass spectra
+Nat Biotechnol, 39, 2021.  https://doi.org/10.1038/s41587-020-0740-8
+(Cite if you are using: CANOPUS)
+
+Yannick Djoumbou Feunang, Roman Eisner, Craig Knox, Leonid Chepelev, Janna Hastings, Gareth Owen, Eoin Fahy, Christoph Steinbeck, Shankar Subramanian, Evan Bolton, Russell Greiner, David S. Wishart
+ClassyFire: automated chemical classification with a comprehensive, computable taxonomy
+J Cheminf, 8, 2016.  https://doi.org/10.1186/s13321-016-0174-y
+(Cite if you are using: CANOPUS)
+
+Kim, Hyun Woo and Wang, Mingxun and Leber, Christopher A. and Nothias, Louis-F?lix and Reher, Raphael and Kang, Kyo Bin and van der Hooft, Justin J. J. and Dorrestein, Pieter C. and Gerwick, William H. and Cottrell, Garrison W.
+NPClassifier: A Deep Neural Network-Based Structural Classification Tool for Natural Products
+Journal of Natural Products, 84, 2021.  https://doi.org/10.1021/acs.jnatprod.1c00399
+(Cite if you are using: CANOPUS)
+
+Kai D?hrkop, Huibin Shen, Marvin Meusel, Juho Rousu and Sebastian B?cker
+Searching molecular structure databases with tandem mass spectra using CSI:FingerID
+Proc Natl Acad Sci U S A, 112, 2015.  https://doi.org/10.1073/pnas.1509788112
+(Cite if you are using: CSI:FingerID)
+
+Hoffmann, Martin A. and Nothias, Louis-F?lix and Ludwig, Marcus and Fleischauer, Markus and Gentry, Emily C. and Witting, Michael and Dorrestein, Pieter C. and D?hrkop, Kai and B?cker, Sebastian
+High-confidence structural annotation of metabolites absent from spectral libraries
+Nat Biotechnol, 40, 2022.  https://doi.org/10.1038/s41587-021-01045-9
+(Cite if you are using: CSI:FingerID, COSMIC)
+
+Sebastian B?cker and Kai D?hrkop
+Fragmentation trees reloaded
+J Cheminform, 8, 2016.  https://doi.org/10.1186/s13321-016-0116-8
+(Cite if you are using: Fragmentation Trees)
+
+Sebastian B?cker, Matthias Letzel, Zsuzsanna Lipt?k and Anton Pervukhin
+SIRIUS: Decomposing isotope patterns for metabolite identification
+Bioinformatics, 25, 2009.  https://doi.org/10.1093/bioinformatics/btn603
+(Cite if you are using: Isotope Pattern analysis)
+
+Stravs, Michael A. and D?hrkop, Kai and B?cker, Sebastian and Zamboni, Nicola
+MSNovelist: de novo structure generation from mass spectra
+Nat Methods, 19, 2022.  https://doi.org/10.1038/s41592-022-01486-3
+(Cite if you are using: MSNovelist)
+
+Ludwig, Marcus and Nothias, Louis-F?lix and D?hrkop, Kai and Koester, Irina and Fleischauer, Markus and Hoffmann, Martin A. and Petras, Daniel and Vargas, Fernando and Morsy, Mustafa and Aluwihare, Lihini and Dorrestein, Pieter C. and B?cker, Sebastian
+Database-independent molecular formula annotation using Gibbs sampling through ZODIAC
+Nat Mach Intell, 2, 2020.  https://doi.org/10.1038/s42256-020-00234-6
+(Cite if you are using: ZODIAC)
+
+
+=== shard_002 ===
+WARNING: While bind mounting '/bigdata:/bigdata': destination is already in the mount point list
+Aug 15, 2026 3:09:11 PM org.apache.commons.beanutils.FluentPropertyBeanIntrospector introspect
+INFO: Error when creating PropertyDescriptor for public final void org.apache.commons.configuration2.AbstractConfiguration.setProperty(java.lang.String,java.lang.Object)! Ignoring this property.
+INFO    15:09:11 - Sirius Workspace Successfully initialized at: /rhome/jstajich/.sirius-6.3
+INFO    15:09:11 - You run SIRIUS 6.3.12 on linux_amd64
+INFO    15:09:11 - You run SIRIUS in 'CLI' mode.
+INFO    15:09:11 - Sirius was compiled with the following ILP solvers: GLPK-v1.7.0 (included), Gurobi-v9.1.1, CPLEX-v12.7.1, COIN-OR-v2.10.12.1
+INFO    15:09:11 - Treebuilder priorities loaded from 'sirius.properties' are: [CLP, GUROBI, CPLEX]
+INFO    15:09:11 - CPU check done. 2 cores that handle 4 threads were found.
+INFO    15:09:11 - Job manager successful initialized with 3 CPU thread(s) and 3 IO thread(s).
+INFO    15:09:11 - Starting http Client with MaxPerRoute=3 / maxTotal=5 (CPU-Threads=3).
+INFO    15:09:13 - Custom databases loaded.
+INFO    15:09:13 - Web API initialized in 00:00:02.201. Started loading active subscription in background...
+FINE    15:09:13 - <0>[JJob-0] Running post processing
+FINE    15:09:13 - <0>[JJob-0] Running cleanup
+INFO    15:09:14 - Running with following arguments: [--cores, 4, --input, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_002.mgf, --output, /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/sirius_results/shard_002, formula, --ppm-max, 15, --ppm-max-ms2, 15, --candidates, 10, fingerprint, canopus, structures, write-summaries]
+INFO    15:09:14 - Shutting down JobManager
+INFO    15:09:14 - Awaiting termination of JobManager
+INFO    15:09:14 - JobManager is shut down
+INFO    15:09:14 - Adjusted JobManager CPU threads to '4' by command line.
+FINE    15:09:14 - <1>[InputExpanderJJob-1] Running post processing
+FINE    15:09:14 - <1>[InputExpanderJJob-1] Running cleanup
+INFO    15:09:14 - <2>[InputExpanderJJob-2] Expanding Input Files: '/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/sirius_annotation/shards/shard_002.mgf'...
+INFO    15:09:14 - <2>[InputExpanderJJob-2] ...Input Files successfully expanded!
+FINE    15:09:14 - <2>[InputExpanderJJob-2] Running post processing
+FINE    15:09:14 - <2>[InputExpanderJJob-2] Running cleanup
+WARNING 15:09:14 - Given project file 'shard_002' does not contain the `.sirius` file extension. Renamed file to 'shard_002.sirius'.
+INFO    15:09:14 - (Re)building index: [key]
+INFO    15:09:14 - (Re)building index: [type, charge]
+INFO    15:09:14 - (Re)building index: [ionPairId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId1]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId2]
+INFO    15:09:14 - (Re)building index: [type]
+INFO    15:09:14 - (Re)building index: [formulaId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, formulaRank]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [sourceTraceId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:09:14 - (Re)building index: [id]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:09:14 - (Re)building index: [runId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [id]
+INFO    15:09:14 - (Re)building index: [compoundId]
+INFO    15:09:14 - (Re)building index: [formulaId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [formulaId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [networkId]
+INFO    15:09:14 - (Re)building index: [alignedIsotopeFeatureId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [featureId]
+INFO    15:09:14 - (Re)building index: [scanId]
+INFO    15:09:14 - (Re)building index: [runId, scanTime]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, type]
+INFO    15:09:14 - (Re)building index: [parametersId]
+INFO    15:09:14 - (Re)building index: [name]
+INFO    15:09:14 - (Re)building index: [runId]
+INFO    15:09:14 - (Re)building index: [retentionTime.middle]
+INFO    15:09:14 - (Re)building index: [averageMass]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [compoundId]
+INFO    15:09:14 - (Re)building index: [traceRef.traceId]
+INFO    15:09:14 - (Re)building index: [tagId]
+INFO    15:09:14 - (Re)building index: [taggedObjectClass, tagName]
+INFO    15:09:14 - (Re)building index: [taggedObjectClass, taggedObjectId, tagName]
+INFO    15:09:14 - (Re)building index: [tagName]
+INFO    15:09:14 - (Re)building index: [inchikey]
+INFO    15:09:14 - (Re)building index: [formulaId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, formulaId, candidateInChiKey]
+INFO    15:09:14 - (Re)building index: [id]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, structureRank]
+INFO    15:09:14 - (Re)building index: [mergedTraceId]
+INFO    15:09:14 - (Re)building index: [name]
+INFO    15:09:14 - (Re)building index: [runId]
+INFO    15:09:14 - (Re)building index: [rt.middle]
+INFO    15:09:14 - (Re)building index: [name]
+INFO    15:09:14 - (Re)building index: [neutralMass]
+INFO    15:09:14 - (Re)building index: [compoundId]
+INFO    15:09:14 - (Re)building index: [scanId]
+INFO    15:09:14 - (Re)building index: [runId, scanTime]
+INFO    15:09:14 - (Re)building index: [precursorScanId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, searchResult.rank]
+INFO    15:09:14 - (Re)building index: [specMatchId]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId, searchResult.candidateInChiKey, searchResult.rank]
+INFO    15:09:14 - (Re)building index: [tagDefId]
+INFO    15:09:14 - (Re)building index: [tagType]
+INFO    15:09:14 - (Re)building index: [tagName]
+INFO    15:09:14 - (Re)building index: [groupName]
+INFO    15:09:14 - (Re)building index: [groupType]
+INFO    15:09:14 - (Re)building index: [id]
+INFO    15:09:14 - (Re)building index: [alignedFeatureId]
+INFO    15:09:14 - (Re)building index: [id]
+INFO    15:09:14 - Updating project type information...
+INFO    15:09:14 - Updating project type information done in 00:00:00.015.
+INFO    15:09:14 - Updating project source information...
+INFO    15:09:14 - Updating project source information done in 00:00:00.000.
+WARNING 15:09:14 - Compound 5690 ignored because of: Do not support multiple charges yet.
+WARNING 15:09:15 - Compound 19196 ignored because of: Do not support multiple charges yet.
+INFO    15:09:15 - Creating Toolchain InstanceBuffer of size 20
+INFO    15:09:17 - Loading CBC libs for detected architecture `linux-amd64` from prefix '/linux-x86-64/' with '11' jar and '11' path dependencies.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by cz.adamh.utils.NativeUtils in an unnamed module (file:/opt/sirius/lib/app/lib/native-utils-1.3.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+INFO    15:09:48 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+INFO    15:09:49 - Starting http Client with MaxPerRoute=2 / maxTotal=3 (CPU-Threads=4).
+WARNING 15:12:40 - <6734>[FingerprintPreprocessingJJob-6734 | SCAN=42371@791.5613m/z] Ignore fragmentation tree for C46H78O10 because it contains less than 2 fragments.
+WARNING 15:12:40 - <6734>[FingerprintPreprocessingJJob-6734 | SCAN=42371@791.5613m/z] No suitable fragmentation tree left.
+WARNING 15:14:26 - <21>[FingerprintSubToolJob-21 | <Awaiting Instance>] Required Job 'SiriusSubToolJob-20 | SCAN=27464 (876482681896820758)' finished with unexpected state 'CANCELED'.
+WARNING 15:14:26 - <22>[CanopusSubToolJob-22 | <Awaiting Instance>] Required Job 'FingerprintSubToolJob-21 | <Awaiting Instance>' finished with unexpected state 'CANCELED'.
+WARNING 15:14:26 - <23>[FingerblastSubToolJob-23 | <Awaiting Instance>] Required Job 'CanopusSubToolJob-22 | <Awaiting Instance>' finished with unexpected state 'CANCELED'.
+WARNING 15:14:26 - <21>[FingerprintSubToolJob-21 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'FingerprintSubToolJob-21 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+WARNING 15:14:26 - <22>[CanopusSubToolJob-22 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'CanopusSubToolJob-22 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+WARNING 15:14:26 - <23>[FingerblastSubToolJob-23 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'FingerblastSubToolJob-23 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+WARNING 15:14:26 - <20>[SiriusSubToolJob-20 | SCAN=27464 (876482681896820758)] ToolChain Job canceled due to: de.unijena.bioinf.jjobs.exceptions.TimeoutException: Timeout reached!
+INFO    15:15:01 - Objective and/or iteration limits were reached
+WARNING 15:15:01 - <39>[FingerprintSubToolJob-39 | <Awaiting Instance>] Required Job 'SiriusSubToolJob-38 | SCAN=47856 (876482682244948010)' finished with unexpected state 'CANCELED'.
+WARNING 15:15:01 - <40>[CanopusSubToolJob-40 | <Awaiting Instance>] Required Job 'FingerprintSubToolJob-39 | <Awaiting Instance>' finished with unexpected state 'CANCELED'.
+WARNING 15:15:01 - <41>[FingerblastSubToolJob-41 | <Awaiting Instance>] Required Job 'CanopusSubToolJob-40 | <Awaiting Instance>' finished with unexpected state 'CANCELED'.
+WARNING 15:15:01 - <38>[SiriusSubToolJob-38 | SCAN=47856 (876482682244948010)] ToolChain Job canceled due to: de.unijena.bioinf.jjobs.exceptions.TimeoutException: Timeout reached!
+WARNING 15:15:01 - <41>[FingerblastSubToolJob-41 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'FingerblastSubToolJob-41 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+WARNING 15:15:01 - <40>[CanopusSubToolJob-40 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'CanopusSubToolJob-40 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+WARNING 15:15:01 - <39>[FingerprintSubToolJob-39 | <Awaiting Instance>] ToolChain Job canceled due to: java.util.concurrent.CancellationException: Job 'FingerprintSubToolJob-39 | <Awaiting Instance>' canceled before submission to executor, Most likely because of a failing required Job.
+########################################
+## Computed 13 instances in 00:05:45.872(2.26 instances/minute).
+########################################
+INFO    15:15:01 - Workflow has been finished in 00:05:47.252
+INFO    15:15:01 - Executing Postprocessing...
+INFO    15:15:01 - Summaries written in: 00:00:00.088
+INFO    15:15:01 - Nitrite database has been closed successfully.
+INFO    15:15:01 - CLI shut down hook: SIRIUS is cleaning up threads and shuts down...
+WARNING 15:15:01 - <3731>[WebJobSubmitterJJob-3731] JobSubmitter thread was interrupted unexpectedly but state should be clean.  Try to recover!
+WARNING 15:15:01 - <3732>[WebJobWatcherJJob-3732] JobWatcher thread was interrupted unexpectedly. State should be clean. Try to recover!
+WARNING 15:15:01 - <3731>[WebJobSubmitterJJob-3731] =====================> Close Job Submitter!
+WARNING 15:15:01 - <3732>[WebJobWatcherJJob-3732] ====================> Close Job Watcher!
+INFO    15:15:01 - Try to delete leftover jobs on web server...
+java.io.InterruptedIOException
+	at okhttp3.internal.http2.Http2Stream.waitForIo$okhttp(Http2Stream.kt:716)
+	at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:156)
+	at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:101)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:114)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:98)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:101)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:85)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:74)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:126)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:208)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.executeWithResponse(AbstractClient.java:138)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:145)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:160)
+	at de.unijena.bioinf.ms.rest.client.AbstractClient.execute(AbstractClient.java:167)
+	at de.unijena.bioinf.ms.rest.client.jobs.JobsClient.deleteJobs(JobsClient.java:143)
+	at de.unijena.bioinf.webapi.rest.RestAPI.lambda$deleteJobs$0(RestAPI.java:358)
+	at de.unijena.bioinf.rest.ProxyManager.consumeClient(ProxyManager.java:437)
+	at de.unijena.bioinf.webapi.rest.RestAPI.deleteJobs(RestAPI.java:358)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.lambda$deleteAllWaiting$0(WebJobWatcher.java:375)
+	at de.unijena.bioinf.rest.NetUtils.lambda$tryAndWait$0(NetUtils.java:79)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:93)
+	at de.unijena.bioinf.rest.NetUtils.tryAndWait(NetUtils.java:78)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.deleteAllWaiting(WebJobWatcher.java:375)
+	at de.unijena.bioinf.webapi.rest.WebJobWatcher$WebJobWatcherJJob.cleanup(WebJobWatcher.java:388)
+	at de.unijena.bioinf.jjobs.BasicJJob.call(BasicJJob.java:152)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+
+Please cite the following publications when using our tool:
+
+When using the SIRIUS Software please cite the following paper:
+
+Kai D?hrkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu and Sebastian B?cker
+SIRIUS4: a rapid tool for turning tandem mass spectra into metabolite structure information
+Nat Methods, 16, 2019.  https://doi.org/10.1038/s41592-019-0344-8
+
+
+Depending on the tools you have used please also cite:
+
+Wishart, David S and Tian, Siyang and Allen, Dana and Oler, Eponine and Peters, Harrison and Lui, Vicki W and Gautam, Vasuk and Djoumbou-Feunang, Yannick and Greiner, Russell and Metz, Thomas O
+BioTransformer 3.0?a web server for accurately predicting metabolic transformation products
+Nucleic Acids Res, 50, 2022.  https://doi.org/10.1093/nar/gkac313
+(Cite if you are using: Biotransformer for structure database generation)
+
+Xing, Shipei and Shen, Sam and Xu, Banghua and Li, Xiaoxiao and Huan, Tao
+BUDDY: molecular formula discovery via bottom-up MS/MS interrogation.
+Nat Methods, 2023.  https://doi.org/10.1038/s41592-023-01850-x
+(Cite if you are using: Bottom-up molecular formula generation)
+
+Kai D?hrkop, Louis-F?lix Nothias, Markus Fleischauer, Raphael Reher, Marcus Ludwig, Martin A. Hoffmann, Daniel Petras, William H. Gerwick, Juho Rousu, Pieter C. Dorrestein and Sebastian B?cker
+Systematic classification of unknown metabolites using high-resolution fragmentation mass spectra
+Nat Biotechnol, 39, 2021.  https://doi.org/10.1038/s41587-020-0740-8
+(Cite if you are using: CANOPUS)
+
+Yannick Djoumbou Feunang, Roman Eisner, Craig Knox, Leonid Chepelev, Janna Hastings, Gareth Owen, Eoin Fahy, Christoph Steinbeck, Shankar Subramanian, Evan Bolton, Russell Greiner, David S. Wishart
+ClassyFire: automated chemical classification with a comprehensive, computable taxonomy
+J Cheminf, 8, 2016.  https://doi.org/10.1186/s13321-016-0174-y
+(Cite if you are using: CANOPUS)
+
+Kim, Hyun Woo and Wang, Mingxun and Leber, Christopher A. and Nothias, Louis-F?lix and Reher, Raphael and Kang, Kyo Bin and van der Hooft, Justin J. J. and Dorrestein, Pieter C. and Gerwick, William H. and Cottrell, Garrison W.
+NPClassifier: A Deep Neural Network-Based Structural Classification Tool for Natural Products
+Journal of Natural Products, 84, 2021.  https://doi.org/10.1021/acs.jnatprod.1c00399
+(Cite if you are using: CANOPUS)
+
+Kai D?hrkop, Huibin Shen, Marvin Meusel, Juho Rousu and Sebastian B?cker
+Searching molecular structure databases with tandem mass spectra using CSI:FingerID
+Proc Natl Acad Sci U S A, 112, 2015.  https://doi.org/10.1073/pnas.1509788112
+(Cite if you are using: CSI:FingerID)
+
+Hoffmann, Martin A. and Nothias, Louis-F?lix and Ludwig, Marcus and Fleischauer, Markus and Gentry, Emily C. and Witting, Michael and Dorrestein, Pieter C. and D?hrkop, Kai and B?cker, Sebastian
+High-confidence structural annotation of metabolites absent from spectral libraries
+Nat Biotechnol, 40, 2022.  https://doi.org/10.1038/s41587-021-01045-9
+(Cite if you are using: CSI:FingerID, COSMIC)
+
+Sebastian B?cker and Kai D?hrkop
+Fragmentation trees reloaded
+J Cheminform, 8, 2016.  https://doi.org/10.1186/s13321-016-0116-8
+(Cite if you are using: Fragmentation Trees)
+
+Sebastian B?cker, Matthias Letzel, Zsuzsanna Lipt?k and Anton Pervukhin
+SIRIUS: Decomposing isotope patterns for metabolite identification
+Bioinformatics, 25, 2009.  https://doi.org/10.1093/bioinformatics/btn603
+(Cite if you are using: Isotope Pattern analysis)
+
+Stravs, Michael A. and D?hrkop, Kai and B?cker, Sebastian and Zamboni, Nicola
+MSNovelist: de novo structure generation from mass spectra
+Nat Methods, 19, 2022.  https://doi.org/10.1038/s41592-022-01486-3
+(Cite if you are using: MSNovelist)
+
+Ludwig, Marcus and Nothias, Louis-F?lix and D?hrkop, Kai and Koester, Irina and Fleischauer, Markus and Hoffmann, Martin A. and Petras, Daniel and Vargas, Fernando and Morsy, Mustafa and Aluwihare, Lihini and Dorrestein, Pieter C. and B?cker, Sebastian
+Database-independent molecular formula annotation using Gibbs sampling through ZODIAC
+Nat Mach Intell, 2, 2020.  https://doi.org/10.1038/s42256-020-00234-6
+(Cite if you are using: ZODIAC)
+
+
+All 3 shards completed
