@@ -1,0 +1,39 @@
+YPD2 vs. control_late color-phenotype agreement
+==================================================
+YPD2 strains (usable L*/a*/b*): 316
+control_late strains (usable L*/a*/b*): 303
+Matched by normalized strain code: 298
+
+L*: Pearson r=0.9444 (p=4.61e-145), Spearman rho=0.9485 (p=7.34e-150), n=298
+a*: Pearson r=0.9693 (p=2.36e-182), Spearman rho=0.9638 (p=5.55e-172), n=298
+b*: Pearson r=0.9898 (p=1.50e-252), Spearman rho=0.9919 (p=2.85e-267), n=298
+C*: Pearson r=0.9672 (p=3.12e-178), Spearman rho=0.9642 (p=1.24e-172), n=298
+
+
+Largest |control_late - YPD2| for L*:
+  DBVPG_3853 (Rhodotorula dairenensis): YPD2=71.78  control_late=77.53  diff=5.76
+  DBVPG_3773 (Rhodotorula dairenensis): YPD2=71.17  control_late=73.31  diff=2.14
+  DBVPG_3442 (Rhodotorula mucilaginosa): YPD2=73.80  control_late=75.50  diff=1.69
+  DBVPG_4531 (Rhodotorula taiwanensis): YPD2=70.63  control_late=71.85  diff=1.22
+  DBVPG_4203 (Rhodotorula mucilaginosa): YPD2=74.51  control_late=75.61  diff=1.10
+
+Largest |control_late - YPD2| for a*:
+  TFCN_86A-8 (Rhodotorula sphaerocarpa): YPD2=12.80  control_late=6.89  diff=5.91
+  DBVPG_3853 (Rhodotorula dairenensis): YPD2=4.30  control_late=8.32  diff=4.02
+  DBVPG_3773 (Rhodotorula dairenensis): YPD2=1.99  control_late=5.26  diff=3.27
+  TFCN_48D-10 (Rhodotorula paludigena): YPD2=6.59  control_late=9.18  diff=2.59
+  DBVPG_3442 (Rhodotorula mucilaginosa): YPD2=9.95  control_late=8.56  diff=1.40
+
+Largest |control_late - YPD2| for b*:
+  DBVPG_3853 (Rhodotorula dairenensis): YPD2=5.22  control_late=6.74  diff=1.52
+  DBVPG_3442 (Rhodotorula mucilaginosa): YPD2=4.66  control_late=3.32  diff=1.34
+  DBVPG_3768 (Rhodotorula dairenensis): YPD2=8.00  control_late=6.77  diff=1.23
+  DBVPG_5229 (Rhodotorula mucilaginosa): YPD2=6.08  control_late=4.88  diff=1.20
+  DBVPG_4531 (Rhodotorula taiwanensis): YPD2=7.94  control_late=6.87  diff=1.07
+
+Largest |control_late - YPD2| for C*:
+  TFCN_86A-8 (Rhodotorula sphaerocarpa): YPD2=13.20  control_late=7.28  diff=5.93
+  DBVPG_3853 (Rhodotorula dairenensis): YPD2=6.76  control_late=10.71  diff=3.95
+  DBVPG_3773 (Rhodotorula dairenensis): YPD2=2.02  control_late=5.31  diff=3.29
+  TFCN_48D-10 (Rhodotorula paludigena): YPD2=7.98  control_late=10.24  diff=2.27
+  DBVPG_3442 (Rhodotorula mucilaginosa): YPD2=10.99  control_late=9.18  diff=1.82
