@@ -15,7 +15,16 @@ genome_stats_outdir: results/genome_stats
 stats_outdir: results/seqstats
 
 # this will allow building db/BFD.duckdb
-run_build_duckdb: true 
+run_build_duckdb: true
+
+# glob every published result off disk for the MERGE_* steps instead of
+# collecting off the live per-run channel -- with -resume, tools whose
+# RUN_* tasks straddle multiple sessions (pfam, targetp) can otherwise
+# lose data and their MERGE_* step silently never runs (see BUILD_DUCKDB
+# failure 2026-08-15: tables/pfam.parquet and tables/targetP.parquet were
+# never written even though all 276 genomes' raw outputs existed on disk).
+merge_all: true
+
 # ── Functional annotation tools ────────────────────────────────────────────────
 skip_merge: false
 
