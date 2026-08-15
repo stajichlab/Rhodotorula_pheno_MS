@@ -197,7 +197,7 @@ function render() {
   const f = currentFilters();
   let rows = DATA.filter(r => matches(r, f));
 
-  document.querySelectorAll("#headRow th").forEach(th => {
+  document.querySelectorAll("#headRow th[data-key]").forEach(th => {
     th.classList.toggle("sorted", th.dataset.key === sortKey);
     const arrow = th.querySelector(".arrow");
     arrow.textContent = th.dataset.key === sortKey ? (sortDir === 1 ? "▲" : "▼") : "";
