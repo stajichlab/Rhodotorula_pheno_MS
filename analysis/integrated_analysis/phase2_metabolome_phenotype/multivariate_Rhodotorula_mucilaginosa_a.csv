@@ -1,0 +1,3 @@
+species,fraction,predictor,n_strains,n_features,alpha,observed_q2,null_q2_mean,null_q2_sd,empirical_p,n_nonzero_coefficients,top_features
+Rhodotorula mucilaginosa,cell,a*,206,9437,0.6500372337956335,-0.4911053287902809,-0.5258832960420269,0.043469756895751846,0.25742574257425743,2,asid_3121:-0.03209;asid_51826:-0.02847
+Rhodotorula mucilaginosa,supernatant,a*,206,10255,0.6500372337956335,-0.6262031880179213,-0.577783863216549,0.04316745947078587,0.8811881188118812,1,asid_4270:-0.1019

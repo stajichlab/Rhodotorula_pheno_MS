@@ -1,0 +1,62 @@
+# Niche-Stratified Photoprotection: Does Color Track Environment, Not Metabolome or Phylogeny?
+
+## Persona
+**Ecologist** — I see five null tests that all implicitly assume strains are ecologically exchangeable draws from a single population, when the metadata to test that assumption (Origin, Environment) is sitting unused in the strain table.
+
+## Motivation
+Carotenoid pigmentation in fungi is a textbook facultative stress response, not a fixed taxonomic trait — it's classically induced by UV exposure, desiccation, and oxidative stress, and its expression can vary strain-to-strain based on the microhabitat the organism actually lives in. An ecologist's first move when a within-species, phylogenetically-controlled color-metabolome correlation comes up null is to ask "null with respect to what predictor?" Five tests have modeled phylogenetic non-independence but none has modeled the ecological driver the pigment is hypothesized to respond to. If color is an adaptation to niche (sun-exposed bark vs. buried soil vs. marine tidalflat) rather than a strain-intrinsic trait correlated with metabolome abundance in general, then testing color-vs-metabolome without conditioning on environment is like testing tan depth against diet without accounting for how much sun someone gets — you'd expect a null result even if the underlying photoprotection biology is completely real.
+
+## Connection to Existing Data
+- Strain metadata already has `Origin` (China, Italy, America, etc.) and `Environment` (soil, marsh_tidalflat, plant, etc.) fields "for many strains" that per the task brief have NOT been used as a covariate or stratifying variable in any of the 5 analyses run so far.
+- Test #2 found that within R. mucilaginosa (n=206, the dominant 68-70% of the panel), color spans nearly the full panel-wide range — this is exactly the kind of high intraspecific variance an ecologist expects when a trait is environmentally plastic rather than fixed by lineage. That's a positive finding hiding inside what was reported as a "null" (null for metabolome correlation, but a real and unexplained source of variance).
+- All 5 statistical tests only ever regressed/correlated color against metabolome features (or ran ANOVA on metabolome pattern groups) — none tested color against Environment/Origin category directly.
+- The unexplained colony-area-vs-cell-fraction-metabolite confound (finding #6, real but uninvestigated) is itself consistent with a growth-condition/niche-adaptation story worth flagging as a secondary thread, since colony area and pigment investment can trade off under stress physiology.
+
+## Approach
+1. Pull `Origin` and `Environment` fields for all strains with CIELAB data; quantify coverage (what % of the ~300-strain panel and of the n=206 R. mucilaginosa subset actually has non-missing Environment annotation) — this determines feasibility before anything else.
+2. Collapse/recode `Environment` into an ecologically meaningful ordinal or categorical UV/desiccation-exposure proxy (e.g., "exposed" [plant surface/bark/air] vs "buried/moist" [soil/marsh_tidalflat] vs "aquatic/marine") using a defensible a priori scheme, not post hoc bins chosen to fit the result.
+3. Test color (L*, a*/C*) against this environment category directly — first panel-wide with species as a random effect / block, then within R. mucilaginosa alone using the existing strain-level phylogenetic blocking already built for test #2, so this reuses existing infrastructure (pruned tree, permutation scaffold) rather than requiring new tooling.
+4. If a color-environment relationship emerges, re-run the color-vs-metabolome correlation (test #1/#2 design) *within* environment strata or with environment as a covariate — the hypothesis is that a real metabolome signal is being averaged away across ecologically heterogeneous strains lumped together.
+5. Cross-tabulate species identity against Environment/Origin to check whether the species imbalance itself is an ecological sampling artifact (e.g., is R. mucilaginosa overrepresented because it's a generalist recovered from many environments, while singleton species are environment-specialists sampled once from their one niche?) — this reframes "n=1-17 for most species" as ecological signal (niche breadth) rather than pure statistical nuisance.
+
+## Expected Insights
+Either (a) a real color~environment association surfaces — direct support for the photoprotectant/desiccation hypothesis and a concrete explanation for why color didn't track metabolome abundance (wrong predictor was tested), or (b) no association, which is itself informative and argues pigmentation variation in this panel is more consistent with neutral/phylogenetic drift or lab-culture artifact than environmental adaptation — a genuine falsification of the classic hypothesis worth stating plainly. The species-imbalance cross-tab could independently reveal whether R. mucilaginosa's dominance reflects generalist niche breadth (ecologically interesting) versus isolation/sampling bias (methodological caveat for every panel-wide test run so far).
+
+## Feasibility
+- Effort: Low
+- Data ready: Mostly (Environment/Origin fields already exist in strain metadata per task description; main unknown is completeness/coverage, step 1 resolves this fast)
+- Methods available: Standard tools (reuses existing PGLS/permutation-blocking scaffold from `analysis/YPD/color_shape_growth/` and the mucilaginosa phylogenetic block permutation already built for test #2)
+- Key risk: Environment/Origin annotations may be sparse, inconsistently categorized (free-text with many near-duplicate labels), or geographically confounded with collection campaign rather than true microhabitat, which would require careful, conservative recoding before any test is trustworthy.
+
+---
+
+# Generalist vs. Specialist Carotenoid Investment: Species-Level Niche Breadth as the Real Predictor
+
+## Persona
+**Ecologist** — Community ecology teaches that abundance in a sample is rarely uniform across niches, and a taxon making up 70% of a community sample is usually the generalist with the widest niche breadth, not a random draw — that's the frame missing from every analysis treating "168 R. mucilaginosa vs 17 singleton species" as an imbalance to correct for rather than describe.
+
+## Motivation
+An ecologist looking at a strain panel with one species at ~70% abundance and 16-17 species each at n=1-17 immediately thinks "abundance distribution," not "sample size problem." In community ecology this shape (a few dominant generalists, a long tail of rare specialists) is the signature of niche breadth variation: generalists that tolerate a wide range of conditions get isolated repeatedly across many collection efforts/environments, while specialists are only found in their narrow required niche and hence show up once or twice. If that's what's happening here, then R. mucilaginosa's dominance isn't a nuisance for statistical power — it's a testable ecological prediction: R. mucilaginosa should have (i) the widest recorded range of Origin/Environment categories in the metadata, and (ii) correspondingly higher within-species phenotypic (color) and possibly metabolomic variance than narrow-niche singleton species, because generalists maintain more environmentally-plastic trait ranges to cope with heterogeneous habitats. This reframes the panel's central methodological headache as itself the first hypothesis worth testing.
+
+## Connection to Existing Data
+- Explicit panel structure given: R. mucilaginosa = 206-216 of ~300-310 strains (68-70%); other 16-17 species have n=1-17 each — a classic long-tailed abundance distribution never itself analyzed as data.
+- Test #2 already shows R. mucilaginosa spans nearly the panel-wide full color range on its own — directly consistent with (but not yet framed as) a generalist/wide-niche-breadth signature.
+- BFD genome database (276-278 strains) has a strain-level phylogenomic tree already built — enables testing whether niche breadth (number of distinct Environment/Origin categories per species) correlates with phylogenetic branch length/diversification pattern, i.e., whether generalist lineages are also older or more diversified.
+- No genome<->color association has been attempted yet — an explicit gap this idea would be the first to fill, using niche breadth as the linking variable instead of testing genome against color directly.
+- The metabolome dataset (594 samples, cell pellet + supernatant) could support a secondary comparison of within-species metabolomic diversity (not just mean level, which is what all 5 null tests measured) between R. mucilaginosa and the better-sampled minor species, since community ecology also predicts generalists carry higher functional/chemical trait variance, not just wider trait means.
+
+## Approach
+1. Build a per-species "niche breadth index" from Origin + Environment metadata: count of distinct Environment categories (and/or Origin countries/regions) recorded per species, normalized somehow for sampling effort (e.g., rarefaction-style correction, since a species sampled 206 times will trivially show more categories than one sampled twice) — this normalization step is the crux and must be done carefully to avoid circularity.
+2. Test whether niche breadth index correlates with species abundance in the panel (n strains per species) — establishing/refuting the core "dominant species = generalist" premise before building anything on top of it.
+3. Test whether niche breadth index correlates with within-species color variance (using species where n>=5, likely limited to R. mucilaginosa plus maybe 2-3 others) — is the generalist's color range genuinely wider than expected under a null resampling model, or does it just look wider because it has more strains sampled (same rarefaction issue as step 1)?
+4. Layer species identity + niche breadth onto the existing BFD phylogenomic tree as a trait to check for phylogenetic signal (Blomberg's K / Pagel's lambda) — do generalist lineages cluster, suggesting niche breadth itself is a heritable/lineage-level trait, or is it scattered, suggesting ecological opportunism independent of ancestry?
+5. If a genuine (rarefaction-corrected) niche-breadth-to-color-variance link holds, propose it as the explanation for why panel-wide and within-species color~metabolome tests keep coming up null: color variance in generalists may be driven by facultative environmental response rather than any fixed metabolomic/genomic program, meaning a fundamentally different study design (paired environmental-manipulation experiments, not observational strain correlation) is needed to detect it.
+
+## Expected Insights
+A quantitative answer to whether the panel's species imbalance is ecologically meaningful (dominant species = broad niche generalist, consistent with r-selected opportunist yeast ecology) or an artifact of sampling/isolation effort with no biological signal. If real, this would be a novel, publishable community-ecology framing for a metabolomics-heavy project, and would directly explain the string of null color~metabolome results as a design mismatch (testing a fixed-trait model against a facultative-trait biology) rather than a true absence of biology. If null, it still clears an important methodological question hanging over every panel-wide test run so far: whether species abundance is safe to ignore as "just" a statistical nuisance.
+
+## Feasibility
+- Effort: High
+- Data ready: Needs preprocessing (Environment/Origin coverage and category harmonization across all species, not just R. mucilaginosa; rarefaction-style correction for sampling effort is a nontrivial custom step, not off-the-shelf)
+- Methods available: Needs custom implementation (rarefaction-corrected niche breadth index is bespoke; phylogenetic signal tests like Blomberg's K are standard once the tree/trait table are assembled, reusing the existing BFD phylogenomic tree)
+- Key risk: Confounding between sampling effort and apparent niche breadth is severe and easy to get wrong — a species sampled 206 times will almost always show more distinct Environment categories than one sampled twice, purely by chance, so the entire idea lives or dies on a defensible resampling/rarefaction correction; also Environment/Origin metadata completeness for the 16-17 minor species (often n=1-17) may be too sparse to compute a meaningful per-species niche breadth at all.

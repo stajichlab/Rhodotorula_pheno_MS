@@ -1,0 +1,6 @@
+"edge_index","posterior_pp","candidate_clade_tips","candidate_clade_n_species","candidate_clade_mean_a","nearest_noncandidate_sister","sister_a","patristic_distance","species_underscore_note"
+29,0.176823176823177,"Rhodotorula_sphaerocarpa;Rhodotorula_taiwanensis",2,11.7482455976662,"Rhodotorula_sp._clade_XI",7.5841081242453,0.5665662595,"species names use underscores (Newick round-trip); convert back to spaces for display"
+23,0.176323676323676,"Rhodotorula_glutinis",1,5.80656836978941,"Rhodotorula_graminis",6.72132206039138,0.231521562,"species names use underscores (Newick round-trip); convert back to spaces for display"
+28,0.147352647352647,"Pseudomicrostroma_phylloplanum",1,10.8977016209349,"Rhodotorula_toruloides",8.0474178112134,1.14000927,"species names use underscores (Newick round-trip); convert back to spaces for display"
+32,0.142357642357642,"Rhodotorula_mucilaginosa",1,10.2573440681184,"Rhodotorula_pacifica",10.5580956497818,0.042915693,"species names use underscores (Newick round-trip); convert back to spaces for display"
+22,0.104395604395604,"Rhodotorula_glutinis;Rhodotorula_sp._clade_I",2,7.91025212690655,"Rhodotorula_graminis",6.72132206039138,0.2606334065,"species names use underscores (Newick round-trip); convert back to spaces for display"

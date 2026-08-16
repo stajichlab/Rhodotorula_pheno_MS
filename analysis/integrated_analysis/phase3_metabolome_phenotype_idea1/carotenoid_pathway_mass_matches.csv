@@ -1,0 +1,32 @@
+compound,category,adduct,target_mz,row_id,observed_mz,ppm_error,rt_min,has_ms2,is_isf,is_default_adduct,total_scans,dedup_group_id,is_group_representative,sirius_npc_class,sirius_structure_name
+dihydroactinidiolide,apocarotenoid,[M+Na]+,203.1042504546,25097,203.1065,11.075816458711468,5.037,True,True,False,9,asid_19887,False,,
+dihydroactinidiolide,apocarotenoid,[M+Na]+,203.1042504546,26305,203.1063,10.091100483743011,5.199,True,False,True,7,asid_26305,True,,
+beta-ionone,apocarotenoid,[M+Na]+,215.1406359601,7009,215.1388,-8.533767188224113,0.536582,True,True,True,66,asid_2721,True,,
+beta-ionone,apocarotenoid,[M+Na]+,215.1406359601,23027,215.1386,-9.463391659742971,8.976,True,False,True,7,asid_23027,True,,
+beta-ionone,apocarotenoid,[M+Na]+,215.1406359601,27889,215.1387,-8.998579423983543,0.83266,True,False,True,37,asid_27889,True,,
+ergosterol,sterol_pathway,[M+H-H2O]+,379.3359277917,846,379.3343,-4.291161423803597,5.112,True,True,True,71,asid_31011,True,Aminoacids,Palmitamidopropylamine oxide
+ergosterol,sterol_pathway,[M+H-H2O]+,379.3359277917,30150,379.3346,-3.500305672847374,6.476319,True,False,True,10,asid_30150,True,,
+ergosterol,sterol_pathway,[M+H-H2O]+,379.3359277917,51263,379.3349,-2.709449922041,6.289517,True,False,True,16,asid_51263,True,,
+ergosterol,sterol_pathway,[M+H]+,397.3464924776,35030,397.3411,-13.5712223515596,4.782,True,False,True,6,asid_35030,True,N-acyl amines,(2S)-5-amino-2-(octadec-9-enoylamino)pentanoic acid
+squalene,sterol_pathway,[M+H]+,411.39852804689997,10579,411.3937,-11.735693180201872,5.742,True,False,True,10,asid_10579,True,N-acyl amines,Stearamidopropyl morpholine
+lanosterol,sterol_pathway,[M+H]+,427.39344266899997,18110,427.3878,-13.202516549393689,5.149,True,False,True,7,asid_18110,True,,
+lanosterol,sterol_pathway,[M+Na]+,449.37538691709995,22650,449.3819,14.493635142571105,5.595,True,False,False,6,asid_13695,False,,
+zeta-carotene,carotenoid_pathway,[M+H-H2O]+,523.46621368,30947,523.4705,8.18834126824064,7.562667,True,False,True,14,asid_30947,True,,
+phytoene,carotenoid_pathway,[M+H]+,545.5080784935,35469,545.499,-16.64227141239324,7.278,True,False,True,12,asid_35469,True,,
+canthaxanthin,additional_carotenoid,[M+H-H2O]+,547.393442669,3297,547.4015,14.71945107845208,5.701568,True,False,True,65,asid_1021,False,,
+torularhodin,carotenoid_pathway,[M+H-H2O]+,547.393442669,3297,547.4015,14.71945107845208,5.701568,True,False,True,65,asid_1021,False,,
+torulene,carotenoid_pathway,[M+Na]+,557.4117724226,16228,557.4111,-1.2063301015267536,5.570708,True,False,False,9,asid_14148,True,,
+phytofluene,carotenoid_pathway,[M+NH4]+,560.5189775306,1735,560.5184,-1.0303497705940752,5.592,True,False,False,220,asid_462,True,,
+phytoene,carotenoid_pathway,[M+NH4]+,562.5346275943999,44251,562.5248,-17.470203464488126,5.598542,True,False,False,13,asid_462,False,,
+zeta-carotene,carotenoid_pathway,[M+Na]+,563.4587226140001,4076,563.4625,6.703926744423364,6.971823,True,False,True,19,asid_4076,True,,
+zeta-carotene,carotenoid_pathway,[M+Na]+,563.4587226140001,10220,563.4623,6.348976165218635,7.171621,True,False,True,20,asid_10220,True,,
+torularhodin,carotenoid_pathway,[M+H]+,565.4040073549,21315,565.4054,2.4630973283259445,5.704949,True,False,True,6,asid_21315,True,Polyamines,"1-N,1-N'-bis[(1R)-2-hydroxy-1-phenyl-2-propylpentyl]cyclopentane-1,1-dicarboxamide"
+torularhodin,carotenoid_pathway,[M+H]+,565.4040073549,26444,565.3975,-11.509212554845508,6.364676,True,False,True,11,asid_12486,False,Open-chain polyketides,"[(3S,5S,8R,10S,13S,14S,16S,17R)-17-acetyloxy-10,13-dimethyl-2,16-di(piperidin-1-yl)-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1H-cyclopenta[a]phenanthren-3-yl] acetate"
+canthaxanthin,additional_carotenoid,[M+H]+,565.4040073549,21315,565.4054,2.4630973283259445,5.704949,True,False,True,6,asid_21315,True,Polyamines,"1-N,1-N'-bis[(1R)-2-hydroxy-1-phenyl-2-propylpentyl]cyclopentane-1,1-dicarboxamide"
+canthaxanthin,additional_carotenoid,[M+H]+,565.4040073549,26444,565.3975,-11.509212554845508,6.364676,True,False,True,11,asid_12486,False,Open-chain polyketides,"[(3S,5S,8R,10S,13S,14S,16S,17R)-17-acetyloxy-10,13-dimethyl-2,16-di(piperidin-1-yl)-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1H-cyclopenta[a]phenanthren-3-yl] acetate"
+phytofluene,carotenoid_pathway,[M+Na]+,565.4743726778,15654,565.4707,-6.49486161976974,5.046,True,False,True,8,asid_15654,True,,
+echinenone,additional_carotenoid,[M+NH4]+,568.4512918975,2371,568.4551,6.699083200737918,5.113839,True,False,False,28,asid_2371,True,,
+astaxanthin,additional_carotenoid,[M+H-H2O]+,579.3832719132,1699,579.3912,13.683665346131423,5.409,True,False,True,13,asid_604,False,,
+astaxanthin,additional_carotenoid,[M+H-H2O]+,579.3832719132,2235,579.3909,13.165873385987767,5.561,True,False,False,19,asid_274,False,,
+astaxanthin,additional_carotenoid,[M+H]+,597.3938365991,9384,597.3953,2.4496417778767063,2.268312,True,False,True,37,asid_9384,True,,
+astaxanthin,additional_carotenoid,[M+Na]+,619.3757808472001,9251,619.3693,-10.463514074216008,5.082,True,False,True,20,asid_9251,True,,
