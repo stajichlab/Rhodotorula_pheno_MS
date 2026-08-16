@@ -1,0 +1,48 @@
+Phenotype-source correlation summary (color: L*/a*/b*/C*, colony size: area)
+==============================================================================
+=== Timepoint progression: do the 3 control-media windows agree with each other? ===
+
+control 70-80h vs control 80-90h (n=305 matched strains):
+  L*: Pearson r=0.9903  Spearman rho=0.9885  n=305
+  a*: Pearson r=0.9968  Spearman rho=0.9957  n=305
+  b*: Pearson r=0.9917  Spearman rho=0.9907  n=305
+  C*: Pearson r=0.9954  Spearman rho=0.9939  n=305
+  area: Pearson r=0.9961  Spearman rho=0.9969  n=305
+
+control 80-90h vs control 90-110h (n=305 matched strains):
+  L*: Pearson r=0.9823  Spearman rho=0.9811  n=305
+  a*: Pearson r=0.9816  Spearman rho=0.9806  n=305
+  b*: Pearson r=0.9912  Spearman rho=0.9895  n=305
+  C*: Pearson r=0.9788  Spearman rho=0.9823  n=305
+  area: Pearson r=0.9852  Spearman rho=0.9931  n=305
+
+control 70-80h vs control 90-110h (n=305 matched strains):
+  L*: Pearson r=0.9675  Spearman rho=0.9639  n=305
+  a*: Pearson r=0.9768  Spearman rho=0.9738  n=305
+  b*: Pearson r=0.9794  Spearman rho=0.9772  n=305
+  C*: Pearson r=0.9713  Spearman rho=0.9735  n=305
+  area: Pearson r=0.9751  Spearman rho=0.9839  n=305
+
+
+=== YPD2 agreement: does each control-media window agree with the original YPD2 table? ===
+
+YPD2 vs control 70-80h (n=298 matched strains):
+  L*: Pearson r=0.9105  Spearman rho=0.9170  n=298
+  a*: Pearson r=0.9550  Spearman rho=0.9523  n=298
+  b*: Pearson r=0.9733  Spearman rho=0.9728  n=298
+  C*: Pearson r=0.9474  Spearman rho=0.9517  n=298
+  area: Pearson r=0.9086  Spearman rho=0.9175  n=298
+
+YPD2 vs control 80-90h (n=298 matched strains):
+  L*: Pearson r=0.9283  Spearman rho=0.9366  n=298
+  a*: Pearson r=0.9627  Spearman rho=0.9642  n=298
+  b*: Pearson r=0.9844  Spearman rho=0.9850  n=298
+  C*: Pearson r=0.9585  Spearman rho=0.9646  n=298
+  area: Pearson r=0.9268  Spearman rho=0.9340  n=298
+
+YPD2 vs control 90-110h (n=298 matched strains):
+  L*: Pearson r=0.9444  Spearman rho=0.9485  n=298
+  a*: Pearson r=0.9693  Spearman rho=0.9638  n=298
+  b*: Pearson r=0.9898  Spearman rho=0.9919  n=298
+  C*: Pearson r=0.9672  Spearman rho=0.9642  n=298
+  area: Pearson r=0.9516  Spearman rho=0.9498  n=298

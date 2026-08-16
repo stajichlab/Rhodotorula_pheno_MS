@@ -10,7 +10,7 @@ suppressMessages({
 })
 
 repo <- "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS"
-treefile <- file.path(repo, "BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile")
+treefile <- file.path(repo, "BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile")
 master_csv <- file.path(repo, "analysis/YPD/color_shape_growth/outputs/ypd_aa_master_table.csv")
 out_csv <- file.path(repo, "analysis/YPD/color_shape_growth/outputs/pgls_correlation_results.csv")
 pruned_tree_out <- file.path(repo, "analysis/YPD/color_shape_growth/outputs/pruned_tree_146strains.nwk")
