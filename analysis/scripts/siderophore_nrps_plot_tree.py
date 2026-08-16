@@ -22,6 +22,7 @@ OUT_DIR = REPO / "analysis" / "integrated_analysis" / "phase_siderophore" / "out
 GENE_TREE = OUT_DIR / "RA_NRPS_candidates.tree.nwk"
 STRAIN_SUMMARY = OUT_DIR / "RA_NRPS_strain_summary.csv"
 REF_NAME = "F2DD6D01_006956-T1"
+OUTGROUP_TIP = "DBVPG6740_002504-T1"
 
 SPECIES_COLORS = {
     "Rhodotorula mucilaginosa": "#1f77b4", "Rhodotorula paludigena": "#ff7f0e",
@@ -53,6 +54,11 @@ def main():
     protein_to_color[REF_NAME] = REF_COLOR
 
     tree = Phylo.read(str(GENE_TREE), "newick")
+
+    outgroup = tree.common_ancestor([c for c in tree.get_terminals()
+                                     if c.name == OUTGROUP_TIP])
+    if tree.root != outgroup:
+        tree.root_with_outgroup(outgroup)
     tree.ladderize()
 
     label_to_color = {}
