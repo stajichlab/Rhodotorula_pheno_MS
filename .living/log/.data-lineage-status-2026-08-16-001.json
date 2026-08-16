@@ -1,0 +1,9 @@
+{
+  "session_id": "2026-08-16-001",
+  "exit_code": 0,
+  "wall_seconds": 0,
+  "events_file_size": 3416,
+  "output_path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/.living/log/data-lineage/2026-08-16-001.json",
+  "log_tail": "extract_data_lineage: wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/.living/log/data-lineage/2026-08-16-001.json (2 actions, 1 inputs, 0 outputs, 0 warnings)\n",
+  "dispatched_at": "2026-08-16T14:58:26.777377Z"
+}

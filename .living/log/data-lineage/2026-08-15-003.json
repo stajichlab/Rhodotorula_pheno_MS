@@ -1,0 +1,52 @@
+{
+  "session_id": "2026-08-15-003",
+  "repo_root": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS",
+  "git_sha": "683a4a1280d98c23974df2fec7b14b123a3395d3",
+  "started_at": "2026-08-16T03:44:33Z",
+  "ended_at": "2026-08-16T03:44:33Z",
+  "n_actions": 1,
+  "agents_seen": [
+    "main"
+  ],
+  "actions": [
+    {
+      "ts": "2026-08-16T03:44:33Z",
+      "agent_id": null,
+      "agent_type": null,
+      "bash_cmd": "cd /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS\npython3 -c \"\nimport pandas as pd\ndf = pd.read_csv('analysis/integrated_analysis/phase2_metabolome_phenotype/anova_Rhodotorula_mucilaginosa_color.csv')\nfor frac in ['cell','supernatant']:\n    sub = df[df.fraction==frac]\n    print(frac, 'top:', sub.sort_values('empirical_p').head(3)[['dedup_group_id','kruskal_H','empirical_p']].to_string(index=False))\n\"",
+      "bash_exit": null,
+      "bash_wall_s": null,
+      "script": null,
+      "script_sha256": "0d97d5764ff8fba61c184f401172727b2584b645ba7f2f448ba7d3eecdbcea9f",
+      "script_source": "\nimport pandas as pd\ndf = pd.read_csv('analysis/integrated_analysis/phase2_metabolome_phenotype/anova_Rhodotorula_mucilaginosa_color.csv')\nfor frac in ['cell','supernatant']:\n    sub = df[df.fraction==frac]\n    print(frac, 'top:', sub.sort_values('empirical_p').head(3)[['dedup_group_id','kruskal_H','empirical_p']].to_string(index=False))\n",
+      "git_sha": "683a4a1280d98c23974df2fec7b14b123a3395d3",
+      "inputs": [
+        {
+          "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/integrated_analysis/phase2_metabolome_phenotype/anova_Rhodotorula_mucilaginosa_color.csv",
+          "size_bytes": 2274472,
+          "sha256": "b842b647a1281e284115e61b73a35a1a41b3c471861539e44406009b406eef79",
+          "n_rows": 19692
+        }
+      ],
+      "outputs": [],
+      "filters_detected": [
+        "df[df.fraction==frac]"
+      ],
+      "seeds_detected": []
+    }
+  ],
+  "summary": {
+    "unique_inputs": [
+      {
+        "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/integrated_analysis/phase2_metabolome_phenotype/anova_Rhodotorula_mucilaginosa_color.csv",
+        "sha256": "b842b647a1281e284115e61b73a35a1a41b3c471861539e44406009b406eef79"
+      }
+    ],
+    "unique_outputs": [],
+    "total_wall_seconds": 0,
+    "scripts_executed": [
+      "(inline 0d97d5764ff8)"
+    ]
+  },
+  "extraction_warnings": []
+}

@@ -1,0 +1,9 @@
+{
+  "session_id": "f36e56ec-00e2-461b-ae67-2b2b4288390f",
+  "exit_code": 0,
+  "wall_seconds": 0,
+  "events_file_size": 6218,
+  "output_path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/.living/log/data-lineage/f36e56ec-00e2-461b-ae67-2b2b4288390f.json",
+  "log_tail": "extract_data_lineage: wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/.living/log/data-lineage/f36e56ec-00e2-461b-ae67-2b2b4288390f.json (2 actions, 4 inputs, 0 outputs, 0 warnings)\n",
+  "dispatched_at": "2026-08-16T02:02:55.531939Z"
+}

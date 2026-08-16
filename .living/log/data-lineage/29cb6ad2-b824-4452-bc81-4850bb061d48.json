@@ -1,0 +1,85 @@
+{
+  "session_id": "29cb6ad2-b824-4452-bc81-4850bb061d48",
+  "repo_root": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS",
+  "git_sha": "ae5ff3144af10c7d17f5fe533923efc09042f3db",
+  "started_at": "2026-08-16T15:49:57Z",
+  "ended_at": "2026-08-16T15:50:18Z",
+  "n_actions": 2,
+  "agents_seen": [
+    "main"
+  ],
+  "actions": [
+    {
+      "ts": "2026-08-16T15:49:57Z",
+      "agent_id": null,
+      "agent_type": null,
+      "bash_cmd": "cd /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS\npython3 -c \"\nimport pandas as pd\ndf = pd.read_csv('analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv')\nprint(df.columns.tolist())\n\"",
+      "bash_exit": null,
+      "bash_wall_s": null,
+      "script": null,
+      "script_sha256": "fed98c6604a4e382929c16cc95600f68a6f380ecb52586fc91c51889d4e82ed8",
+      "script_source": "\nimport pandas as pd\ndf = pd.read_csv('analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv')\nprint(df.columns.tolist())\n",
+      "git_sha": "ae5ff3144af10c7d17f5fe533923efc09042f3db",
+      "inputs": [
+        {
+          "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv",
+          "size_bytes": 67330,
+          "sha256": "c32b251fd516a23a4d4d578c1f0586bf7045d5743c7df932a1d87ea5350c4543",
+          "n_rows": 303
+        }
+      ],
+      "outputs": [],
+      "filters_detected": [],
+      "seeds_detected": []
+    },
+    {
+      "ts": "2026-08-16T15:50:18Z",
+      "agent_id": null,
+      "agent_type": null,
+      "bash_cmd": "cd /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS\npython3 -c \"\nimport pandas as pd\npheno = pd.read_csv('analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv')\nmeta = pd.read_csv('analysis/linked_data/sample_metadata.csv.gz')\nms_strains = set(meta['canonical_strain'])\npheno_ms = pheno[pheno['strain_id'].isin(ms_strains)]\ncounts = pheno_ms.groupby('species').size().sort_values(ascending=False)\nprint(counts.to_string())\n\"",
+      "bash_exit": null,
+      "bash_wall_s": null,
+      "script": null,
+      "script_sha256": "a31c405e50f5825601742cb20b4cc74cc2a13fa9f931a186144c957293897fd1",
+      "script_source": "\nimport pandas as pd\npheno = pd.read_csv('analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv')\nmeta = pd.read_csv('analysis/linked_data/sample_metadata.csv.gz')\nms_strains = set(meta['canonical_strain'])\npheno_ms = pheno[pheno['strain_id'].isin(ms_strains)]\ncounts = pheno_ms.groupby('species').size().sort_values(ascending=False)\nprint(counts.to_string())\n",
+      "git_sha": "ae5ff3144af10c7d17f5fe533923efc09042f3db",
+      "inputs": [
+        {
+          "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv",
+          "size_bytes": 67330,
+          "sha256": "c32b251fd516a23a4d4d578c1f0586bf7045d5743c7df932a1d87ea5350c4543",
+          "n_rows": 303
+        },
+        {
+          "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/linked_data/sample_metadata.csv.gz",
+          "size_bytes": 58384,
+          "sha256": "3d6f5040c3f22fdeeb80640c92045d0911e3c4e9c967f7df40fde7f74ebc0fd1"
+        }
+      ],
+      "outputs": [],
+      "filters_detected": [
+        "pheno[pheno['strain_id'].isin(ms_strains)]"
+      ],
+      "seeds_detected": []
+    }
+  ],
+  "summary": {
+    "unique_inputs": [
+      {
+        "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/integrated_analysis/phase1_phenotype/strain_phenotype_table.csv",
+        "sha256": "c32b251fd516a23a4d4d578c1f0586bf7045d5743c7df932a1d87ea5350c4543"
+      },
+      {
+        "path": "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/linked_data/sample_metadata.csv.gz",
+        "sha256": "3d6f5040c3f22fdeeb80640c92045d0911e3c4e9c967f7df40fde7f74ebc0fd1"
+      }
+    ],
+    "unique_outputs": [],
+    "total_wall_seconds": 0,
+    "scripts_executed": [
+      "(inline fed98c6604a4)",
+      "(inline a31c405e50f5)"
+    ]
+  },
+  "extraction_warnings": []
+}

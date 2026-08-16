@@ -42,6 +42,25 @@ current sample.
 evidence that this specific test, at this power, does not detect it. See
 "Recommended next steps" below.
 
+### Follow-up: within-species tests (higher power, phylogeny-free)
+
+The whole-panel test above pays an "n≈17-18 independent lineages" tax for
+phylogenetic correction. Restricting to variation *within* one species
+sidesteps that almost entirely. Every species in the panel with ≥5
+strains and MS data has now been tested this way — **all 8 come back
+null for a\***:
+
+| Species | n | Result | Details |
+|---|---|---|---|
+| *R. mucilaginosa* | 206 | Null | [`WITHIN_SPECIES_MUCILAGINOSA.md`](WITHIN_SPECIES_MUCILAGINOSA.md) |
+| *R. paludigena*, *R. toruloides* | 10 each | Null | [`ROBUSTNESS_AND_MULTIVARIATE.md`](ROBUSTNESS_AND_MULTIVARIATE.md) (also includes sparse multivariate Lasso + pattern-group ANOVA, both null) |
+| *R. dairenensis*, *R. diobovata*, *R. taiwanensis*, *R. sp. clade I*, *R. sphaerocarpa* | 5-8 each | Null, **but negative control uninformative at this n** | [`WITHIN_SPECIES_SMALL_SPECIES_SWEEP.md`](WITHIN_SPECIES_SMALL_SPECIES_SWEEP.md) |
+
+Only *R. mucilaginosa* (n=206) has a negative control with real
+demonstrated power (area decoy: 1,524/10,164 cell-fraction hits). The
+6 smaller species' area decoys all returned 0 hits too, which the sweep
+doc above flags explicitly as underpowered nulls, not confirmed ones.
+
 ## Result 2: important QC finding — colony area confounds cell-fraction abundances broadly
 
 The negative-control decoy run (`--predictor area`) was expected to show
@@ -94,11 +113,9 @@ partly confounded by this if it correlates with area).
    near-term, standalone task — independent of the color hypothesis, this
    affects any future analysis of cell-fraction absolute or TSS-normalized
    abundances.
-4. Consider whether **within-species variation tests** (Phase 1/Step 6 of
-   the Species-Level Collapse procedure — phylogeny-free, strain-level)
-   might have more power for species with enough strains (e.g. *R.
-   mucilaginosa*, n=216) than the whole-panel test, since within-species
-   comparisons don't pay the same "n≈17-18 independent lineages" tax.
+4. ~~Consider whether **within-species variation tests**...~~ **Done** —
+   see the "Follow-up: within-species tests" subsection above; all 8
+   testable species (≥5 strains) come back null.
 
 ## Reproduce
 
