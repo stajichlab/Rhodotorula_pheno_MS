@@ -909,3 +909,170 @@ future small-n test in this project, not just this one -- worth
 promoting to a general convention if it recurs.
 
 **Tags**: navigation, executive-summary, within-species, small-species, negative-control-caveat, phase-2
+
+## 2026-08-16: Two new PI-directed threads — extreme-group color test, siderophore investigation
+
+**Context**: PI proposed 2 new ideas: (1) partition strains into
+high-orange/red vs low-orange/red groups (explicitly acknowledging this
+ignores phylogeny) and test for compound differences, confirming
+cell/supernatant are already tested separately throughout this project
+(they are); (2) investigate rhodotorulic acid / siderophore chemistry in
+the MS data, its strain-level presence/absence, and cross-reference
+against the known NRPS gene (PI: "we know the NRPS gene... so we can also
+condition whether the gene is found in genomes of strains that do not
+show evidence of the compound").
+
+**Decision/outcome**:
+
+(1) Built `analysis/scripts/extreme_group_color_association.py` --
+top/bottom-quartile a\*/C\*/area groups, rank-biserial effect size
+(vectorized Mann-Whitney-U-equivalent rank-sum, reusing
+phase2_color_metabolome_association.py's TSS/dedup/block-permutation
+machinery unchanged). Null for both color axes, both fractions; decoy
+well-calibrated (1,723 cell-fraction hits). 6th independent method to
+find no color-metabolome signal. See
+`EXTREME_GROUP_RESULTS.md`, findings F-006/registry F-013.
+
+(2) Built a 3-script siderophore investigation:
+`siderophore_mass_remining.py` (exact-mass search, idea1-style, 4
+compounds x 4 adducts, 29 matches -- best rhodotorulic acid candidate row
+2190 is the highest-intensity match found), `siderophore_presence_absence.py`
+(strain-level presence, ~99% across all 17 species -- flagged as too
+permissively thresholded to be discriminating), `siderophore_nrps_pfam_screen.py`
+(coarse Pfam stand-in for the real reference sequence, since the PI has
+not yet supplied the actual NRPS accession -- ornithine-hydroxylase proxy
+universal/uninformative, 2-module-NRPS architecture proxy found only 1
+genome-wide, judged a draft-assembly gene-model fragmentation artifact
+rather than real absence). Concluded: neither side of the proposed
+genotype/phenotype cross-reference is currently discriminating enough to
+condition one against the other. See `phase_siderophore/RESULTS.md`,
+findings F-001/registry F-014.
+
+**Consequences**: Both threads are explicitly flagged as needing PI
+input to proceed further -- (1) is a completed, documented null (no
+further action needed unless PI wants a different quantile threshold);
+(2) is blocked on the PI supplying the actual rhodotorulic-acid NRPS
+reference sequence/accession, the same unblock pattern that worked for
+Idea 3's pigment HMM panel. Also worth tightening the MS presence
+threshold before any future genome cross-reference attempt.
+
+**Tags**: extreme-group, color-metabolome, null-result, siderophore, rhodotorulic-acid, nrps, needs-reference-sequence
+
+## 2026-08-16: Real rhodotorulic-acid NRPS ortholog search (PI-supplied reference sequence)
+
+**Context**: PI supplied the actual reference sequence for the
+rhodotorulic-acid NRPS at `tmpin/RA_NRPS.fa` (protein F2DD6D01_006956-T1
+from *R. kratochvilovae* Y14), replacing the earlier coarse Pfam stand-in
+(F-014/registry, from the same-day siderophore investigation). Also
+pointed to antiSMASH results for that source genome at
+`/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_RhodotorulaAcid/annotation/Rhodotorula_kratochvilovae_Y14/antismash_local/`.
+
+**Decision/outcome**: Ingested the reference to
+`analysis/integrated_analysis/phase_siderophore/reference/RA_NRPS.fa`.
+Confirmed via antiSMASH (JAFEUJ010000019.1.region001.gbk, product="NRPS")
+that this sits in a real BGC with an adjacent biosynthetic-additional
+smCOG gene (F2DD6D01_006955, plausibly the ornithine hydroxylase
+partner). Built `analysis/scripts/siderophore_nrps_diamond_search.py`
+(diamond blastp, single query vs. all 278 BFD proteomes) — supersedes
+`siderophore_nrps_pfam_screen.py` entirely (kept for provenance only,
+its output should not be used). Result: clean, strongly bimodal identity
+distribution (303 hits <30% = noise, 305 hits >=60% = real orthologs),
+with the 3 in-panel *R. kratochvilovae* strains landing exactly as
+expected as a built-in positive control. Threshold pident>=45 &
+qcovhsp>=70 (the empty gap between modes) gives 275/278 strains
+confirmed ortholog-positive.
+
+Cross-referenced the 3 negative strains (1 outgroup + 2 *R. mucilaginosa*,
+DBVPG_3236/DBVPG_3855) against the existing MS presence data for the best
+rhodotorulic acid candidate (row 2190). **Result: both gene-negative
+R. mucilaginosa strains still show strong, comparable-to-positive-control
+MS signal** -- does not confirm a simple 1:1 gene-presence <->
+compound-presence dependency. Checked BUSCO completeness for these 2
+strains (busco_genome table in BFD.duckdb): both below panel average
+(90.4%, 81.0% vs. 95.1% average), with DBVPG_3855 the LOWEST-completeness
+genome in the entire 278-strain panel -- strongly suggestive this is a
+gene-model dropout artifact of assembly quality, not true biological
+absence or pathway redundancy, though not yet directly confirmed (would
+need tblastn against the raw assembly rather than the predicted
+proteome). Findings logged:
+`.living/findings/siderophore-detectability-rhodotorulic-acid.md` F-002,
+registry F-015.
+
+**Consequences**: The genome side of the siderophore investigation is now
+solid and reusable (real validated ortholog call, not a coarse domain
+proxy) -- a meaningful upgrade matching the pattern already established
+with Idea 3's custom pigment HMM panel. The specific 2-strain discordance
+found should NOT be read as evidence against the gene-compound
+relationship without first ruling out the assembly-quality explanation
+(tblastn check, not yet done). A panel-wide statistical test is likely
+underpowered regardless (only 2-3/278 strains negative either way).
+
+**Tags**: siderophore, rhodotorulic-acid, nrps, diamond-ortholog-search, busco-completeness, assembly-artifact
+
+## 2026-08-16: BUSCO<90 discordance accepted as assembly artifact; NRPS candidate multifasta/alignment/tree built
+
+**Context**: PI reviewed the DBVPG_3236/DBVPG_3855 gene-negative-but-
+MS-positive discordance from the prior entry and decided: ignore strains
+with BUSCO completeness <90%, attribute the discordance to incomplete
+assembly (most *R. mucilaginosa* strains do carry the ortholog), move on
+-- no tblastn-vs-raw-assembly confirmation requested. Then asked for a
+multifasta of the best candidate rhodotorulic-acid NRPS orthologs across
+the panel, for alignment and phylogeny building.
+
+**Decision/outcome**: Built `analysis/scripts/siderophore_nrps_build_multifasta.py`
+-- pulls each strain's best-hit ortholog protein (from the diamond search's
+per-strain summary) via BFD.duckdb's gene_proteins table, filtered to
+confirmed ortholog AND BUSCO completeness >=90%. 10 strains dropped on
+the BUSCO filter (not just the 2 originally flagged -- 8 more across
+other species also fall below 90% among the 275 ortholog-positive set).
+265 candidates + the PI-supplied reference = 266 sequences ->
+`outputs/RA_NRPS_candidates.faa`. Aligned with `mafft --auto` (~15s) ->
+`RA_NRPS_candidates.aln.fa`, first-pass tree with `FastTree` (~5s, CAT
+approximation, no bootstrap) -> `RA_NRPS_candidates.tree.nwk`. Findings
+logged: `.living/findings/siderophore-detectability-rhodotorulic-acid.md`
+F-003.
+
+**Consequences**: Real alignment/tree data now exists for asking whether
+the NRPS gene tree tracks the species tree or shows topology anomalies
+(HGT, duplication, lineage-specific acceleration) -- not yet interpreted,
+that's the natural next step if the PI wants to pursue it. If this
+becomes a figure, the current FastTree pass (no bootstrap) should be
+upgraded to a proper ML tree with support values (e.g. IQ-TREE).
+
+**Tags**: siderophore, rhodotorulic-acid, nrps, phylogeny, busco-filter, mafft, fasttree
+
+## 2026-08-16: NRPS gene tree vs. species tree comparison, rendered figure
+
+**Context**: PI asked whether the rhodotorulic-acid NRPS gene tree
+(built from the prior entry's multifasta/alignment) tracks the species
+tree, then separately asked for the tree to be drawn and saved as
+PDF/PNG and linked into the results doc.
+
+**Decision/outcome**: Built `analysis/scripts/siderophore_nrps_tree_species_comparison.py`
+(per-species monophyly check via MRCA/terminal-set comparison,
+terminal-branch-length outlier detection) and
+`analysis/scripts/siderophore_nrps_plot_tree.py` (species-colored
+Bio.Phylo + matplotlib rendering). Result: the 3 largest species
+(*R. mucilaginosa* n=194, *R. paludigena* n=16, *R. toruloides* n=8) come
+back "not monophyletic," but this is a tree-RESOLUTION artifact, not
+biology -- FastTree found only 61 unique sequence patterns among 266
+sequences, i.e. the gene is essentially invariant across most of the
+genus at the protein level, visually confirmed as one shallow
+near-zero-branch-length block in the rendered tree. The well-resolved
+half of the tree (species with genuinely distinct sequences) forms clean
+monophyletic clades matching expectations for simple vertical
+inheritance -- no strong evidence of HGT. One genuine, unexplained
+anomaly: *R. evergladensis* DBVPG_7922 has an outlier-long terminal
+branch despite a clean high-confidence ortholog hit (not a bad gene
+model) -- flagged as a real accelerated-evolution lead, not investigated
+further. Figure delivered to PI and linked into
+`phase_siderophore/RESULTS.md` (Step 7). Findings logged:
+`.living/findings/siderophore-detectability-rhodotorulic-acid.md` F-004,
+registry F-016.
+
+**Consequences**: This closes out the phylogenetic side of the
+siderophore investigation for now -- no further action proposed unless
+the PI wants a bootstrap-supported ML tree (IQ-TREE) or wants to chase
+the *R. evergladensis* branch-length anomaly.
+
+**Tags**: siderophore, rhodotorulic-acid, nrps, phylogeny, gene-tree-species-tree, conserved-gene

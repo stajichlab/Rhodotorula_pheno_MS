@@ -15,6 +15,8 @@
 | [3 — Idea 1 targeted re-mining](#phase-3--idea-1-targeted-carotenoidsterol-mass-re-mining-done--live-lead) | Can targeted mass search find pigment features the untargeted pipeline missed? | Done | Found candidates; **no color link**, but a real copper-AUC lead (unvalidated) |
 | [5 — Idea 5 regime shift](#phase-5--idea-5-bayesian-regime-shift-detection-done) | Where on the tree did color shift convergently? | Done | Diffuse posterior; top candidate corroborates Phase 1 ranking |
 | [5 — Idea 3 pigment genes](#phase-5--idea-3-pigment-gene-genome-screen-done-for-screening-stage) | Are pigment-pathway genes present/variable across the genome panel? | Done (screening stage) | Melanin = laccase route (convergent 3-method finding); first genome↔color test not yet run |
+| [2 — Extreme-group color test](#phase-2--extreme-group-high-vs-low-orangered-test-done-null) | Do color-extreme strains (top/bottom quartile a\*/C\*) differ in any compound, ignoring phylogeny? | Done | **Null** — 6th independent method to agree |
+| [Siderophore investigation](#siderophore--iron-sequestration-investigation-done-real-cross-reference-unresolved) | Can rhodotorulic acid / siderophore chemistry be detected, and does it track the known NRPS gene? | Done | Real ortholog call now works (275/278); compound present even in the 2 gene-negative strains — likely assembly artifact, not resolved |
 
 ---
 
@@ -92,6 +94,56 @@ Three independent screens of pigment-pathway gene presence/copy-number across al
 **Verdict, caution**: 10/28 custom HMM profiles found zero hits genome-wide (likely lineage-specific paralog discrimination — needs a PI sanity check on 4 gene names: `ayg1`/`crtB`/`hppd`/`scd`); 5 HMM-panel + 2 Pfam families show implausibly high copy numbers (superfamily-level domain matches, not confirmed single-gene orthologs — not yet safe to use as a predictor).
 **Full evidence ledger**: `.living/findings/pigment-gene-genomic-screen-rhodotorula.md` (F-001 through F-003; registry F-010/F-011).
 **Next step (not started, this is the project's first real genome↔color test)**: test the sparse-presence families (`crtR` in 52/278 strains, `crtQ` in 48/278, `hgd` in 28/278) as presence/absence predictors against species-level color.
+
+---
+
+## Phase 2 — Extreme-group (high vs. low orange/red) test (done, null)
+**Path**: `phase2_metabolome_phenotype/EXTREME_GROUP_RESULTS.md`
+**Script**: `analysis/scripts/extreme_group_color_association.py`
+
+PI follow-up: split strains into top/bottom quartile on a\*/C\*/area and
+test for compound-abundance differences (Mann-Whitney-U-equivalent
+rank-sum, species-tree-block-restricted permutation) — a different,
+higher-power question than continuous correlation, explicitly
+acknowledged by the PI as lumping species together. **Null for both a\*
+and C\*, both fractions** (0 hits); decoy (area) shows the expected 1,723
+cell-fraction hits, confirming real power at this n. This is the 6th
+independent method (after the 5 in Phase 2 above) to find no color↔
+metabolome signal — including one designed specifically to catch
+threshold effects a continuous correlation could miss.
+
+---
+
+## Siderophore / iron-sequestration investigation (done, real cross-reference, unresolved)
+**Path**: `phase_siderophore/RESULTS.md`
+**Scripts**: `analysis/scripts/siderophore_mass_remining.py`, `siderophore_presence_absence.py`, `siderophore_nrps_diamond_search.py` (supersedes `siderophore_nrps_pfam_screen.py`)
+
+PI request: detect rhodotorulic acid / related siderophore chemistry in
+the MS data, determine strain-level presence/absence, and cross-reference
+against the known NRPS biosynthetic gene. Mass search found **29
+candidate matches**; the best rhodotorulic acid candidate (row 2190,
+[M+NH4]+, 164 total scans) is the highest-intensity match in the whole
+search. MS presence came back near-universal (~99%).
+
+PI then supplied the actual reference sequence (`RA_NRPS.fa`, from
+*R. kratochvilovae* Y14, antiSMASH-confirmed NRPS cluster gene) — a real
+`diamond blastp` ortholog search replaced the coarse Pfam stand-in and
+gave a clean, strongly bimodal identity distribution (303 noise-tier hits
+<30% vs. 305 real orthologs >=60%, with the 3 in-panel
+*R. kratochvilovae* strains landing exactly as expected as a built-in
+positive control). **275/278 strains confirmed with the ortholog.** The 3
+without it: the *Cystobasidium* outgroup (plausible real absence) and 2
+specific *R. mucilaginosa* strains (200/202 of that species ARE
+positive). **Cross-referencing those 2 strains against MS presence: the
+compound is still clearly present, at abundances comparable to
+ortholog-positive controls** — doesn't confirm the hypothesized 1:1
+gene↔compound link. Both strains have below-average BUSCO completeness
+(one is the lowest in the entire 278-strain panel), so this is most
+likely a genome-assembly gene-dropout artifact rather than true
+biological loss or pathway redundancy — **not yet resolved**.
+**Next step, not started**: tblastn the reference against the raw
+assemblies (not just predicted proteins) for these 2 strains to
+distinguish "gene truly missing" from "gene-calling failure."
 
 ---
 

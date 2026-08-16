@@ -50,6 +50,28 @@ independent points can resolve at alpha=0.05 with FDR correction across
   jointly across features) detect a diffuse relationship a per-feature
   univariate test with FDR correction is poorly suited to find?
 
+## F-006: Extreme-group (quartile) color contrast also null — 6th independent method to agree
+**Status:** preliminary
+**Claim:** `analysis/scripts/extreme_group_color_association.py` split
+strains into top/bottom quartile groups on a\*/C\*/area and tested for
+compound-abundance differences via a block-permuted rank-sum statistic —
+a design built to catch threshold/nonlinear effects a continuous
+correlation could miss, at the acknowledged cost of lumping species
+together (PI-flagged caveat). Null for both a\* and C\*, both fractions
+(0 BH-FDR<0.05 hits); the area decoy shows 1,723 cell-fraction hits,
+confirming real power at this n.
+**Implications:** A 6th independent statistical method (after the 5 in
+F-002 through F-004) finds no color-metabolome signal, now including one
+specifically designed to be more sensitive to threshold effects than
+Spearman correlation. Strengthens confidence this is a genuine null, not
+a methodological blind spot.
+**Tags:** extreme-group, rank-sum, null-result, quartile-split
+
+### Evidence Ledger
+| Date | Run/Session | Dataset | Project | Result | Direction |
+|------|-------------|---------|---------|--------|-----------|
+| 2026-08-16 | Extreme-group test (extreme_group_color_association.py) | Same feature matrix as F-002/F-003 | Rhodotorula_pheno_MS | Null for a\*/C\*, both fractions; decoy well-calibrated | refines |
+
 ## F-005: All 8 species with ≥5 strains now tested within-species for color↔metabolome association — all null
 **Status:** preliminary
 **Claim:** Extended the within-species test (F-003's design) from 3 to

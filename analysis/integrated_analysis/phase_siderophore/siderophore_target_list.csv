@@ -1,0 +1,17 @@
+compound,category,formula,neutral_mass,adduct,target_mz
+N5-acetyl-N5-hydroxyornithine,precursor,C7H14N2O4,190.0953569454,[M+H]+,191.1026333973
+N5-acetyl-N5-hydroxyornithine,precursor,C7H14N2O4,190.0953569454,[M+NH4]+,208.1291824982
+N5-acetyl-N5-hydroxyornithine,precursor,C7H14N2O4,190.0953569454,[M+Na]+,213.0845776454
+N5-acetyl-N5-hydroxyornithine,precursor,C7H14N2O4,190.0953569454,[M+K]+,229.0585148518
+rhodotorulic_acid,primary_target,C20H32N4O6,424.2321847742,[M+H]+,425.2394612261
+rhodotorulic_acid,primary_target,C20H32N4O6,424.2321847742,[M+NH4]+,442.266010327
+rhodotorulic_acid,primary_target,C20H32N4O6,424.2321847742,[M+Na]+,447.22140547419997
+rhodotorulic_acid,primary_target,C20H32N4O6,424.2321847742,[M+K]+,463.1953426806
+dimerumic_acid,related_siderophore,C22H37N3O9,487.2529797948,[M+H]+,488.2602562467
+dimerumic_acid,related_siderophore,C22H37N3O9,487.2529797948,[M+NH4]+,505.2868053476
+dimerumic_acid,related_siderophore,C22H37N3O9,487.2529797948,[M+Na]+,510.2422004948
+dimerumic_acid,related_siderophore,C22H37N3O9,487.2529797948,[M+K]+,526.2161377012001
+ferrichrome,related_siderophore,C27H42N9O12,684.2952928518,[M+H]+,685.3025693037
+ferrichrome,related_siderophore,C27H42N9O12,684.2952928518,[M+NH4]+,702.3291184046
+ferrichrome,related_siderophore,C27H42N9O12,684.2952928518,[M+Na]+,707.2845135518
+ferrichrome,related_siderophore,C27H42N9O12,684.2952928518,[M+K]+,723.2584507582001
