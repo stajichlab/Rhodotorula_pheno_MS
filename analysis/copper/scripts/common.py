@@ -20,7 +20,7 @@ REPO = "/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/
 TREEFILE = os.path.join(
     REPO,
     "BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/"
-    "protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile",
+    "protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile",
 )
 AA_FREQ_GLOB = os.path.join(REPO, "BFD/results/genome_stats/aa_freq/*/*.aa_freq.csv.gz")
 CU_AUC_CSV = os.path.join(REPO, "data/metadata/EXFAB_UCR-005/Cu_AUC.20260811.fixed.csv.gz")

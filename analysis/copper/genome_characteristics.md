@@ -17,7 +17,7 @@ trait-level association with copper resistance.
 |---|---|---|
 | Copper resistance | `data/metadata/EXFAB_UCR-005/Cu_AUC.20260811.fixed.csv.gz` | `mean_auc_rate` = growth-curve AUC in copper-stress medium, per strain (`SAMPLE_NAME`), 275 rows |
 | Genome-wide AA composition | `BFD/results/genome_stats/aa_freq/*/<strain>.aa_freq.csv.gz` | Proteome-wide frequency of each of the 20 standard amino acids, one file per strain (150 strains with genomes/annotations in BFD) |
-| Phylogeny | `BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile` | FastTree ML tree from PHYling BUSCO (fungi_odb10) protein markers, 276 tips, used for phylogenetic correction |
+| Phylogeny | `BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile` | FastTree ML tree from PHYling BUSCO (fungi_odb10) protein markers, 278 tips, used for phylogenetic correction |
 
 ## Strain identifier reconciliation
 
