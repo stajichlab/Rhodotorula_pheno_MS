@@ -1,0 +1,12 @@
+MS2 feature de-duplication summary (adducts/isotopologues/in-source fragments)
+==============================================================================
+Source (fuller EB output with grouping annotation): /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/data/processed/EB_20260130_ExFAB_Rhodo_Sup_and_Pellet/b773ffa18c2b41e5a3484526293a54f9/b773ffa18c2b41e5a3484526293a54f9/nf_output/feature_finding/feature_finding_results/aligned_features_ms2.csv
+Working matrix (this project's 16,332-feature set): /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/linked_data/feature_abundance_matrix.csv.gz
+
+Raw features (rows in working matrix): 16332
+Deduplicated groups (isotopologue + same-adduct-type + ISF collapsed): 10949
+Reduction: 16332 -> 10949 (33.0% collapsed)
+Features flagged as in-source fragments (folded into their parent's group): 1774
+Groups with >1 member feature: 8154
+
+NOT applied: cross-adduct-type compound merging (e.g. a compound's [M+H]+ and [M+Na]+ groups sharing one true compound identity) -- see module docstring in dedupe_ms_features.py. This means the group count above is a conservative (slightly too high, never too low) de-dup relative to the true number of independent chemical entities.
