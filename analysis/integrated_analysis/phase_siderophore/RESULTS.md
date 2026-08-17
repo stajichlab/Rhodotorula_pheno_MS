@@ -34,7 +34,11 @@ doing before trusting these as more than plausible mass matches).
 
 **Script**: `analysis/scripts/siderophore_presence_absence.py`. Presence
 defined as nonzero raw abundance in >=1 replicate sample of a strain/
-fraction (a permissive threshold — see caveat below).
+fraction (a permissive threshold — see caveat below). Counts below were
+regenerated from `analysis/linked_data/sample_metadata.csv.gz` rebuilt
+after the whole-genome ANI species reassignment (the 4 reassigned strains
+now carry their corrected species labels; see
+`data/metadata/control_phenotype_90_110h/provenance.md`).
 
 | Candidate | Fraction | % strains present | Species present |
 |---|---|---|---|
@@ -113,7 +117,7 @@ modes): **275/278 strains have a confirmed ortholog.** Only 3 do not:
 | Strain | pident | qcovhsp | bitscore | Note |
 |---|---|---|---|---|
 | *Cystobasidium* sp. DBVPG_10075 | 23.9% | 32.6% | 77.8 | Outgroup taxon — noise-tier, plausibly real absence/too divergent |
-| *R. mucilaginosa* DBVPG_3236 | 25.1% | 32.6% | 82.4 | Within-species absence (200/202 *R. mucilaginosa* strains ARE positive) |
+| *R. mucilaginosa* DBVPG_3236 | 25.1% | 32.6% | 82.4 | Within-species absence (203/205 *R. mucilaginosa* strains ARE positive) |
 | *R. mucilaginosa* DBVPG_3855 | 25.1% | 32.6% | 82.4 | Within-species absence |
 
 (*Pseudomicrostroma phylloplanum* DBVPG_6740 initially looked negative at
@@ -206,26 +210,29 @@ unique sequence patterns among 266 sequences, and the top ~200 tips
 (*R. mucilaginosa*, plus a handful of *R. paludigena*/*R. toruloides*
 sequences) collapse into one shallow, near-zero-branch-length block
 (visible in the figure as the long flat mass at the top). **This is why
-*R. mucilaginosa*, *R. paludigena*, and *R. toruloides* come back
-"not monophyletic"** in the automated check — almost certainly a
-tree-resolution artifact from insufficient variable sites in this
-protein-level alignment, not evidence of horizontal transfer or
-contamination. Full per-species monophyly table:
+*R. mucilaginosa* comes back "not monophyletic"** in the automated check —
+almost certainly a tree-resolution artifact from insufficient variable
+sites in this protein-level alignment, not evidence of horizontal
+transfer or contamination. Full per-species monophyly table:
 `outputs/RA_NRPS_species_monophyly.csv`.
 
 **More trustworthy signal, from the well-resolved lower half of the
 tree**: species with genuinely distinct sequences form clean,
 correctly-grouped monophyletic clades matching the species tree — *R.
 dairenensis*, *R. diobovata*, *R. graminis*, *R. kratochvilovae*, *R. sp.
-clade I*, *R. sp. clade XI*, *R. sphaerocarpa* all check out OK. Two
-smaller anomalies worth a closer look if pursued further (not
-investigated beyond flagging): *R. taiwanensis* clusters with a
-*R. toruloides* tip, and *R. pacifica* (n=2) is embedded within the
-*R. mucilaginosa* block. **Overall: broadly consistent with simple
-vertical inheritance for a conserved single-copy biosynthetic gene, no
-strong evidence of anything unusual** (e.g. horizontal transfer) — but
-this is a descriptive first pass (no bootstrap, no formal Robinson-Foulds
-distance or reconciliation analysis), not a rigorous cophylogenetic test.
+clade I*, *R. sp. clade XI*, *R. sphaerocarpa* all check out OK. Note:
+after the whole-genome ANI reassignment (mis-specified *R. paludigena*/*R.
+toruloides*/*R. pacifica* strains moved to their true species), *R.
+paludigena*, *R. taiwanensis*, and *R. toruloides* all became cleanly
+**monophyletic** — the earlier anomalies in this gene tree traced back to
+those specific mis-labelled strains, and now resolve with the corrected
+species assignments. Only *R. mucilaginosa* (the huge shallow-revolution
+block above) stays "not monophyletic", which is the tree-resolution
+artifact. **Overall: broadly consistent with simple vertical inheritance
+for a conserved single-copy biosynthetic gene, no strong evidence of
+anything unusual** (e.g. horizontal transfer) — but this is a descriptive
+first pass (no bootstrap, no formal Robinson-Foulds distance or
+reconciliation analysis), not a rigorous cophylogenetic test.
 
 **Terminal branch length outliers** (`outputs/RA_NRPS_branch_length_outliers.csv`):
 2 tips exceed the 3-SD threshold. *Pseudomicrostroma phylloplanum*
