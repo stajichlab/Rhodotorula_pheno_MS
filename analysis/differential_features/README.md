@@ -3,7 +3,7 @@
 Pairwise species comparisons of MS2 features, annotated with
 GNPS library matches and SIRIUS/CANOPUS predictions.
 
-- **11,953** significant features (FDR < 5%)
+- **12,619** significant features (FDR < 5%)
 - **10** comparisons with significant features (out of 110 total)
 - **790** SIRIUS annotations (663 with structure predictions)
 
@@ -11,27 +11,27 @@ GNPS library matches and SIRIUS/CANOPUS predictions.
 
 | View | Features | Link |
 |------|----------|------|
-| All significant features (every comparison concatenated) | 11,953 | [open](all_significant_features_summary.html) |
+| All significant features (every comparison concatenated) | 12,619 | [open](all_significant_features_summary.html) |
 
 ## Cell pellet comparisons
 
 | Comparison | Features | Identified | Dashboard |
 |------------|----------|------------|-----------|
-| Cell pellet: R. mucilaginosa vs R. toruloides | 2,600 | 2,399 | [dashboard](./cell_mucilaginosa_vs_toruloides/dashboard.html) |
-| Cell pellet: R. diobovata vs R. mucilaginosa | 2,085 | 1,953 | [dashboard](./cell_diobovata_vs_mucilaginosa/dashboard.html) |
-| Cell pellet: R. mucilaginosa vs R. paludigena | 1,270 | 1,179 | [dashboard](./cell_mucilaginosa_vs_paludigena/dashboard.html) |
-| Cell pellet: R. mucilaginosa vs R. taiwanensis | 961 | 903 | [dashboard](./cell_mucilaginosa_vs_taiwanensis/dashboard.html) |
-| Cell pellet: R. mucilaginosa vs R. sphaerocarpa | 642 | 606 | [dashboard](./cell_mucilaginosa_vs_sphaerocarpa/dashboard.html) |
-| Cell pellet: R. dairenensis vs R. mucilaginosa | 268 | 256 | [dashboard](./cell_dairenensis_vs_mucilaginosa/dashboard.html) |
+| Cell pellet: R. mucilaginosa vs R. toruloides | 2,439 | 2,167 | [dashboard](./cell_mucilaginosa_vs_toruloides/dashboard.html) |
+| Cell pellet: R. diobovata vs R. mucilaginosa | 2,072 | 1,928 | [dashboard](./cell_diobovata_vs_mucilaginosa/dashboard.html) |
+| Cell pellet: R. mucilaginosa vs R. paludigena | 1,321 | 1,214 | [dashboard](./cell_mucilaginosa_vs_paludigena/dashboard.html) |
+| Cell pellet: R. mucilaginosa vs R. taiwanensis | 1,081 | 1,003 | [dashboard](./cell_mucilaginosa_vs_taiwanensis/dashboard.html) |
+| Cell pellet: R. mucilaginosa vs R. sphaerocarpa | 637 | 598 | [dashboard](./cell_mucilaginosa_vs_sphaerocarpa/dashboard.html) |
+| Cell pellet: R. dairenensis vs R. mucilaginosa | 276 | 262 | [dashboard](./cell_dairenensis_vs_mucilaginosa/dashboard.html) |
 
 ## Supernatant comparisons
 
 | Comparison | Features | Identified | Dashboard |
 |------------|----------|------------|-----------|
-| Supernatant: R. diobovata vs R. mucilaginosa | 1,706 | 1,440 | [dashboard](./supernatant_diobovata_vs_mucilaginosa/dashboard.html) |
-| Supernatant: R. mucilaginosa vs R. taiwanensis | 859 | 803 | [dashboard](./supernatant_mucilaginosa_vs_taiwanensis/dashboard.html) |
-| Supernatant: R. mucilaginosa vs R. paludigena | 782 | 673 | [dashboard](./supernatant_mucilaginosa_vs_paludigena/dashboard.html) |
-| Supernatant: R. mucilaginosa vs R. sphaerocarpa | 780 | 723 | [dashboard](./supernatant_mucilaginosa_vs_sphaerocarpa/dashboard.html) |
+| Supernatant: R. diobovata vs R. mucilaginosa | 1,705 | 1,417 | [dashboard](./supernatant_diobovata_vs_mucilaginosa/dashboard.html) |
+| Supernatant: R. mucilaginosa vs R. taiwanensis | 1,261 | 1,056 | [dashboard](./supernatant_mucilaginosa_vs_taiwanensis/dashboard.html) |
+| Supernatant: R. mucilaginosa vs R. paludigena | 1,079 | 863 | [dashboard](./supernatant_mucilaginosa_vs_paludigena/dashboard.html) |
+| Supernatant: R. mucilaginosa vs R. sphaerocarpa | 748 | 692 | [dashboard](./supernatant_mucilaginosa_vs_sphaerocarpa/dashboard.html) |
 
 ## Individual comparison tables
 

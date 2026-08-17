@@ -40,6 +40,11 @@ Usage:
     python3 analysis/scripts/phase2_within_species_association.py --species "Rhodotorula mucilaginosa" --predictor area   # negative control, run first
     python3 analysis/scripts/phase2_within_species_association.py --species "Rhodotorula mucilaginosa" --predictor a      # primary
     python3 analysis/scripts/phase2_within_species_association.py --species "Rhodotorula mucilaginosa" --predictor C      # secondary
+    # copper-resistance-growth-rate (phase3 idea1) predictor, 2026-08-17:
+    #   mean_auc_rate per canonical_strain from sample_metadata.csv.gz (NOT the
+    #   phenotype table -- AUC lives in the metadata). Same phylo-blocked design
+    #   as the color predictors; gut-checked against the same fresh `area` decoy.
+    python3 analysis/scripts/phase2_within_species_association.py --species "Rhodotorula mucilaginosa" --predictor auc
 """
 from __future__ import annotations
 
@@ -72,7 +77,7 @@ STRAIN_TREE = (
 )
 OUT_DIR = REPO / "analysis" / "integrated_analysis" / "phase2_metabolome_phenotype"
 
-PREDICTOR_COL = {"a": "a*", "C": "C*", "area": "area"}
+PREDICTOR_COL = {"a": "a*", "C": "C*", "area": "area", "auc": "mean_auc_rate"}
 FDR_ALPHA = 0.05
 
 
@@ -178,7 +183,7 @@ def load_strain_fraction_matrix(fraction: str, species_strains: set[str]) -> tup
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--species", required=True, help='e.g. "Rhodotorula mucilaginosa"')
-    ap.add_argument("--predictor", choices=["a", "C", "area"], default="a")
+    ap.add_argument("--predictor", choices=["a", "C", "area", "auc"], default="a")
     ap.add_argument("--n-perm", type=int, default=500)
     ap.add_argument("--n-clades", type=int, default=15, help="Number of strain-tree blocks for restricted permutation.")
     ap.add_argument("--seed", type=int, default=0)
@@ -227,6 +232,13 @@ def main():
             )
 
     pheno = pd.read_csv(PHENOTYPE_TABLE).set_index("strain_id")
+    if predictor_col == "mean_auc_rate":
+        auc_by_strain = (
+            pd.read_csv(SAMPLE_METADATA)
+            .dropna(subset=["mean_auc_rate"])
+            .groupby("canonical_strain")["mean_auc_rate"].mean()
+        )
+        pheno["mean_auc_rate"] = auc_by_strain.reindex(pheno.index)
     species_strains_all = set(pheno.index[pheno["species"] == args.species])
     print(f"{args.species}: {len(species_strains_all)} strains in phenotype table", file=sys.stderr)
 
