@@ -4,7 +4,7 @@ Script: `analysis/scripts/phase2_within_species_association.py`. Follows
 directly from PHASE2_SUMMARY.md's "Recommended next steps" #4: the
 whole-panel test's effective sample size is bounded by ~17-18 independent
 species-level lineages; a single species with many strains sidesteps that
-almost entirely. *R. mucilaginosa* is the obvious candidate here: 216
+almost entirely. *R. mucilaginosa* is the obvious candidate here: 219
 phenotyped strains, 206 with both color and MS data, 201 with genome data
 for real strain-level phylogenetic blocking (not the coarser species-tree
 blocks the whole-panel script uses).
@@ -83,8 +83,8 @@ correlation test).
 ## Recommended next steps
 
 1. **Try one or two other species with enough strains** for a similar
-   test as a robustness check (e.g. *R. paludigena* n=17, *R. toruloides*
-   n=10, *R. diobovata* n=10) — smaller n, weaker power, but worth a quick
+   test as a robustness check (e.g. *R. paludigena* n=16, *R. toruloides*
+   n=9, *R. diobovata* n=10) — smaller n, weaker power, but worth a quick
    look given how easy this script makes it (`--species` flag).
 2. **Consider a multivariate approach**: instead of per-feature univariate
    correlation, test whether color axes are jointly predictable from a

@@ -62,7 +62,7 @@ DBVPG4957_004683-T1,DBVPG4957,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 4957,63
 DBVPG4958_003621-T1,DBVPG4958,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 4958,63.1,99.8,99.7,0.0,1779.0,True
 DBVPG4964_003433-T1,DBVPG4964,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 4964,63.1,99.8,99.7,0.0,1779.0,True
 DBVPG5757_001925-T1,DBVPG5757,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 5757,63.1,99.8,99.7,0.0,1779.0,True
-TFCN1A12_002400-T1,TFCN1A12,Rhodotorula,Rhodotorula paludigena,TFCN 1A-1-2,63.1,99.8,99.7,0.0,1779.0,True
+TFCN1A12_002400-T1,TFCN1A12,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1A-1-2,63.1,99.8,99.7,0.0,1779.0,True
 TFCN98C7_002646-T1,TFCN98C7,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98C-7,63.1,99.8,99.7,0.0,1779.0,True
 TFCN98A10_003494-T1,TFCN98A10,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98A-10,63.1,99.8,99.7,0.0,1779.0,True
 TFCN211A3_003766-T1,TFCN211A3,Rhodotorula,Rhodotorula mucilaginosa,TFCN 211A-3,63.1,99.8,99.7,0.0,1779.0,True
@@ -229,8 +229,8 @@ TFCN98C8_002865-T1,TFCN98C8,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98C-8,63.0
 TFCN98D11_004818-T1,TFCN98D11,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98D-11,63.0,99.8,99.7,0.0,1778.0,True
 TFCN98D7_002623-T1,TFCN98D7,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98D-7,63.0,99.8,99.7,0.0,1778.0,True
 TFCN98D9_002459-T1,TFCN98D9,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98D-9,63.0,99.8,99.7,0.0,1778.0,True
-TFCN1A13_002498-T1,TFCN1A13,Rhodotorula,Rhodotorula pacifica,TFCN 1A-1-3,63.0,99.8,99.7,0.0,1778.0,True
-TFCN1B12_002363-T1,TFCN1B12,Rhodotorula,Rhodotorula pacifica,TFCN 1B-1-2,63.0,99.8,99.7,0.0,1778.0,True
+TFCN1A13_002498-T1,TFCN1A13,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1A-1-3,63.0,99.8,99.7,0.0,1778.0,True
+TFCN1B12_002363-T1,TFCN1B12,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1B-1-2,63.0,99.8,99.7,0.0,1778.0,True
 DBVPG3984_007415-T1,DBVPG3984,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 3984,63.0,99.8,99.7,0.0,1777.0,True
 DBVPG3983_007396-T1,DBVPG3983,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 3983,63.0,99.8,99.7,0.0,1777.0,True
 DBVPG3857_006431-T1,DBVPG3857,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 3857,63.2,99.8,99.7,0.0,1777.0,True
@@ -279,7 +279,7 @@ OM447_000299-T1,OM447,Rhodotorula,Rhodotorula dairenensis,NRRL Y-2504,61.6,99.8,
 TFCN86C10_003674-T1,TFCN86C10,Rhodotorula,Rhodotorula sphaerocarpa,TFCN 86C-10,62.3,99.8,99.9,0.0,1731.0,True
 TFCN134A3_004486-T1,TFCN134A3,Rhodotorula,Rhodotorula mucilaginosa,TFCN 134A-3,62.3,99.8,99.7,0.0,1727.0,True
 DBVPG3853_000391-T1,DBVPG3853,Rhodotorula,Rhodotorula dairenensis,DBVPG 3853,61.5,99.8,99.6,0.0,1726.0,True
-TFCN152C6_003361-T1,TFCN152C6,Rhodotorula,Rhodotorula toruloides,TFCN 152C-6,61.6,99.9,100.0,0.0,1723.0,True
+TFCN152C6_003361-T1,TFCN152C6,Rhodotorula,Rhodotorula taiwanensis,TFCN 152C-6,61.6,99.9,100.0,0.0,1723.0,True
 TFCN0520421_006227-T1,TFCN0520421,Rhodotorula,Rhodotorula taiwanensis,TFCN 0520-4-2-1,61.6,99.9,100.0,0.0,1723.0,True
 TFCN3571_003887-T1,TFCN3571,Rhodotorula,Rhodotorula taiwanensis,TFCN 357-1,61.6,99.9,100.0,0.0,1723.0,True
 TFCNS22D1_004234-T1,TFCNS22D1,Rhodotorula,Rhodotorula taiwanensis,TFCN S22D-1,61.6,99.9,100.0,0.0,1723.0,True
@@ -313,7 +313,7 @@ TFCNS22D1_001109-T1,TFCNS22D1,Rhodotorula,Rhodotorula taiwanensis,TFCN S22D-1,25
 TFCN0520421_001022-T1,TFCN0520421,Rhodotorula,Rhodotorula taiwanensis,TFCN 0520-4-2-1,25.6,32.6,32.9,1.43e-16,92.4,False
 TFCN3571_000542-T1,TFCN3571,Rhodotorula,Rhodotorula taiwanensis,TFCN 357-1,25.6,32.6,32.9,1.43e-16,92.4,False
 TFCN0520422_000315-T1,TFCN0520422,Rhodotorula,Rhodotorula taiwanensis,TFCN 0520-4-2-2,25.6,32.6,32.9,1.43e-16,92.4,False
-TFCN152C6_000092-T1,TFCN152C6,Rhodotorula,Rhodotorula toruloides,TFCN 152C-6,25.6,32.6,32.9,1.43e-16,92.4,False
+TFCN152C6_000092-T1,TFCN152C6,Rhodotorula,Rhodotorula taiwanensis,TFCN 152C-6,25.6,32.6,32.9,1.43e-16,92.4,False
 DBVPG7316_005653-T1,DBVPG7316,Rhodotorula,Rhodotorula paludigena,DBVPG 7316,24.9,45.2,44.9,1.88e-16,92.0,False
 TFCN48A15_003170-T1,TFCN48A15,Rhodotorula,Rhodotorula paludigena,TFCN 48A-15,24.9,45.2,44.9,1.88e-16,92.0,False
 TFCN49A1_002627-T1,TFCN49A1,Rhodotorula,Rhodotorula paludigena,TFCN 49A-1,24.9,45.2,44.9,1.88e-16,92.0,False
@@ -496,9 +496,9 @@ TFCN17325D4_004379-T1,TFCN17325D4,Rhodotorula,Rhodotorula mucilaginosa,TFCN 17-3
 TFCN17325P1_004932-T1,TFCN17325P1,Rhodotorula,Rhodotorula mucilaginosa,TFCN 17-325P-1,25.4,27.4,27.9,2.12e-13,82.0,False
 TFCN17329Y4_002023-T1,TFCN17329Y4,Rhodotorula,Rhodotorula mucilaginosa,TFCN 17-329Y-4,25.1,32.6,33.0,2.12e-13,82.0,False
 TFCN98D9_004631-T1,TFCN98D9,Rhodotorula,Rhodotorula mucilaginosa,TFCN 98D-9,25.4,27.4,27.9,2.12e-13,82.0,False
-TFCN1A13_004045-T1,TFCN1A13,Rhodotorula,Rhodotorula pacifica,TFCN 1A-1-3,25.4,27.4,27.9,2.12e-13,82.0,False
-TFCN1B12_000566-T1,TFCN1B12,Rhodotorula,Rhodotorula pacifica,TFCN 1B-1-2,25.4,27.4,27.9,2.12e-13,82.0,False
-TFCN1A12_004835-T1,TFCN1A12,Rhodotorula,Rhodotorula paludigena,TFCN 1A-1-2,25.4,27.4,27.9,2.12e-13,82.0,False
+TFCN1A13_004045-T1,TFCN1A13,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1A-1-3,25.4,27.4,27.9,2.12e-13,82.0,False
+TFCN1B12_000566-T1,TFCN1B12,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1B-1-2,25.4,27.4,27.9,2.12e-13,82.0,False
+TFCN1A12_004835-T1,TFCN1A12,Rhodotorula,Rhodotorula mucilaginosa,TFCN 1A-1-2,25.4,27.4,27.9,2.12e-13,82.0,False
 DBVPG4380_005606-T1,DBVPG4380,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 4380,25.1,32.6,32.9,2.12e-13,82.0,False
 DBVPG6660_002848-T1,DBVPG6660,Rhodotorula,Rhodotorula mucilaginosa,DBVPG 6660,25.1,32.6,32.9,2.12e-13,82.0,False
 TFCN134A3_001187-T1,TFCN134A3,Rhodotorula,Rhodotorula mucilaginosa,TFCN 134A-3,25.1,32.6,32.9,2.12e-13,82.0,False

@@ -1,6 +1,8 @@
 # Summary Statistics: control_phenotype_90_110h
 
 <!-- Generated: 2026-08-15 -->
+<!-- Updated: 2026-08-16 (species census refreshed after whole-genome ANI reassignment:
+     3 R. pacifica/paludigena -> R. mucilaginosa, 1 R. toruloides -> R. taiwanensis) -->
 <!-- Script: manual (python3/pandas one-off, see data/raw/control_phenotype_90_110h/CONTROL_PHENOTYPE_90_110H.md for pipeline this table came from) -->
 
 ## Overview
@@ -20,7 +22,7 @@
 | strain_id | numeric | 314 | 314 | 1 | ~320 | — | — |
 | strain_code | categorical | 304 | 303 | — | — | — | `TFCN_48D-10` (2 rows) |
 | genus | categorical | 302 | 3 | — | — | — | Rhodotorula (300), Cystobasidium (1), Pseudomicrostroma (1) |
-| species | categorical | 302 | 18 | — | — | — | R. mucilaginosa (216), R. paludigena (17), R. toruloides (10), R. diobovata (10) |
+| species | categorical | 302 | 18 | — | — | — | R. mucilaginosa (219), R. paludigena (16), R. diobovata (10), R. toruloides (9) |
 | n_colonies | numeric | 314 | — | 1 | 8 | 3.69 (sd 0.80) | median 4 |
 | n_replicate_wells | numeric | 314 | — | 1 | 8 | 3.65 (sd 0.81) | median 4 |
 | timepoint_h | numeric | 314 | 2 | 105.0 | 108.0 | 107.20 | 108h (main cadence, majority), 105h (alternate cadence) |

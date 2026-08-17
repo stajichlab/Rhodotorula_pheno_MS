@@ -1,13 +1,12 @@
 species,n_strains,monophyletic,n_extra_tips_in_clade,extra_species
-Rhodotorula mucilaginosa,194,False,71,Pseudomicrostroma phylloplanum;Rhodotorula araucariae;Rhodotorula dairenensis;Rhodotorula diobovata;Rhodotorula evergladensis;Rhodotorula glutinis;Rhodotorula graminis;Rhodotorula kratochvilovae;Rhodotorula pacifica;Rhodotorula paludigena;Rhodotorula sp. clade I;Rhodotorula sp. clade XI;Rhodotorula sp. clade XIII;Rhodotorula sphaerocarpa;Rhodotorula taiwanensis;Rhodotorula toruloides
-Rhodotorula paludigena,16,False,117,Pseudomicrostroma phylloplanum;Rhodotorula araucariae;Rhodotorula dairenensis;Rhodotorula diobovata;Rhodotorula evergladensis;Rhodotorula glutinis;Rhodotorula graminis;Rhodotorula kratochvilovae;Rhodotorula mucilaginosa;Rhodotorula sp. clade I;Rhodotorula sp. clade XI;Rhodotorula sp. clade XIII;Rhodotorula sphaerocarpa;Rhodotorula taiwanensis;Rhodotorula toruloides
-Rhodotorula toruloides,8,False,51,Pseudomicrostroma phylloplanum;Rhodotorula araucariae;Rhodotorula diobovata;Rhodotorula evergladensis;Rhodotorula glutinis;Rhodotorula graminis;Rhodotorula kratochvilovae;Rhodotorula paludigena;Rhodotorula sp. clade I;Rhodotorula sp. clade XIII;Rhodotorula sphaerocarpa;Rhodotorula taiwanensis
+Rhodotorula mucilaginosa,197,False,68,Pseudomicrostroma phylloplanum;Rhodotorula araucariae;Rhodotorula dairenensis;Rhodotorula diobovata;Rhodotorula evergladensis;Rhodotorula glutinis;Rhodotorula graminis;Rhodotorula kratochvilovae;Rhodotorula paludigena;Rhodotorula sp. clade I;Rhodotorula sp. clade XI;Rhodotorula sp. clade XIII;Rhodotorula sphaerocarpa;Rhodotorula taiwanensis;Rhodotorula toruloides
+Rhodotorula paludigena,15,True,0,
 Rhodotorula sp. clade I,8,True,0,
+Rhodotorula taiwanensis,7,True,0,
+Rhodotorula toruloides,7,True,0,
 Rhodotorula dairenensis,7,True,0,
-Rhodotorula taiwanensis,6,False,1,Rhodotorula toruloides
 Rhodotorula diobovata,6,True,0,
 Rhodotorula sphaerocarpa,5,True,0,
 Rhodotorula graminis,3,True,0,
 Rhodotorula kratochvilovae,3,True,0,
 Rhodotorula sp. clade XI,2,True,0,
-Rhodotorula pacifica,2,False,114,Rhodotorula mucilaginosa

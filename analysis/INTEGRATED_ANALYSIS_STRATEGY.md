@@ -110,7 +110,7 @@ read as part of the plan rather than an addendum easy to skip.
 | **Genome – Functional** | `BFD/db/BFD.duckdb` | 276 strains, **fully populated** across pfam (3.27M rows), merops (402K), cazy (58K), signalp (103K), targetp (240K), tmhmm (401K), wolfpsort (2.17M), predgpi (2.17M), idp (3.0M) — checked 2026-08-15, all 9 tables have `count(distinct species_prefix) = 276`; the earlier "only 1-2 strains populated" blocker is resolved |
 | **Genome – Gene/Protein** | Same BFD database | gene_proteins (2.1M), gene_info, gene_transcripts, codon_freq, aa_freq |
 | **Genome – Assembly Stats** | Same BFD database | asm_stats, busco_genome (`complete_pct` etc., all 276 strains), telomere_summary |
-| **Phylogeny** | `BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile` (PHYling protein tree, 278 strain-level tips) | Pruned to one tip per species via `analysis/scripts/prune_species_tree.R` → `analysis/integrated_analysis/phase1_phenotype/species_tree.nwk` (17 species with genome data) |
+| **Phylogeny** | `BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile` (PHYling protein tree, 278 strain-level tips) | Pruned to one tip per species via `analysis/scripts/prune_species_tree.R` → `analysis/integrated_analysis/phase1_phenotype/species_tree.nwk` (16 species with genome data) |
 | **Existing Analyses** | `analysis/` directory | Color PCoA (`color_phenotype_ordination/`), MS feature PCoA (`ms_feature_ordination/`), differential features by species pair (`differential_features/`), SIRIUS annotations |
 
 ### Strain Overlap
