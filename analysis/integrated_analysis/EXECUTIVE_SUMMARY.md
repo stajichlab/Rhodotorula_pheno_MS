@@ -56,7 +56,7 @@ This 5-method null result triggered the `analysis/ideas/2026-08-15-color-metabol
 
 ---
 
-## Phase 3 — Idea 1: targeted carotenoid/sterol mass re-mining (done, **live lead**)
+## Phase 3 — Idea 1: targeted carotenoid/sterol mass re-mining (done, copper-AUC lead tested to null 2026-08-17)
 **Path**: `phase3_metabolome_phenotype_idea1/`
 **Script**: `analysis/scripts/idea1_targeted_mass_remining.py`, `idea1_auc_quickcheck.py`
 
@@ -66,9 +66,9 @@ This 5-method null result triggered the `analysis/ideas/2026-08-15-color-metabol
 - `STEROL_CLUSTER_AUC_CHECK.md`, `sterol_cluster_auc_quickcheck.csv` — extended to a 4-feature ergostane cluster (SIRIUS-called Peroxyergosterol, Ergost-3,5,7,9(11),22-pentaen, 7-Hydroxyergosterol + row-846 anchor). **All 4 show the same positive-direction naive correlation with copper-resistance AUC in the cell fraction** (rho 0.17-0.28, p<0.006).
 
 **Verdict on color**: no candidate from either pass correlates with a\* — this re-mining did not rescue a hidden color signal, consistent with Phase 2.
-**Verdict on copper-AUC**: a real, multi-feature-corroborated **lead, not a validated result** — no phylogenetic block-permutation or negative control has been run on it yet, and this project has a track record of naive whole-panel hits (including this exact AUC phenotype) failing that check once tested.
+**Verdict on copper-AUC**: **tested and now null under rigor.** A predictor-swapped within-species run (`phase2_within_species_association.py --predictor auc`, *R. mucilaginosa* n=207, hard-gated by a fresh colony-area decoy) shows **0 BH-FDR hits in either fraction** and collapses the whole 4-feature sterol cluster to within-species |rho| <= 0.12 (all empirical_p > 0.10) — the 3rd straight naive whole-panel hit (and 2nd for this exact AUC phenotype) to fail under phylogenetic/within-species blocking. The naive whole-panel signal was between-species phylogenetic structure, not within-species co-variation.
 **Full evidence ledger**: `.living/findings/carotenoid-pathway-detectability-in-untargeted-lcms.md` (F-001 through F-004; registry F-007/F-008/F-009).
-**Next step (not started)**: phylogenetically-corrected test of the ergosterol/sterol-cluster↔copper-AUC signal (predictor-swapped variant of `phase2_within_species_association.py`, `mean_auc_rate` instead of color).
+**Next step (done 2026-08-17)**: phylogenetically-corrected test of the ergosterol/sterol-cluster↔copper-AUC signal — `analysis/scripts/phase2_within_species_association.py --predictor auc` + refreshed `area` decoy (outputs `within_species_Rhodotorula_mucilaginosa_association_auc.csv` / `_area_decoy.csv` in `phase2_metabolome_phenotype/`).
 
 ---
 

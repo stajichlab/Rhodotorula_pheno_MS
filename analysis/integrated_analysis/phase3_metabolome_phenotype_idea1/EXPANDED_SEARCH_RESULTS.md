@@ -89,17 +89,12 @@ control, no BH-FDR context) specifically to decide whether investing in
 the full pipeline is worthwhile — and on that basis, **yes, this looks
 worth the full test**.
 
-## Recommendation / next step (not yet done)
+## Recommendation / next step (done 2026-08-17)
 
-Run ergosterol (asid_31011, cell fraction) through the same rigor as
-everything else in this project before trusting it: phylogenetic
-block-permutation empirical p-value (species-level primary,
-*R. mucilaginosa*-only as secondary), with the same hard-gated
-negative-control convention (e.g. colony area as decoy) already
-established in `phase2_color_metabolome_association.py`/
-`phase2_within_species_association.py`. This would need a small new
-script variant (predictor = mean_auc_rate from sample_metadata rather
-than the color phenotype table) — not yet written.
+Ergosterol was run through the same rigor: `--predictor auc` was added to
+`phase2_within_species_association.py` (mean_auc_rate from sample_metadata),
+gated by a freshly rerun colony-area decoy, and run on *R. mucilaginosa*.
+**Null** -- see `STEROL_CLUSTER_AUC_CHECK.md` "Status / next step (done)".
 
 ## Reproduce
 

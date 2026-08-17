@@ -60,15 +60,38 @@ consistently. Two additional details are worth carrying forward:
   cluster; worth keeping distinct rather than treating the cluster as one
   monolithic signal.
 
-## Status / next step (still not done)
+## Status / next step (done 2026-08-17)
 
-This raises the priority of running the row-846/cluster ergosterol signal
-through the full rigor (phylogenetic block permutation, hard-gated
-negative control) already standard elsewhere in this project, per the
-still-open recommendation in `EXPANDED_SEARCH_RESULTS.md`. Not started --
-would reuse `phase2_within_species_association.py`'s machinery with
-`mean_auc_rate` as predictor instead of color. Held pending PI direction
-(Idea 3 gene-list work is still the standing priority).
+The full-rigor test is now done: added `--predictor auc` (mean_auc_rate from
+`sample_metadata.csv.gz`) to `phase2_within_species_association.py` and ran it
+on *R. mucilaginosa* (207 strains with copper AUC), gated by a freshly rerun
+`area` colony-size decoy (same hard-gate convention as the color tests).
+
+**Result: the naive whole-panel sterol-AUC signal does NOT survive**
+**within-species phylogenetic block permutation.** All four cluster features
+collapse to |rho| <= 0.12 within *R. mucilaginosa* (all empirical_p > 0.10),
+and the overall within-species AUC run finds 0 BH-FDR<0.05 hits in either
+fraction (null mean 0.0 hits/permutation).
+
+This is the third straight failure of a naive whole-panel correlation to
+survive phylogenetic/within-species rigor (F-005 in
+`.living/findings/phylogenetic-confounding-of-trait-molecular-associations.md`),
+and the second for the copper-AUC phenotype specifically (the naive amino-acid
+hits failed the *R. mucilaginosa*-only check first). Consistent with the
+established finding, the whole-panel cell-fraction rho 0.17-0.28 was driven by
+between-species phylogenetic structure (copper-resistant species carry more
+cell sterol), not by within-species co-variation.
+
+Outputs:
+- `analysis/integrated_analysis/phase2_metabolome_phenotype/within_species_Rhodotorula_mucilaginosa_association_auc.csv`
+- `.../within_species_Rhodotorula_mucilaginosa_association_area_decoy.csv` (refreshed decoy)
+- Reproduce: `python3 analysis/scripts/phase2_within_species_association.py --species "Rhodotorula mucilaginosa" --predictor auc`
+
+A species-level (whole-panel, species-tree-blocked) variant --
+`phase2_color_metabolome_association.py` machinery with mean_auc_rate -- is
+still available if we ever want the species-lineage-level view, but it is the
+weaker design (effective sample size bounded by ~17 species lineages) and the
+within-species result already tells the story; not run this pass.
 
 ## Reproduce
 
