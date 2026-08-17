@@ -2,7 +2,7 @@
 #SBATCH -p short
 #SBATCH -c 2 --mem 4gb
 #SBATCH --time=00:40:00
-#SBATCH --array=1-110
+#SBATCH --array=1-90
 #SBATCH -J diff_features
 #SBATCH -o analysis/differential_features/logs/%A_%a.log
 
@@ -10,7 +10,7 @@
 # (both fractions) listed in analysis/differential_features/pairs_to_run.tsv
 # -- one SLURM array task per pair, so a slow/failed pair doesn't block the
 # rest and everything fits comfortably in the short queue's 2h limit even
-# though there are ~110 pairs total. Each task runs the base Mann-Whitney
+# though there are 90 pairs total. Each task runs the base Mann-Whitney
 # test plus TWO block-permutation checks (see block_permutation.py and
 # differential_features_by_species.py's docstrings):
 #   - plate:  --block-by "Library Plate", always informative, catches an MS
@@ -25,17 +25,17 @@
 #             degenerate -- check that before trusting a clade result,
 #             don't assume "0 significant" means "no real difference."
 #
-# TREE_PATH below is the 276-taxon FastTree-with-support-values tree
+# TREE_PATH below is the 278-taxon FastTree-with-support-values tree
 # (BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/...).
-# Checked directly across all 110 pairs at N_CLADES=30: only 2 (both
-# fractions of R. mucilaginosa vs R. pacifica) have any clade containing
-# both species -- the other 108 will report DEGENERATE for the clade test,
-# which is expected (see block_permutation.py) and not a bug: most species
-# pairs here are cleanly monophyletic and non-overlapping in this tree, so
-# clade-blocking has nothing to test for them. If a future tree changes
-# this, update TREE_PATH in place (and rerun
-# scripts/generate_species_pairs.py + resubmit) -- nothing else here needs
-# to change.
+# Checked directly across the current 90 pairs at N_CLADES=30: with the
+# R. pacifica pairs dropped (that was the only species sharing a clade
+# with mucilaginosa at this resolution), every remaining pair is expected
+# to report DEGENERATE for the clade test, which is fine (see
+# block_permutation.py): most species pairs here are cleanly monophyletic
+# and non-overlapping in this tree, so clade-blocking has nothing to test
+# for them. If a future tree changes this, update TREE_PATH in place (and
+# rerun scripts/generate_species_pairs.py + resubmit) -- nothing else here
+# needs to change.
 #
 # Before submitting:
 #   1. Regenerate the pair list if the linked sample metadata has changed:
