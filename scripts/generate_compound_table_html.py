@@ -320,7 +320,7 @@ function matches(row, f) {{
   if (!isNaN(f.qmax) && !(row.q_used <= f.qmax)) return false;
   if (!isNaN(f.fcmin) && !(Math.abs(row.log2FC_a_over_b) >= f.fcmin)) return false;
   if (f.search) {{
-    const hay = [row.best_identity, row.library_NAME, row.analog_NAME, row.sirius_structure_name,
+    const hay = [row["row ID"], row.best_identity, row.library_NAME, row.analog_NAME, row.sirius_structure_name,
                  row.sirius_formula, row.adduct].filter(Boolean).join(" ").toLowerCase();
     if (!hay.includes(f.search)) return false;
   }}
