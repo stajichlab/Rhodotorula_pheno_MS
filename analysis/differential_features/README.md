@@ -33,6 +33,12 @@ GNPS library matches and SIRIUS/CANOPUS predictions.
 | Supernatant: R. mucilaginosa vs R. paludigena | 1,079 | 863 | [dashboard](./supernatant_mucilaginosa_vs_paludigena/dashboard.html) |
 | Supernatant: R. mucilaginosa vs R. sphaerocarpa | 748 | 692 | [dashboard](./supernatant_mucilaginosa_vs_sphaerocarpa/dashboard.html) |
 
+## Supernatant vs cell pellet (paired, within species)
+
+| Comparison | Features | Identified | Dashboard |
+|------------|----------|------------|-----------|
+| R. mucilaginosa: supernatant vs cell pellet | 11,126 | 6,421 | [dashboard](./mucilaginosa_sup_vs_cell/dashboard.html) |
+
 ## Individual comparison tables
 
 Each comparison directory also contains:

@@ -30,7 +30,16 @@ MASTER_TSV = DIFF_ROOT / "all_significant_features_summary.tsv"
 
 
 def _label(name: str) -> str:
-    """cell_diobovata_vs_mucilaginosa -> 'R. diobovata vs R. mucilaginosa'"""
+    """Turn a comparison dir name into a readable label.
+
+    cell_diobovata_vs_mucilaginosa -> 'Cell pellet: R. diobovata vs R. mucilaginosa'
+    mucilaginosa_sup_vs_cell       -> 'R. mucilaginosa: supernatant vs cell pellet'
+    """
+    PAIRED_SUFFIX = "_sup_vs_cell"
+    if name.endswith(PAIRED_SUFFIX):
+        species = name[: -len(PAIRED_SUFFIX)]
+        return f"R. {species.replace('_', ' ')}: supernatant vs cell pellet"
+
     if name.startswith("cell_"):
         frac = "Cell pellet"
         pair = name[len("cell_"):]
@@ -249,6 +258,7 @@ def build_readme(dashboards: list[tuple[str, int, int, int]]) -> str:
 
     cell_dirs = [d for d in dashboards if d[0].startswith("cell_")]
     sup_dirs = [d for d in dashboards if d[0].startswith("supernatant_")]
+    paired_dirs = [d for d in dashboards if d[0].endswith("_sup_vs_cell")]
 
     if cell_dirs:
         lines += ["## Cell pellet comparisons", "", "| Comparison | Features | Identified | Dashboard |", "|------------|----------|------------|-----------|"]
@@ -259,6 +269,12 @@ def build_readme(dashboards: list[tuple[str, int, int, int]]) -> str:
     if sup_dirs:
         lines += ["## Supernatant comparisons", "", "| Comparison | Features | Identified | Dashboard |", "|------------|----------|------------|-----------|"]
         for name, n_total, n_identified, n_robust in sorted(sup_dirs, key=lambda x: -x[1]):
+            lines.append(f"| {_label(name)} | {n_total:,} | {n_identified:,} | [dashboard](./{name}/dashboard.html) |")
+        lines.append("")
+
+    if paired_dirs:
+        lines += ["## Supernatant vs cell pellet (paired, within species)", "", "| Comparison | Features | Identified | Dashboard |", "|------------|----------|------------|-----------|"]
+        for name, n_total, n_identified, n_robust in sorted(paired_dirs, key=lambda x: -x[1]):
             lines.append(f"| {_label(name)} | {n_total:,} | {n_identified:,} | [dashboard](./{name}/dashboard.html) |")
         lines.append("")
 
@@ -283,6 +299,7 @@ def build_readme_html(dashboards: list[tuple[str, int, int, int]]) -> str:
     total = sum(d[1] for d in dashboards)
     cell_dirs = sorted([d for d in dashboards if d[0].startswith("cell_")], key=lambda x: -x[1])
     sup_dirs = sorted([d for d in dashboards if d[0].startswith("supernatant_")], key=lambda x: -x[1])
+    paired_dirs = sorted([d for d in dashboards if d[0].endswith("_sup_vs_cell")], key=lambda x: -x[1])
 
     rows_html = []
     if cell_dirs:
@@ -295,6 +312,12 @@ def build_readme_html(dashboards: list[tuple[str, int, int, int]]) -> str:
         rows_html.append("<h2>Supernatant comparisons</h2>")
         rows_html.append("<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>")
         for name, n_total, n_identified, _ in sup_dirs:
+            rows_html.append(_row(name, n_total, n_identified))
+        rows_html.append("</tbody></table>")
+    if paired_dirs:
+        rows_html.append("<h2>Supernatant vs cell pellet (paired, within species)</h2>")
+        rows_html.append("<table><thead><tr><th>Comparison</th><th>Features</th><th>Identified</th><th>Links</th></tr></thead><tbody>")
+        for name, n_total, n_identified, _ in paired_dirs:
             rows_html.append(_row(name, n_total, n_identified))
         rows_html.append("</tbody></table>")
 
