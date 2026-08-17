@@ -6,11 +6,12 @@
 # N=strains -- feeding both Idea 5's own metabolome-side follow-up and,
 # once ready, Idea 3's genome-side candidate-gene calls.
 #
-# Adjustment from the original plan: Step 1's posterior support turned out
-# diffuse (max branch pp ~0.21, no clean shift/non-shift partition -- see
-# idea5_regime_shift/regime_shift_amean_summary.txt "Branches with
-# posterior probabilities higher than 0.1"). Rather than force a hard
-# threshold that isn't supported by the data, this script takes the
+# Adjustment from the original plan: Step 1's posterior support is
+# strongest on the terminal branches to R. taiwanensis / R. sphaerocarpa
+# (pp ~0.26 / 0.12 on the post-ANI 16-tip tree — see
+# idea5_regime_shift/regime_shift_amean_summary.txt), still below a clean
+# shift/non-shift partition. Rather than force a hard threshold that
+# isn't supported by the data, this script takes the
 # top-N ranked branches by posterior probability as CANDIDATE shift
 # clades (explicitly labeled as such, not confirmed shifts) and pairs
 # each against its phylogenetically nearest non-candidate clade.
@@ -112,8 +113,8 @@ cat(sprintf("Wrote %s\n", opt$out))
 cat(
   "\nCAVEAT (per DEVELOPMENT_PLAN.md Part C): this is hypothesis-generation,\n",
   "not a confirmatory test. Posterior support for individual branches was\n",
-  "diffuse (max pp ~0.21) -- treat this contrast-pair list as candidates\n",
-  "for Step 3 (shared molecular correlates), not as confirmed independent\n",
-  "origins.\n",
+  "strongest on the taiwanensis/sphaerocarpa subclade but stayed below ~0.3\n",
+  "-- treat this contrast-pair list as candidates for Step 3 (shared\n",
+  "molecular correlates), not as confirmed independent origins.\n",
   sep = ""
 )

@@ -8,7 +8,7 @@
 # Method: bayou (Uyeda & Harmon; reversible-jump MCMC over an
 # Ornstein-Uhlenbeck process with an unknown number/location of
 # adaptive-regime shifts) on the species-level tree
-# (species_tree.nwk, 17 tips -- built by prune_species_tree.R). This
+# (species_tree.nwk, 16 tips -- built by prune_species_tree.R). This
 # directly answers "which branches most likely carry an independent
 # color-gain event" with posterior support, rather than a hand-tuned
 # above/below-mean threshold.
@@ -18,7 +18,7 @@
 # the same way as a documented follow-up (exploratory tier, per the same
 # decision) by changing TRAIT_COL below.
 #
-# Tree size caveat: 17 tips is small for bayou (most published examples
+# Tree size caveat: 16 tips is small for bayou (most published examples
 # use 50-300+ tips). This is run as an exploratory/preliminary pass --
 # generations kept modest (fast on this tree size) and results should be
 # read as "candidate shift locations for Step 2's contrast-pair
@@ -40,9 +40,9 @@ option_list <- list(
   make_option("--trait-col", type = "character", default = "a._mean",
               help = "Column in --species-table to use as the trait (R read.csv mangles 'a*_mean' -> 'a._mean'). Default: a._mean (primary predictor)."),
   make_option("--ngen", type = "integer", default = 20000,
-              help = "MCMC generations. Small tree (17 tips) -> fast; increase for a publication-grade run."),
+              help = "MCMC generations. Small tree (16 tips) -> fast; increase for a publication-grade run."),
   make_option("--kmax", type = "integer", default = 5,
-              help = "Max number of regime shifts allowed by the prior (17 tips / ~32 edges -> keep small)."),
+              help = "Max number of regime shifts allowed by the prior (16 tips / ~30 edges -> keep small)."),
   make_option("--seed", type = "integer", default = 0),
   make_option("--out-dir", type = "character",
               default = "analysis/integrated_analysis/phase5_genome_linkage/idea5_regime_shift")

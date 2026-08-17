@@ -13,7 +13,7 @@
 | [1 — Phenotype](#phase-1--phenotype-characterization-done) | Characterize color phenotype, phylogenetic structure | Done | Reframed the whole project |
 | [2 — Metabolome](#phase-2--color--metabolome-association-done-null) | Does color correlate with any of 10,949 MS2 compound groups? | Done | **Null**, 5 independent methods agree |
 | [3 — Idea 1 targeted re-mining](#phase-3--idea-1-targeted-carotenoidsterol-mass-re-mining-done--live-lead) | Can targeted mass search find pigment features the untargeted pipeline missed? | Done | Found candidates; **no color link**, but a real copper-AUC lead (unvalidated) |
-| [5 — Idea 5 regime shift](#phase-5--idea-5-bayesian-regime-shift-detection-done) | Where on the tree did color shift convergently? | Done | Diffuse posterior; top candidate corroborates Phase 1 ranking |
+| [5 — Idea 5 regime shift](#phase-5--idea-5-bayesian-regime-shift-detection-done) | Where on the tree did color shift convergently? | Done | Signal on the sphaerocarpa/taiwanensis subclade (not decisive); corroborates Phase 1 ranking |
 | [5 — Idea 3 pigment genes](#phase-5--idea-3-pigment-gene-genome-screen-done-for-screening-stage) | Are pigment-pathway genes present/variable across the genome panel? | Done (screening stage) | Melanin = laccase route (convergent 3-method finding); first genome↔color test not yet run |
 | [2 — Extreme-group color test](#phase-2--extreme-group-high-vs-low-orangered-test-done-null) | Do color-extreme strains (top/bottom quartile a\*/C\*) differ in any compound, ignoring phylogeny? | Done | **Null** — 6th independent method to agree |
 | [Siderophore investigation](#siderophore--iron-sequestration-investigation-done-real-cross-reference-unresolved) | Can rhodotorulic acid / siderophore chemistry be detected, and does it track the known NRPS gene? | Done | Real ortholog call now works (275/278); compound present even in the 2 gene-negative strains — likely assembly artifact, not resolved |
@@ -26,10 +26,10 @@
 
 - `strain_phenotype_table.csv` / `species_phenotype_table.csv` — CIELAB L\*/a\*/b\*/C\*/h°/orange_score at strain and species level (canonical `control_90_110` source).
 - `phenotype_phylogenetic_signal.csv` — Blomberg's K / Pagel's λ per trait.
-- `species_tree.nwk` — 17-tip species-level pruned tree (278-taxa PHYling backbone).
+- `species_tree.nwk` — 16-tip species-level pruned tree (278-taxa PHYling backbone, after the whole-genome ANI reassignment collapsed *R. pacifica* into *R. mucilaginosa*).
 - `convergent_color_candidates.csv` — heuristic convergence screen (superseded by Idea 5's formal Bayesian version, see Phase 5 below).
 
-**Key finding, project-reframing**: *R. dairenensis* — the species the project was originally built around — ranks only **4th of 17-18 species** on the orange_score composite, reproduced across multiple phenotype sources (`analysis/examine_phenotype_calling/RECOMMENDATION.md`). This motivated the 2026-08-15 pivot from an *R.-dairenensis*-specific investigation to a whole-panel color→compound→genome framing (see strategy doc's "Reframing" section).
+**Key finding, project-reframing**: *R. dairenensis* — the species the project was originally built around — ranks only **4th of 16 species** on the orange_score composite, reproduced across multiple phenotype sources (`analysis/examine_phenotype_calling/RECOMMENDATION.md`). This motivated the 2026-08-15 pivot from an *R.-dairenensis*-specific investigation to a whole-panel color→compound→genome framing (see strategy doc's "Reframing" section).
 
 ---
 
@@ -39,14 +39,14 @@
 
 | Method | File | n | Result |
 |---|---|---|---|
-| Whole-panel univariate + phylo block-permutation | `PHASE2_SUMMARY.md`, `color_metabolome_association_{a,C}.csv` | ~275 strains, 17-18 species blocks | **0/10,164-10,416** hits at BH-FDR<0.05, either color axis, either fraction |
+| Whole-panel univariate + phylo block-permutation | `PHASE2_SUMMARY.md`, `color_metabolome_association_{a,C}.csv` | ~275 strains, 16 species blocks | **0/10,164-10,416** hits at BH-FDR<0.05, either color axis, either fraction |
 | Within-species univariate, *R. mucilaginosa* | `WITHIN_SPECIES_MUCILAGINOSA.md`, `within_species_Rhodotorula_mucilaginosa_association_a.csv` | n=206, real strain-tree blocking | **Null**, despite near-full panel-wide color range within this one species |
 | Within-species univariate, 2 more species | `ROBUSTNESS_AND_MULTIVARIATE.md`, `within_species_Rhodotorula_{paludigena,toruloides}_association_a.csv` | n=10 each | Null |
 | Within-species univariate, remaining 5 species with ≥5 strains | `WITHIN_SPECIES_SMALL_SPECIES_SWEEP.md`, `within_species_Rhodotorula_{dairenensis,diobovata,taiwanensis,sp_clade_I,sphaerocarpa}_association_a.csv` | n=5-8 each | Null, but negative control uninformative at this n (flagged explicitly) |
 | Sparse multivariate (Lasso, group-CV) | `ROBUSTNESS_AND_MULTIVARIATE.md`, `multivariate_Rhodotorula_mucilaginosa_a.csv` | *R. mucilaginosa* | Null — cross-val R² negative throughout |
 | Pattern-group ANOVA (k-means + Kruskal-Wallis) | `anova_Rhodotorula_mucilaginosa_color.csv` | *R. mucilaginosa* | Null |
 
-**Every species in the panel with ≥5 strains and MS data (8 of 17-18) has now been tested within-species — all null.**
+**Every species in the panel with ≥5 strains and MS data (8 of 16) has now been tested within-species — all null.**
 
 **Verdict**: 5 independent statistical methods agree — **no detectable color↔metabolome association** in this dataset at current resolution. Hard-gated negative controls (`*_area_decoy.csv` files, colony area as a phylogenetically-structured but color-unrelated decoy) confirm each pipeline can detect a real effect when present (area decoy shows 1,354-2,025 hits depending on method/fraction), so this is not a power/calibration artifact of the pipeline itself.
 **Real side-finding**: colony area broadly confounds cell-fraction (not supernatant) metabolite abundances — `.living/findings/biomass-scaling-artifacts-in-extraction-based-metabolomics.md`.
@@ -76,10 +76,10 @@ This 5-method null result triggered the `analysis/ideas/2026-08-15-color-metabol
 **Path**: `phase5_genome_linkage/idea5_regime_shift/`
 **Scripts**: `analysis/scripts/idea5_regime_shift_detection.R`, `idea5_contrast_pairs.R`
 
-- `RESULTS.md`, `regime_shift_amean_summary.txt` — formal `bayou` reversible-jump OU MCMC on a\* (species tree), replacing the earlier coarse heuristic (`convergent_color_test.R`, Phase 1). k (number of shifts): posterior mean 1.8, 95% HPD 0-4. **No branch reaches a confident posterior probability** (top 5 branches all 0.10-0.21) — a power-ceiling result, same story as Phase 1/2, now in a formal Bayesian framework.
-- `contrast_pairs.csv` — top candidate branches paired with nearest non-candidate sister clade by patristic distance. Top candidates: *R. sphaerocarpa*+*R. taiwanensis* (pp=0.177) and *R. glutinis* (pp=0.176) — **these independently match Phase 1's original heuristic #1/#2 ranking**, despite the low absolute posterior support.
+- `RESULTS.md`, `regime_shift_amean_summary.txt` — formal `bayou` reversible-jump OU MCMC on a\* (16-tip post-ANI species tree), replacing the earlier coarse heuristic (`convergent_color_test.R`, Phase 1). k (number of shifts): posterior mean 1.39, 95% HPD 0-3. **Support is concentrated on the *R. sphaerocarpa*/*R. taiwanensis* subclade** (terminal *R. taiwanensis* branch pp=0.256, *R. sphaerocarpa* 0.119 — the top two branches) but stays below a decisive threshold.
+- `contrast_pairs.csv` — top candidate branches paired with nearest non-candidate sister clade by patristic distance. Top candidates: *R. taiwanensis* (pp=0.256) and *R. sphaerocarpa* (pp=0.119) — **both members of the same subclade that ranked #1/#2 by a\* in Phase 1's ranking**, an independent formal method corroborating the earlier heuristic.
 
-**Verdict**: diffuse/inconclusive on its own, but the cross-method agreement with Phase 1 is itself informative — these two clades are the most defensible convergent-color-evolution candidates in the project so far, worth using as the contrast pairs if/when Idea 3's genome data supports a convergence test.
+**Verdict**: not decisive on its own (na single branch clears pp>0.3), but post-reassignment the signal sharpened onto the *R. sphaerocarpa*/*R. taiwanensis* high-a\* subclade — the cross-method agreement with Phase 1 makes this the most defensible convergent-color-evolution candidate in the project so far, worth using as the contrast pair if/when Idea 3's genome data supports a convergence test. *R. diobovata* (pp=0.080) is a secondary candidate.
 **Full evidence ledger**: `.living/findings/convergent-color-evolution-in-rhodotorula.md` (F-006).
 
 ---
@@ -133,7 +133,7 @@ gave a clean, strongly bimodal identity distribution (303 noise-tier hits
 *R. kratochvilovae* strains landing exactly as expected as a built-in
 positive control). **275/278 strains confirmed with the ortholog.** The 3
 without it: the *Cystobasidium* outgroup (plausible real absence) and 2
-specific *R. mucilaginosa* strains (200/202 of that species ARE
+specific *R. mucilaginosa* strains (203/205 of that species ARE
 positive). **Cross-referencing those 2 strains against MS presence: the
 compound is still clearly present, at abundances comparable to
 ortholog-positive controls** — doesn't confirm the hypothesized 1:1

@@ -5,27 +5,27 @@ Scripts: `analysis/scripts/idea5_regime_shift_detection.R` (Step 1),
 heuristic in `convergent_color_test.R` (above-mean orange_score AND
 phylogenetically-distant-from-*R.-dairenensis*) with a formal Bayesian
 reversible-jump OU model (`bayou` 2.3.2) fit to a\* (primary predictor)
-on the 17-tip species tree.
+on the 16-tip species tree.
 
 ## Step 1: bayou MCMC result
 
-- 20,000 generations, 30% burnin, single chain (not yet run with multiple
-  independent chains for a formal convergence check — see Caveats).
-- Effective sample sizes: 51-206 across parameters (borderline for
-  `alpha`, adequate for the rest) — fine for an exploratory pass, not
-  yet publication-grade.
-- **k (number of regime shifts): posterior mean 1.8, 95% HPD interval
-  0-4.** The tree supports roughly 1-2 shifts but with substantial
-  uncertainty — expected given only 17 tips.
-- **No single branch reached a decisive posterior probability**: the
-  top 5 branches all sit in the 0.10-0.21 range (see
-  `regime_shift_amean_branch_posterior.csv`), well below what would
-  normally be called a confident shift call (`shiftSummaries()` found
-  nothing clearing pp>0.3). This is itself informative — it is the same
-  "not enough independent data points" power-ceiling story that has
-  recurred throughout this project (Phase 1's phylogenetic signal test,
-  Phase 2's species-level block permutation), now showing up in a
-  formal Bayesian framework instead of an ad hoc heuristic.
+- 40,000 generations, 30% burnin, single chain (not yet run with multiple
+  independent chains for a formal convergence check — see Caveats). Re-run
+  on the post-ANI 16-tip species tree (R. pacifica removed; the two
+  reclassified strains merged into R. mucilaginosa).
+- Effective sample sizes: 141-388 across parameters (adequate for an
+  exploratory pass, `alpha` borderline) — not yet publication-grade.
+- **k (number of regime shifts): posterior mean 1.39, 95% HPD interval
+  0-3.** The tree supports roughly 1-2 shifts but with substantial
+  uncertainty — expected given only 16 tips.
+- **A single branch now carries most of the signal**: the terminal branch
+  to *R. taiwanensis* has posterior shift probability 0.256 (see
+  `regime_shift_amean_branch_posterior.csv`), with its sister *R.
+  sphaerocarpa* branch next at 0.119. Still below the pp>0.3 bar
+  `shiftSummaries()` uses for a confident call, but a much more coherent
+  distribution than the pre-reassignment run — the high-a\* signal is
+  concentrated on the *R. sphaerocarpa*/*R. taiwanensis* subclade rather
+  than spread diffusely across near-root branches.
 
 ## Step 2: candidate contrast pairs
 
@@ -35,48 +35,48 @@ paired against their nearest phylogenetic non-candidate sister
 
 | pp | Candidate clade | Clade mean a\* | Nearest non-candidate sister | Sister a\* | Patristic dist. |
 |---|---|---|---|---|---|
-| 0.177 | *R. sphaerocarpa* + *R. taiwanensis* | **11.75** | *R. sp. clade XI* | 7.58 | 0.567 |
-| 0.176 | *R. glutinis* | 5.81 | *R. graminis* | 6.72 | 0.232 |
-| 0.147 | *Pseudomicrostroma phylloplanum* (outgroup) | 10.90 | *R. toruloides* | 8.05 | 1.140 |
-| 0.142 | *R. mucilaginosa* | 10.26 | *R. pacifica* | 10.56 | 0.043 |
-| 0.104 | *R. glutinis* + *R. sp. clade I* | 7.91 | *R. graminis* | 6.72 | 0.261 |
+| 0.256 | *R. taiwanensis* | **12.73** | *R. sp. clade XI* | 7.58 | 0.562 |
+| 0.119 | *R. sphaerocarpa* | 10.76 | *R. sp. clade XI* | 7.58 | 0.571 |
+| 0.080 | *R. diobovata* | 8.15 | *R. graminis* | 6.72 | 0.471 |
+| 0.073 | *R. glutinis* | 5.81 | *R. graminis* | 6.72 | 0.232 |
+| 0.072 | *R. glutinis* + *R. sp. clade I* | 7.91 | *R. graminis* | 6.72 | 0.261 |
 
-**Consistency check with prior work**: the top candidate
-(*R. sphaerocarpa* + *R. taiwanensis*) is exactly the pair that ranked
-#1/#2 by a\* in Phase 1's species ranking (`convergent_color_candidates.csv`)
-— an independent, formal method recovering the same signal the earlier
-coarse heuristic and the raw ranking both pointed to. That's a real
-consistency win for the analysis pipeline, not a coincidence to explain
-away.
+**Consistency check with prior work**: the top candidate is now a single
+species, *R. taiwanensis* (a\* 12.73 — the highest in the panel), with
+its sister *R. sphaerocarpa* second — i.e. both members of the
+*R. sphaerocarpa*/*R. taiwanensis* subclade that ranked #1/#2 by a\* in
+Phase 1's species ranking (`convergent_color_candidates.csv`). A formal
+Bayesian method recovering the same subclade the earlier coarse heuristic
+and the raw ranking both pointed to is a real consistency win for the
+analysis pipeline.
 
 **Caveats on individual rows**:
-- The *Pseudomicrostroma phylloplanum* row is a single-strain outgroup
-  genus with substantial phylogenetic distance to its paired sister
-  (1.14, the largest in the table) — plausibly a tree-placement/outgroup
-  artifact rather than a genuine within-*Rhodotorula* carotenoid-pathway
-  convergence event. Treat with more skepticism than the *Rhodotorula*-
-  only rows.
-- The *R. mucilaginosa* row has a suspiciously tiny patristic distance to
-  its "nearest non-candidate sister" (0.043) — likely reflects
-  *R. mucilaginosa*'s own branch-length placement (206 strains collapsed
-  to one representative tip) rather than a meaningful evolutionary
-  distance; also *R. mucilaginosa*'s a\* (10.26) barely differs from its
-  paired sister's (10.56), so this row likely doesn't represent a real
-  color-gain event regardless of its posterior probability — the pp
-  ranking is picking something else up (possibly tree-topology/branch-
-  length structure near the root of the *Rhodotorula* clade) that
-  deserves a closer look before being treated as a "candidate origin."
+- The *R. taiwanensis* and *R. sphaerocarpa* rows are a shared subclade
+  (both descend from a common ancestor) — not independent origins, so as
+  contrast units they count as a single candidate event (the high-a\*
+  signal on the *R. sphaerocarpa*/*R. taiwanensis* subclade as a whole).
+  The post-ANI removal of *R. pacifica* (which previously sat between
+  *R. mucilaginosa* and the sphaerocarpa/taiwanensis clade as part of the
+  diffuse signal) sharpened this into the clean two-species cluster.
+- The *R. diobovata* row (pp 0.080) has a modest a\* contrast (8.15 vs
+  6.72) — lower priority than the top pair but a reasonable secondary
+  candidate to carry into Step 3.
+- *R. glutinis* (a\* 5.81, low) appears as a candidate shift clade at
+  pp 0.073 — this reflects the model's freedom to place a downward
+  shift on a low-trait branch, not a color-gain event, so it is of lower
+  biological interest for the "convergent color gain" question.
 
 ## What this means for the rest of Idea 5 / Idea 3
 
-Given the diffuse posterior support, Step 3 ("do independent origins share
-molecular/genomic correlates") should proceed but with explicit weighting
-toward the two cleanest rows — *R. sphaerocarpa*+*R. taiwanensis* (pp
-0.177, biologically consistent with prior ranking) and *R. glutinis* (pp
-0.176, consistent with the original heuristic's flagged candidates) — and
-treat the *Pseudomicrostroma* and *R. mucilaginosa* rows as lower-
-confidence / needing manual review before inclusion in any contrast
-analysis.
+Posterior support for any single branch is still below a decisive
+threshold, but the signal is now coherently concentrated on the
+*R. sphaerocarpa*/*R. taiwanensis* high-a\* subclade. Step 3 ("do
+independent origins share molecular/genomic correlates") should proceed
+with explicit weighting toward the *R. taiwanensis*/*R. sphaerocarpa*
+row pair (pp 0.256/0.119, the same clade ranked #1/#2 by a\* in Phase 1)
+as the primary candidate, with *R. diobovata* as a secondary. The
+post-reassignment tree no longer confounds the signal with a
+*R. pacifica*-adjacent branch.
 
 This is exactly the kind of candidate list Idea 3's genome-side work
 should eventually test against once the BFD rebuild + candidate-gene
@@ -87,24 +87,25 @@ sisters?
 
 ## Caveats on the method itself
 
-- Single MCMC chain, 20,000 generations — adequate to see the qualitative
-  story (diffuse support, no decisive shift) but not a publication-grade
-  run. A rigorous version would run ≥2 independent chains, check Gelman-
-  Rubin diagnostics (`gelman.R()`, available in bayou), and likely
-  increase generations until all parameters' ESS clear ~200-500.
+- Single MCMC chain, 40,000 generations — adequate to see the qualitative
+  story (signal concentrated on the sphaerocarpa/taiwanensis subclade but
+  still below a decisive pp threshold) but not a publication-grade run. A
+  rigorous version would run ≥2 independent chains, check Gelman-Rubin
+  diagnostics (`gelman.R()`, available in bayou), and likely increase
+  generations until all parameters' ESS clear ~200-500.
 - Only a\* was tested (primary predictor per the 2026-08-15 grilling
   session decision). orange_score_mean can be rerun the same way
   (`--trait-col orange_score_mean`) as an exploratory-tier follow-up —
   not yet done.
-- 17 tips is small for bayou by the standard of most published
-  applications (typically 50-300+ tips) — the diffuse result should be
-  read as "this tree probably doesn't have enough independent lineages to
-  formally localize shifts with confidence," which is itself a valid and
-  useful finding, not a failed analysis.
+- 16 tips is small for bayou by the standard of most published
+  applications (typically 50-300+ tips) — posterior support for any single
+  branch stays below a decisive threshold, but the concentration of the
+  signal on the sphaerocarpa/taiwanensis subclade is itself a useful and
+  consistent finding, not a failed analysis.
 
 ## Reproduce
 
 ```
-Rscript analysis/scripts/idea5_regime_shift_detection.R
+Rscript analysis/scripts/idea5_regime_shift_detection.R --ngen 40000
 Rscript analysis/scripts/idea5_contrast_pairs.R
 ```
