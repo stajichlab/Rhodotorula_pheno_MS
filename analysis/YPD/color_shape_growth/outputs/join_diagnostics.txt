@@ -5,13 +5,12 @@ Tree tip matched but no aa_freq file: 131
 Matched but missing/non-numeric phenotype values: 0
 
 Unique species among matched strains:
-  Rhodotorula mucilaginosa: 101
-  Rhodotorula paludigena: 15
+  Rhodotorula mucilaginosa: 104
+  Rhodotorula paludigena: 14
   Rhodotorula dairenensis: 8
   Rhodotorula diobovata: 7
   Rhodotorula sp. clade I: 4
   Rhodotorula kratochvilovae: 3
-  Rhodotorula pacifica: 2
   Rhodotorula graminis: 2
   Cystobasidium sp.: 1
   Pseudomicrostroma phylloplanum: 1

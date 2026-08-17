@@ -8,21 +8,21 @@ Strains with missing species: 1
   TFCN_17-331Y-3
 
 Strain count by species:
-  Rhodotorula mucilaginosa: 216
-  Rhodotorula paludigena: 17
-  Rhodotorula toruloides: 10
+  Rhodotorula mucilaginosa: 219
+  Rhodotorula paludigena: 16
   Rhodotorula diobovata: 10
+  Rhodotorula toruloides: 9
   Rhodotorula sp. clade I: 8
   Rhodotorula sphaerocarpa: 8
   Rhodotorula dairenensis: 8
-  Rhodotorula taiwanensis: 6
+  Rhodotorula taiwanensis: 7
   Rhodotorula glutinis: 3
-  Rhodotorula pacifica: 3
-  Rhodotorula kratochvilovae: 3
   Rhodotorula graminis: 3
+  Rhodotorula kratochvilovae: 3
   Rhodotorula sp. clade XI: 2
-  Cystobasidium sp.: 1
   Pseudomicrostroma phylloplanum: 1
-  Rhodotorula evergladensis: 1
+  Cystobasidium sp.: 1
   Rhodotorula araucariae: 1
+  Rhodotorula evergladensis: 1
+  Rhodotorula pacifica: 1
   Rhodotorula sp. clade XIII: 1

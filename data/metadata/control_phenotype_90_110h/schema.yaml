@@ -1,0 +1,177 @@
+dataset_name: control_phenotype_90_110h
+description: >
+  Per-strain colony color (CIELAB L*/a*/b*) and colony size (area, px)
+  phenotype table for Rhodotorula (+2 outgroup genera) strains grown on
+  control media (Copper concentration = 0 mM / plain YPD), aggregated
+  across replicate colonies at each strain's latest imaging pass within
+  the 90-110h window (105h or 108h depending on imaging cadence). One row
+  per strain (with a handful of exceptions -- see known issues below).
+format: CSV
+
+columns:
+  - name: strain_id
+    type: int
+    description: Numeric strain identifier, source database primary key.
+    nullable: false
+
+  - name: strain_code
+    type: str
+    description: >
+      Strain code (e.g. "DBVPG_3768", "TFCN_17-331Y-3") -- the join key
+      used throughout this repo (analysis/scripts/build_strain_phenotype_table.py
+      groups on this column).
+    nullable: true
+    notes: >
+      10/314 rows have strain_code = NULL ("unidentified spots" per the
+      upstream pipeline doc). These rows are silently dropped by a pandas
+      groupby(strain_code) in this repo's ingestion script (NaN group keys
+      are dropped by default) -- their color/area data currently does not
+      reach any downstream table. See CONTROL_PHENOTYPE_90_110H.md.
+      One value ("TFCN_48D-10") appears twice in the raw file (2 rows,
+      different plates/replicates); collapsed to the mean by strain_code
+      in this repo's derived tables.
+
+  - name: strain_name
+    type: str
+    description: Free-text strain name/label, not always equal to strain_code.
+    nullable: true
+
+  - name: genus
+    type: categorical
+    description: First token of `species`.
+    nullable: true
+    values:
+      - Rhodotorula
+      - Cystobasidium
+      - Pseudomicrostroma
+    notes: >
+      300/314 rows are Rhodotorula; 1 Cystobasidium, 1 Pseudomicrostroma
+      (outgroup genera used as ordination/comparison references elsewhere
+      in this repo), 12 rows NULL.
+
+  - name: species
+    type: categorical
+    description: Full binomial species name (matches BFD genome database's `species.SPECIES` column verbatim).
+    nullable: true
+    notes: 12/314 rows NULL (10 of these are the strain_code-NULL rows above; 2 more have a strain_code but no species call).
+
+  - name: origin
+    type: str
+    description: Geographic origin of the strain isolate (free text, e.g. "Italy", "China", "America").
+    nullable: true
+
+  - name: environment
+    type: str
+    description: Isolation environment/substrate (free text, e.g. "soil", "plant").
+    nullable: true
+
+  - name: n_colonies
+    type: int
+    description: Number of replicate colonies aggregated for this strain at its chosen imaging pass.
+    units: colonies
+    nullable: false
+    notes: Median 4, range 1-8. Strains with n_colonies < 3 have unreliable variance/SD per upstream doc (28/314 flagged).
+
+  - name: n_replicate_wells
+    type: int
+    description: Number of distinct run:well spots contributing to n_colonies (transparency check).
+    nullable: false
+
+  - name: timepoint_h
+    type: float
+    description: Rounded hour of the strain's latest imaging pass within the 90-110h window.
+    units: hours since plate start
+    nullable: false
+    values: [105.0, 108.0]
+    notes: Two-cadence imaging rig; 105h = alternate cadence, 108h = main cadence group.
+
+  - name: area_median
+    type: float
+    description: Median colony area (Shape_Area) across replicate colonies.
+    units: pixels
+    nullable: false
+
+  - name: area_mean
+    type: float
+    description: Mean colony area across replicate colonies.
+    units: pixels
+    nullable: false
+
+  - name: area_var
+    type: float
+    description: Sample variance of colony area across replicate colonies.
+    units: pixels^2
+    nullable: true
+    notes: NULL for the 14 rows with n_colonies < 2 (variance undefined).
+
+  - name: area_sd
+    type: float
+    description: Sample SD of colony area across replicate colonies.
+    units: pixels
+    nullable: true
+
+  - name: l_median
+    type: float
+    description: Median CIELAB L* (lightness) across replicate colonies -- pixel-median of each colony's Lab histogram, then median across colonies.
+    units: CIELAB L* (0-100)
+    nullable: false
+
+  - name: l_mean
+    type: float
+    description: Mean CIELAB L* across replicate colonies.
+    units: CIELAB L* (0-100)
+    nullable: false
+
+  - name: l_var
+    type: float
+    description: Sample variance of CIELAB L* across replicate colonies.
+    nullable: true
+
+  - name: l_sd
+    type: float
+    description: Sample SD of CIELAB L* across replicate colonies.
+    nullable: true
+
+  - name: a_median
+    type: float
+    description: Median CIELAB a* (green-red axis) across replicate colonies.
+    units: CIELAB a*
+    nullable: false
+
+  - name: a_mean
+    type: float
+    description: Mean CIELAB a* across replicate colonies.
+    units: CIELAB a*
+    nullable: false
+
+  - name: a_var
+    type: float
+    description: Sample variance of CIELAB a* across replicate colonies.
+    nullable: true
+
+  - name: a_sd
+    type: float
+    description: Sample SD of CIELAB a* across replicate colonies.
+    nullable: true
+
+  - name: b_median
+    type: float
+    description: Median CIELAB b* (blue-yellow axis) across replicate colonies.
+    units: CIELAB b*
+    nullable: false
+
+  - name: b_mean
+    type: float
+    description: Mean CIELAB b* across replicate colonies.
+    units: CIELAB b*
+    nullable: false
+
+  - name: b_var
+    type: float
+    description: Sample variance of CIELAB b* across replicate colonies.
+    nullable: true
+
+  - name: b_sd
+    type: float
+    description: Sample SD of CIELAB b* across replicate colonies.
+    nullable: true
