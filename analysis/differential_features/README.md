@@ -3,15 +3,15 @@
 Pairwise species comparisons of MS2 features, annotated with
 GNPS library matches and SIRIUS/CANOPUS predictions.
 
-- **12,619** significant features (FDR < 5%)
-- **10** comparisons with significant features (out of 110 total)
+- **23,745** significant features (FDR < 5%)
+- **11** comparisons with significant features (out of 110 total)
 - **790** SIRIUS annotations (663 with structure predictions)
 
 ## Cross-comparison rollup
 
 | View | Features | Link |
 |------|----------|------|
-| All significant features (every comparison concatenated) | 12,619 | [open](all_significant_features_summary.html) |
+| All significant features (every comparison concatenated) | 23,745 | [open](all_significant_features_summary.html) |
 
 ## Cell pellet comparisons
 
