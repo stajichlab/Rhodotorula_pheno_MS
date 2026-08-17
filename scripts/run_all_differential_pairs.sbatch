@@ -54,7 +54,7 @@ set -euo pipefail
 REPO_DIR=/bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS
 cd "$REPO_DIR"
 
-TREE_PATH=BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_276.fungi_odb10.fasttree.support.treefile
+TREE_PATH=BFD/results/phyling_pep/protein/buildtree/fungi_odb10/fasttree/protein-Rhodotorula-taxa_278.fungi_odb10.fasttree.support.treefile
 N_CLADES=30
 
 module load miniconda3/py39_4.12.0
