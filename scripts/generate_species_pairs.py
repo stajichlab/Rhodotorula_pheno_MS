@@ -12,6 +12,7 @@ median fold-change are barely defined, let alone FDR-worth reporting.
 
 Usage:
     python3 scripts/generate_species_pairs.py [--min-n 3]
+    python3 scripts/generate_species_pairs.py --paired [--min-n 3]
 """
 import argparse
 import itertools
@@ -22,15 +23,31 @@ import pandas as pd
 REPO = Path(__file__).resolve().parent.parent
 LINKED = REPO / "analysis" / "linked_data"
 OUT_PATH = REPO / "analysis" / "differential_features" / "pairs_to_run.tsv"
+PAIRED_OUT_PATH = REPO / "analysis" / "differential_features" / "paired_species_to_run.tsv"
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--min-n", type=int, default=3, help="minimum samples per species per fraction")
+    ap.add_argument("--paired", action="store_true",
+                    help="instead of species-pair rows, list each species with >= --min-n STRAINS that have BOTH a cell and a supernatant sample (for --sup-vs-cell)")
     args = ap.parse_args()
 
     meta = pd.read_csv(LINKED / "sample_metadata.csv.gz")
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    if args.paired:
+        cell = meta[(meta["fraction"] == "cell")].drop_duplicates(subset="Strain ID").set_index("Strain ID")
+        sup = meta[(meta["fraction"] == "supernatant")].drop_duplicates(subset="Strain ID").set_index("Strain ID")
+        both = cell.index.intersection(sup.index)
+        species_of = cell.loc[both, "Species"]
+        paired_counts = species_of.value_counts()
+        eligible = sorted(paired_counts[paired_counts >= args.min_n].index)
+        with PAIRED_OUT_PATH.open("w") as fh:
+            for sp in eligible:
+                fh.write(f"{sp}\n")
+        print(f"{len(eligible)} species with >= {args.min_n} paired strains -> {PAIRED_OUT_PATH}")
+        return
 
     rows = []
     for fraction in ["cell", "supernatant"]:

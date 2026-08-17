@@ -69,6 +69,20 @@ Usage:
         [--fraction cell|supernatant] [--prevalence-min 0.10] [--fdr 0.05] \
         [--block-by "Library Plate"] [--tree tree.nwk [--n-clades 20 | --clade-height 0.05]] \
         [--n-perm 2000]
+
+    python3 scripts/differential_features_by_species.py \
+        --sup-vs-cell --species-a "Rhodotorula mucilaginosa" \
+        [--prevalence-min 0.10] [--fdr 0.05] [--block-by "Library Plate"] [--n-perm 2000]
+
+    --sup-vs-cell switches to the paired within-species comparison: each
+    strain's whole-cell-pellet TSS profile tested against its own spent-
+    medium supernatant (Wilcoxon signed-rank, paired by Strain ID), so
+    "what does the species release / retain" is asked with genotype held
+    constant. Outputs live in analysis/differential_features/<slug>_sup_vs_cell/
+    with the same file set as the unpaired comparisons and join the same
+    rollup. The optional --block-by permutation test here is a within-block
+    sign-flip (see block_permutation.py's paired_block_permutation_pvalues)
+    rather than a label shuffle -- the per-strain pair is never broken.
 """
 import argparse
 import sys
@@ -85,6 +99,7 @@ from statsmodels.stats.multitest import multipletests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from block_permutation import block_permutation_pvalues, derive_blocks_from_metadata, derive_blocks_from_tree
+from block_permutation import paired_block_permutation_pvalues
 from build_compound_summary import ANALOG_SEARCH, LIBRARY_SEARCH, load_gnps, load_sirius, summarize_one
 from pcoa_ms_features import savefig_multi
 
@@ -213,6 +228,129 @@ def plot_top_features(
     plt.close(fig)
 
 
+def test_paired_features(mat_cell: np.ndarray, mat_sup: np.ndarray) -> pd.DataFrame:
+    """Paired (same-strain) cell vs supernatant test per feature. mat_cell /
+    mat_sup are both n_pairs x n_features, row-aligned by strain. Per
+    feature: Wilcoxon signed-rank on the paired (cell, sup) TSS proportions
+    (pairs where both fractions are zero -- an undetected feature in both --
+    drop out as zero differences; pairs where at least one fraction is
+    detected carry the information), effect size = log2 fold-change of the
+    group medians (sup / cell) with the same per-feature pseudocount as the
+    unpaired test, then BH FDR across features.
+
+    Output columns are kept in the same vocabulary as the unpaired test so
+    every downstream consumer (build_compound_summary.py's
+    summarize_one, the HTML table generator, the rollup) works unchanged:
+    median_a/median_b/log2FC_a_over_b now mean
+    sup/cell/log2(sup median / cell median), U_stat is replaced by W_stat."""
+    import warnings
+
+    from scipy.stats import wilcoxon
+
+    n_features = mat_cell.shape[1]
+    median_cell = np.empty(n_features)
+    median_sup = np.empty(n_features)
+    log2fc = np.empty(n_features)
+    wstat = np.empty(n_features)
+    pvals = np.empty(n_features)
+
+    for i in range(n_features):
+        c, s = mat_cell[:, i], mat_sup[:, i]
+        median_cell[i], median_sup[i] = np.median(c), np.median(s)
+        pseudocount = min(x[x > 0].min() if (x > 0).any() else 1e-12 for x in (c, s)) / 2
+        log2fc[i] = np.log2((median_sup[i] + pseudocount) / (median_cell[i] + pseudocount))
+
+        det = (c > 0) | (s > 0)
+        cc, ss = c[det], s[det]
+        if det.sum() < 3 or (np.abs(cc - ss) == 0).all():
+            w, p = 0.0, 1.0
+        else:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")  # wilcoxon warns on tied/small rank rows
+                try:
+                    w, p = wilcoxon(cc, ss, alternative="two-sided", zero_method="wilcox")
+                except ValueError:
+                    w, p = 0.0, 1.0
+        wstat[i], pvals[i] = w, p
+
+    _, qvals, _, _ = multipletests(pvals, method="fdr_bh")
+    return pd.DataFrame(
+        {
+            "median_a": median_sup, "median_b": median_cell, "log2FC_a_over_b": log2fc,
+            "W_stat": wstat, "p_value": pvals, "q_value": qvals,
+        }
+    )
+
+
+def run_paired_sup_vs_cell(args, meta, feature_df):
+    """Supernatant-vs-cell within ONE species, using each strain's paired
+    (supernatant, cell) samples -- the samples the metadata describes as one
+    culture split into a spent-medium supernatant and a whole-cell pellet.
+    Output lands in analysis/differential_features/<slug>_sup_vs_cell/ with
+    the same file set (csv.gz, volcano, top_features, compound_summary) as
+    the unpaired species-vs-species comparisons, and updates the rollup."""
+    cell = meta[(meta["Species"] == args.species_a) & (meta["fraction"] == "cell")]
+    sup = meta[(meta["Species"] == args.species_a) & (meta["fraction"] == "supernatant")]
+    cell_map = cell.drop_duplicates("Strain ID").set_index("Strain ID")["sample_id"]
+    sup_map = sup.drop_duplicates("Strain ID").set_index("Strain ID")["sample_id"]
+    strains = cell_map.index.intersection(sup_map.index).sort_values()
+    if len(strains) < 2:
+        sys.exit(f"fewer than 2 strains of '{args.species_a}' have BOTH a cell and a supernatant sample")
+
+    ids_cell = [cell_map[s] for s in strains]
+    ids_sup = [sup_map[s] for s in strains]
+
+    kept_annot, mat_all = tss_normalize(feature_df, ids_cell + ids_sup, args.prevalence_min)
+    n = len(strains)
+    mat_cell, mat_sup = mat_all[:n], mat_all[n:]
+
+    stats = test_paired_features(mat_cell, mat_sup)
+    result = pd.concat([kept_annot, stats], axis=1)
+    result = result.assign(_abs=result["log2FC_a_over_b"].abs()).sort_values(
+        ["q_value", "_abs"], ascending=[True, False]
+    ).drop(columns="_abs")
+
+    if args.block_by:
+        blocks = derive_blocks_from_metadata(meta, ids_cell, args.block_by)
+        blocks_pairs = [blocks[s] for s in ids_cell]
+        p_perm = paired_block_permutation_pvalues(mat_cell, mat_sup, blocks_pairs, n_perm=args.n_perm)
+        _, q_perm, _, _ = multipletests(p_perm, method="fdr_bh")
+        n_kept = mat_cell.shape[1]
+        result = result.assign(
+            p_value_perm_plate=pd.Series(p_perm, index=range(n_kept)),
+            q_value_perm_plate=pd.Series(q_perm, index=range(n_kept)),
+        )
+        print(
+            f"paired-block-permutation [{args.block_by}]: "
+            f"{n} paired strains, {args.n_perm} permutations, "
+            f"{(q_perm < args.fdr).sum()} significant at FDR < {args.fdr:.0%}",
+            file=sys.stderr,
+        )
+
+    out_dir = REPO / "analysis" / "differential_features" / f"{slugify(args.species_a)}_sup_vs_cell"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    result.to_csv(out_dir / "differential_features.csv.gz", index=False)
+    plot_volcano(stats, f"{args.species_a} supernatant", f"{args.species_a} cell", args.fdr, out_dir / "volcano.png")
+    # result's index still holds original column positions in the paired mat;
+    # plot_top_features relies on it to pull the right column per feature.
+    plot_top_features(result, mat_sup, mat_cell, f"{args.species_a} supernatant", f"{args.species_a} cell", out_dir / "top_features.png")
+
+    n_sig = int((stats["q_value"] < args.fdr).sum())
+    print(
+        f"paired sup-vs-cell ({args.species_a}): {n} paired strains, "
+        f"{len(stats)}/{len(feature_df)} features tested (prevalence >= {args.prevalence_min:.0%}), "
+        f"{n_sig} significant at FDR < {args.fdr:.0%}",
+        file=sys.stderr,
+    )
+    print(f"wrote outputs to {out_dir}", file=sys.stderr)
+
+    if not args.skip_compound_summary:
+        library = load_gnps(LIBRARY_SEARCH, "library")
+        analog = load_gnps(ANALOG_SEARCH, "analog")
+        sirius = load_sirius()
+        summarize_one(out_dir, library, analog, sirius, args.fdr)
+
+
 def run_one_block_test(tag, block_desc, blocks, args, ids_a, ids_b, mat_a, mat_b, result):
     """Shared machinery for one block-permutation test (plate or clade).
     `tag` names the output columns (p_value_perm_<tag>, q_value_perm_<tag>).
@@ -318,6 +456,8 @@ def main():
     ap.add_argument("--species-a", default="Rhodotorula diobovata")
     ap.add_argument("--species-b", default="Rhodotorula mucilaginosa")
     ap.add_argument("--fraction", choices=["cell", "supernatant"], default="cell")
+    ap.add_argument("--sup-vs-cell", action="store_true",
+                    help="paired within-species comparison: supernatant vs cell samples of the SAME strains (ignores --species-b / --fraction)")
     ap.add_argument("--prevalence-min", type=float, default=0.10)
     ap.add_argument("--fdr", type=float, default=0.05)
     ap.add_argument("--block-by", help="sample_metadata.csv.gz column to block-permutation-test on, e.g. 'Library Plate'")
@@ -335,6 +475,10 @@ def main():
 
     meta = pd.read_csv(LINKED / "sample_metadata.csv.gz")
     feature_df = pd.read_csv(LINKED / "feature_abundance_matrix.csv.gz")
+
+    if args.sup_vs_cell:
+        run_paired_sup_vs_cell(args, meta, feature_df)
+        return
 
     sub_meta = meta[meta["fraction"] == args.fraction]
     ids_a = sub_meta.loc[sub_meta["Species"] == args.species_a, "sample_id"].tolist()

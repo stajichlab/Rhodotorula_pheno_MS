@@ -191,3 +191,43 @@ def block_permutation_pvalues(
         exceed_count += stat >= observed
 
     return (exceed_count + 1) / (n_perm + 1)
+
+
+def paired_block_permutation_pvalues(
+    mat_cell: np.ndarray,
+    mat_sup: np.ndarray,
+    blocks: list,
+    n_perm: int = 2000,
+    seed: int = 0,
+) -> np.ndarray:
+    """Two-sided permutation p-values (one per feature/column) for the
+    within-pair (cell vs supernatant) contrast in a *paired* design, where
+    mat_cell[i] / mat_sup[i] are the two fractions of the same strain.
+
+    Null: swap which fraction is "cell" vs "supernatant" for each pair --
+    independently *within each block* only (so a block that holds just one
+    plate keeps exactly its own sign-flips). This is the paired analogue of
+    block_permutation_pvalues() above, catching a plate/batch confound for
+    the paired sup-vs-cell analysis without ever breaking a pair across
+    blocks. `blocks` is one label per pair, index-aligned to mat_cell.
+    """
+    n_pairs, n_features = mat_cell.shape
+    observed = np.abs(np.median(mat_sup, axis=0) - np.median(mat_cell, axis=0))
+    exceed_count = np.zeros(n_features, dtype=np.int64)
+
+    blocks_arr = np.asarray(blocks)
+    block_indices = [np.where(blocks_arr == b)[0] for b in np.unique(blocks_arr)]
+
+    rng = np.random.default_rng(seed)
+    perm_cell = mat_cell.copy()
+    perm_sup = mat_sup.copy()
+    for _ in range(n_perm):
+        for idx in block_indices:
+            swap = rng.random(len(idx)) < 0.5
+            tmp = perm_cell[idx].copy()
+            perm_cell[idx] = np.where(swap[:, None], perm_sup[idx], perm_cell[idx])
+            perm_sup[idx] = np.where(swap[:, None], tmp, perm_sup[idx])
+        stat = np.abs(np.median(perm_sup, axis=0) - np.median(perm_cell, axis=0))
+        exceed_count += stat >= observed
+
+    return (exceed_count + 1) / (n_perm + 1)
