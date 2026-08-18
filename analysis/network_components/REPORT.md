@@ -28,7 +28,7 @@ A note on fractions (verified this session): AUC and color are **strain-level** 
 | phenotype metadata | `analysis/linked_data/sample_metadata.csv.gz` | AUC / color / species / fraction |
 | feature abundances | `analysis/linked_data/feature_abundance_matrix.csv.gz` | 594-sample TSS-normalized intensities |
 | dedup map | `analysis/linked_data/ms_feature_dedup_groups.csv` | 10,949 representative features |
-| MS2 network | `…/networking/filtered_pairs.tsv` (in the Rodeo `db` tree via `build_compound_summary`) | feature → `ComponentIndex` |
+| MS2 network | `data/processed/EB_20260130_ExFAB_Rhodo_Sup_and_Pellet/b773ffa18c2b41e5a3484526293a54f9/b773ffa18c2b41e5a3484526293a54f9/nf_output/networking/filtered_pairs.tsv` (local repo; the `EB_DIR` root in `scripts/build_compound_summary.py`; 17,165 edges, 2,027 components) | feature → `ComponentIndex` |
 
 Pipeline per trait: subset metadata to the fraction (± *R. mucilaginosa*), collapse replicate samples per feature to a strain mean, rank-transform + normalize the abundance matrix, then Spearman-correlate each feature against the strain-mean phenotype (z-ranked). Feature identity is carried through the dedup-group representative map (fixed in the same session by grouping at the strain-representative level — 10,949 analysis reps, 6,057 network-mapped, 4,892 singletons/unmapped per trait).
 
@@ -66,6 +66,8 @@ Care: components are NOT independent (they share latent chemistry), so the BH co
 The growth AUC signal is overwhelmingly in the **supernatant**: 210–328 of 1,153 molecular families pass BH-FDR and 7 survive the conservative familywise bound, while 41% of all tested components show enrichment perm-p<0.05 (vs 5% under a true null). The **cell fraction** has only a handful of nominally significant families (3 enrichment / 7 max|ρ|) and **zero** that survive the familywise bound — the intracellular metabolome barely tracks growth rate within the species.
 
 ![Effect size vs enrichment significance across all six trait panels](figures/fig2_effect_vs_enrichment_2x3.png)
+
+**Color key (same in all six panels):** dark red = component significant in *both* designs (enrichment BH-FDR & max\|ρ\| BH-FDR < 0.05); orange = enrichment only; blue = max\|ρ\| only; grey = not significant. Dashed line = enrichment permutation p = 0.05.
 
 The effect-size/enrichment scatter makes the asymmetry plain: only the growth-supernatant panel shows a dense cloud of components with both a large family max-|ρ| *and* strong enrichment p; the other five panels sit near the null region.
 
@@ -135,7 +137,7 @@ The chemistry reinforces the F-002 picture: **purine-nucleoside turnover (MTA/ad
 | file | description |
 |---|---|
 | `figures/fig1_sig_components_by_trait.png/.pdf` | significant-family counts per trait, both designs, familywise annotated |
-| `figures/fig2_effect_vs_enrichment_2x3.png/.pdf` | 6-panel volcano-style: family max|ρ| vs enrichment significance |
+| `figures/fig2_effect_vs_enrichment_2x3.png/.pdf` | 6-panel volcano-style: family max\|ρ\| vs enrichment significance (legend: red both / orange enrichment-only / blue max\|ρ\|-only / grey NS) |
 | `figures/fig3_component887_by_fraction.png/.pdf` | comp 887 member features, sup vs cell rho, labelled identities |
 | `figures/fig4_permutation_calibration.png/.pdf` | ECDF of permutation p vs uniform null (signal vs null panels) |
 

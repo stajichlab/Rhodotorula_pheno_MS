@@ -98,6 +98,9 @@ def fig1_by_trait() -> None:
 
 def fig2_effect_vs_enrichment() -> None:
     fig, axes = plt.subplots(2, 3, figsize=(13.5, 8.5), sharex=True, sharey=True)
+    state_labels = {"both": "significant in BOTH designs", "enrichment": "enrichment only",
+                    "maxrho": "max|rho| only", "none": "not significant"}
+    legend_handles = []
     for ax, (tname, lbl) in zip(axes.ravel(), TRAITS):
         r = pd.read_csv(OUT / f"{tname}_components.tsv", sep="\t")
         es_sig = r["p_es_fdr"] < 0.05
@@ -108,9 +111,9 @@ def fig2_effect_vs_enrichment() -> None:
             mask = np.array([s == st for s in state])
             if not mask.any():
                 continue
-            ax.scatter(r["max_rho_abs"][mask], y[mask], s=8, color=c, alpha=0.8,
-                       label={"both": "both designs", "enrichment": "enrichment",
-                              "maxrho": "max|rho|", "none": "NS"}[st] if mask.sum() <= 400 else None)
+            ax.scatter(r["max_rho_abs"][mask], y[mask], s=8, color=c, alpha=0.8, label=state_labels[st])
+            if len(legend_handles) < len(COLORS):
+                legend_handles.append(ax.collections[-1])
         ax.axhline(-np.log10(0.05), color="grey", ls="--", lw=0.7)
         ax.set_title(f"{lbl}\n({len(r)} components)", fontsize=10)
         ax.set_xlim(0, 0.38)
@@ -119,7 +122,10 @@ def fig2_effect_vs_enrichment() -> None:
     for ax in axes.ravel():
         ax.set_xlabel("max $|\\rho|$ over member features (effect)")
         ax.set_ylabel("$-\\log_{10}$(enrichment perm p)")
-    fig.suptitle("Component-level association: effect size vs enrichment significance, per trait", y=1.02, fontsize=13)
+    fig.legend(handles=legend_handles, loc="lower center", ncol=len(COLORS),
+               frameon=False, fontsize=9, bbox_to_anchor=(0.5, -0.02))
+    fig.suptitle("Component-level association: effect size vs enrichment significance, per trait\n"
+                 "dashed grey line = enrichment perm p = 0.05", y=1.0, fontsize=13)
     fig.tight_layout()
     savefig(fig, "fig2_effect_vs_enrichment_2x3")
 
