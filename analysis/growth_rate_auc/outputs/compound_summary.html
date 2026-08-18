@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Growth-rate (Cu-AUC) associated features — R. mucilaginosa supernatant (n=10)</title>
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f7f7f8; --border: #e2e2e6;
+    --ink: #1a1a1e; --ink-muted: #6b6b74; --accent: #0072B2;
+    --row-hover: #f0f4f8; --robust-bg: #eef8f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px; background: var(--bg); color: var(--ink);
+    font: 14px/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  .subtitle { color: var(--ink-muted); margin: 0 0 16px; font-size: 13px; }
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    padding: 12px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; margin-bottom: 12px; position: sticky; top: 0; z-index: 2;
+  }
+  .toolbar label { font-size: 12px; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; }
+  .toolbar input[type="text"], .toolbar input[type="number"] {
+    font: inherit; padding: 5px 8px; border: 1px solid var(--border); border-radius: 5px; width: 100px;
+  }
+  .toolbar input[type="text"] { width: 220px; }
+  .chip {
+    font: inherit; font-size: 12px; padding: 5px 10px; border-radius: 999px;
+    border: 1px solid var(--border); background: #fff; cursor: pointer; color: var(--ink);
+  }
+  .chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .chip .swatch { display: inline-block; width: 10px; text-align: center; margin-right: 4px; }
+  #count { margin-left: auto; font-size: 12px; color: var(--ink-muted); }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  thead th {
+    position: sticky; top: 58px; background: var(--surface); text-align: left;
+    padding: 8px 10px; border-bottom: 2px solid var(--border); cursor: pointer;
+    white-space: nowrap; user-select: none; font-size: 12px; color: var(--ink-muted);
+  }
+  thead th:hover { color: var(--ink); }
+  thead th.sorted { color: var(--accent); }
+  thead th .arrow { font-size: 10px; margin-left: 3px; }
+  tbody td { padding: 7px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody tr.data-row { cursor: pointer; }
+  tbody tr.data-row:hover { background: var(--row-hover); }
+  tbody tr.data-row.robust { background: var(--robust-bg); }
+  tbody tr.data-row.robust:hover { background: #e2f2ea; }
+  td.identity { text-align: center; font-size: 15px; }
+  td.name-cell { max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  tr.detail-row { display: none; }
+  tr.detail-row.open { display: table-row; }
+  tr.detail-row td { background: var(--surface); white-space: normal; padding: 12px 16px; }
+  .detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6px 20px; }
+  .detail-item dt { font-size: 11px; color: var(--ink-muted); margin: 0; }
+  .detail-item dd { margin: 0 0 6px; font-size: 13px; word-break: break-word; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-muted); margin: 0 0 12px; }
+  .legend span.g { margin-right: 3px; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a; --surface: #1e1e23; --border: #303038;
+      --ink: #eaeaef; --ink-muted: #9a9aa5; --row-hover: #26262c; --robust-bg: #17251d;
+    }
+    .chip { background: #222228; }
+    tr.detail-row.robust:hover { background: #1c2f24; }
+  }
+</style>
+</head>
+<body>
+<h1>Growth-rate (Cu-AUC) associated features — R. mucilaginosa supernatant (n=10)</h1>
+<p class="subtitle">10 significant features &middot; 7 already identified (library/SIRIUS) &middot; 0 survive plate-block permutation testing</p>
+<p class="legend" id="legend"></p>
+<div class="toolbar">
+  <label>Search <input type="text" id="search" placeholder="identity, formula, adduct..."></label>
+  <label>q-value &le; <input type="number" id="qmax" step="0.001" placeholder="0.05"></label>
+  <label>|log2FC| &ge; <input type="number" id="fcmin" step="0.1" placeholder="0"></label>
+  <label><input type="checkbox" id="robustOnly"> robust only</label>
+  <span id="sourceChips"></span>
+  <span id="count"></span>
+</div>
+<table>
+  <thead><tr id="headRow"></tr></thead>
+  <tbody id="body"></tbody>
+</table>
+
+<script>
+const DATA = [{"row ID": 4951, "row m/z": 554.2697, "row retention time": 1.926625, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3387, "emp_p_perm_within_muc": 0.000999, "best_identity": "His-Phe-Pro-Gly-Pro", "best_identity_source": "sirius_structure", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": null, "analog_matched_peaks": null, "analog_SMILES": null, "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": "C26H39N3O10", "sirius_adduct": "[M + H]+", "sirius_structure_name": "His-Phe-Pro-Gly-Pro", "sirius_structure_smiles": "C1CC(N(C1)C(=O)CNC(=O)C2CCCN2C(=O)C(CC3=CC=CC=C3)NC(=O)C(CC4=CN=CN4)N)C(=O)O", "sirius_structure_confidence": 0.623, "sirius_npc_pathway": "Amino acids and Peptides", "sirius_npc_class": "Tripeptides", "sirius_classyfire_class": "Carboxylic acids and derivatives"}, {"row ID": 1483, "row m/z": 299.0993, "row retention time": 0.605356, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3243, "emp_p_perm_within_muc": 0.000999, "best_identity": "9-[(3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]-1-methyl-3H-purine-2,6-dione", "best_identity_source": "sirius_structure", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": "METHYLTHIOADENOSINE - 40.0 eV M+H", "analog_cosine": 0.8951, "analog_matched_peaks": 8.0, "analog_SMILES": "CSC[C@H]1O[C@H]([C@H](O)[C@@H]1O)N1C=NC2=C1N=CN=C2N", "analog_INCHI": null, "analog_ORGANISM": "GNPS-LIBRARY", "sirius_formula": "C12H15FN4O2S", "sirius_adduct": "[M + H]+", "sirius_structure_name": "9-[(3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]-1-methyl-3H-purine-2,6-dione", "sirius_structure_smiles": "CN1C(=O)C2=C(NC1=O)N(C=N2)C3C(C(C(O3)CO)O)O", "sirius_structure_confidence": 0.319, "sirius_npc_pathway": "Carbohydrates", "sirius_npc_class": "Purine nucleosides", "sirius_classyfire_class": "Purine nucleosides"}, {"row ID": 17148, "row m/z": 588.2539, "row retention time": 2.294553, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3187, "emp_p_perm_within_muc": 0.000999, "best_identity": null, "best_identity_source": "unidentified", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": null, "analog_matched_peaks": null, "analog_SMILES": null, "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": null, "sirius_adduct": null, "sirius_structure_name": null, "sirius_structure_smiles": null, "sirius_structure_confidence": null, "sirius_npc_pathway": null, "sirius_npc_class": null, "sirius_classyfire_class": null}, {"row ID": 5327, "row m/z": 553.2858, "row retention time": 1.183769, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3167, "emp_p_perm_within_muc": 0.000999, "best_identity": null, "best_identity_source": "unidentified", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": null, "analog_matched_peaks": null, "analog_SMILES": null, "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": null, "sirius_adduct": null, "sirius_structure_name": null, "sirius_structure_smiles": null, "sirius_structure_confidence": null, "sirius_npc_pathway": null, "sirius_npc_class": null, "sirius_classyfire_class": null}, {"row ID": 1762, "row m/z": 300.0917, "row retention time": 0.693, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3048, "emp_p_perm_within_muc": 0.000999, "best_identity": "2-amino-9-[(2R,4R,5R)-5-(hydroperoxymethyl)-3,4-dihydroxyoxolan-2-yl]-1H-purin-6-one", "best_identity_source": "sirius_structure", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": null, "analog_matched_peaks": null, "analog_SMILES": null, "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": "C10H13N5O6", "sirius_adduct": "[M + H]+", "sirius_structure_name": "2-amino-9-[(2R,4R,5R)-5-(hydroperoxymethyl)-3,4-dihydroxyoxolan-2-yl]-1H-purin-6-one", "sirius_structure_smiles": "C1=NC2=C(N1C3C(C(C(O3)COO)O)O)N=C(NC2=O)N", "sirius_structure_confidence": 0.505, "sirius_npc_pathway": "Carbohydrates", "sirius_npc_class": "Purine nucleosides", "sirius_classyfire_class": "Purine nucleosides"}, {"row ID": 28139, "row m/z": 338.2046, "row retention time": 0.683867, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3039, "emp_p_perm_within_muc": 0.000999, "best_identity": "Massbank:ET201705 PRZ_M477 M+H", "best_identity_source": "analog_library_match", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": "Massbank:ET201705 PRZ_M477 M+H", "analog_cosine": 0.716, "analog_matched_peaks": 6.0, "analog_SMILES": "CCCN(CCOC1=C(Cl)C=C(O)C(SCC(N)C(O)=O)=C1Cl)C(=O)N1C=CN=C1", "analog_INCHI": "1S/C18H22Cl2N4O5S/c1-2-4-23(18(28)24-5-3-22-10-24)6-7-29-15-11(19)8-13(25)16(14(15)20)30-9-12(21)17(26)27/h3,5,8,10,12,25H,2,4,6-7,9,21H2,1H3,(H,26,27)", "analog_ORGANISM": "MASSBANK", "sirius_formula": null, "sirius_adduct": null, "sirius_structure_name": null, "sirius_structure_smiles": null, "sirius_structure_confidence": null, "sirius_npc_pathway": null, "sirius_npc_class": null, "sirius_classyfire_class": null}, {"row ID": 22697, "row m/z": 387.2702, "row retention time": 4.97961, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3016, "emp_p_perm_within_muc": 0.000999, "best_identity": "Massbank: Cholesterol [M+H]+", "best_identity_source": "analog_library_match", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": "Massbank: Cholesterol [M+H]+", "analog_cosine": 0.8485, "analog_matched_peaks": 9.0, "analog_SMILES": "[H]C(C([H])([H])C([H])([H])C([H])([H])C(C(C4([H])[H])([H])C(C([H])([H])[H])(C3([H])[H])C(C4([H])[H])([H])C([H])(C([H])(C3([H])[H])1)C([H])([H])C([H])=C(C([H])([H])2)C1(C([H])([H])C([H])([H])C([H])(O[H])2)C([H])([H])[H])(C([H])([H])[H])[H])(C([H])([H])[H])C([H])([H])[H]", "analog_INCHI": "1S/C27H46O/c1-18(2)7-6-8-19(3)23-11-12-24-22-10-9-20-17-21(28)13-15-26(20,4)25(22)14-16-27(23,24)5/h9,18-19,21-25,28H,6-8,10-17H2,1-5H3", "analog_ORGANISM": "MASSBANK", "sirius_formula": null, "sirius_adduct": null, "sirius_structure_name": null, "sirius_structure_smiles": null, "sirius_structure_confidence": null, "sirius_npc_pathway": null, "sirius_npc_class": null, "sirius_classyfire_class": null}, {"row ID": 1979, "row m/z": 300.0918, "row retention time": 0.621469, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3013, "emp_p_perm_within_muc": 0.000999, "best_identity": "Lysine, 6-[(1-carboxyethyl)carbamoyl]-, L-", "best_identity_source": "sirius_structure", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": 0.7325, "analog_matched_peaks": 6.0, "analog_SMILES": "CCC(C)C(N)C(=O)NC(Cc1ccc(O)cc1)C(=O)NC(CCCNC(=N)N)C(=O)O", "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": "C10H19N3O5", "sirius_adduct": "[M + K]+", "sirius_structure_name": "Lysine, 6-[(1-carboxyethyl)carbamoyl]-, L-", "sirius_structure_smiles": "CC(C(=O)O)NC(=O)C(CCCC(C(=O)O)N)N", "sirius_structure_confidence": 0.222, "sirius_npc_pathway": "Amino acids and Peptides", "sirius_npc_class": "Dipeptides", "sirius_classyfire_class": "Carboxylic acids and derivatives"}, {"row ID": 48, "row m/z": 298.0958, "row retention time": 0.683, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": 0.3005, "emp_p_perm_within_muc": 0.000999, "best_identity": "2-(6-aminopurin-9-yl)-5-(methylsulfanylmethyl)oxolane-3,4-diol [M+H]+", "best_identity_source": "exact_library_match", "library_NAME": "2-(6-aminopurin-9-yl)-5-(methylsulfanylmethyl)oxolane-3,4-diol [M+H]+", "library_cosine": 0.9864, "library_matched_peaks": 9.0, "library_SMILES": "CSCC1OC(n2cnc3c(N)ncnc32)C(O)C1O", "library_INCHI": "InChI=1S/C11H15N5O3S/c1-20-2-5-7(17)8(18)11(19-5)16-4-15-6-9(12)13-3-14-10(6)16/h3-5,7-8,11,17-18H,2H2,1H3,(H2,12,13,14)", "library_ORGANISM": "MSNLIB-POSITIVE", "analog_NAME": "2-(6-aminopurin-9-yl)-5-(methylsulfanylmethyl)oxolane-3,4-diol [M+H]+", "analog_cosine": 0.9864, "analog_matched_peaks": 9.0, "analog_SMILES": "CSCC1OC(n2cnc3c(N)ncnc32)C(O)C1O", "analog_INCHI": "InChI=1S/C11H15N5O3S/c1-20-2-5-7(17)8(18)11(19-5)16-4-15-6-9(12)13-3-14-10(6)16/h3-5,7-8,11,17-18H,2H2,1H3,(H2,12,13,14)", "analog_ORGANISM": "MSNLIB-POSITIVE", "sirius_formula": "C11H15N5O3S", "sirius_adduct": "[M + H]+", "sirius_structure_name": "Methylthioadenosine", "sirius_structure_smiles": "CSCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O", "sirius_structure_confidence": 0.847, "sirius_npc_pathway": "Carbohydrates", "sirius_npc_class": "Purine nucleosides", "sirius_classyfire_class": "5'-deoxyribonucleosides"}, {"row ID": 4299, "row m/z": 1260.6807, "row retention time": 2.516, "adduct": "[M+H]1+", "has_ms2": true, "rho_auc": -0.3287, "emp_p_perm_within_muc": 0.000999, "best_identity": null, "best_identity_source": "unidentified", "library_NAME": null, "library_cosine": null, "library_matched_peaks": null, "library_SMILES": null, "library_INCHI": null, "library_ORGANISM": null, "analog_NAME": null, "analog_cosine": null, "analog_matched_peaks": null, "analog_SMILES": null, "analog_INCHI": null, "analog_ORGANISM": null, "sirius_formula": null, "sirius_adduct": null, "sirius_structure_name": null, "sirius_structure_smiles": null, "sirius_structure_confidence": null, "sirius_npc_pathway": null, "sirius_npc_class": null, "sirius_classyfire_class": null}];
+const PRIMARY_COLS = [{"key": "best_identity_source", "label": "ID", "kind": "glyph"}, {"key": "row ID", "label": "row ID", "kind": "int"}, {"key": "row m/z", "label": "m/z", "kind": "float"}, {"key": "row retention time", "label": "RT (min)", "kind": "float"}, {"key": "adduct", "label": "adduct", "kind": "text"}, {"key": "rho_auc", "label": "rho (vs AUC)", "kind": "float"}, {"key": "emp_p_perm_within_muc", "label": "emp. perm p", "kind": "sci"}, {"key": "best_identity", "label": "best identity", "kind": "text"}];
+const SECONDARY_COLS = ["has_ms2", "library_NAME", "library_cosine", "library_matched_peaks", "library_SMILES", "library_INCHI", "library_ORGANISM", "analog_NAME", "analog_cosine", "analog_matched_peaks", "analog_SMILES", "analog_INCHI", "analog_ORGANISM", "sirius_formula", "sirius_adduct", "sirius_structure_name", "sirius_structure_smiles", "sirius_structure_confidence", "sirius_npc_pathway", "sirius_npc_class", "sirius_classyfire_class"];
+const SECONDARY_LABELS = {"has_ms2": "has MS2 spectrum", "library_NAME": "GNPS exact-match name", "library_cosine": "GNPS exact-match cosine", "library_matched_peaks": "GNPS exact-match matched peaks", "library_SMILES": "GNPS exact-match SMILES", "library_INCHI": "GNPS exact-match InChI", "library_ORGANISM": "GNPS exact-match organism", "analog_NAME": "GNPS analog-match name", "analog_cosine": "GNPS analog-match cosine", "analog_matched_peaks": "GNPS analog-match matched peaks", "analog_SMILES": "GNPS analog-match SMILES", "analog_INCHI": "GNPS analog-match InChI", "analog_ORGANISM": "GNPS analog-match organism", "sirius_formula": "SIRIUS formula", "sirius_adduct": "SIRIUS adduct", "sirius_structure_name": "SIRIUS structure name", "sirius_structure_smiles": "SIRIUS structure SMILES", "sirius_structure_confidence": "SIRIUS structure confidence", "sirius_npc_pathway": "SIRIUS/CANOPUS NPC pathway", "sirius_npc_class": "SIRIUS/CANOPUS NPC class", "sirius_classyfire_class": "SIRIUS/CANOPUS ClassyFire class"};
+const GLYPHS = {"exact_library_match": {"glyph": "\u25cf", "color": "#0072B2", "label": "exact library match"}, "analog_library_match": {"glyph": "\u25a0", "color": "#009E73", "label": "analog library match"}, "sirius_structure": {"glyph": "\u25c7", "color": "#E69F00", "label": "SIRIUS structure"}, "sirius_formula_only": {"glyph": "\u25cb", "color": "#999999", "label": "SIRIUS formula only"}, "unidentified": {"glyph": "\u2014", "color": "#BBBBBB", "label": "unidentified"}};
+
+let sortKey = "q_used", sortDir = 1;
+let openRow = null;
+
+function fmt(kind, v) {
+  if (v === null || v === undefined) return "–";
+  if (kind === "sci") return Number(v).toExponential(2);
+  if (kind === "bool") return v ? "✓" : "";
+  return String(v);
+}
+function fmtFloat(v, digits) {
+  if (v === null || v === undefined) return "–";
+  return Number(v).toFixed(digits);
+}
+
+function glyphCell(source) {
+  const g = GLYPHS[source] || GLYPHS["unidentified"];
+  return `<span title="${g.label}" style="color:${g.color}">${g.glyph}</span>`;
+}
+
+function buildLegend() {
+  const el = document.getElementById("legend");
+  el.innerHTML = Object.values(GLYPHS).map(g =>
+    `<span><span class="g" style="color:${g.color}">${g.glyph}</span>${g.label}</span>`
+  ).join("");
+}
+
+function buildHead() {
+  const tr = document.getElementById("headRow");
+  tr.innerHTML = "";
+  PRIMARY_COLS.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col.label;
+    th.dataset.key = col.key;
+    th.dataset.kind = col.kind;
+    const arrow = document.createElement("span");
+    arrow.className = "arrow";
+    th.appendChild(arrow);
+    th.addEventListener("click", () => {
+      if (sortKey === col.key) sortDir *= -1; else { sortKey = col.key; sortDir = col.kind === "text" || col.kind === "glyph" ? 1 : -1; }
+      render();
+    });
+    tr.appendChild(th);
+  });
+  const th = document.createElement("th");
+  tr.appendChild(th); // spacer for detail toggle
+}
+
+let sourceFilter = new Set(Object.keys(GLYPHS));
+function buildSourceChips() {
+  const el = document.getElementById("sourceChips");
+  el.innerHTML = "";
+  Object.entries(GLYPHS).forEach(([key, g]) => {
+    const btn = document.createElement("button");
+    btn.className = "chip";
+    btn.setAttribute("aria-pressed", "true");
+    btn.innerHTML = `<span class="swatch" style="color:${g.color}">${g.glyph}</span>${g.label}`;
+    btn.addEventListener("click", () => {
+      if (sourceFilter.has(key)) { sourceFilter.delete(key); btn.setAttribute("aria-pressed", "false"); }
+      else { sourceFilter.add(key); btn.setAttribute("aria-pressed", "true"); }
+      render();
+    });
+    el.appendChild(btn);
+  });
+}
+
+function currentFilters() {
+  return {
+    search: document.getElementById("search").value.trim().toLowerCase(),
+    qmax: parseFloat(document.getElementById("qmax").value),
+    fcmin: parseFloat(document.getElementById("fcmin").value),
+    robustOnly: document.getElementById("robustOnly").checked,
+  };
+}
+
+function matches(row, f) {
+  if (!sourceFilter.has(row.best_identity_source || "unidentified")) return false;
+  if (f.robustOnly && row.blocking_robust !== true) return false;
+  if (!isNaN(f.qmax) && !(row.q_used <= f.qmax)) return false;
+  if (!isNaN(f.fcmin) && !(Math.abs(row.log2FC_a_over_b) >= f.fcmin)) return false;
+  if (f.search) {
+    const hay = [row["row ID"], row.best_identity, row.library_NAME, row.analog_NAME, row.sirius_structure_name,
+                 row.sirius_formula, row.adduct].filter(Boolean).join(" ").toLowerCase();
+    if (!hay.includes(f.search)) return false;
+  }
+  return true;
+}
+
+function detailPanel(row) {
+  const items = SECONDARY_COLS.map(k => {
+    const v = row[k];
+    if (v === null || v === undefined || v === "") return "";
+    return `<div class="detail-item"><dt>${SECONDARY_LABELS[k] || k}</dt><dd>${String(v)}</dd></div>`;
+  }).join("");
+  return `<dl class="detail-grid">${items}</dl>`;
+}
+
+let debounceTimer;
+function scheduleRender() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(render, 150);
+}
+
+function render() {
+  const f = currentFilters();
+  let rows = DATA.filter(r => matches(r, f));
+
+  document.querySelectorAll("#headRow th[data-key]").forEach(th => {
+    th.classList.toggle("sorted", th.dataset.key === sortKey);
+    const arrow = th.querySelector(".arrow");
+    arrow.textContent = th.dataset.key === sortKey ? (sortDir === 1 ? "▲" : "▼") : "";
+  });
+
+  const kind = (PRIMARY_COLS.find(c => c.key === sortKey) || {}).kind;
+  rows.sort((a, b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if (kind === "text" || kind === "glyph") {
+      av = (av || "").toString(); bv = (bv || "").toString();
+      return sortDir * av.localeCompare(bv);
+    }
+    av = av === null || av === undefined ? -Infinity : Number(av);
+    bv = bv === null || bv === undefined ? -Infinity : Number(bv);
+    return sortDir * (av - bv);
+  });
+
+  document.getElementById("count").textContent = `${rows.length} / ${DATA.length} rows`;
+
+  const tbody = document.getElementById("body");
+  tbody.innerHTML = "";
+  const frag = document.createDocumentFragment();
+
+  rows.forEach((row, i) => {
+    const tr = document.createElement("tr");
+    tr.className = "data-row" + (row.blocking_robust ? " robust" : "");
+    PRIMARY_COLS.forEach(col => {
+      const td = document.createElement("td");
+      if (col.key === "best_identity_source") {
+        td.className = "identity";
+        td.innerHTML = glyphCell(row.best_identity_source);
+      } else if (col.key === "best_identity") {
+        td.className = "name-cell";
+        td.textContent = row.best_identity || "–";
+      } else if (col.kind === "float") {
+        td.textContent = fmtFloat(row[col.key], col.key.includes("retention") ? 2 : 4);
+      } else {
+        td.textContent = fmt(col.kind, row[col.key]);
+      }
+      tr.appendChild(td);
+    });
+    const toggleTd = document.createElement("td");
+    toggleTd.textContent = "›";
+    toggleTd.style.color = "var(--ink-muted)";
+    tr.appendChild(toggleTd);
+
+    const detailTr = document.createElement("tr");
+    detailTr.className = "detail-row";
+    const detailTd = document.createElement("td");
+    detailTd.colSpan = PRIMARY_COLS.length + 1;
+    detailTd.innerHTML = detailPanel(row);
+    detailTr.appendChild(detailTd);
+
+    tr.addEventListener("click", () => {
+      const wasOpen = detailTr.classList.contains("open");
+      document.querySelectorAll("tr.detail-row.open").forEach(el => el.classList.remove("open"));
+      if (!wasOpen) detailTr.classList.add("open");
+    });
+
+    frag.appendChild(tr);
+    frag.appendChild(detailTr);
+  });
+  tbody.appendChild(frag);
+}
+
+buildLegend();
+buildHead();
+buildSourceChips();
+["search"].forEach(id => document.getElementById(id).addEventListener("input", scheduleRender));
+["qmax", "fcmin"].forEach(id => document.getElementById(id).addEventListener("input", scheduleRender));
+document.getElementById("robustOnly").addEventListener("change", render);
+render();
+</script>
+</body>
+</html>

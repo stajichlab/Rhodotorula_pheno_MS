@@ -187,3 +187,29 @@ dataset has low expected marginal return; targeted pigment validation
 - Would the targeted HPLC/LC-UV-Vis validation (contingent on SIRIUS
   re-run) find a relationship this untargeted approach structurally
   cannot see?
+
+## F-007: SIRIUS class aggregation and GSEA-style enrichment also find no color class association
+**Status:** supported
+**Claim:** `analysis/scripts/class_level_association.py` aggregates the
+10,949 dedup features into SIRIUS chemical classes (NPC pathway, NPC
+class, ClassyFire class — only the ~29%-annotated subset) and tests a\*/C\*
+via (strategy 2) class-mean z-score Spearman and (strategy 3) GSEA-style
+KS enrichment ES, both against block-restricted (species-tree-clade)
+500-permutation nulls with BH-FDR. Null for both color axes: 0-1 of 502
+classes survive FDR<0.05 (a\*: 1 NPC-pathway hit in supernatant; C\*: 0);
+top a\* signals are single-feature classes (n_members=1) that don't
+survive. This is the 7th/8th independent method to agree null (after the
+5 in F-002/F-004, F-006, F-005's sweep).
+**Why aggregation doesn't rescue signal:** SIRIUS classes in this data are
+mostly tiny (typical n_members=1), so class aggregation neither pools weak
+within-class signal nor materially reduces multiple testing.
+**Decoy/calibration angle:** the area decoy saturates (129/502 classes,
+43% of cell/NPC classes) — traced to the F-001 biomass/global-abundance
+artifact, `spearman(mean z-abundance, area) = -0.30` (p=3e-7) in the cell
+fraction — not a machine bug: a globally shuffled true-null phenotype
+through the identical pipeline gives the expected ~3-5% FPR, and
+per-species blocks barely reduce decoy hits (43%→41%), so area's signal is
+within-species scalar abundance scaling, not species-tree structure. The
+default 6-clade restriction is weak in the cell fraction (clade_1 holds
+230/274 strains).
+**Tag:** class-aggregation, gsea, null-result, biomass-artifact
