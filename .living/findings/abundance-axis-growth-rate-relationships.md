@@ -113,7 +113,8 @@ metabolome relationship is overwhelmingly phylogenetic in the cell fraction, and
 mucilaginosa only; 1,153 GNPS molecular-network components with ≥2 dedup-rep members; 4,892
 unmapped/singleton features tested per-feature only) tests each molecular family by two
 designs — GSEA-style enrichment (mean(-log10 p) of member features) and max|rho| — each with
-permutation p + BH-FDR, plus a familywise whole-panel max null (`p_fdr_max`). Results:
+permutation p + BH-FDR, plus a familywise whole-panel max null (`p_fdr_max`). Narrative
+report with figures and links to all tables: `analysis/network_components/REPORT.md`. Results:
 
 | trait | comps sig (enrichment BH<0.05) | comps sig (max\|rho\| BH<0.05) | comps sig (familywise) |
 |---|---|---|---|
