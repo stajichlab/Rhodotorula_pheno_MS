@@ -6,7 +6,131 @@ PI hypothesis (2026-09-11): long-chain N-acyl-L-homoserine lactones (AHLs
 across *Rhodotorula* strains/species and their production is linked to
 smooth vs. rough colony morphology.
 
-## Status: Phase 1 (mass search) + Phase 2 (strain-level detection vs. morphology proxy) done. Current evidence is null / non-discriminating. See "Phase 2 results" below.
+## Status: Phase 1 (mass search) + Phase 2 (strain-level detection vs. morphology proxy) done. Current evidence is null / non-discriminating. See "Phase 2 results" below. The likely source publication for the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*) and a broader fungal-AHL-biosynthesis literature check (both below) independently weaken the premise further.
+
+## Primary source of the hypothesis, and why it should be discounted (2026-09-11)
+
+PI identified the likely origin of the "Rhodotorula produces AHL" premise:
+**Wilson et al. 2025, "Characterization of virulence-related phenotypes of
+*Candida parapsilosis* and *Rhodotorula mucilaginosa* isolated from the
+International Space Station (ISS)", *Life Sciences in Space Research*
+45:16-24, doi:10.1016/j.lssr.2025.01.002** (PMID 40280638). Full abstract
+retrieved (PubMed); paper itself not accessed (paywalled).
+
+**What that paper actually did, per its own abstract**: "autoinducer (AI)
+production was detected by activation of a reporter fluorescent gene
+present in biosensor bacterial strains" -- i.e. a **bacterial bioreporter
+functional assay**, not a chemical/structural identification (no MS, no
+NMR reported in the abstract). It reports "increased ... long-chain
+autoinducer production ... in the ISS isolates" alongside increased
+capsule production, biofilm formation, antifungal resistance, and
+nematode virulence in ISS *R. mucilaginosa* vs. ATCC controls -- an
+overall "enhanced virulence phenotype" narrative, not a specific
+AHL-vs-morphology test. No smooth/rough colony-texture score is reported
+in the abstract either; its morphology-adjacent readouts are capsule
+production and filamentation.
+
+**Why this weakens the premise, independent of this project's own null MS
+result**: a bacterial LuxR-type AHL bioreporter is a functional assay, and
+such reporters are well documented in the quorum-sensing literature to
+cross-react with non-AHL lipophilic ligands (certain fatty acids and
+fatty-acid-like compounds can activate LuxR-family receptors
+non-specifically). *Rhodotorula* is a prolific lipid/fatty-acid-derivative
+producer, so a positive bioreporter signal from a fungal extract does not
+by itself demonstrate a genuine AHL was present -- it is at least as
+consistent with cross-reactive fungal lipid chemistry, or residual
+bacterial AHL carried over in a non-axenic culture, as with true fungal
+AHL biosynthesis. Combined with the KEGG/Pfam absence of any fungal LuxI
+ortholog and the specific published finding that *R. mucilaginosa* is an
+AHL-**degrading** (lactonase-positive) organism (both below), the
+bioreporter signal in the ISS paper is better explained by one of those
+two alternatives than by novel fungal AHL biosynthesis. This does not
+mean the ISS finding is wrong on its own terms (a real bioreporter signal
+was presumably observed) -- it means "long-chain autoinducer production"
+in that paper's specific, narrow (functional-bioassay) sense should not be
+read as "this fungus makes AHLs" in the structural-chemistry sense this
+project's MS mass-search was built to test.
+
+## Background literature check (2026-09-11): is fungal AHL biosynthesis even known to exist?
+
+Before pursuing this further, a background research pass checked whether
+any fungus has ever been shown to biosynthesize AHLs at all (independent of
+this project's own MS data). Summary (full citations at the end of this
+section):
+
+- **No LuxI-type AHL synthase ortholog exists in any fungal genome per
+  KEGG.** The relevant KEGG ortholog (K18096, the CoA-utilizing LuxI
+  homolog) is restricted to alpha-Proteobacteria; no fungal/eukaryotic
+  genome is annotated with it, and no Pfam/InterPro entry for a
+  "homoserine-lactone synthase" domain family in fungi was found.
+- **No natural fungal AHL production has been cloned or characterized.**
+  The one directly relevant paper (*Commun. Biol.* 2025, engineering an
+  AHL-based quorum-sensing circuit in *S. cerevisiae*) is explicitly an
+  **engineered, heterologous** system (bacterial LuxI expressed in yeast)
+  — the paper itself frames this as something yeast does not do naturally.
+- **Directly relevant counter-finding: *Rhodotorula mucilaginosa* — this
+  panel's dominant species (213/298 strains in the texture table) — is
+  specifically published as an AHL-DEGRADING (quorum-quenching) yeast**,
+  with lactonase activity confirmed against C6-HSL, 3-oxo-C6-HSL, and
+  3-hydroxy-C6-HSL (Tan et al. 2014, *Sensors* 14:6463, PMC4029656).
+  AHL-inactivating (lactonase/acylase) activity is reported as widespread
+  across yeasts generally, and the basidiomycetous yeast *Trichosporon
+  loubieri* was shown to consume AHLs as a carbon/nitrogen source (PMC3859043).
+  This is the **opposite** direction from the hypothesis: this genus is
+  documented to destroy AHLs, not make them.
+- Fungi do have their own, chemically unrelated quorum-sensing chemistry
+  (farnesol, tyrosol, phenylethanol, tryptophol — aromatic
+  alcohols/sesquiterpenes controlling yeast-hyphal morphogenesis;
+  Wongsuk et al. 2016, *J. Basic Microbiol.*) — not homoserine lactones.
+
+**Implication**: this reframes any AHL-mass signal in the existing MS data
+as more parsimoniously explained by trace bacterial contamination
+(possibly since degraded by the strain's own lactonase activity, which
+would also help explain why no clean, discriminating detection signal was
+found in Phase 2) than by novel fungal biosynthesis. It does not rule out
+the hypothesis — a genuinely novel fungal AHL pathway would by definition
+not yet be in KEGG/Pfam — but there is currently no positive-control gene
+to anchor a genomic search against, and the literature gives a more
+likely alternative explanation for the null Phase 2 result than "wrong
+detection method."
+
+**Key sources**: KEGG KO K18096; Tan et al., *Rhodotorula mucilaginosa*, a
+Quorum Quenching Yeast Exhibiting Lactonase Activity, *Sensors* 2014,
+14:6463 (PMC4029656); Ren et al., *Trichosporon loubieri* AHL degradation
+(PMC3859043); "Inactivation of bacterial quorum sensing signals N-acyl
+homoserine lactones is widespread in yeasts" (2018); Engineering an
+AHL-based quorum-sensing circuit in *S. cerevisiae*, *Commun. Biol.* 2025
+(PMC12717128, engineered/heterologous); Wongsuk et al. 2016, *J. Basic
+Microbiol.* (fungal QS chemistry: farnesol/tyrosol/phenylethanol/tryptophol).
+
+## Morphology-variance figures (2026-09-11)
+
+`analysis/scripts/ahl_morphology_variance_figures.py` -> `figures/`:
+
+- `fig1_smoothness_by_species.png/pdf` — smoothness_z by species (boxplot +
+  jittered strip for n>=3 species; diamonds for the 8 singleton/n=2
+  species, where a box is not meaningful). One pathological outlier
+  (`TFCN_43A-4`, smoothness_z=-43, driven by an extreme raw Contrast
+  value) is excluded from the plotted axis only (named in the title; the
+  underlying data is untouched).
+- `fig2_smoothness_distribution.png/pdf` — strain-level smoothness_z
+  histogram (n=297 plotted, same outlier excluded and named), roughly
+  unimodal, median 0.13.
+- `fig3_raw_texture_components_by_species.png/pdf` — the 4 raw Haralick
+  components feeding smoothness_z (Contrast, Entropy, AngularSecondMoment,
+  InverseDifferenceMoment), by species, so the composite's apparent
+  variance isn't taken on faith.
+- `fig4_all_texture_metrics_distribution.png/pdf` — all 13 raw
+  `-avg-scale05` Haralick metrics' distributions across all 298 strains
+  pooled (independent of species) — most are unimodal and reasonably
+  symmetric; Contrast is heavily right-skewed (the same outlier strain
+  drives its long tail).
+
+Species-level spread in `smoothness_z` (n>=3 species) is modest and
+overlapping (interquartile ranges mostly span roughly -2 to +2, medians
+clustered near 0) — there is no visually obvious species with a
+dramatically different texture profile from the rest, *R. mucilaginosa*'s
+enormous sample size (213/298) aside.
 
 ## What has been done
 `analysis/scripts/ahl_targeted_mass_remining.py` — exact-mass re-mining of
@@ -120,7 +244,7 @@ raw-peak-area/colony-size confound documented elsewhere in this project.
 
 **Result 3 — the single "best" SIRIUS cross-reference argues against, not for, AHL identity**: of the 103 raw mass hits, 39 have an independent SIRIUS structural call; the closest thing to an AHL-adjacent class label is row 28552 (`C5-HSL`, short/medium-chain, not even long-chain) called "N-acyl amines" -- but SIRIUS's own assigned formula for that row (`C11H13NO3`) does not match the target AHL formula (`C9H15NO3`) the mass search was aiming at, meaning the match is very likely a coincidental isobaric overlap with an unrelated compound (4-(cyclopropanecarbonylamino)-3-methylbutanoic acid), not corroborating evidence. No other candidate row has any SIRIUS class resembling an acyl-lactone/amide signaling molecule; the rest are dipeptides, amino acids, fatty acyl carnitines, chalcones, terpenoids, etc. -- all structurally incompatible with AHLs.
 
-**Bottom line as of 2026-09-11**: no positive evidence for the hypothesis has been found. The mass-search hits do not show a discriminating detection pattern, the one available structural cross-check argues against AHL identity for its best candidate, and the continuous intensity-vs-smoothness relationship is null. This does not rule out the hypothesis -- MS2 spectral confirmation (the diagnostic AHL fragment) has still not been attempted on any candidate, since none has cleared even a basic detection/plausibility bar to justify that next step yet.
+**Bottom line as of 2026-09-11**: no positive evidence for the hypothesis has been found. The mass-search hits do not show a discriminating detection pattern, the one available structural cross-check argues against AHL identity for its best candidate, and the continuous intensity-vs-smoothness relationship is null. Independently, the literature source that likely motivated the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*, see above) rests on a bacterial bioreporter functional assay, not a chemically-confirmed AHL structure, and bioreporters of this type are known to cross-react with fungal lipid chemistry -- so the premise itself is weaker than "a paper detected AHLs in this species" would suggest. This does not rule out the hypothesis outright -- MS2 spectral confirmation (the diagnostic AHL fragment) has still not been attempted on any candidate -- but combined with the biosynthesis-pathway absence and the degradation-not-production literature, the balance of evidence currently weighs against it.
 
 ## Next steps (open)
 1. Run the decoy/permutation null on the 103 raw hits, to formally

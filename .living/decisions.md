@@ -1114,3 +1114,15 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: no positive evidence for the hypothesis currently exists. Next real step (if pursued) is the still-outstanding decoy/permutation null on the mass search itself, not further morphology correlation work on unvalidated mass hits.
 
 **Tags**: ahl, autoinducer, morphology, texture, smoothness, detection-saturation, null-result, descriptive-not-phylogenetic
+
+## 2026-09-11: Traced and discounted the AHL hypothesis's likely primary source
+
+**Context**: PI identified the likely originating publication for the AHL/morphology hypothesis: Wilson et al. 2025, "Characterization of virulence-related phenotypes of Candida parapsilosis and Rhodotorula mucilaginosa isolated from the International Space Station (ISS)", Life Sci. Space Res. 45:16-24 (doi:10.1016/j.lssr.2025.01.002, PMID 40280638).
+
+**Finding**: per its own abstract, that paper detected "long-chain autoinducer production" via "activation of a reporter fluorescent gene present in biosensor bacterial strains" -- a bacterial bioreporter functional assay, not chemical/structural AHL confirmation (no MS/NMR reported).
+
+**Decision**: documented this as a further reason to discount the hypothesis (in addition to the KEGG/Pfam absence of fungal LuxI orthologs and the R. mucilaginosa AHL-degradation literature, same date's earlier entry) -- LuxR-type bioreporters are known to cross-react with fungal lipid chemistry, so a positive bioreporter signal from a Rhodotorula extract does not by itself demonstrate true AHL production.
+
+**Consequences**: the balance of evidence (this project's own null MS/morphology result + absent biosynthesis pathway + documented AHL-degrading phenotype + weak/functional-only primary literature support) now weighs against the hypothesis, though it is not disproven -- MS2 structural confirmation was never completed on any candidate feature.
+
+**Tags**: ahl, autoinducer, morphology, literature-review, bioreporter-cross-reactivity, hypothesis-provenance
