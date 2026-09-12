@@ -1126,3 +1126,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: the balance of evidence (this project's own null MS/morphology result + absent biosynthesis pathway + documented AHL-degrading phenotype + weak/functional-only primary literature support) now weighs against the hypothesis, though it is not disproven -- MS2 structural confirmation was never completed on any candidate feature.
 
 **Tags**: ahl, autoinducer, morphology, literature-review, bioreporter-cross-reactivity, hypothesis-provenance
+
+## 2026-09-12: GWAS follow-up (cross-project) closes with a checked null — no genetic locus for colony texture
+
+**Context**: after texture-morphology data was ingested and the AHL mass search came back null, PI asked whether genetic variants might explain colony smoothness in R. mucilaginosa. Rather than build genomics infrastructure in this project, the work was done in `~/projects/Rhodotorula_phenotypes`, which already has a mature, validated GEMMA GWAS pipeline for this exact species/strain panel.
+
+**Decision**: added 13 raw Haralick texture traits (already present in that project's own db_extract, no ingestion needed) as a new GWAS trait block there, ran the standard Tier A scan, then applied that project's own rare-variant carrier-kinship check to every apparent hit before reporting anything.
+
+**Result**: no credible locus survived. Every large-hit-count trait (Contrast, SumVariance, HaralickVariance, SumAverage) traced to either (a) a tight near-clonal carrier group (pairwise kinship in the top 2-4% genome-wide -- the opposite of that project's one validated rare-variant locus's pattern), or (b) SumAverage restating the already-known lightness (lab_L) locus, since average gray-level and lightness are mechanistically the same quantity.
+
+**Why**: reusing an existing, validated pipeline and its own validation battery (rather than building new infrastructure here) let this be checked properly instead of reported as a raw hit count, which would have been misleading (3,885 "significant" SNPs for Contrast alone, all one lineage-tagging artifact).
+
+**Consequences**: this is the fourth independent line of evidence against the AHL/morphology hypothesis (alongside the null mass-search detection, the discounted bioreporter-based literature premise, and the absent fungal AHL biosynthesis pathway). None of the four lines individually disproves the hypothesis, but together they leave it with no positive support anywhere it's been tested.
+
+**Tags**: gwas, texture, ahl-autoinducer-search, near-clone-artifact, cross-project, hypothesis-closure

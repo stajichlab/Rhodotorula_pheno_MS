@@ -6,7 +6,70 @@ PI hypothesis (2026-09-11): long-chain N-acyl-L-homoserine lactones (AHLs
 across *Rhodotorula* strains/species and their production is linked to
 smooth vs. rough colony morphology.
 
+**Revised framing (2026-09-11, later same day)**: PI noted the
+"smooth/rough" framing may have conflated two distinct phenotypes reported
+in the source literature (see below) — biofilm formation (a liquid-culture
+attachment/aggregation assay) and **capsule production** (a
+polysaccharide-layer trait scored on solid media). Capsule production is
+the mechanistically plausible link to colony-surface appearance: an
+encapsulated colony classically reads smoother/mucoid/glistening, an
+unencapsulated one rougher/drier (the same logic long used for
+*Cryptococcus*-type capsule scoring). So "smooth vs. rough" as a target
+phenotype is now understood as most likely a **proxy for capsule
+production specifically**, not biofilm formation, and not a generic
+texture descriptor invented independently of the literature. This makes
+the `salinity_texture_baseline` GLCM/Haralick texture proxy (colony-image
+texture) a *more* plausible stand-in than it would be for biofilm (which
+has no direct colony-surface signature at all) — but it is still an
+unvalidated proxy, and no direct capsule measurement (e.g. India-ink
+capsule staining/sizing, the classical assay for this trait) has been
+located or ingested into this project. See "Primary source of the
+hypothesis" below for the literature this reframing is based on.
+
 ## Status: Phase 1 (mass search) + Phase 2 (strain-level detection vs. morphology proxy) done. Current evidence is null / non-discriminating. See "Phase 2 results" below. The likely source publication for the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*) and a broader fungal-AHL-biosynthesis literature check (both below) independently weaken the premise further.
+
+## Cross-project follow-up: GWAS for genetic variants explaining colony texture (2026-09-11/12)
+
+PI asked whether genetic variants might explain colony smoothness, restricted
+to *R. mucilaginosa* (the species with real GWAS infrastructure available).
+This was done in the sibling `~/projects/Rhodotorula_phenotypes` project,
+which already has a mature, validated GEMMA-based GWAS pipeline (kinship-only
+LMM, 213-strain reconciled panel + 182-strain near-clone-culled panel,
+Meff/Bonferroni + BH-FDR, population-confounding and rare-variant-carrier
+validation batteries) for R. mucilaginosa color/copper-response phenotypes.
+
+**No new data ingestion was needed**: that project's own `db_extract`
+already carries 13 raw Haralick/GLCM `TextureGray_*` columns from its own
+Copper-screen imaging pipeline, at the exact same control condition/window
+(Cu=0, 85-110h) already used for its existing color GWAS traits — a better
+match than porting this project's cross-pipeline `salinity_texture_baseline`
+proxy would have been. Added as "Part D" of that project's
+`build_gwas_phenotypes.py`; 212/213 GWAS-panel strains covered. Tested as
+13 separate raw traits (not a composite), per user direction, so a real
+signal on one metric wouldn't be diluted by summing with others.
+
+**Result: GEMMA Tier A scan (13 traits x 2 panels, SLURM job 28311124) found
+no credible genetic locus for colony texture/roughness.** Several traits
+initially showed large FDR-significant hit counts (Contrast: 3,885 SNPs;
+SumVariance: 3,056; SumAverage: 1,518), but applying that project's own
+established scrutiny — checking each rare-variant hit's carrier pairwise
+kinship against the existing relatedness matrix, the same diagnostic that
+validated a real locus elsewhere in that GWAS (`scaffold_13:810026`) —
+showed every apparent hit traces to a tight near-clonal group of 3-4
+strains (pairwise kinship in the top 2-4% of genome-wide relatedness,
+the *opposite* of the validated locus's pattern) rather than an
+independent causal variant. The one more-common-variant hit (`SumAverage`,
+af=0.24) turned out to sit in the same genomic block as that project's
+already-known `lab_L` (lightness) locus — mechanistically expected, since
+`SumAverage` is literally average image gray-level, not a distinct
+roughness signal. Full detail, including which specific strains form each
+artifactual cluster: `~/projects/Rhodotorula_phenotypes/analysis/gwas/GWAS.md`
+§24 and `.living/decisions.md` D-32/D-33 in that project.
+
+**This is a third, independent line of evidence against the hypothesis**
+(alongside the null MS/morphology association and the weak/discounted
+literature premise below): even where real GWAS power exists, no genetic
+signal for colony texture survives scrutiny in this panel.
 
 ## Primary source of the hypothesis, and why it should be discounted (2026-09-11)
 
@@ -244,7 +307,7 @@ raw-peak-area/colony-size confound documented elsewhere in this project.
 
 **Result 3 — the single "best" SIRIUS cross-reference argues against, not for, AHL identity**: of the 103 raw mass hits, 39 have an independent SIRIUS structural call; the closest thing to an AHL-adjacent class label is row 28552 (`C5-HSL`, short/medium-chain, not even long-chain) called "N-acyl amines" -- but SIRIUS's own assigned formula for that row (`C11H13NO3`) does not match the target AHL formula (`C9H15NO3`) the mass search was aiming at, meaning the match is very likely a coincidental isobaric overlap with an unrelated compound (4-(cyclopropanecarbonylamino)-3-methylbutanoic acid), not corroborating evidence. No other candidate row has any SIRIUS class resembling an acyl-lactone/amide signaling molecule; the rest are dipeptides, amino acids, fatty acyl carnitines, chalcones, terpenoids, etc. -- all structurally incompatible with AHLs.
 
-**Bottom line as of 2026-09-11**: no positive evidence for the hypothesis has been found. The mass-search hits do not show a discriminating detection pattern, the one available structural cross-check argues against AHL identity for its best candidate, and the continuous intensity-vs-smoothness relationship is null. Independently, the literature source that likely motivated the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*, see above) rests on a bacterial bioreporter functional assay, not a chemically-confirmed AHL structure, and bioreporters of this type are known to cross-react with fungal lipid chemistry -- so the premise itself is weaker than "a paper detected AHLs in this species" would suggest. This does not rule out the hypothesis outright -- MS2 spectral confirmation (the diagnostic AHL fragment) has still not been attempted on any candidate -- but combined with the biosynthesis-pathway absence and the degradation-not-production literature, the balance of evidence currently weighs against it.
+**Bottom line as of 2026-09-12**: no positive evidence for the hypothesis has been found, across four independent lines of investigation. (1) The mass-search hits do not show a discriminating detection pattern. (2) The one available structural cross-check argues against AHL identity for its best candidate, and the continuous intensity-vs-smoothness relationship is null. (3) The literature source that likely motivated the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*) rests on a bacterial bioreporter functional assay, not a chemically-confirmed AHL structure, and such bioreporters are known to cross-react with fungal lipid chemistry. (4) A dedicated GWAS for genetic variants explaining colony texture in *R. mucilaginosa* found no locus that survives scrutiny — every apparent hit traces to a near-clone lineage artifact or a restated lightness signal, not real texture-specific genetics. This does not rule out the hypothesis outright -- MS2 spectral confirmation (the diagnostic AHL fragment) has still not been attempted on any candidate -- but the balance of evidence across chemistry, biosynthesis-pathway plausibility, sourcing literature, and genetics all currently weighs against it.
 
 ## Next steps (open)
 1. Run the decoy/permutation null on the 103 raw hits, to formally
