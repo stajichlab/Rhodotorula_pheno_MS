@@ -1,0 +1,161 @@
+dataset_name: salinity_texture_baseline
+description: >
+  Per-colony GLCM (gray-level co-occurrence matrix / Haralick) texture
+  features extracted from colony photographs, subsetted to the 0% w/v
+  salinity control condition at Hours=90 on YPDN media from the sibling
+  Rhodotorula_Phenotyping/Salinity screen. One row per imaged colony
+  (multiple replicate colonies per strain). Intended use: quantitative
+  proxy for colony surface morphology (smooth vs. rough) where no
+  categorical morphology call exists in this project.
+format: CSV.gz
+
+columns:
+  - name: Strain ID
+    type: float
+    description: Numeric strain identifier from the source project's ID space; crosswalks to this project's strain_code via data/metadata/EXFAB_UCR-005/MS2_samples_combine.extended_metadata_with_strain_traits.tsv.gz (Strain ID -> Strain).
+    nullable: true
+    notes: >
+      32-112 rows have missing identity columns ("unidentified spots"-type rows, consistent with the same issue documented for control_phenotype_90_110h).
+
+  - name: Strain Name
+    type: str
+    description: Free-text strain name/alias as recorded by the source project (sometimes includes a secondary lab ID on a second line).
+    nullable: true
+
+  - name: Strain
+    type: str
+    description: Strain code (e.g. TFCN_xxx, DBVPG_xxx) matching this project's strain_code convention.
+    nullable: true
+
+  - name: Species
+    type: categorical
+    description: Species call as recorded by the source project. Not cross-validated against this project's species calls (see known_issues).
+    nullable: true
+
+  - name: Origin
+    type: str
+    description: Strain collection/origin field, carried over from source.
+    nullable: true
+
+  - name: Environment
+    type: str
+    description: Isolation environment field, carried over from source.
+    nullable: true
+
+  - name: Salinity (%w/v)
+    type: float
+    description: Experimental salinity level. Fixed at 0 in this extracted subset (unstressed baseline condition).
+    units: "% w/v NaCl"
+    nullable: false
+
+  - name: Hours
+    type: int
+    description: Hours post-inoculation at imaging. Fixed at 90 in this extracted subset.
+    units: hours
+    nullable: false
+
+  - name: Media
+    type: categorical
+    description: Growth medium. Fixed at YPDN in this extracted subset.
+    nullable: false
+    values:
+      - YPDN
+
+  - name: Replicate
+    type: str
+    description: Replicate identifier from the source plate design.
+    nullable: true
+
+  - name: run_number
+    type: str
+    description: Source experiment run/batch identifier.
+    nullable: true
+
+  - name: configuration
+    type: str
+    description: Source plate configuration identifier.
+    nullable: true
+
+  - name: well_position
+    type: str
+    description: Plate well position of the imaged colony.
+    nullable: true
+
+  - name: Shape_Area
+    type: float
+    description: Segmented colony area in pixels. Retained for QC and as a known confound check (colony area/size confounds abundance-based comparisons elsewhere in this project -- see .living/findings/biomass-scaling-artifacts-in-extraction-based-metabolomics.md).
+    units: pixels
+    nullable: true
+
+  - name: Shape_Perimeter
+    type: float
+    description: Segmented colony perimeter.
+    units: pixels
+    nullable: true
+
+  - name: Shape_Circularity
+    type: float
+    description: Colony shape circularity (1.0 = perfect circle).
+    nullable: true
+
+  - name: Shape_ConvexArea
+    type: float
+    description: Area of the convex hull of the segmented colony.
+    units: pixels
+    nullable: true
+
+  - name: Shape_Solidity
+    type: float
+    description: Shape_Area / Shape_ConvexArea -- a macro-scale (whole-colony outline) roughness/irregularity measure, distinct from the pixel-scale Texture_* GLCM metrics.
+    nullable: true
+
+  - name: Shape_Eccentricity
+    type: float
+    description: Ellipse-fit eccentricity of the colony outline.
+    nullable: true
+
+  - name: Shape_MajorAxisLength
+    type: float
+    description: Ellipse-fit major axis length.
+    units: pixels
+    nullable: true
+
+  - name: Shape_MinorAxisLength
+    type: float
+    description: Ellipse-fit minor axis length.
+    units: pixels
+    nullable: true
+
+  - name: Shape_Compactness
+    type: float
+    description: Shape compactness metric (perimeter^2 / area, normalized).
+    nullable: true
+
+  - name: "Texture_<Metric>-deg{000,045,090,135}-scale05"
+    type: float
+    description: >
+      Directional GLCM Haralick texture metric computed at 4 pixel-adjacency
+      angles (0/45/90/135 degrees) and a fixed spatial scale (scale05). 13
+      metrics x 4 angles = 52 columns. Metric semantics:
+        AngularSecondMoment: energy/uniformity (higher = smoother-reading local texture)
+        Contrast: local intensity variation (higher = rougher-reading)
+        Correlation: linear dependency between neighboring pixel intensities
+        HaralickVariance: gray-level pair variance
+        InverseDifferenceMoment: local homogeneity (higher = smoother)
+        SumAverage / SumVariance / SumEntropy: sum-of-pairs statistics
+        Entropy: overall textural randomness (higher = rougher/more disordered)
+        DiffVariance / DiffEntropy: difference-of-pairs statistics
+        InfoCorrelation1 / InfoCorrelation2: Haralick's information-measures-of-correlation f12/f13
+      None of these have been validated against a human smooth/rough call for this genus -- treat as a texture profile, not a pre-established roughness scale.
+    nullable: true
+    notes: >
+      6 rows have missing values across this whole column family (same rows, likely a colony-segmentation edge case in the source pipeline).
+
+  - name: "Texture_<Metric>-avg-scale05"
+    type: float
+    description: >
+      Same 13 Haralick metrics as above, averaged across the 4 directional
+      angles -- a single per-metric, rotation-invariant summary. 13
+      columns. These are the recommended columns to start from for any
+      strain-level morphology summary (avoids picking an arbitrary angle).
+    nullable: true

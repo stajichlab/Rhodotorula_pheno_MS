@@ -37,6 +37,43 @@ now reads from `data/raw/control_phenotype_90_110h/` in this repo instead.
 Wet-lab provenance (imaging/plate design) is still pending PI review — see
 open questions in `data/raw/control_phenotype_90_110h/CONTROL_PHENOTYPE_90_110H.md`.
 
+### salinity_texture_baseline
+```yaml
+name: salinity_texture_baseline
+type: imaging                # colony-image GLCM/Haralick texture features, morphology proxy
+source: Sibling project Rhodotorula_Phenotyping/Salinity (Jason Stajich lab), derived from master_measurements_combined.csv
+date_acquired: 2026-09-11
+format: CSV.gz (1 file)
+rows: 997 (312 distinct Strain ID, 300 distinct strain_code)
+columns: 87
+size: 497 KB (gzip)
+raw_path: data/raw/salinity_texture_baseline/
+processed_path: (none yet)
+metadata_path: data/metadata/salinity_texture_baseline/
+status: raw
+known_issues:
+  - This is a quantitative TEXTURE PROXY for colony morphology, not a PI-validated smooth/rough categorical phenotype -- no such phenotype exists anywhere reachable from this project as of 2026-09-11
+  - Collected under a different imaging pipeline/rig (Rhodotorula_Phenotyping/Salinity) than this project's own color phenotyping -- cross-pipeline batch effects not checked
+  - 0% salinity is the unstressed baseline of a salinity-STRESS screen, not a dedicated morphology assay
+  - Hours=90 is a single timepoint (not a 90-110h window average like control_phenotype_90_110h), chosen only for nominal timepoint consistency
+  - 6/997 rows missing all Texture_* values; 32-112/997 rows missing Strain/Species/Origin/Environment
+  - Strain ID -> strain_code crosswalk (via EXFAB_UCR-005) checked only at ID-set-overlap level (274/303 canonical panel strains matched), not spot-checked
+  - Multiple replicate colony rows per strain -- no strain-level aggregation applied yet
+access_restrictions: institutional-only
+tags: [phenotype, morphology, texture, GLCM, Haralick, colony-imaging, rhodotorula, proxy]
+```
+
+Brought in specifically to test the PI's 2026-09-11 hypothesis that
+AHL-autoinducer-like MS features correlate with colony morphology
+(smooth vs. rough) — see `analysis/ahl_autoinducer_search/`. GLCM
+(Haralick) texture metrics (contrast, correlation, entropy, angular
+second moment, etc.) computed per colony image are the best available
+quantitative stand-in for colony surface morphology in this project's
+data ecosystem; treat any downstream use as testing a proxy, not a
+validated trait, until/unless the PI confirms a real smooth/rough score
+exists elsewhere. See `SALINITY_TEXTURE_BASELINE.md` for the full
+extraction rationale and caveats.
+
 ### EXFAB_UCR-005 (legacy — pre-mycelium, not fully retrofitted)
 ```yaml
 name: EXFAB_UCR-005

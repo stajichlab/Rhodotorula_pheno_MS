@@ -159,3 +159,19 @@ Not yet backported to `phase2_color_metabolome_association.py` or
 **structural_mitigation_candidate**: (partially shipped, see Resolution)
 — `n_perm` recording + minimum-permutation-count gate check, in 2 of 4
 Phase 2 scripts so far.
+
+## 2026-09-11: No colony-morphology (smooth/rough) phenotype exists in currently accessible data
+
+Searched this repo's `data/` and `analysis/` trees plus the reachable sibling phenotyping projects (`Rhodotorula_Phenotyping`, `ExRhodotorula_Phenotypes`, `Phenotypes_Study1`) for any smooth/rough or general colony-texture/surface trait. Found none — the two phenotype sources this project actually has (`control_phenotype_90_110h`, `EXFAB_UCR-005`) cover only CIELAB color (L*/a*/b*, chroma, hue), colony area/shape, and copper-media growth AUC.
+
+**Resolution**: none yet — flagged to PI as an open question (does this trait exist anywhere unscored, e.g. in colony images not yet analyzed, or a spreadsheet not yet ingested?). Not assumed absent; stated as a gap per this project's "don't give inflated results" standard.
+
+**Tags**: colony-morphology, phenotype-gap, smooth-rough, data-availability, ahl-autoinducer-search
+
+## 2026-09-11: Blank-floor-only detection thresholds saturate on large untargeted feature tables
+
+Built a per-feature "peak area > max blank peak area" detection rule for 41 AHL-mass-search candidates against 266 MS samples. Result: 100% of samples show at least one candidate "detected" -- the threshold has zero discriminating power. Root cause: in a 16k+-feature untargeted table, any complex sample extract has *some* peak above blank noise somewhere across even a handful of narrow (20 ppm) mass windows, independent of whether the targeted compound is really present.
+
+**Resolution**: pivoted to a continuous check (max raw peak area vs. the trait of interest) instead of trusting the binary call; flagged the binary result explicitly as uninformative rather than reporting the 100% figure as a finding. For future targeted-mass searches in this project, a blank-floor-only rule should not be treated as sufficient evidence of detection on its own -- pair it with either a continuous intensity comparison or a decoy/permutation null (see [[ahl-autoinducer-search]] decision entry, same date) before calling anything "detected."
+
+**Tags**: targeted-mass-search, detection-threshold, blank-floor, false-positive-saturation, ahl-autoinducer-search, methodology

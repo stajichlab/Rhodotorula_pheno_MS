@@ -1,0 +1,36 @@
+AHL candidate row IDs: 103 (41 long_chain rows, 41 distinct long_chain row IDs)
+Sample columns: 601 strain (C_/SUP_) + 7 blank
+Sample columns with no strain_code in Cu_AUC crosswalk: 70 (dropped)
+Strains with MS data (either fraction): 266
+Of those, strains with >=1 long-chain AHL candidate above its own blank floor: 266 / 266 (100.0%)
+*** Binary detection saturates near 100% -- this call carries essentially NO discriminating information. A blank-floor-only threshold is too permissive for a 16k+-feature untargeted table: almost every sample has SOME peak above blank noise somewhere in these 41 narrow mass windows, real signal or not. The binary detection columns below are retained for transparency but should NOT be read as evidence of AHL production -- see the continuous max-intensity check instead. ***
+
+Strains with texture data but no MS sample match at all (excluded from all MS-side stats, kept in output table as NaN): 38
+
+Wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/ahl_autoinducer_search/ahl_strain_detection_vs_morphology.csv
+
+=== Continuous check (descriptive, NOT phylogenetically controlled) ===
+Spearman rho(max raw peak area of strongest long-chain AHL-mass candidate, smoothness_z) = -0.097, p = 0.1198, n = 260
+(raw peak area, not abundance-normalized -- a known confound in this project's other abundance-based comparisons; do not read a positive rho here as confirmed biology)
+
+=== Top 20 strains by max long-chain AHL-candidate peak area, with smoothness_z ===
+median smoothness_z, top-20-by-intensity strains: -0.387
+median smoothness_z, all tested strains: 0.155
+
+Species composition of top-20-by-intensity strains (check for single-clade dominance before reading any pattern as hypothesis-consistent):
+Species
+Rhodotorula mucilaginosa        9
+Rhodotorula taiwanensis         3
+Rhodotorula diobovata           2
+Rhodotorula frigidialcoholis    1
+Rhodotorula sp. clade I         1
+Rhodotorula toruloides          1
+Rhodotorula pacifica            1
+Rhodotorula paludigena          1
+Rhodotorula dairenensis         1
+Name: count, dtype: int64
+
+=== Binary 2x2 (retained for transparency -- SEE SATURATION WARNING ABOVE, not informative) ===
+smoothness_z           False  True 
+ahl_long_detected_any              
+True                     130    130

@@ -1,0 +1,13 @@
+Raw colony rows: 997
+Raw distinct Strain ID: 312
+Crosswalk rows (Strain ID -> strain_code): 277
+Colony rows with no resolvable strain_code after crosswalk join: 32 (dropped)
+Colony rows missing one or more avg-scale05 texture values: 6 (dropped)
+Colony rows below --min-colony-area=1000.0 px: 4 (dropped)
+Colony rows entering aggregation: 955 (of 959 pre-area-filter, 997 raw)
+
+Final strain-level table: 298 strains
+n_colonies_used per strain: min=1, median=3.0, max=7
+
+Wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/ahl_autoinducer_search/strain_texture_table.csv
+Wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/ahl_autoinducer_search/strain_texture_table_diagnostics.txt

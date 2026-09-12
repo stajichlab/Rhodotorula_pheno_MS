@@ -1,0 +1,104 @@
+compound,category,formula,adduct,target_mz,row_id,observed_mz,ppm_error,rt_min,has_ms2,is_isf,is_default_adduct,total_scans,dedup_group_id,is_group_representative,sirius_npc_class,sirius_structure_name,sirius_formula
+C4-HSL,short_medium_chain,C8H13NO3,[M+Na]+,194.07876398620002,42918,194.0807,9.975402564542033,1.437614,True,False,True,10,asid_42918,True,,,
+3-oxo-C4-HSL,short_medium_chain,C8H11NO4,[M+NH4]+,203.10263339730002,25097,203.1065,19.03767880952394,5.037,True,True,False,9,asid_19887,False,Cinnamic acids and derivatives,"1-[4-hydroxy-3-(3-methylbuta-1,3-dien-1-yl)phenyl]ethan-1-one",C13H14O2
+3-oxo-C4-HSL,short_medium_chain,C8H11NO4,[M+NH4]+,203.10263339730002,26305,203.1063,18.05295499446927,5.199,True,False,True,7,asid_26305,True,Noreudesmane sesquiterpenoids,"1-[4-hydroxy-3-(3-methylbuta-1,3-dien-1-yl)phenyl]ethan-1-one",C13H14O2
+C5-HSL,short_medium_chain,C9H15NO3,[M+NH4]+,203.1390189028,36960,203.1421,15.167431725580908,4.240602,True,False,False,6,asid_6671,False,Menthane monoterpenoids,,C14H18O
+C5-HSL,short_medium_chain,C9H15NO3,[M+Na]+,208.09441404999998,28552,208.0964,9.543504610979404,1.418482,True,False,True,8,asid_28552,True,N-acyl amines,4-(Cyclopropanecarbonylamino)-3-methylbutanoic acid,C11H13NO3
+C5-HSL,short_medium_chain,C9H15NO3,[M+Na]+,208.09441404999998,49491,208.0963,9.062953509060492,1.840786,True,False,True,8,asid_49491,True,,,
+3-hydroxy-C4-HSL,short_medium_chain,C8H13NO4,[M+Na]+,210.0736786083,41348,210.0755,8.670251847149872,0.699403,True,False,True,24,asid_41348,True,Pyridine alkaloids,N-Phenyliminodiacetic acid,C10H11NO4
+3-oxo-C7-HSL,short_medium_chain,C11H17NO4,[M+H]+,228.1230344878,19026,228.1193,-16.370498526698533,4.825294,True,False,True,6,asid_19026,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+H]+,230.1386845516,34915,230.1392,2.239729496146231,7.527,True,True,True,8,asid_3404,True,,,
+C7-HSL,short_medium_chain,C11H19NO3,[M+NH4]+,231.1703190304,9090,231.1698,-2.245229414297386,1.256,True,True,True,82,asid_10257,True,,,
+C7-HSL,short_medium_chain,C11H19NO3,[M+NH4]+,231.1703190304,13755,231.1698,-2.245229414297386,0.534218,True,True,False,60,asid_12288,False,Dipeptides,,C11H22N2O3
+C7-HSL,short_medium_chain,C11H19NO3,[M+Na]+,236.1257141776,13051,236.1275,7.563015346358885,2.853914,True,False,True,16,asid_13051,True,,,
+C7-HSL,short_medium_chain,C11H19NO3,[M+Na]+,236.1257141776,36591,236.1277,8.410021784023744,0.709273,True,False,True,15,asid_36591,True,Aminoacids,rel-(2R)-2-{[(tert-butoxy)carbonyl]amino}-3-fluoro-3-methylbutanoic acid,C10H18FNO4
+3-hydroxy-C6-HSL,short_medium_chain,C10H17NO4,[M+Na]+,238.1049787359,34782,238.1068,7.648996294226293,2.025108,True,False,True,8,asid_34782,True,Aminoacids,1-[(Tert-butoxy)carbonyl]-4-methylazetidine-2-carboxylic acid,C12H15NO4
+3-hydroxy-C8-HSL,short_medium_chain,C12H21NO4,[M+H]+,244.1543346154,17654,244.1537,-2.599238719240539,0.581497,True,False,False,17,asid_9598,False,Fatty acyl carnitines,[3-carboxy-2-[(E)-pent-3-enoyl]oxypropyl]-trimethylazanium,C12H21NO4
+3-oxo-C7-HSL,short_medium_chain,C11H17NO4,[M+NH4]+,245.1495835887,8100,245.153,13.936027342849865,4.563888,True,True,True,18,asid_235,False,,,
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,456,245.1855,-1.9132179616428904,0.811368,True,True,True,229,asid_4258,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,536,245.1855,-1.9132179616428904,0.936817,True,True,True,263,asid_4125,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,578,245.1855,-1.9132179616428904,0.62851,True,False,True,28,asid_578,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,3721,245.1855,-1.9132179616428904,1.65934,True,True,True,45,asid_521,True,,,
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,3937,245.1853,-2.728925323353209,1.752,True,True,True,98,asid_7160,True,,,
+C8-HSL,short_medium_chain,C12H21NO3,[M+NH4]+,245.1859690942,29560,245.1854,-2.321071642556009,1.030727,True,False,True,14,asid_29560,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+NH4]+,247.1652336525,1456,247.1658,2.2913720170684417,7.529,True,False,False,17,asid_15990,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+NH4]+,247.1652336525,10942,247.1687,14.024413744483216,4.563131,True,True,True,14,asid_235,False,Unsaturated fatty acids,"2,6,10-Trimethylundeca-2,6-dienoic acid",C11H21FN3O2
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+NH4]+,247.1652336525,31426,247.1654,0.673021434044157,5.398,True,False,True,50,asid_31426,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+NH4]+,247.1652336525,32975,247.1687,14.024413744483216,4.959,True,True,True,8,asid_7500,False,,,
+C8-HSL,short_medium_chain,C12H21NO3,[M+Na]+,250.1413642414,10552,250.1367,-18.64642185091105,1.307662,True,False,True,13,asid_10552,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+Na]+,252.1206287997,18910,252.1225,7.4218452845779215,1.046889,True,False,True,31,asid_18910,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+Na]+,252.1206287997,26182,252.1225,7.4218452845779215,0.899384,True,False,True,15,asid_26182,True,,,
+3-hydroxy-C7-HSL,short_medium_chain,C11H19NO4,[M+Na]+,252.1206287997,26662,252.1225,7.4218452845779215,0.89505,True,False,True,15,asid_26662,True,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,2442,259.169,14.532610902026189,5.064,True,True,True,29,asid_8222,True,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,3595,259.1646,-2.44497493371614,0.906,True,False,True,46,asid_3595,True,Dipeptides,2-amino-6-(cyclopentyloxycarbonylamino)hexanoic Acid,C12H22N2O4
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,8755,259.1685,12.60333978436309,5.609,True,True,True,121,asid_18281,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,13744,259.1685,12.60333978436309,4.555135,True,True,True,14,asid_235,False,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,23461,259.1683,11.831631337253985,5.970813,True,True,True,27,asid_6338,True,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,30278,259.1689,14.146756678581303,4.175549,True,False,True,6,asid_30278,True,Pinane monoterpenoids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C11H22BNO5
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,34196,259.1683,11.831631337253985,5.199,True,False,False,10,asid_974,False,Aminoacids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C7H18BN7O3
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,42242,259.1684,12.217485560918202,6.214238,True,True,True,8,asid_15530,True,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+NH4]+,259.1652336525,44520,259.1683,11.831631337253985,5.312105,True,False,True,26,asid_44520,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+C9-HSL,short_medium_chain,C13H23NO3,[M+NH4]+,259.20161915799997,28400,259.2046,11.500090199048152,5.022,True,True,True,21,asid_26992,True,,,
+C9-HSL,short_medium_chain,C13H23NO3,[M+NH4]+,259.20161915799997,46109,259.205,13.04329043543483,3.875413,True,True,True,8,asid_3884,False,,,
+3-hydroxy-C8-HSL,short_medium_chain,C12H21NO4,[M+NH4]+,261.1808837163,9075,261.1842,12.697268087873633,4.563888,True,True,True,11,asid_235,False,,,
+3-oxo-C8-HSL,short_medium_chain,C12H19NO4,[M+Na]+,264.1206287997,19790,264.1257,19.200318896106523,0.6543,True,False,True,25,asid_19790,True,Aminoacids,Boc-D-Asp(OMe)FMK,C11H21NO4S
+3-hydroxy-C8-HSL,short_medium_chain,C12H21NO4,[M+Na]+,266.13627886349997,2953,266.1313,-18.707947376505093,1.734662,True,False,True,97,asid_2953,True,Aminoacids,4-Fluoro-1-[2-[(1-hydroxy-2-methylpropan-2-yl)amino]acetyl]pyrrolidine-2-carbonitrile,C13H16FN3O2
+3-hydroxy-C8-HSL,short_medium_chain,C12H21NO4,[M+Na]+,266.13627886349997,5554,266.1311,-19.459442065093636,1.344373,True,False,True,33,asid_5554,True,,,
+3-hydroxy-C8-HSL,short_medium_chain,C12H21NO4,[M+Na]+,266.13627886349997,27890,266.1381,6.842872034650988,0.95739,True,False,True,19,asid_27890,True,Fatty acyl carnitines,Benzoylcarnitine,C14H19NO4
+C11-HSL,short_medium_chain,C15H27NO3,[M+H]+,270.2063701847,42052,270.2054,-3.590532300721063,3.557363,True,False,True,7,asid_42052,True,,,
+3-hydroxy-C10-HSL,short_medium_chain,C14H25NO4,[M+H]+,272.185634743,44824,272.1851,-1.964626092437978,0.937999,True,False,True,19,asid_44824,True,,,
+3-oxo-C9-HSL,short_medium_chain,C13H21NO4,[M+NH4]+,273.1808837163,14295,273.1843,12.505573792466324,4.563888,True,True,True,12,asid_235,False,,,
+3-hydroxy-C9-HSL,short_medium_chain,C13H23NO4,[M+NH4]+,275.1965337801,12440,275.1997,11.505304432762701,5.082,True,False,False,12,asid_22284,True,Unsaturated fatty acids,hexadec-15-ynoic acid,C18H26O2
+3-hydroxy-C9-HSL,short_medium_chain,C13H23NO4,[M+NH4]+,275.1965337801,25584,275.1996,11.14192776279473,4.582064,True,False,True,17,asid_25584,True,Unsaturated fatty acids,hexadec-15-ynoic acid,C16H28O2
+3-hydroxy-C9-HSL,short_medium_chain,C13H23NO4,[M+NH4]+,275.1965337801,39417,275.1996,11.14192776279473,4.793,True,False,True,12,asid_39417,True,,,
+3-oxo-C9-HSL,short_medium_chain,C13H21NO4,[M+Na]+,278.13627886349997,15720,278.1396,11.94068071082361,3.232038,True,True,True,7,asid_6064,False,,,
+3-oxo-C9-HSL,short_medium_chain,C13H21NO4,[M+Na]+,278.13627886349997,20471,278.1378,5.469033044790631,4.490919,True,False,False,12,asid_12584,False,,,
+3-hydroxy-C9-HSL,short_medium_chain,C13H23NO4,[M+Na]+,280.1519289273,7534,280.1534,5.250981871222059,3.575091,True,False,True,23,asid_7534,True,Dipeptides,methyl (2S)-2-[(1-deuterio-2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoate,C11H17N7O2
+3-hydroxy-C11-HSL,short_medium_chain,C15H27NO4,[M+H]+,286.2012848068,9475,286.2004,-3.091554255597815,2.188,True,False,True,19,asid_9475,True,,,
+3-oxo-C10-HSL,short_medium_chain,C14H23NO4,[M+NH4]+,287.1965337801,13459,287.1957,-2.9031690914361485,2.236,True,False,True,23,asid_13459,True,,,
+C11-HSL,short_medium_chain,C15H27NO3,[M+NH4]+,287.2329192856,22109,287.2323,-2.156039779667539,2.470537,True,False,True,8,asid_22109,False,,,
+C11-HSL,short_medium_chain,C15H27NO3,[M+NH4]+,287.2329192856,29191,287.2359,10.377342567173725,5.314519,True,False,True,10,asid_29191,True,,,
+C11-HSL,short_medium_chain,C15H27NO3,[M+Na]+,292.1883144328,21998,292.1899,5.426525024165889,4.713918,True,False,True,30,asid_21998,True,,,
+3-hydroxy-C10-HSL,short_medium_chain,C14H25NO4,[M+Na]+,294.16757899109996,14581,294.1635,-13.866215692255636,0.633351,True,False,True,39,asid_14581,True,,,
+3-hydroxy-C10-HSL,short_medium_chain,C14H25NO4,[M+Na]+,294.16757899109996,17313,294.1637,-13.186331115265286,0.757148,True,False,True,34,asid_17313,True,Dipeptides,"2-[3-[5-(1H-imidazol-5-ylmethyl)-3,6-dioxopiperazin-2-yl]propyl]guanidine",C11H23N3O6
+C12-HSL,long_chain,C16H29NO3,[M+Na]+,306.2039644966,12279,306.2056,5.3412221578662855,4.704916,True,False,True,18,asid_12279,True,,,
+C14-HSL,long_chain,C18H33NO3,[M+H]+,312.25332037609996,35854,312.252,-4.228541423880287,4.893,True,False,True,35,asid_35854,True,,,
+3-oxo-C12-HSL,long_chain,C16H27NO4,[M+NH4]+,315.2278339077,18425,315.231,10.043822148347179,5.576,True,True,True,7,asid_6025,True,Abietane diterpenoids,"5,9-dimethyl-14,15-dimethylidenetetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecane-5-carboxylic acid",C21H30O2
+3-oxo-C12-HSL,long_chain,C16H27NO4,[M+NH4]+,315.2278339077,29630,315.2308,9.409360408318218,6.28703,True,True,False,7,asid_26126,False,,,
+C13-HSL,long_chain,C17H31NO3,[M+NH4]+,315.2642194132,18300,315.2632,-3.233520130904641,3.524536,True,False,True,9,asid_18300,False,,,
+C15-HSL,long_chain,C19H35NO3,[M+H]+,326.2689704399,1502,326.2679,-3.28085106759406,7.568,True,True,False,24,asid_2103,False,N-acyl amines,,C19H35NO3
+C15-HSL,long_chain,C19H35NO3,[M+H]+,326.2689704399,27571,326.2678,-3.587346655697552,4.847014,True,False,True,103,asid_27571,True,,,
+C16-HSL,long_chain,C20H37NO3,[M+H]+,340.2846205037,11195,340.2914,19.923017061314955,7.552,True,False,True,15,asid_3144,True,Dipeptides,"1-[(2S,3S,4S)-4-ethyl-2-(hydroxymethyl)-3-[(4-methylpiperazin-1-yl)methyl]pyrrolidin-1-yl]-3,3-dimethylbutan-1-one",C19H37N3O2
+C16-HSL,long_chain,C20H37NO3,[M+H]+,340.2846205037,32077,340.2833,-3.8805858991221687,4.181147,True,False,False,17,asid_4583,False,,,
+C16-HSL,long_chain,C20H37NO3,[M+H]+,340.2846205037,47309,340.2837,-2.7050993331375355,4.668174,True,True,False,26,asid_15057,False,Sphingoid bases,Phytosphingosine,C20H37NO3
+C15-HSL,long_chain,C19H35NO3,[M+NH4]+,343.2955195408,3254,343.2944,-3.261157621580362,4.357783,True,False,False,42,asid_3254,False,N-acyl amines,"2-[Dimethyl-[3-(2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosadeuteriododecanoylamino)propyl]azaniumyl]acetate",C19H38N2O3
+3-hydroxy-C14-HSL,long_chain,C18H33NO4,[M+NH4]+,345.2747840991,12823,345.2734,-4.008688626379844,4.252747,True,False,True,13,asid_12823,True,,,
+C15-HSL,long_chain,C19H35NO3,[M+Na]+,348.25091468799997,6223,348.2518,2.5421670488069674,5.197248,True,True,True,28,asid_240,True,N-acyl amines,,C21H33NO3
+3-oxo-C16-HSL,long_chain,C20H35NO4,[M+H]+,354.263885062,14333,354.2626,-3.627414631159665,4.816,True,False,False,11,asid_11364,False,,,
+C17-HSL,long_chain,C21H39NO3,[M+H]+,354.3002705675,17038,354.2988,-4.150624829032641,5.442,True,False,True,27,asid_17038,True,N-acyl amines,,C21H39NO3
+C17-HSL,long_chain,C21H39NO3,[M+H]+,354.3002705675,27695,354.2991,-3.3038854249079628,4.908152,True,False,True,8,asid_27695,True,Ceramides,"N-[(E,2S,3R)-1,3-dihydroxyoctadec-4-en-2-yl]prop-2-enamide",C21H39NO3
+C17-HSL,long_chain,C21H39NO3,[M+H]+,354.3002705675,39955,354.299,-3.586131893056481,4.683,True,False,True,6,asid_39955,True,Ceramides,"N-(1,3-dihydroxypropan-2-yl)octadeca-9,12-dienamide",C21H39NO3
+3-hydroxy-C16-HSL,long_chain,C20H37NO4,[M+H]+,356.2795351258,6693,356.2782,-3.747410862404817,4.639073,True,False,False,26,asid_6715,False,,,
+3-hydroxy-C16-HSL,long_chain,C20H37NO4,[M+H]+,356.2795351258,37874,356.2785,-2.905375408766961,5.159144,True,False,True,6,asid_37874,True,Sphingoid bases,"3,3'-(Dodecylimino)bispropane-1,2-diol",C20H37NO4
+3-hydroxy-C16-HSL,long_chain,C20H37NO4,[M+H]+,356.2795351258,51466,356.2784,-3.186053893419278,3.392127,True,False,True,8,asid_51466,True,,,
+3-oxo-C15-HSL,long_chain,C19H33NO4,[M+NH4]+,357.27478409910003,752,357.2776,7.881611088438889,4.959,True,True,False,71,asid_7500,False,,,
+3-oxo-C15-HSL,long_chain,C19H33NO4,[M+NH4]+,357.27478409910003,1697,357.2776,7.881611088438889,4.925,True,False,True,13,asid_1697,True,,,
+C16-HSL,long_chain,C20H37NO3,[M+NH4]+,357.3111696046,23414,357.31,-3.273350232282829,5.058,True,False,True,7,asid_23414,True,,,
+3-oxo-C17-HSL,long_chain,C21H37NO4,[M+H]+,368.2795351258,38200,368.276,-9.599028625882218,4.389613,True,False,True,7,asid_38200,True,,,
+C18-HSL,long_chain,C22H41NO3,[M+H]+,368.3159206313,2308,368.3146,-3.585593850395236,5.393,True,True,False,10,asid_5317,False,N-acyl amines,4-[[(E)-octadec-9-enoyl]amino]butanoic acid,C22H41NO3
+C18-HSL,long_chain,C22H41NO3,[M+H]+,368.3159206313,2926,368.3146,-3.585593850395236,5.553,True,True,True,16,asid_6821,True,Ceramides,[(2R)-3-hexadecoxy-2-isocyanopropyl] acetate,C22H41NO3
+3-hydroxy-C17-HSL,long_chain,C21H39NO4,[M+H]+,370.2951851896,45233,370.2938,-3.740771296530113,3.576537,True,False,True,9,asid_45233,True,,,
+C17-HSL,long_chain,C21H39NO3,[M+NH4]+,371.3268196684,6227,371.3257,-3.0153178836050727,4.79516,True,False,False,10,asid_6227,False,N-acyl amines,3-(Tetradecanoylamino)propyl(carboxymethyl)dimethylammonium,C21H42N2O3
+3-hydroxy-C16-HSL,long_chain,C20H37NO4,[M+NH4]+,373.3060842267,37757,373.3048,-3.4401440380556245,4.77196,True,False,True,6,asid_37757,True,,,
+C17-HSL,long_chain,C21H39NO3,[M+Na]+,376.28221481559996,40823,376.2808,-3.7599853095665465,5.086256,True,True,True,10,asid_19752,False,,,
+3-hydroxy-C16-HSL,long_chain,C20H37NO4,[M+Na]+,378.2614793739,9656,378.261,-1.2673082671733773,5.064,True,False,True,14,asid_9656,True,Terpenoid alkaloids,Ethyl 2-(2-oxohexadecanamido)acetate,C17H35N3O6
+3-oxo-C18-HSL,long_chain,C22H39NO4,[M+H]+,382.2951851896,4234,382.2914,-9.901222266477857,5.104,True,False,False,9,asid_690,False,,,
+3-oxo-C18-HSL,long_chain,C22H39NO4,[M+H]+,382.2951851896,5925,382.2914,-9.901222266477857,4.698049,True,True,False,20,asid_15057,False,,,
+3-hydroxy-C18-HSL,long_chain,C22H41NO4,[M+H]+,384.3108352534,1458,384.3095,-3.4744099762526814,5.272875,True,False,False,17,asid_1069,False,Ceramides,"[(E,2S,3R)-2-acetamido-3-hydroxyoctadec-4-enyl] acetate",C22H41NO4
+3-hydroxy-C18-HSL,long_chain,C22H41NO4,[M+H]+,384.3108352534,2909,384.3094,-3.734616014851112,5.394,True,True,False,27,asid_5310,False,Ceramides,"2-Amino-1,3,4,5-Icosanetetrol",C20H43NO4
+3-oxo-C17-HSL,long_chain,C21H37NO4,[M+NH4]+,385.3060842267,22286,385.309,7.567420861923975,4.771929,True,False,False,15,asid_22286,True,,,
+3-oxo-C17-HSL,long_chain,C21H37NO4,[M+NH4]+,385.3060842267,22631,385.3088,7.048353013805161,4.369851,True,False,False,14,asid_41225,True,,,
+C18-HSL,long_chain,C22H41NO3,[M+NH4]+,385.3424697322,51152,385.341,-3.8140934764571126,4.743,True,False,True,6,asid_51152,True,N-acyl amines,N6-Palmitoyl lysine,C22H44N2O3
+C18-HSL,long_chain,C22H41NO3,[M+Na]+,390.2978648794,3633,390.2964,-3.7532344698530604,5.401,True,False,False,7,asid_2308,True,,,
+3-oxo-C18-HSL,long_chain,C22H39NO4,[M+NH4]+,399.3217342905,16383,399.3242,6.17474404294651,5.506218,True,False,False,10,asid_22607,True,Ergostane steroids,"(1S,5Z)-5-[(2E)-2-[(7aR)-7a-methyl-1-[(E,2S)-6-methylhept-3-en-2-yl]-2,3,3a,5,6,7-hexahydro-1H-inden-4-ylidene]ethylidene]-4-methylidenecyclohexane-1,3-diol",C27H42O2
+3-oxo-C18-HSL,long_chain,C22H39NO4,[M+NH4]+,399.3217342905,34357,399.3246,7.176442587272279,4.497876,True,False,False,7,asid_32677,False,,,

@@ -1076,3 +1076,41 @@ the PI wants a bootstrap-supported ML tree (IQ-TREE) or wants to chase
 the *R. evergladensis* branch-length anomaly.
 
 **Tags**: siderophore, rhodotorulic-acid, nrps, phylogeny, gene-tree-species-tree, conserved-gene
+
+## 2026-09-11: AHL autoinducer search — mass-only hits treated as unfiltered, not leads, pending decoy null
+
+**Context**: PI hypothesis that long-chain AHL autoinducers vary across strains and link to colony morphology (smooth/rough). Ran a 20 ppm exact-mass re-mining search (same idea1-style pattern as the carotenoid/siderophore mass searches) against 45 AHL homologs (Cn-HSL/3-oxo/3-hydroxy, C4-C18) x 3 adducts.
+
+**Decision**: report the 103 raw matches as unfiltered candidates, not leads, and do not run any statistical association until (a) a decoy/permutation null quantifies the expected match count for this common CxHyNO3/NO4 formula family at 20 ppm, and (b) MS2 spectral confirmation is done on any survivor.
+
+**Why**: this project's established pattern (idea1 pigment search, siderophore search) is that naive mass hits without a null/decoy comparison have repeatedly turned out non-actionable; AHL formulas are especially generic (no distinctive heteroatom/ring signature at the elemental-formula level), so the false-positive risk here is higher than in those prior searches, not lower.
+
+**Consequences**: no correlation/association test against morphology can start yet — also blocked separately by the phenotype data itself (see learnings entry, same date).
+
+**Tags**: ahl, autoinducer, quorum-sensing, targeted-mass-search, false-positive-risk, pending-validation
+
+## 2026-09-11: Adopted colony-image GLCM texture as the morphology proxy for the AHL hypothesis
+
+**Context**: PI's AHL-autoinducer hypothesis needs a colony-morphology (smooth/rough) phenotype. No such phenotype existed anywhere reachable from this project (see same-date learnings entry). PI pointed to `Rhodotorula_Phenotyping/Salinity/analysis/master_measurements_combined.csv`, a salinity-stress colony-imaging screen that happens to include GLCM/Haralick texture features per colony.
+
+**Decision**: ingested the 0% w/v salinity (unstressed baseline), Hours=90, YPDN subset (997 rows, 312 strains) as `data/raw/salinity_texture_baseline/`, keeping only identity/shape/texture columns, and adopted its `-avg-scale05` Haralick metrics as a quantitative morphology proxy. Chose Hours=90 for nominal consistency with `control_phenotype_90_110h`'s 90-110h color-phenotype window (best strain coverage among the available timepoints near that window: 312 vs. ~150-160 at 95/96/100h).
+
+**Why**: this is the only texture-bearing dataset found; PI confirmed (in-session) that texture columns are an acceptable way to encode colony morphology aspects. Chose "full ingest" over a scratch/exploratory read so the dataset is documented, provenanced, and reusable rather than a throwaway join.
+
+**Consequences**: any AHL-vs-morphology test built on this data is testing a *texture proxy*, not a validated smooth/rough call, and crosses two different imaging pipelines (this project's color rig vs. the Salinity screen's rig) with unchecked batch effects. Both caveats must travel with any result. Strain-level aggregation across replicate colony rows, and a batch-effect check, are still needed before any association test.
+
+**Tags**: morphology, texture, GLCM, Haralick, ahl-autoinducer-search, data-ingestion, proxy-phenotype
+
+## 2026-09-11: AHL vs. morphology Phase 2 -- detection-based check per PI direction, not phylogenetic association
+
+**Context**: with the texture-morphology proxy (`strain_texture_table.csv`) and the AHL mass-search hits (103 raw, Phase 1) both in hand, the PI directed a search for direct positive evidence (which strains show the candidate features and skew smoother) rather than this project's usual phylogenetically-aware block-permutation association framework.
+
+**Decision**: built `analysis/scripts/ahl_strain_detection_vs_morphology.py` doing (a) a blank-floor-based binary detection call per strain, and (b) a continuous Spearman check of max raw candidate peak area vs. a z-score-sum `smoothness_z` composite (same convention as `orange_score`). Explicitly labeled both as descriptive/exploratory, not phylogenetically controlled.
+
+**Why**: matches the scope the PI actually asked for; the heavier framework remains available (`phase2_metabolome_phenotype` pattern) if a candidate ever clears a basic plausibility bar first.
+
+**Result**: binary detection saturated at 100% (266/266 MS-sampled strains) — caught and flagged as uninformative rather than reported as a hit rate. Continuous check null (rho=-0.097, p=0.12, n=260, wrong-signed). The one AHL-adjacent SIRIUS class call (row 28552, "N-acyl amines") has a SIRIUS formula mismatched to its own target formula -- evidence against, not for, AHL identity there.
+
+**Consequences**: no positive evidence for the hypothesis currently exists. Next real step (if pursued) is the still-outstanding decoy/permutation null on the mass search itself, not further morphology correlation work on unvalidated mass hits.
+
+**Tags**: ahl, autoinducer, morphology, texture, smoothness, detection-saturation, null-result, descriptive-not-phylogenetic
