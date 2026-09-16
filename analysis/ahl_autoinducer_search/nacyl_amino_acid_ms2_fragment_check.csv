@@ -1,0 +1,13 @@
+row_id,compound,amino_acid,fragment,expected_mz,observed_mz,ppm_error,observed_intensity,rel_intensity_pct,hit
+4109,N-C16:0-arginine (Palmitoyl arginine),arginine,[Arg+H]+ (full acyl-chain loss),175.11896,175.1185,-2.6267858144856504,536594.0,13.613701940824132,True
+4109,N-C16:0-arginine (Palmitoyl arginine),arginine,[Arg+H-NH3]+,158.09241,158.092,-2.593419886432442,708234.0,17.968308591519172,True
+4109,N-C16:0-arginine (Palmitoyl arginine),arginine,[Arg+H-CH5N3]+ (guanidine loss),116.07061,116.0703,-2.670788065979168,358015.0,9.083048823401215,True
+4109,N-C16:0-arginine (Palmitoyl arginine),arginine,C4H8N+ (Arg side-chain pyrrolinium),70.06511,70.0649,-2.9972121646538974,410635.0,10.418048834817977,True
+51126,N-C14:0-arginine (N-myristoyl-arginine),arginine,[Arg+H]+ (full acyl-chain loss),175.11896,175.1182,-4.339906997994044,21352.0,11.331589086605565,True
+51126,N-C14:0-arginine (N-myristoyl-arginine),arginine,[Arg+H-NH3]+,158.09241,158.0919,-3.225961322187135,48781.0,25.888265606674132,True
+51126,N-C14:0-arginine (N-myristoyl-arginine),arginine,[Arg+H-CH5N3]+ (guanidine loss),116.07061,116.0702,-3.532332603423398,19209.0,10.194290687739148,True
+51126,N-C14:0-arginine (N-myristoyl-arginine),arginine,C4H8N+ (Arg side-chain pyrrolinium),70.06511,70.0647,-5.851699940273296,23590.0,12.519304353363866,True
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),lysine,[Lys+H]+ (full acyl-chain loss),147.11281,147.1131,1.9712763287356474,18554.0,30.587381921891225,True
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),lysine,[Lys+H-NH3]+,130.08626,130.0859,-2.767394496548537,28403.0,46.824049193029886,True
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),lysine,[Lys+H-H2O]+ (cyclic lactam-type ion),129.10152,129.102,3.7180042497582524,40186.0,66.24903147101008,True
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),lysine,C5H10N+ (secondary lysine marker),84.08078,84.0806,-2.1407984083912046,60659.0,100.0,True

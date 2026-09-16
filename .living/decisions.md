@@ -1182,3 +1182,19 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: production variation across species is more consistent with strain-level or ecological drivers than deep phylogenetic conservation, though limited power at n=16 species (several single-strain) can't be ruled out as an alternative explanation for a true-but-undetected signal. Suggested next validation steps (documented in NACYL_AMINO_ACID_SEARCH.md): MS2 fragment confirmation (highest priority), the still-outstanding decoy/permutation null, checking the known colony-area/biomass confound against these species differences, checking Blank/QC_Mix presence directly, and authentic chemical standards if pursued further.
 
 **Tags**: n-acyl-amino-acid, phylogenetic-signal, blomberg-k, pagel-lambda, block-permutation, ahl-autoinducer-search
+
+## 2026-09-16 (follow-up 3): MS2 confirms N-acyl-arginine/lysine identity for the 3 strong candidates -- strongest positive result in the whole investigation
+
+**Context**: PI asked to run validation steps 1-4 from the prior recommendation list: MS2 fragment confirmation, decoy/permutation null, colony-area/biomass confound check, Blank/QC_Mix presence check.
+
+**Decision and results**:
+1. **MS2 (CONFIRMED)**: pulled real MS2 spectra for rows 4109, 51126, 51152 from the raw pipeline's MGF file, checked against diagnostic arginine/lysine fragments computed from first principles (loss of acyl chain to free amino acid, then that amino acid's own documented secondary fragmentation). 4/4 fragments matched for all 3 rows, all within +/-6 ppm, at 9-100% relative intensity. This is real fragment-level chemistry, not mass-only matching.
+2. **Decoy null**: both AHL (103 vs null mean 27.9) and N-acyl-AA (918 vs 228.5) searches exceed a shifted-mass permutation null (p=0.001 each) -- but a direct density check shows the target mass range (146-493 Da) sits in an inherently dense region of this metabolome (feature count roughly quadruples 150->500 Da), so this most likely reflects general chemical density (matching SIRIUS's own finding that most raw matches are dipeptides/amino acids), not specific enrichment for either target class. Documented explicitly as NOT substituting for the MS2 result.
+3. **Colony-area confound**: absent (strain-level rho 0.02-0.04, all p>0.5; species-level null for 2/3, borderline non-significant for the third).
+4. **Blank/QC_Mix**: absent (exact zero in every blank and QC_Mix sample for all 5 candidates).
+
+**Rationale**: distinguishing what each test can and cannot show mattered here -- the decoy null result looked impressive (p=0.001) but needed a density-uniformity check before being read as support for compound identity; that check showed it isn't independent evidence the way MS2 is, and both are documented with that distinction explicit rather than letting the headline p-value stand alone.
+
+**Consequences**: compound identity for Palmitoyl arginine, N-myristoyl-arginine, and N6-Palmitoyl lysine is now well-supported by real chemistry, not just mass/SIRIUS-class matching -- the strongest positive result across the whole AHL/quorum-sensing investigation. Fungal-vs-bacterial origin and any signaling role remain unresolved; MS2 confirms identity, not origin or function. Remaining open step: authentic chemical standards for retention-time/MS2 matching, if pursued further.
+
+**Tags**: n-acyl-amino-acid, ms2-confirmation, decoy-null, biomass-confound, blank-contamination, ahl-autoinducer-search, validation

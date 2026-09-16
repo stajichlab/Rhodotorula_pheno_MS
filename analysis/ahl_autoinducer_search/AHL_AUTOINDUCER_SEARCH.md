@@ -309,11 +309,29 @@ raw-peak-area/colony-size confound documented elsewhere in this project.
 
 **Bottom line as of 2026-09-12**: no positive evidence for the hypothesis has been found, across four independent lines of investigation. (1) The mass-search hits do not show a discriminating detection pattern. (2) The one available structural cross-check argues against AHL identity for its best candidate, and the continuous intensity-vs-smoothness relationship is null. (3) The literature source that likely motivated the hypothesis (Wilson et al. 2025, ISS *R. mucilaginosa*) rests on a bacterial bioreporter functional assay, not a chemically-confirmed AHL structure, and such bioreporters are known to cross-react with fungal lipid chemistry. (4) A dedicated GWAS for genetic variants explaining colony texture in *R. mucilaginosa* found no locus that survives scrutiny — every apparent hit traces to a near-clone lineage artifact or a restated lightness signal, not real texture-specific genetics. This does not rule out the hypothesis outright -- MS2 spectral confirmation (the diagnostic AHL fragment) has still not been attempted on any candidate -- but the balance of evidence across chemistry, biosynthesis-pathway plausibility, sourcing literature, and genetics all currently weighs against it.
 
+## Decoy/permutation null (done 2026-09-16)
+
+`analysis/scripts/mass_search_decoy_null.py` (built for the N-acyl amino
+acid search, reused here): 1000 permutations, each shifting all 135 AHL
+targets by a random signed 15-60 Da offset, rerunning the same 20 ppm
+search. Observed 103 raw matches vs. a null mean of 27.9 (sd 9.3, 95th
+pct 45.0) -- empirical p=0.001 (0/1000 permutations reached 103).
+
+**Read with the same caveat documented in NACYL_AMINO_ACID_SEARCH.md**:
+this feature table's m/z density is not uniform (roughly quadruples from
+150-175 Da to 475-500 Da), and the AHL target range (172-406 Da) sits in
+a generally dense, chemically busy region. The excess over the shifted-
+mass null most likely reflects that this mass region is intrinsically
+rich in real, unrelated small-molecule chemistry, not that AHLs are
+specifically enriched there -- consistent with the SIRIUS cross-
+referencing above finding mostly dipeptides, amino acids, and fatty acyl
+carnitines among the 103 raw matches. This rules out "pure random noise"
+as an explanation for the raw hit count; it does not independently
+support AHL identity the way a structural/MS2 check would. Full output:
+`ahl_decoy_null.csv`.
+
 ## Next steps (open)
-1. Run the decoy/permutation null on the 103 raw hits, to formally
-   quantify the false-positive rate of a 20 ppm search over this AHL
-   formula family (script not yet written) -- would explain, and put a
-   number on, the 100% binary-detection saturation found in Phase 2.
+1. ~~Run the decoy/permutation null~~ — done above (2026-09-16).
 2. If a decoy-adjusted candidate still stands out, pull its MS2 scan and
    check against the AHL diagnostic fragment (homoserine-lactone ring
    loss) before trusting it structurally -- not yet attempted for any

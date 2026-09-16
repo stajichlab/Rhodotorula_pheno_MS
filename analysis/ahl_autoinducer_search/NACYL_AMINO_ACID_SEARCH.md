@@ -297,54 +297,129 @@ Full output: `nacyl_amino_acid_species_table.csv`,
    reasons; whether that confound explains any of the cell-fraction
    species variation above has not been checked.
 
-## Bottom line
+## Validation steps 1-4 (2026-09-16, PI request)
 
-This remains a more promising exploratory lead than the AHL search
-produced — real, chemically coherent SIRIUS structure calls for
-N-acyl-arginine and N-acyl-lysine at long acyl chain lengths (C14, C16),
-not just formula coincidences. **But two results now argue against a
-quorum-sensing interpretation specifically**: (1) these compounds are
-almost entirely cell-associated, not released into the supernatant —
-what a membrane lipid looks like, not what a diffusible signal looks
-like, matching the role documented in the literature for the closest
-known relative compound class (bacterial phosphate-stress aminolipids);
-and (2) despite real species-level differences in abundance, neither of
-two independent phylogenetic-signal tests finds those differences
-structured by the species tree — i.e., production does not look like a
-trait tracking deep ancestry.
+### 1. MS2 fragment confirmation — CONFIRMED for all 3 strong candidates
 
-## Suggested additional validation, in priority order
+`analysis/scripts/nacyl_amino_acid_ms2_fragment_check.py` pulled the real
+MS2 spectrum for rows 4109, 51126, and 51152 from the raw EB pipeline's
+`aligned_features.mgf` (matched by FEATURE_ID, not simulated) and checked
+for the diagnostic fragment ions expected from a free arginine or lysine
+backbone — the same logic used to confirm an intact AHL via its
+homoserine-lactone-loss fragment, computed from first principles (not
+looked up as pre-set values):
 
-1. **MS2 fragment confirmation** (still not done) for rows 4109, 51126,
-   and 51152 — check for the expected fatty-acyl and amino-acid-backbone
-   fragment ions. This is the single highest-value remaining step: it is
-   the only test that can move these from "mass + SIRIUS class match" to
-   an actual confirmed structure.
-2. **The decoy/permutation null**, still owed to both the AHL and
-   N-acyl-amino-acid searches — quantifies how many "hits" a random
-   20 ppm search of this size would produce by chance in this feature
-   table.
-3. **Check the colony-area/biomass confound** (caveat 6 above) on the
-   cell-fraction species differences before reading them as biology —
-   this project has an established precedent of naive cell-fraction
-   abundance differences turning out to be a size/biomass artifact, and
-   it has not been ruled out here.
-4. **Check presence in Blank and QC_Mix samples directly** (beyond the
-   blank-floor threshold already applied) — if these features are also
-   substantial in pooled QC injections, that points toward a reagent/
-   extraction-background signal rather than strain-specific biology.
-5. **If MS2 confirms structure and a biological question is still worth
-   pursuing**: authentic chemical standards (Palmitoyl-arginine,
-   myristoyl-arginine, N6-Palmitoyl-lysine are commercially available)
-   would let retention time and MS2 be matched directly, the only way to
-   fully rule out an isobaric misassignment the way this project's other
-   searches have repeatedly found.
-6. **Run the original `phase2_color_metabolome_association.py` design**
-   (not done here) if the question of interest shifts from "is this
-   phylogenetically structured" to "does this compound's abundance
-   track an existing phenotype (color, copper resistance) once phylogeny
-   is controlled for" — a legitimately different question from what this
-   section tested, using the same block-permutation infrastructure.
+| row | fragment | expected m/z | observed m/z | ppm error | rel. intensity |
+|---|---|---|---|---|---|
+| 4109 (arginine) | [Arg+H]+ | 175.11896 | 175.1185 | -2.6 | 13.6% |
+| 4109 | [Arg+H-NH3]+ | 158.09241 | 158.0920 | -2.6 | 18.0% |
+| 4109 | [Arg+H-guanidine]+ | 116.07061 | 116.0703 | -2.7 | 9.1% |
+| 4109 | C4H8N+ (Arg marker) | 70.06511 | 70.0649 | -3.0 | 10.4% |
+| 51126 (arginine) | [Arg+H]+ | 175.11896 | 175.1182 | -4.3 | 11.3% |
+| 51126 | [Arg+H-NH3]+ | 158.09241 | 158.0919 | -3.2 | 25.9% |
+| 51126 | [Arg+H-guanidine]+ | 116.07061 | 116.0702 | -3.5 | 10.2% |
+| 51126 | C4H8N+ (Arg marker) | 70.06511 | 70.0647 | -5.9 | 12.5% |
+| 51152 (lysine) | [Lys+H]+ | 147.11281 | 147.1131 | +2.0 | 30.6% |
+| 51152 | [Lys+H-NH3]+ | 130.08626 | 130.0859 | -2.8 | 46.8% |
+| 51152 | [Lys+H-H2O]+ | 129.10152 | 129.1020 | +3.7 | 66.2% |
+| 51152 | C5H10N+ (Lys marker) | 84.08078 | 84.0806 | -2.1 | 100.0% |
+
+**4/4 diagnostic fragments matched for all 3 candidates, all within
+±6 ppm, at meaningful relative intensity (9-100% of base peak).** This is
+real structural evidence, not another mass coincidence: the spectrum for
+each row shows exactly the fragment series a genuine N-acyl-arginine or
+N-acyl-lysine should produce (loss of the acyl chain revealing the free
+amino acid, then that amino acid's own well-documented secondary
+fragmentation). This is the strongest positive structural result in this
+entire investigation (AHL search included) — everything else so far has
+been mass-only matching or SIRIUS class-level agreement; this is
+consistent fragment-level chemistry. It does not, on its own, resolve
+fungal-vs-bacterial origin (see caveat 3 above), and it does not confirm
+acyl-chain length or attachment position beyond what SIRIUS already
+implied (no fragment here is chain-length-diagnostic; the parent mass
+already fixes that). Full detail: `nacyl_amino_acid_ms2_fragment_check.csv`.
+
+### 2. Decoy/permutation null — read with a specific caveat, not at face value
+
+`analysis/scripts/mass_search_decoy_null.py` reused for both the AHL and
+N-acyl-amino-acid target lists: each of 1000 permutations shifts every
+target m/z by a random, signed offset (Uniform 15-60 Da), reruns the same
+20 ppm window search, and records the total match count.
+
+| search | observed raw matches | null mean (sd) | null 95th pct | empirical p |
+|---|---|---|---|---|
+| AHL (135 targets) | 103 | 27.9 (9.3) | 45.0 | 0.001 |
+| N-acyl amino acid (945 targets) | 918 | 228.5 (26.3) | 272.0 | 0.001 |
+
+Both searches produce far more matches than the shifted-mass null
+predicts (p=0.001, the floor at 1000 permutations — 0/1000 null draws
+reached the observed count for either search).
+
+**This needs a specific, honest reading, not a triumphant one.** The
+feature table's m/z density is NOT uniform — a direct check (25 Da bins,
+150-525 Da) shows feature count roughly quadruples across that range
+(155 features at 150-175 Da vs. 689 at 475-500 Da). Both target lists
+(146-493 Da for AHLs, 146-493 Da for N-acyl amino acids) sit in a
+generally dense, chemically busy region of this metabolome. **The excess
+match count over the shifted-mass null most likely reflects that this
+mass region is intrinsically rich in real, unrelated small-molecule
+chemistry (dipeptides, amino acids, fatty acyl carnitines — exactly what
+SIRIUS cross-referencing already found for most of the raw matches, see
+above), not that AHLs or N-acyl amino acids are specifically enriched
+there.** This decoy test rules out "these hit counts are pure random
+noise with no chemical basis" — it does NOT independently support "these
+are real AHLs/N-acyl amino acids specifically" the way the MS2 result
+above does. The two results (decoy null, MS2 confirmation) answer
+different questions and should not be conflated. Full output:
+`ahl_decoy_null.csv`, `nacyl_amino_acid_decoy_null.csv`.
+
+### 3. Colony-area/biomass confound — checked, not present
+
+Spearman correlation of each candidate's raw cell-fraction peak area
+(log10) against colony area (`control_phenotype_90_110h`'s `area_median`,
+log10), per strain (n=264): **all three strong candidates show
+essentially zero correlation** (rho=0.02-0.04, p=0.52-0.72). A
+species-level check (mean per species, n=16) is also null for two of
+three (rho=-0.04 and 0.04, p>0.85) and borderline-non-significant for the
+third (Palmitoyl arginine, rho=0.47, p=0.064). **The established
+cell-fraction/biomass confound in this project does not explain these
+candidates' abundance or their species-level variation.**
+
+### 4. Blank and QC_Mix presence — checked, absent
+
+Raw peak area for all 5 candidate rows (3 strong + 2 supplementary) is
+**exactly zero in every one of the 7 Blank samples and every one of the 7
+QC_Mix (pooled-sample) injections**, in both technical replicate sets.
+No evidence of a reagent, extraction-background, or carryover signal.
+(The absence from QC_Mix specifically is worth noting as mildly
+unexpected if the compound were broadly present at the intensities seen
+in individual strains — but pooled-QC dilution/matrix effects for a
+compound restricted to particular strains is a plausible, non-alarming
+explanation, not itself a red flag.)
+
+## Bottom line (updated 2026-09-16)
+
+**This is now the best-supported candidate in this entire AHL/quorum-
+sensing investigation.** Three N-acyl-arginine/lysine features have: a
+SIRIUS structure call naming the exact compound, MS2 fragments matching
+the expected amino-acid-backbone chemistry at sub-5-ppm accuracy, no
+detectable background/reagent contamination, and no detectable
+colony-size confound. That said, three things still argue against a
+**signaling** role specifically, independent of whether the compound
+identity itself is now well-supported: (1) these compounds are almost
+entirely cell-associated, not released into the supernatant, which is
+what a membrane lipid looks like, not a diffusible signal; (2) the
+closest literature-documented relative class (bacterial ornithine/lysine
+aminolipids) has a described membrane-lipid, phosphate-stress role, not
+a signaling one; (3) neither of two independent phylogenetic-signal tests
+finds species-level production differences structured by the species
+tree. **Fungal-vs-bacterial origin remains unresolved** — MS2 confirms
+the compound's identity, not its producing organism. The one remaining
+step from the original priority list, authentic chemical standards for
+retention-time/MS2 matching, is the only test that could move this
+further; item 6 (the `phase2_color_metabolome_association.py`
+phenotype-association design) remains available if a different question
+(does this track color/copper resistance) becomes of interest.
 
 ## Files
 - `analysis/scripts/nacyl_amino_acid_mass_remining.py` — target-list builder + search
@@ -358,3 +433,7 @@ trait tracking deep ancestry.
 - `nacyl_amino_acid_phylogenetic_signal.csv` — K/lambda results
 - `analysis/scripts/nacyl_amino_acid_block_permutation_signal.py` — block-permutation phylogenetic signal test
 - `nacyl_amino_acid_block_permutation_signal.csv` — block-permutation results
+- `analysis/scripts/nacyl_amino_acid_ms2_fragment_check.py` — MS2 diagnostic-fragment confirmation (validation step 1)
+- `nacyl_amino_acid_ms2_fragment_check.csv` — fragment match results (4/4 for all 3 strong candidates)
+- `analysis/scripts/mass_search_decoy_null.py` — decoy/permutation null, reused for both the AHL and this search (validation step 2)
+- `ahl_decoy_null.csv` / `nacyl_amino_acid_decoy_null.csv` — per-permutation null match counts

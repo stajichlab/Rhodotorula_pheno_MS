@@ -48,7 +48,12 @@ cell-associated, not present in the supernatant (p<0.0001) — the opposite
 compartment pattern from what a diffusible quorum signal would need.
 Production does vary significantly by species in the cell fraction, but
 two independent phylogenetic-signal tests find that variation is NOT
-structured by the species tree. See section 8.
+structured by the species tree. **Update (2026-09-16): MS2 fragment
+confirmation now supports the compound identity itself** — all 3
+candidates show the expected diagnostic amino-acid fragments at ≤6 ppm
+error, the strongest positive structural result in this investigation.
+Fungal-vs-bacterial origin and any signaling role remain open. See
+section 8.
 
 ## 1. Where the hypothesis came from, and why it is weak on its own terms
 
@@ -343,12 +348,37 @@ any candidate. Species differ, but that difference does not track the
 species tree — consistent with strain-level or ecological drivers, not
 deep phylogenetic conservation (or with limited power at n=16 species).
 
-**Suggested next steps, in order**: MS2 fragment confirmation for rows
-4109/51126/51152 (highest priority — the only step that can confirm
-structure); the decoy/permutation null still owed to both searches;
-checking the known colony-area/biomass confound against the cell-
-fraction species differences; checking Blank/QC_Mix presence directly;
-authentic chemical standards if pursued further.
+**Validation steps completed (2026-09-16)**:
+
+1. **MS2 fragment confirmation — CONFIRMED.** All 3 candidates' real MS2
+   spectra (pulled from the raw pipeline's MGF file) show 4/4 expected
+   diagnostic fragments for a free arginine or lysine backbone (loss of
+   the fatty acyl chain, then that amino acid's own well-documented
+   secondary fragmentation), all within ±6 ppm at meaningful relative
+   intensity. This is the strongest positive structural result in this
+   entire investigation — everything else so far was mass-only or
+   SIRIUS-class-level; this is consistent fragment-level chemistry.
+2. **Decoy/permutation null — run, read with a caveat.** Both the AHL
+   and N-acyl-amino-acid searches produce far more matches than a
+   shifted-mass null predicts (p=0.001 each). This most likely reflects
+   that the target mass range is an intrinsically dense, chemically busy
+   region of this metabolome (consistent with SIRIUS finding mostly
+   dipeptides/amino acids there) rather than specific enrichment for
+   either compound class — it rules out "pure random noise," it does not
+   independently support AHL or N-acyl-amino-acid identity the way the
+   MS2 result does.
+3. **Colony-area/biomass confound — absent.** No correlation between
+   candidate abundance and colony size at strain level (rho 0.02-0.04,
+   all p>0.5).
+4. **Blank/QC_Mix presence — absent.** Exact zero in every blank and
+   QC_Mix sample for all 5 candidates; no reagent/background signal.
+
+**Net effect of this round of validation**: compound identity for the 3
+strong candidates (Palmitoyl arginine, N-myristoyl-arginine, N6-Palmitoyl
+lysine) is now well-supported by real fragment-level chemistry, not just
+mass matching. Fungal-vs-bacterial origin, and any signaling role, remain
+open — MS2 confirms what the molecule is, not who made it or what it's
+for.
 
 Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
 
