@@ -1,0 +1,919 @@
+compound,amino_acid,acyl_n,category,formula,adduct,target_mz,row_id,observed_mz,ppm_error,rt_min,has_ms2,is_isf,is_default_adduct,total_scans,dedup_group_id,is_group_representative,sirius_npc_class,sirius_structure_name,sirius_formula
+N-C4:0-glycine,glycine,4,short_medium_chain,C6H11N1O3,[M+Na]+,168.06311392240002,4852,168.0651,11.817450918452556,2.616865,True,False,True,43,asid_4852,True,Pyridine alkaloids,Pyridoxal,C8H9NO3
+N-C4:0-glycine,glycine,4,short_medium_chain,C6H11N1O3,[M+Na]+,168.06311392240002,6006,168.0652,12.412465479764878,2.705141,True,True,True,21,asid_12916,True,Pyridine alkaloids,Pyridoxal,C8H9NO3
+N-C5:0-glycine,glycine,5,short_medium_chain,C7H13N1O3,[M+Na]+,182.07876398620002,14557,182.0807,10.632836897650625,0.549883,True,False,True,37,asid_14557,True,Aminoacids,L-Tyr,C9H11NO3
+N-C5:0-glycine,glycine,5,short_medium_chain,C7H13N1O3,[M+Na]+,182.07876398620002,26822,182.0807,10.632836897650625,3.192396,True,False,True,19,asid_26822,True,Piperidine alkaloids,4-Acetamido-3-methylbutanoic acid,C9H11NO3
+N-C4:0-alanine,alanine,4,short_medium_chain,C7H13N1O3,[M+Na]+,182.07876398620002,14557,182.0807,10.632836897650625,0.549883,True,False,True,37,asid_14557,True,Aminoacids,L-Tyr,C9H11NO3
+N-C4:0-alanine,alanine,4,short_medium_chain,C7H13N1O3,[M+Na]+,182.07876398620002,26822,182.0807,10.632836897650625,3.192396,True,False,True,19,asid_26822,True,Piperidine alkaloids,4-Acetamido-3-methylbutanoic acid,C9H11NO3
+N-C5:0-alanine,alanine,5,short_medium_chain,C8H15N1O3,[M+NH4]+,191.13901890280002,17521,191.1425,18.212383949531564,5.528395,True,True,False,10,asid_12414,False,,,
+N-C5:0-alanine,alanine,5,short_medium_chain,C8H15N1O3,[M+NH4]+,191.13901890280002,22455,191.1424,17.689204535002013,3.008345,True,False,False,24,asid_22919,True,,,
+N-C6:0-glycine,glycine,6,short_medium_chain,C8H15N1O3,[M+NH4]+,191.13901890280002,17521,191.1425,18.212383949531564,5.528395,True,True,False,10,asid_12414,False,,,
+N-C6:0-glycine,glycine,6,short_medium_chain,C8H15N1O3,[M+NH4]+,191.13901890280002,22455,191.1424,17.689204535002013,3.008345,True,False,False,24,asid_22919,True,,,
+N-C4:0-serine,serine,4,short_medium_chain,C7H13N1O4,[M+NH4]+,193.11828346110002,6751,193.1219,18.727066309694887,5.143,True,True,True,8,asid_842,False,,,
+N-C5:0-alanine,alanine,5,short_medium_chain,C8H15N1O3,[M+Na]+,196.09441405,43305,196.0964,10.12751948900714,1.145774,True,False,True,20,asid_43305,True,,,
+N-C6:0-glycine,glycine,6,short_medium_chain,C8H15N1O3,[M+Na]+,196.09441405,43305,196.0964,10.12751948900714,1.145774,True,False,True,20,asid_43305,True,,,
+N-C4:0-isoleucine,isoleucine,4,short_medium_chain,C10H19N1O3,[M+H]+,202.1437699295,20748,202.1434,-1.8300316656355673,2.517572,True,False,True,7,asid_20748,True,,,
+N-C5:0-valine,valine,5,short_medium_chain,C10H19N1O3,[M+H]+,202.1437699295,20748,202.1434,-1.8300316656355673,2.517572,True,False,True,7,asid_20748,True,,,
+N-C7:0-alanine,alanine,7,short_medium_chain,C10H19N1O3,[M+H]+,202.1437699295,20748,202.1434,-1.8300316656355673,2.517572,True,False,True,7,asid_20748,True,,,
+N-C8:0-glycine,glycine,8,short_medium_chain,C10H19N1O3,[M+H]+,202.1437699295,20748,202.1434,-1.8300316656355673,2.517572,True,False,True,7,asid_20748,True,,,
+N-C4:0-leucine,leucine,4,short_medium_chain,C10H19N1O3,[M+H]+,202.1437699295,20748,202.1434,-1.8300316656355673,2.517572,True,False,True,7,asid_20748,True,,,
+N-C4:0-asparagine,asparagine,4,short_medium_chain,C8H14N2O4,[M+H]+,203.1026333973,25097,203.1065,19.037678809663877,5.037,True,True,False,9,asid_19887,False,Cinnamic acids and derivatives,"1-[4-hydroxy-3-(3-methylbuta-1,3-dien-1-yl)phenyl]ethan-1-one",C13H14O2
+N-C4:0-asparagine,asparagine,4,short_medium_chain,C8H14N2O4,[M+H]+,203.1026333973,26305,203.1063,18.05295499460921,5.199,True,False,True,7,asid_26305,True,Noreudesmane sesquiterpenoids,"1-[4-hydroxy-3-(3-methylbuta-1,3-dien-1-yl)phenyl]ethan-1-one",C13H14O2
+N-C4:0-proline,proline,4,short_medium_chain,C9H15N1O3,[M+NH4]+,203.1390189028,36960,203.1421,15.167431725580908,4.240602,True,False,False,6,asid_6671,False,Menthane monoterpenoids,,C14H18O
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,9317,204.124,4.730050199477471,1.284738,True,False,True,18,asid_9317,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,12459,204.1237,3.260348356496749,1.53,True,False,True,13,asid_12459,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,14837,204.124,4.730050199477471,2.182764,True,True,True,7,asid_688,False,Purine alkaloids,Isopentenyladenine,C10H13N5
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,25883,204.1226,-2.128558401470536,0.5372,True,False,False,34,asid_25883,True,,,
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,52278,204.1226,-2.128558401470536,1.693745,True,False,True,8,asid_52278,True,Aminoacids,2-(1-Carboxyethylamino)-4-methylpentanoic acid,C9H17NO4
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,9317,204.124,4.730050199477471,1.284738,True,False,True,18,asid_9317,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,12459,204.1237,3.260348356496749,1.53,True,False,True,13,asid_12459,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,14837,204.124,4.730050199477471,2.182764,True,True,True,7,asid_688,False,Purine alkaloids,Isopentenyladenine,C10H13N5
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,25883,204.1226,-2.128558401470536,0.5372,True,False,False,34,asid_25883,True,,,
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,52278,204.1226,-2.128558401470536,1.693745,True,False,True,8,asid_52278,True,Aminoacids,2-(1-Carboxyethylamino)-4-methylpentanoic acid,C9H17NO4
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,9317,204.124,4.730050199477471,1.284738,True,False,True,18,asid_9317,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,12459,204.1237,3.260348356496749,1.53,True,False,True,13,asid_12459,True,Purine alkaloids,Isopentenyladenine,C9H17NO4
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,14837,204.124,4.730050199477471,2.182764,True,True,True,7,asid_688,False,Purine alkaloids,Isopentenyladenine,C10H13N5
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,25883,204.1226,-2.128558401470536,0.5372,True,False,False,34,asid_25883,True,,,
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+H]+,204.1230344878,52278,204.1226,-2.128558401470536,1.693745,True,False,True,8,asid_52278,True,Aminoacids,2-(1-Carboxyethylamino)-4-methylpentanoic acid,C9H17NO4
+N-C7:0-glycine,glycine,7,short_medium_chain,C9H17N1O3,[M+NH4]+,205.1546689666,42970,205.1579,15.74925599438722,4.012181,True,False,False,11,asid_47487,False,Camphane monoterpenoids,2-ethyl-3-methyl-6-(propan-2-yl)cyclohexan-1-one,C14H20O
+N-C6:0-alanine,alanine,6,short_medium_chain,C9H17N1O3,[M+NH4]+,205.1546689666,42970,205.1579,15.74925599438722,4.012181,True,False,False,11,asid_47487,False,Camphane monoterpenoids,2-ethyl-3-methyl-6-(propan-2-yl)cyclohexan-1-one,C14H20O
+N-C4:0-valine,valine,4,short_medium_chain,C9H17N1O3,[M+NH4]+,205.1546689666,42970,205.1579,15.74925599438722,4.012181,True,False,False,11,asid_47487,False,Camphane monoterpenoids,2-ethyl-3-methyl-6-(propan-2-yl)cyclohexan-1-one,C14H20O
+N-C5:0-cysteine,cysteine,5,short_medium_chain,C8H15N1O3S1,[M+H]+,206.08454049190001,10003,206.0807,-18.6355167196939,2.041256,True,False,False,19,asid_10003,False,Simple indole alkaloids,Indolelactate,C11H11NO3
+N-C4:0-proline,proline,4,short_medium_chain,C9H15N1O3,[M+Na]+,208.09441404999998,28552,208.0964,9.543504610979404,1.418482,True,False,True,8,asid_28552,True,N-acyl amines,4-(Cyclopropanecarbonylamino)-3-methylbutanoic acid,C11H13NO3
+N-C4:0-proline,proline,4,short_medium_chain,C9H15N1O3,[M+Na]+,208.09441404999998,49491,208.0963,9.062953509060492,1.840786,True,False,True,8,asid_49491,True,,,
+N-C4:0-cysteine,cysteine,4,short_medium_chain,C7H13N1O3S1,[M+NH4]+,209.09543952900003,2391,209.0954,-0.18904764307128144,4.838,True,False,True,32,asid_2391,True,,,
+N-C6:0-alanine,alanine,6,short_medium_chain,C9H17N1O3,[M+Na]+,210.1100641138,22162,210.1095,-2.6848490213422385,1.636959,True,False,True,10,asid_22162,True,,,
+N-C4:0-valine,valine,4,short_medium_chain,C9H17N1O3,[M+Na]+,210.1100641138,22162,210.1095,-2.6848490213422385,1.636959,True,False,True,10,asid_22162,True,,,
+N-C7:0-glycine,glycine,7,short_medium_chain,C9H17N1O3,[M+Na]+,210.1100641138,22162,210.1095,-2.6848490213422385,1.636959,True,False,True,10,asid_22162,True,,,
+N-C5:0-serine,serine,5,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,9439,212.0892,-0.6066882327830673,3.894983,True,False,True,19,asid_1555,True,Pyridine alkaloids,"(2,6-Difluorophenyl)(pyrrolidin-1-yl)methanone",C11H11F2NO
+N-C5:0-serine,serine,5,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,15995,212.0893,-0.13518879134759398,4.049843,True,False,True,12,asid_2419,False,,,
+N-C4:0-threonine,threonine,4,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,9439,212.0892,-0.6066882327830673,3.894983,True,False,True,19,asid_1555,True,Pyridine alkaloids,"(2,6-Difluorophenyl)(pyrrolidin-1-yl)methanone",C11H11F2NO
+N-C4:0-threonine,threonine,4,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,15995,212.0893,-0.13518879134759398,4.049843,True,False,True,12,asid_2419,False,,,
+N-C4:0-homoserine,homoserine,4,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,9439,212.0892,-0.6066882327830673,3.894983,True,False,True,19,asid_1555,True,Pyridine alkaloids,"(2,6-Difluorophenyl)(pyrrolidin-1-yl)methanone",C11H11F2NO
+N-C4:0-homoserine,homoserine,4,short_medium_chain,C8H15N1O4,[M+Na]+,212.0893286721,15995,212.0893,-0.13518879134759398,4.049843,True,False,True,12,asid_2419,False,,,
+N-C7:0-serine,serine,7,short_medium_chain,C10H19N1O4,[M+H]+,218.1386845516,9859,218.1387,0.0708191673480115,1.194221,True,False,True,48,asid_9859,True,,,
+N-C6:0-threonine,threonine,6,short_medium_chain,C10H19N1O4,[M+H]+,218.1386845516,9859,218.1387,0.0708191673480115,1.194221,True,False,True,48,asid_9859,True,,,
+N-C6:0-homoserine,homoserine,6,short_medium_chain,C10H19N1O4,[M+H]+,218.1386845516,9859,218.1387,0.0708191673480115,1.194221,True,False,True,48,asid_9859,True,,,
+N-C4:0-isoleucine,isoleucine,4,short_medium_chain,C10H19N1O3,[M+NH4]+,219.1703190304,10258,219.174,16.79501866987374,5.201261,True,False,False,17,asid_10258,True,,,
+N-C7:0-alanine,alanine,7,short_medium_chain,C10H19N1O3,[M+NH4]+,219.1703190304,10258,219.174,16.79501866987374,5.201261,True,False,False,17,asid_10258,True,,,
+N-C5:0-valine,valine,5,short_medium_chain,C10H19N1O3,[M+NH4]+,219.1703190304,10258,219.174,16.79501866987374,5.201261,True,False,False,17,asid_10258,True,,,
+N-C4:0-leucine,leucine,4,short_medium_chain,C10H19N1O3,[M+NH4]+,219.1703190304,10258,219.174,16.79501866987374,5.201261,True,False,False,17,asid_10258,True,,,
+N-C8:0-glycine,glycine,8,short_medium_chain,C10H19N1O3,[M+NH4]+,219.1703190304,10258,219.174,16.79501866987374,5.201261,True,False,False,17,asid_10258,True,,,
+N-C4:0-aspartate,aspartate,4,short_medium_chain,C8H13N1O5,[M+NH4]+,221.11319808320002,15093,221.1168,16.289922226345645,5.027,True,False,False,7,asid_15093,True,,,
+N-C5:0-threonine,threonine,5,short_medium_chain,C9H17N1O4,[M+NH4]+,221.1495835887,6671,221.1526,13.639687902851893,4.23753,True,False,False,25,asid_6671,True,Unsaturated fatty acids,"Cyclopropanecarboxylic acid, 2-ethylhexyl ester",C14H20O2
+N-C6:0-serine,serine,6,short_medium_chain,C9H17N1O4,[M+NH4]+,221.1495835887,6671,221.1526,13.639687902851893,4.23753,True,False,False,25,asid_6671,True,Unsaturated fatty acids,"Cyclopropanecarboxylic acid, 2-ethylhexyl ester",C14H20O2
+N-C5:0-homoserine,homoserine,5,short_medium_chain,C9H17N1O4,[M+NH4]+,221.1495835887,6671,221.1526,13.639687902851893,4.23753,True,False,False,25,asid_6671,True,Unsaturated fatty acids,"Cyclopropanecarboxylic acid, 2-ethylhexyl ester",C14H20O2
+N-C5:0-cysteine,cysteine,5,short_medium_chain,C8H15N1O3S1,[M+NH4]+,223.11108959280003,2028,223.1074,-16.537021116918847,1.73852,True,True,True,77,asid_10935,False,,,
+N-C5:0-cysteine,cysteine,5,short_medium_chain,C8H15N1O3S1,[M+NH4]+,223.11108959280003,5107,223.1072,-17.43343554603422,0.927277,True,True,True,77,asid_437,True,Dipeptides,2-[[(2R)-2-azaniumyl-3-phenylpropanoyl]amino]acetate,C11H14N2O3
+N-C4:0-histidine,histidine,4,short_medium_chain,C10H15N3O3,[M+H]+,226.1186178123,32331,226.1218,14.073090180753212,4.650048,True,False,True,9,asid_32331,True,,,
+N-C6:0-proline,proline,6,short_medium_chain,C11H19N1O3,[M+NH4]+,231.1703190304,9090,231.1698,-2.245229414297386,1.256,True,True,True,82,asid_10257,True,,,
+N-C6:0-proline,proline,6,short_medium_chain,C11H19N1O3,[M+NH4]+,231.1703190304,13755,231.1698,-2.245229414297386,0.534218,True,True,False,60,asid_12288,False,Dipeptides,,C11H22N2O3
+N-C5:0-lysine,lysine,5,short_medium_chain,C11H22N2O3,[M+H]+,231.1703190304,9090,231.1698,-2.245229414297386,1.256,True,True,True,82,asid_10257,True,,,
+N-C5:0-lysine,lysine,5,short_medium_chain,C11H22N2O3,[M+H]+,231.1703190304,13755,231.1698,-2.245229414297386,0.534218,True,True,False,60,asid_12288,False,Dipeptides,,C11H22N2O3
+N-C6:0-valine,valine,6,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,2967,233.1896,15.570858804724233,4.984,True,False,False,24,asid_2967,False,,,
+N-C6:0-valine,valine,6,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,30914,233.1892,13.855489730130852,5.132,True,True,True,9,asid_6123,True,Bisabolane sesquiterpenoids,4-tert-Butyl-2-cyclohexylphenol,C14H22N3
+N-C6:0-valine,valine,6,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,34658,233.1893,14.284331998779198,4.586873,True,True,False,9,asid_14853,False,Bicyclohumulane sesquiterpenoids,,C16H24O
+N-C9:0-glycine,glycine,9,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,2967,233.1896,15.570858804724233,4.984,True,False,False,24,asid_2967,False,,,
+N-C9:0-glycine,glycine,9,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,30914,233.1892,13.855489730130852,5.132,True,True,True,9,asid_6123,True,Bisabolane sesquiterpenoids,4-tert-Butyl-2-cyclohexylphenol,C14H22N3
+N-C9:0-glycine,glycine,9,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,34658,233.1893,14.284331998779198,4.586873,True,True,False,9,asid_14853,False,Bicyclohumulane sesquiterpenoids,,C16H24O
+N-C5:0-leucine,leucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,2967,233.1896,15.570858804724233,4.984,True,False,False,24,asid_2967,False,,,
+N-C5:0-leucine,leucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,30914,233.1892,13.855489730130852,5.132,True,True,True,9,asid_6123,True,Bisabolane sesquiterpenoids,4-tert-Butyl-2-cyclohexylphenol,C14H22N3
+N-C5:0-leucine,leucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,34658,233.1893,14.284331998779198,4.586873,True,True,False,9,asid_14853,False,Bicyclohumulane sesquiterpenoids,,C16H24O
+N-C5:0-isoleucine,isoleucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,2967,233.1896,15.570858804724233,4.984,True,False,False,24,asid_2967,False,,,
+N-C5:0-isoleucine,isoleucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,30914,233.1892,13.855489730130852,5.132,True,True,True,9,asid_6123,True,Bisabolane sesquiterpenoids,4-tert-Butyl-2-cyclohexylphenol,C14H22N3
+N-C5:0-isoleucine,isoleucine,5,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,34658,233.1893,14.284331998779198,4.586873,True,True,False,9,asid_14853,False,Bicyclohumulane sesquiterpenoids,,C16H24O
+N-C8:0-alanine,alanine,8,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,2967,233.1896,15.570858804724233,4.984,True,False,False,24,asid_2967,False,,,
+N-C8:0-alanine,alanine,8,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,30914,233.1892,13.855489730130852,5.132,True,True,True,9,asid_6123,True,Bisabolane sesquiterpenoids,4-tert-Butyl-2-cyclohexylphenol,C14H22N3
+N-C8:0-alanine,alanine,8,short_medium_chain,C11H21N1O3,[M+NH4]+,233.1859690942,34658,233.1893,14.284331998779198,4.586873,True,True,False,9,asid_14853,False,Bicyclohumulane sesquiterpenoids,,C16H24O
+N-C5:0-asparagine,asparagine,5,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,26151,234.1403,-19.357941622770248,3.202404,True,True,True,13,asid_4721,False,,,
+N-C5:0-asparagine,asparagine,5,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,42276,234.1481,13.954773053252971,3.522,True,False,True,7,asid_42276,True,,,
+N-C5:0-asparagine,asparagine,5,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,48313,234.148,13.527686967648926,4.641,True,True,True,9,asid_17416,True,,,
+N-C4:0-glutamine,glutamine,4,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,26151,234.1403,-19.357941622770248,3.202404,True,True,True,13,asid_4721,False,,,
+N-C4:0-glutamine,glutamine,4,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,42276,234.1481,13.954773053252971,3.522,True,False,True,7,asid_42276,True,,,
+N-C4:0-glutamine,glutamine,4,short_medium_chain,C9H16N2O4,[M+NH4]+,234.144832562,48313,234.148,13.527686967648926,4.641,True,True,True,9,asid_17416,True,,,
+N-C5:0-aspartate,aspartate,5,short_medium_chain,C9H15N1O5,[M+NH4]+,235.12884814699999,25428,235.1309,8.726504706597996,0.568768,True,False,True,26,asid_25428,True,,,
+N-C4:0-glutamate,glutamate,4,short_medium_chain,C9H15N1O5,[M+NH4]+,235.12884814699999,25428,235.1309,8.726504706597996,0.568768,True,False,True,26,asid_25428,True,,,
+N-C6:0-threonine,threonine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,845,235.1687,14.740050840664203,5.143,True,False,True,36,asid_845,True,Wax monoesters,Cyclododecanecarboxylic acid,C10H22N2O4
+N-C6:0-threonine,threonine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,24204,235.1647,-2.2692661313394695,0.534315,True,False,True,9,asid_24204,True,Phenylalanine-derived alkaloids,"[[tert-Butyl[(S)-1-(dimethylphosphinyl)-2,2-dimethylpropyl]amino]oxy]radical",C8H19FN6O
+N-C6:0-threonine,threonine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,43621,235.1687,14.740050840664203,4.727203,True,False,False,7,asid_36452,False,Eremophilane sesquiterpenoids,5-(3-hydroxy-6-methylhept-5-en-2-ylidene)-2-methylcyclohex-2-en-1-one,C15H22O2
+N-C7:0-serine,serine,7,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,845,235.1687,14.740050840664203,5.143,True,False,True,36,asid_845,True,Wax monoesters,Cyclododecanecarboxylic acid,C10H22N2O4
+N-C7:0-serine,serine,7,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,24204,235.1647,-2.2692661313394695,0.534315,True,False,True,9,asid_24204,True,Phenylalanine-derived alkaloids,"[[tert-Butyl[(S)-1-(dimethylphosphinyl)-2,2-dimethylpropyl]amino]oxy]radical",C8H19FN6O
+N-C7:0-serine,serine,7,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,43621,235.1687,14.740050840664203,4.727203,True,False,False,7,asid_36452,False,Eremophilane sesquiterpenoids,5-(3-hydroxy-6-methylhept-5-en-2-ylidene)-2-methylcyclohex-2-en-1-one,C15H22O2
+N-C6:0-homoserine,homoserine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,845,235.1687,14.740050840664203,5.143,True,False,True,36,asid_845,True,Wax monoesters,Cyclododecanecarboxylic acid,C10H22N2O4
+N-C6:0-homoserine,homoserine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,24204,235.1647,-2.2692661313394695,0.534315,True,False,True,9,asid_24204,True,Phenylalanine-derived alkaloids,"[[tert-Butyl[(S)-1-(dimethylphosphinyl)-2,2-dimethylpropyl]amino]oxy]radical",C8H19FN6O
+N-C6:0-homoserine,homoserine,6,short_medium_chain,C10H19N1O4,[M+NH4]+,235.1652336525,43621,235.1687,14.740050840664203,4.727203,True,False,False,7,asid_36452,False,Eremophilane sesquiterpenoids,5-(3-hydroxy-6-methylhept-5-en-2-ylidene)-2-methylcyclohex-2-en-1-one,C15H22O2
+N-C6:0-proline,proline,6,short_medium_chain,C11H19N1O3,[M+Na]+,236.1257141776,13051,236.1275,7.563015346358885,2.853914,True,False,True,16,asid_13051,True,,,
+N-C6:0-proline,proline,6,short_medium_chain,C11H19N1O3,[M+Na]+,236.1257141776,36591,236.1277,8.410021784023744,0.709273,True,False,True,15,asid_36591,True,Aminoacids,rel-(2R)-2-{[(tert-butoxy)carbonyl]amino}-3-fluoro-3-methylbutanoic acid,C10H18FNO4
+N-C4:0-phenylalanine,phenylalanine,4,short_medium_chain,C13H17N1O3,[M+H]+,236.1281198657,13051,236.1275,-2.625124446657492,2.853914,True,False,True,16,asid_13051,True,,,
+N-C4:0-phenylalanine,phenylalanine,4,short_medium_chain,C13H17N1O3,[M+H]+,236.1281198657,36591,236.1277,-1.778126638347363,0.709273,True,False,True,15,asid_36591,True,Aminoacids,rel-(2R)-2-{[(tert-butoxy)carbonyl]amino}-3-fluoro-3-methylbutanoic acid,C10H18FNO4
+N-C4:0-methionine,methionine,4,short_medium_chain,C9H17N1O3S1,[M+NH4]+,237.12673965660002,7118,237.1284,7.001923960075898,0.936341,True,False,True,87,asid_7118,True,,,
+N-C6:0-cysteine,cysteine,6,short_medium_chain,C9H17N1O3S1,[M+NH4]+,237.12673965660002,7118,237.1284,7.001923960075898,0.936341,True,False,True,87,asid_7118,True,,,
+N-C6:0-threonine,threonine,6,short_medium_chain,C10H19N1O4,[M+Na]+,240.1206287997,24860,240.1222,6.543379083446236,3.798901,True,False,True,13,asid_24860,True,,,
+N-C7:0-serine,serine,7,short_medium_chain,C10H19N1O4,[M+Na]+,240.1206287997,24860,240.1222,6.543379083446236,3.798901,True,False,True,13,asid_24860,True,,,
+N-C6:0-homoserine,homoserine,6,short_medium_chain,C10H19N1O4,[M+Na]+,240.1206287997,24860,240.1222,6.543379083446236,3.798901,True,False,True,13,asid_24860,True,,,
+N-C4:0-histidine,histidine,4,short_medium_chain,C10H15N3O3,[M+NH4]+,243.1451669132,9598,243.1488,14.942048185109943,0.541447,True,False,False,66,asid_9598,True,,,
+N-C4:0-histidine,histidine,4,short_medium_chain,C10H15N3O3,[M+NH4]+,243.1451669132,35189,243.1483,12.885663489761791,3.344315,True,False,True,16,asid_35189,True,,,
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+H]+,244.19072012089998,12414,244.1899,-3.358526071677892,5.538476,True,False,True,10,asid_12414,True,,,
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+H]+,244.19072012089998,12414,244.1899,-3.358526071677892,5.538476,True,False,True,10,asid_12414,True,,,
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+H]+,244.19072012089998,12414,244.1899,-3.358526071677892,5.538476,True,False,True,10,asid_12414,True,,,
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+H]+,244.19072012089998,12414,244.1899,-3.358526071677892,5.538476,True,False,True,10,asid_12414,True,,,
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+H]+,244.19072012089998,12414,244.1899,-3.358526071677892,5.538476,True,False,True,10,asid_12414,True,,,
+N-C7:0-asparagine,asparagine,7,short_medium_chain,C11H20N2O4,[M+H]+,245.1495835887,8100,245.153,13.936027342849865,4.563888,True,True,True,18,asid_235,False,,,
+N-C6:0-glutamine,glutamine,6,short_medium_chain,C11H20N2O4,[M+H]+,245.1495835887,8100,245.153,13.936027342849865,4.563888,True,True,True,18,asid_235,False,,,
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,456,245.1855,-1.9132179616428904,0.811368,True,True,True,229,asid_4258,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,536,245.1855,-1.9132179616428904,0.936817,True,True,True,263,asid_4125,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,578,245.1855,-1.9132179616428904,0.62851,True,False,True,28,asid_578,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,3721,245.1855,-1.9132179616428904,1.65934,True,True,True,45,asid_521,True,,,
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,3937,245.1853,-2.728925323353209,1.752,True,True,True,98,asid_7160,True,,,
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+NH4]+,245.1859690942,29560,245.1854,-2.321071642556009,1.030727,True,False,True,14,asid_29560,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,456,245.1855,-1.9132179616428904,0.811368,True,True,True,229,asid_4258,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,536,245.1855,-1.9132179616428904,0.936817,True,True,True,263,asid_4125,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,578,245.1855,-1.9132179616428904,0.62851,True,False,True,28,asid_578,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,3721,245.1855,-1.9132179616428904,1.65934,True,True,True,45,asid_521,True,,,
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,3937,245.1853,-2.728925323353209,1.752,True,True,True,98,asid_7160,True,,,
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+H]+,245.1859690942,29560,245.1854,-2.321071642556009,1.030727,True,False,True,14,asid_29560,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C12H24N2O3
+N-C8:0-threonine,threonine,8,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,5386,246.1694,-2.375103531612706,0.783667,True,False,True,53,asid_5386,True,Fatty acyl carnitines,O-Isovalerylcarnitine,C12H23NO4
+N-C8:0-threonine,threonine,8,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,29962,246.1692,-3.187550265390068,3.325399,True,False,True,13,asid_29962,True,Aminoacids,"(2S)-3,4-dimethyl-2-[(2-methylpropan-2-yl)oxycarbonylamino]pentanoic acid",C12H23NO4
+N-C9:0-serine,serine,9,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,5386,246.1694,-2.375103531612706,0.783667,True,False,True,53,asid_5386,True,Fatty acyl carnitines,O-Isovalerylcarnitine,C12H23NO4
+N-C9:0-serine,serine,9,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,29962,246.1692,-3.187550265390068,3.325399,True,False,True,13,asid_29962,True,Aminoacids,"(2S)-3,4-dimethyl-2-[(2-methylpropan-2-yl)oxycarbonylamino]pentanoic acid",C12H23NO4
+N-C8:0-homoserine,homoserine,8,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,5386,246.1694,-2.375103531612706,0.783667,True,False,True,53,asid_5386,True,Fatty acyl carnitines,O-Isovalerylcarnitine,C12H23NO4
+N-C8:0-homoserine,homoserine,8,short_medium_chain,C12H23N1O4,[M+H]+,246.16998467919998,29962,246.1692,-3.187550265390068,3.325399,True,False,True,13,asid_29962,True,Aminoacids,"(2S)-3,4-dimethyl-2-[(2-methylpropan-2-yl)oxycarbonylamino]pentanoic acid",C12H23NO4
+N-C7:0-threonine,threonine,7,short_medium_chain,C11H21N1O4,[M+NH4]+,249.1808837163,842,249.1844,14.111370212540328,5.143,True,False,True,33,asid_842,True,Simple phenolic acids,"1-(3,5-Ditert-butyl-4-hydroxyphenyl)-2-tritioethanone",C16H24O2
+N-C7:0-homoserine,homoserine,7,short_medium_chain,C11H21N1O4,[M+NH4]+,249.1808837163,842,249.1844,14.111370212540328,5.143,True,False,True,33,asid_842,True,Simple phenolic acids,"1-(3,5-Ditert-butyl-4-hydroxyphenyl)-2-tritioethanone",C16H24O2
+N-C8:0-serine,serine,8,short_medium_chain,C11H21N1O4,[M+NH4]+,249.1808837163,842,249.1844,14.111370212540328,5.143,True,False,True,33,asid_842,True,Simple phenolic acids,"1-(3,5-Ditert-butyl-4-hydroxyphenyl)-2-tritioethanone",C16H24O2
+N-C7:0-proline,proline,7,short_medium_chain,C12H21N1O3,[M+Na]+,250.1413642414,10552,250.1367,-18.64642185091105,1.307662,True,False,True,13,asid_10552,True,,,
+N-C7:0-cysteine,cysteine,7,short_medium_chain,C10H19N1O3S1,[M+NH4]+,251.14238972040002,5533,251.1442,7.208180196139324,0.539,True,False,False,17,asid_16477,True,,,
+N-C7:0-cysteine,cysteine,7,short_medium_chain,C10H19N1O3S1,[M+NH4]+,251.14238972040002,10349,251.144,6.411819214509334,1.121147,True,False,False,36,asid_15779,False,,,
+N-C5:0-methionine,methionine,5,short_medium_chain,C10H19N1O3S1,[M+NH4]+,251.14238972040002,5533,251.1442,7.208180196139324,0.539,True,False,False,17,asid_16477,True,,,
+N-C5:0-methionine,methionine,5,short_medium_chain,C10H19N1O3S1,[M+NH4]+,251.14238972040002,10349,251.144,6.411819214509334,1.121147,True,False,False,36,asid_15779,False,,,
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+H]+,252.1230344878,18910,252.1225,-2.119948306515602,1.046889,True,False,True,31,asid_18910,True,,,
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+H]+,252.1230344878,26182,252.1225,-2.119948306515602,0.899384,True,False,True,15,asid_26182,True,,,
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+H]+,252.1230344878,26662,252.1225,-2.119948306515602,0.89505,True,False,True,15,asid_26662,True,,,
+N-C6:0-asparagine,asparagine,6,short_medium_chain,C10H18N2O4,[M+Na]+,253.115877773,32359,253.1174,6.0139530297449255,4.072382,True,False,True,9,asid_32359,True,Dipeptides,2-amino-3-[3-(2-amino-2-carboxyethyl)phenyl]propanoic acid,C12H16N2O4
+N-C6:0-asparagine,asparagine,6,short_medium_chain,C10H18N2O4,[M+Na]+,253.115877773,52607,253.1173,5.618877063420118,3.956772,True,False,True,6,asid_52607,True,,,
+N-C5:0-glutamine,glutamine,5,short_medium_chain,C10H18N2O4,[M+Na]+,253.115877773,32359,253.1174,6.0139530297449255,4.072382,True,False,True,9,asid_32359,True,Dipeptides,2-amino-3-[3-(2-amino-2-carboxyethyl)phenyl]propanoic acid,C12H16N2O4
+N-C5:0-glutamine,glutamine,5,short_medium_chain,C10H18N2O4,[M+Na]+,253.115877773,52607,253.1173,5.618877063420118,3.956772,True,False,True,6,asid_52607,True,,,
+N-C5:0-histidine,histidine,5,short_medium_chain,C11H17N3O3,[M+NH4]+,257.160816977,16857,257.1643,13.54414347000871,0.947807,True,False,True,71,asid_16857,True,,,
+N-C4:0-phenylalanine,phenylalanine,4,short_medium_chain,C13H17N1O3,[M+Na]+,258.1100641138,3904,258.1095,-2.1855552277284755,0.534315,True,False,True,215,asid_3904,True,,,
+N-C4:0-phenylalanine,phenylalanine,4,short_medium_chain,C13H17N1O3,[M+Na]+,258.1100641138,16133,258.109,-4.122713322519275,4.944,True,True,True,26,asid_8582,True,Glycerophosphocholines,"2-[2,3-bis(16O)(oxidanyl)propoxy-(16O)oxidanyl(31P)(31P)(16O)(31P)(16O)(16O)(31P)(16O)(16O)(16O)phosphoryl]oxyethyl-tri((112C)methyl)(14N)azanium",C8H20NO6P
+N-C4:0-phenylalanine,phenylalanine,4,short_medium_chain,C13H17N1O3,[M+Na]+,258.1100641138,43101,258.1127,10.212256577787452,4.423,True,False,True,8,asid_43101,True,Imidazole alkaloids,"4-Amino-1-tert-butyl-3-(3-ethyl)pyrazolo[3,4-d]pyrimidine",C9H21O6S
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,2442,259.169,14.532610901806851,5.064,True,True,True,29,asid_8222,True,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,3595,259.1646,-2.4449749339354723,0.906,True,False,True,46,asid_3595,True,Dipeptides,2-amino-6-(cyclopentyloxycarbonylamino)hexanoic Acid,C12H22N2O4
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,8755,259.1685,12.603339784143754,5.609,True,True,True,121,asid_18281,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,13744,259.1685,12.603339784143754,4.555135,True,True,True,14,asid_235,False,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,23461,259.1683,11.831631337034649,5.970813,True,True,True,27,asid_6338,True,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,30278,259.1689,14.146756678361966,4.175549,True,False,True,6,asid_30278,True,Pinane monoterpenoids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C11H22BNO5
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,34196,259.1683,11.831631337034649,5.199,True,False,False,10,asid_974,False,Aminoacids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C7H18BN7O3
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,42242,259.1684,12.217485560698869,6.214238,True,True,True,8,asid_15530,True,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,44520,259.1683,11.831631337034649,5.312105,True,False,True,26,asid_44520,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,2442,259.169,14.532610901806851,5.064,True,True,True,29,asid_8222,True,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,3595,259.1646,-2.4449749339354723,0.906,True,False,True,46,asid_3595,True,Dipeptides,2-amino-6-(cyclopentyloxycarbonylamino)hexanoic Acid,C12H22N2O4
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,8755,259.1685,12.603339784143754,5.609,True,True,True,121,asid_18281,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,13744,259.1685,12.603339784143754,4.555135,True,True,True,14,asid_235,False,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,23461,259.1683,11.831631337034649,5.970813,True,True,True,27,asid_6338,True,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,30278,259.1689,14.146756678361966,4.175549,True,False,True,6,asid_30278,True,Pinane monoterpenoids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C11H22BNO5
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,34196,259.1683,11.831631337034649,5.199,True,False,False,10,asid_974,False,Aminoacids,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",C7H18BN7O3
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,42242,259.1684,12.217485560698869,6.214238,True,True,True,8,asid_15530,True,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+H]+,259.16523365250004,44520,259.1683,11.831631337034649,5.312105,True,False,True,26,asid_44520,True,Chalcones,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",C17H22O2
+N-C8:0-proline,proline,8,short_medium_chain,C13H23N1O3,[M+NH4]+,259.20161915799997,28400,259.2046,11.500090199048152,5.022,True,True,True,21,asid_26992,True,,,
+N-C8:0-proline,proline,8,short_medium_chain,C13H23N1O3,[M+NH4]+,259.20161915799997,46109,259.205,13.04329043543483,3.875413,True,True,True,8,asid_3884,False,,,
+N-C7:0-lysine,lysine,7,short_medium_chain,C13H26N2O3,[M+H]+,259.201619158,28400,259.2046,11.500090198828847,5.022,True,True,True,21,asid_26992,True,,,
+N-C7:0-lysine,lysine,7,short_medium_chain,C13H26N2O3,[M+H]+,259.201619158,46109,259.205,13.043290435215525,3.875413,True,True,True,8,asid_3884,False,,,
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,2053,260.1849,-2.8239183945663786,1.460763,True,False,True,43,asid_2053,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C13H25NO4
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,3336,260.185,-2.4395774217310655,1.394715,True,False,True,34,asid_3336,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,6589,260.1849,-2.8239183945663786,1.240268,True,False,True,23,asid_6589,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,2053,260.1849,-2.8239183945663786,1.460763,True,False,True,43,asid_2053,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C13H25NO4
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,3336,260.185,-2.4395774217310655,1.394715,True,False,True,34,asid_3336,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,6589,260.1849,-2.8239183945663786,1.240268,True,False,True,23,asid_6589,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,2053,260.1849,-2.8239183945663786,1.460763,True,False,True,43,asid_2053,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C13H25NO4
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,3336,260.185,-2.4395774217310655,1.394715,True,False,True,34,asid_3336,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+H]+,260.185634743,6589,260.1849,-2.8239183945663786,1.240268,True,False,True,23,asid_6589,True,Fatty acyl carnitines,"2,2,3-Trideuterio-3-hexanoyloxy-4-(trimethylazaniumyl)butanoate",C9H21N7O2
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,9059,261.2207,13.133810832061902,4.855,True,True,True,11,asid_402,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,14266,261.2202,11.219695423327309,5.205891,True,True,True,20,asid_240,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,9059,261.2207,13.133810832061902,4.855,True,True,True,11,asid_402,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,14266,261.2202,11.219695423327309,5.205891,True,True,True,20,asid_240,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,9059,261.2207,13.133810832061902,4.855,True,True,True,11,asid_402,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,14266,261.2202,11.219695423327309,5.205891,True,True,True,20,asid_240,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,9059,261.2207,13.133810832061902,4.855,True,True,True,11,asid_402,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,14266,261.2202,11.219695423327309,5.205891,True,True,True,20,asid_240,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,9059,261.2207,13.133810832061902,4.855,True,True,True,11,asid_402,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+NH4]+,261.2172692218,14266,261.2202,11.219695423327309,5.205891,True,True,True,20,asid_240,False,Fatty aldehydes,Farnesylideneacetone,C18H28O
+N-C5:0-histidine,histidine,5,short_medium_chain,C11H17N3O3,[M+Na]+,262.1162121242,3198,262.1182,7.583948294926071,0.893818,True,True,False,67,asid_5540,False,Dipeptides,2-[2-azaniumyl-3-(1H-indol-3-yl)propanamido]acetate,C10H16FN3O4
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+H]+,262.14714074709997,1842,262.1432,-15.03257708155123,5.193,True,False,True,30,asid_1842,True,Acridone alkaloids,"2-Methyl-2-(1,3,3-trimethyl-2-oxoindol-5-yl)propanoic acid",C15H19NO3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+H]+,262.14714074709997,1842,262.1432,-15.03257708155123,5.193,True,False,True,30,asid_1842,True,Acridone alkaloids,"2-Methyl-2-(1,3,3-trimethyl-2-oxoindol-5-yl)propanoic acid",C15H19NO3
+N-C7:0-aspartate,aspartate,7,short_medium_chain,C11H19N1O5,[M+NH4]+,263.16014827460003,15635,263.1569,-12.34333777862157,5.190745,True,False,True,6,asid_15635,True,,,
+N-C6:0-glutamate,glutamate,6,short_medium_chain,C11H19N1O5,[M+NH4]+,263.16014827460003,15635,263.1569,-12.34333777862157,5.190745,True,False,True,6,asid_15635,True,,,
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,512,265.1541,-14.858249077388571,0.661484,True,True,True,280,asid_6648,True,Dipeptides,2-(2-amino-3-methylbutanamido)-3-phenylpropanoic acid,C14H20N2O3
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,4110,265.1539,-15.61251623130708,1.520311,True,True,False,16,asid_1106,False,,,
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,5827,265.154,-15.235382654455012,1.636337,True,True,True,62,asid_3129,True,Dipeptides,,C14H20N2O3
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,7323,265.1538,-15.989649808373521,1.455595,True,True,True,9,asid_2331,False,,,
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,9111,265.1542,-14.481115500536504,2.149319,True,True,True,23,asid_7939,False,,,
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,11599,265.1543,-14.103981923684437,0.830339,True,True,True,47,asid_3528,False,Dipeptides,2-(2-amino-3-methylbutanamido)-3-phenylpropanoic acid,C14H20N2O3
+N-C8:0-cysteine,cysteine,8,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,20211,265.1541,-14.858249077388571,0.618857,True,False,True,21,asid_20211,False,,,
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,512,265.1541,-14.858249077388571,0.661484,True,True,True,280,asid_6648,True,Dipeptides,2-(2-amino-3-methylbutanamido)-3-phenylpropanoic acid,C14H20N2O3
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,4110,265.1539,-15.61251623130708,1.520311,True,True,False,16,asid_1106,False,,,
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,5827,265.154,-15.235382654455012,1.636337,True,True,True,62,asid_3129,True,Dipeptides,,C14H20N2O3
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,7323,265.1538,-15.989649808373521,1.455595,True,True,True,9,asid_2331,False,,,
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,9111,265.1542,-14.481115500536504,2.149319,True,True,True,23,asid_7939,False,,,
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,11599,265.1543,-14.103981923684437,0.830339,True,True,True,47,asid_3528,False,Dipeptides,2-(2-amino-3-methylbutanamido)-3-phenylpropanoic acid,C14H20N2O3
+N-C6:0-methionine,methionine,6,short_medium_chain,C11H21N1O3S1,[M+NH4]+,265.1580397842,20211,265.1541,-14.858249077388571,0.618857,True,False,True,21,asid_20211,False,,,
+N-C5:0-tyrosine,tyrosine,5,short_medium_chain,C14H19N1O4,[M+H]+,266.1386845516,27890,266.1381,-2.1964172589131734,0.95739,True,False,True,19,asid_27890,True,Fatty acyl carnitines,Benzoylcarnitine,C14H19NO4
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,20316,266.1718,-3.2473995854938695,5.519,True,True,True,8,asid_10152,False,Aminoacids,,C10H23N3O5
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,24721,266.1717,-3.623095565653235,3.760489,True,False,False,7,asid_24721,False,,,C10H23N3O5
+N-C10:0-alanine,alanine,10,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,30660,266.1741,5.393607955395286,2.642,True,False,True,16,asid_30660,True,,,
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,20316,266.1718,-3.2473995854938695,5.519,True,True,True,8,asid_10152,False,Aminoacids,,C10H23N3O5
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,24721,266.1717,-3.623095565653235,3.760489,True,False,False,7,asid_24721,False,,,C10H23N3O5
+N-C7:0-isoleucine,isoleucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,30660,266.1741,5.393607955395286,2.642,True,False,True,16,asid_30660,True,,,
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,20316,266.1718,-3.2473995854938695,5.519,True,True,True,8,asid_10152,False,Aminoacids,,C10H23N3O5
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,24721,266.1717,-3.623095565653235,3.760489,True,False,False,7,asid_24721,False,,,C10H23N3O5
+N-C11:0-glycine,glycine,11,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,30660,266.1741,5.393607955395286,2.642,True,False,True,16,asid_30660,True,,,
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,20316,266.1718,-3.2473995854938695,5.519,True,True,True,8,asid_10152,False,Aminoacids,,C10H23N3O5
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,24721,266.1717,-3.623095565653235,3.760489,True,False,False,7,asid_24721,False,,,C10H23N3O5
+N-C8:0-valine,valine,8,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,30660,266.1741,5.393607955395286,2.642,True,False,True,16,asid_30660,True,,,
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,20316,266.1718,-3.2473995854938695,5.519,True,True,True,8,asid_10152,False,Aminoacids,,C10H23N3O5
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,24721,266.1717,-3.623095565653235,3.760489,True,False,False,7,asid_24721,False,,,C10H23N3O5
+N-C7:0-leucine,leucine,7,short_medium_chain,C13H25N1O3,[M+Na]+,266.17266436899996,30660,266.1741,5.393607955395286,2.642,True,False,True,16,asid_30660,True,,,
+N-C6:0-glutamine,glutamine,6,short_medium_chain,C11H20N2O4,[M+Na]+,267.1315278368,17579,267.1335,7.3827421869939895,0.645,True,False,True,35,asid_17579,True,Dipeptides,,C13H18N2O4
+N-C6:0-glutamine,glutamine,6,short_medium_chain,C11H20N2O4,[M+Na]+,267.1315278368,47975,267.1341,9.628826746243902,4.454366,True,False,True,9,asid_47975,True,Iridoids monoterpenoids,"1,5-Bis(2-tetrahydrofuryl)-3-pentanol",C13H18N2O4
+N-C7:0-asparagine,asparagine,7,short_medium_chain,C11H20N2O4,[M+Na]+,267.1315278368,17579,267.1335,7.3827421869939895,0.645,True,False,True,35,asid_17579,True,Dipeptides,,C13H18N2O4
+N-C7:0-asparagine,asparagine,7,short_medium_chain,C11H20N2O4,[M+Na]+,267.1315278368,47975,267.1341,9.628826746243902,4.454366,True,False,True,9,asid_47975,True,Iridoids monoterpenoids,"1,5-Bis(2-tetrahydrofuryl)-3-pentanol",C13H18N2O4
+N-C4:0-arginine,arginine,4,short_medium_chain,C10H20N4O3,[M+Na]+,267.1427612251,8188,267.1481,19.984726052517352,3.11227,True,True,False,14,asid_31204,False,Dipeptides,"Acetamide, 2-((10,11-dihydro-5H-dibenzo(a,d)cyclohepten-5-yl)amino)-",C17H18N2O
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+Na]+,267.1679133423,32176,267.1711,11.927546463854931,5.095007,True,False,True,7,asid_32176,True,,,
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+Na]+,267.1679133423,51287,267.1693,5.190210466112117,3.942,True,False,True,23,asid_51287,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C14H22N2O3
+N-C6:0-lysine,lysine,6,short_medium_chain,C12H24N2O3,[M+Na]+,267.1679133423,52530,267.1692,4.81591402167487,4.15561,True,False,True,7,asid_52530,True,,,
+N-C5:0-phenylalanine,phenylalanine,5,short_medium_chain,C14H19N1O3,[M+NH4]+,267.1703190304,32176,267.1711,2.9231151232586132,5.095007,True,False,True,7,asid_32176,True,,,
+N-C5:0-phenylalanine,phenylalanine,5,short_medium_chain,C14H19N1O3,[M+NH4]+,267.1703190304,51287,267.1693,-3.8141602093283775,3.942,True,False,True,23,asid_51287,True,Dipeptides,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,C14H22N2O3
+N-C5:0-phenylalanine,phenylalanine,5,short_medium_chain,C14H19N1O3,[M+NH4]+,267.1703190304,52530,267.1692,-4.1884532834791885,4.15561,True,False,True,7,asid_52530,True,,,
+N-C7:0-histidine,histidine,7,short_medium_chain,C13H21N3O3,[M+H]+,268.1655680037,5571,268.1649,-2.491012194393745,0.788,True,False,False,91,asid_5571,False,Dipeptides,"Acetylprolyl-alpha,beta-dehydrovaline methylamide",C13H21N3O3
+N-C7:0-histidine,histidine,7,short_medium_chain,C13H21N3O3,[M+H]+,268.1655680037,12007,268.1695,14.662569580786093,1.225,True,False,True,29,asid_12007,True,,,
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+NH4]+,269.1495835887,22560,269.1489,-2.5398096139350423,0.541231,True,False,False,19,asid_25883,False,Aminoacids,"4-(carboxylatomethyl)-3-{[5-(methoxymethyl)-1,2-oxazol-3-yl]methyl}piperidin-1-ium",C13H20N2O4
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+NH4]+,269.1495835887,32584,269.149,-2.1682690057663425,0.798341,True,False,True,22,asid_32584,True,Aminoacids,2-Methoxyethyl N-(5-amino-2-methoxyphenyl)-beta-alaninate,C13H20N2O4
+N-C10:0-proline,proline,10,short_medium_chain,C15H27N1O3,[M+H]+,270.2063701847,42052,270.2054,-3.590532300721063,3.557363,True,False,True,7,asid_42052,True,,,
+N-C6:0-histidine,histidine,6,short_medium_chain,C12H19N3O3,[M+NH4]+,271.1764670408,20249,271.1756,-3.1973305408047916,1.104,True,False,True,37,asid_20249,True,,,
+N-C9:0-asparagine,asparagine,9,short_medium_chain,C13H24N2O4,[M+H]+,273.1808837163,14295,273.1843,12.505573792466324,4.563888,True,True,True,12,asid_235,False,,,
+N-C8:0-glutamine,glutamine,8,short_medium_chain,C13H24N2O4,[M+H]+,273.1808837163,14295,273.1843,12.505573792466324,4.563888,True,True,True,12,asid_235,False,,,
+N-C4:0-tyrosine,tyrosine,4,short_medium_chain,C13H17N1O4,[M+Na]+,274.1049787359,22387,274.1064,5.18510866378929,3.84886,True,False,True,10,asid_22387,False,,,
+N-C10:0-threonine,threonine,10,short_medium_chain,C14H27N1O4,[M+H]+,274.2012848068,9355,274.2006,-2.4974602160522146,2.049582,True,False,True,10,asid_9355,True,Fatty acyl carnitines,3-Methylhexanoylcarnitine,C14H27NO4
+N-C10:0-homoserine,homoserine,10,short_medium_chain,C14H27N1O4,[M+H]+,274.2012848068,9355,274.2006,-2.4974602160522146,2.049582,True,False,True,10,asid_9355,True,Fatty acyl carnitines,3-Methylhexanoylcarnitine,C14H27NO4
+N-C11:0-serine,serine,11,short_medium_chain,C14H27N1O4,[M+H]+,274.2012848068,9355,274.2006,-2.4974602160522146,2.049582,True,False,True,10,asid_9355,True,Fatty acyl carnitines,3-Methylhexanoylcarnitine,C14H27NO4
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+H]+,275.1390189028,13367,275.1385,-1.885965872950237,1.216,True,False,True,24,asid_13367,True,Dipeptides,"6-cyclopropanecarbonyl-4-(propan-2-yl)-octahydropyrrolo[3,4-b][1,4]oxazin-3-one",C15H18N2O3
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+H]+,275.1390189028,18457,275.1385,-1.885965872950237,2.203101,True,False,True,6,asid_18457,True,,,
+N-C6:0-histidine,histidine,6,short_medium_chain,C12H19N3O3,[M+Na]+,276.13186218799996,6085,276.1338,7.017705181489434,0.897183,True,False,False,50,asid_5666,True,Dipeptides,,C11H18FN3O4
+N-C10:0-cysteine,cysteine,10,short_medium_chain,C13H25N1O3S1,[M+H]+,276.1627908109,20222,276.1585,-15.537252094639598,5.071,True,False,True,6,asid_20222,True,Simple indole alkaloids,"2-Methyl-7-(1-oxobutyl)-4-propyl-2H-1,4-benzoxazin-3(4H)-one",C16H21NO3
+N-C8:0-methionine,methionine,8,short_medium_chain,C13H25N1O3S1,[M+H]+,276.1627908109,20222,276.1585,-15.537252094639598,5.071,True,False,True,6,asid_20222,True,Simple indole alkaloids,"2-Methyl-7-(1-oxobutyl)-4-propyl-2H-1,4-benzoxazin-3(4H)-one",C16H21NO3
+N-C8:0-aspartate,aspartate,8,short_medium_chain,C12H21N1O5,[M+NH4]+,277.1757983384,974,277.1793,12.633359842394883,5.193,True,False,False,32,asid_974,True,,,
+N-C8:0-aspartate,aspartate,8,short_medium_chain,C12H21N1O5,[M+NH4]+,277.1757983384,8509,277.1798,14.437269141062199,4.685,True,False,True,16,asid_8509,True,,,
+N-C7:0-glutamate,glutamate,7,short_medium_chain,C12H21N1O5,[M+NH4]+,277.1757983384,974,277.1793,12.633359842394883,5.193,True,False,False,32,asid_974,True,,,
+N-C7:0-glutamate,glutamate,7,short_medium_chain,C12H21N1O5,[M+NH4]+,277.1757983384,8509,277.1798,14.437269141062199,4.685,True,False,True,16,asid_8509,True,,,
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,1946,277.2153,11.241050291552446,5.022,True,False,False,67,asid_26992,False,,,
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8412,277.2155,11.96251930216152,3.875754,True,False,False,33,asid_3884,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8936,277.2152,10.880315786145381,5.197802,True,True,False,45,asid_15089,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,31782,277.2154,11.601784796754455,4.774883,True,False,False,33,asid_16349,True,,,
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,52547,277.2154,11.601784796754455,4.190023,True,False,True,30,asid_52547,True,Unsaturated fatty acids,"octadeca-4,8,12,15-tetraenoic acid",C18H28O2
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,1946,277.2153,11.241050291552446,5.022,True,False,False,67,asid_26992,False,,,
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8412,277.2155,11.96251930216152,3.875754,True,False,False,33,asid_3884,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8936,277.2152,10.880315786145381,5.197802,True,True,False,45,asid_15089,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,31782,277.2154,11.601784796754455,4.774883,True,False,False,33,asid_16349,True,,,
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,52547,277.2154,11.601784796754455,4.190023,True,False,True,30,asid_52547,True,Unsaturated fatty acids,"octadeca-4,8,12,15-tetraenoic acid",C18H28O2
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,1946,277.2153,11.241050291552446,5.022,True,False,False,67,asid_26992,False,,,
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8412,277.2155,11.96251930216152,3.875754,True,False,False,33,asid_3884,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,8936,277.2152,10.880315786145381,5.197802,True,True,False,45,asid_15089,False,Unsaturated fatty acids,"octadeca-11,17-dien-9-ynoic acid",C18H28O2
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,31782,277.2154,11.601784796754455,4.774883,True,False,False,33,asid_16349,True,,,
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+NH4]+,277.2121838439,52547,277.2154,11.601784796754455,4.190023,True,False,True,30,asid_52547,True,Unsaturated fatty acids,"octadeca-4,8,12,15-tetraenoic acid",C18H28O2
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,152,279.1697,-14.291633291717702,1.285998,True,False,True,409,asid_152,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,263,279.1695,-15.00803317903763,1.203,True,False,False,37,asid_263,True,Dipeptides,,C15H22N2O3
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,277,279.1696,-14.649833235377667,1.093894,True,False,True,54,asid_277,False,Dipeptides,,C15H22N2O3
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,1397,279.1696,-14.649833235377667,2.100591,True,True,True,249,asid_1508,True,,,
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,1426,279.1693,-15.724433066561172,1.995039,True,True,True,255,asid_6959,True,,,
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,3663,279.1698,-13.933433347854123,1.351892,True,False,True,64,asid_3663,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C9:0-cysteine,cysteine,9,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,45546,279.1696,-14.649833235377667,1.281632,True,False,True,8,asid_45546,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,152,279.1697,-14.291633291717702,1.285998,True,False,True,409,asid_152,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,263,279.1695,-15.00803317903763,1.203,True,False,False,37,asid_263,True,Dipeptides,,C15H22N2O3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,277,279.1696,-14.649833235377667,1.093894,True,False,True,54,asid_277,False,Dipeptides,,C15H22N2O3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,1397,279.1696,-14.649833235377667,2.100591,True,True,True,249,asid_1508,True,,,
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,1426,279.1693,-15.724433066561172,1.995039,True,True,True,255,asid_6959,True,,,
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,3663,279.1698,-13.933433347854123,1.351892,True,False,True,64,asid_3663,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C7:0-methionine,methionine,7,short_medium_chain,C12H23N1O3S1,[M+NH4]+,279.173689848,45546,279.1696,-14.649833235377667,1.281632,True,False,True,8,asid_45546,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-phenylpropanoic acid,C15H22N2O3
+N-C6:0-tyrosine,tyrosine,6,short_medium_chain,C15H21N1O4,[M+H]+,280.1543346154,7534,280.1534,-3.3360733157877815,3.575091,True,False,True,23,asid_7534,True,Dipeptides,methyl (2S)-2-[(1-deuterio-2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoate,C11H17N7O2
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,12591,281.1489,6.125259420606802,0.572701,True,False,True,37,asid_12591,True,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,17672,281.1421,-18.061360736051903,7.586213,True,False,True,12,asid_17672,True,,,
+N-C8:0-asparagine,asparagine,8,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,29797,281.1489,6.125259420606802,1.018783,True,False,True,14,asid_29797,True,Dipeptides,2-[2-amino-3-(4-hydroxyphenyl)propanamido]-3-methylbutanoic acid,C14H20N2O4
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,12591,281.1489,6.125259420606802,0.572701,True,False,True,37,asid_12591,True,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,17672,281.1421,-18.061360736051903,7.586213,True,False,True,12,asid_17672,True,,,
+N-C7:0-glutamine,glutamine,7,short_medium_chain,C12H22N2O4,[M+Na]+,281.1471779006,29797,281.1489,6.125259420606802,1.018783,True,False,True,14,asid_29797,True,Dipeptides,2-[2-amino-3-(4-hydroxyphenyl)propanamido]-3-methylbutanoic acid,C14H20N2O4
+N-C8:0-aspartate,aspartate,8,short_medium_chain,C12H21N1O5,[M+Na]+,282.13119348559997,2221,282.1351,13.846446228771201,5.448231,True,False,True,14,asid_2221,True,Carboline alkaloids,"4-N-[(3-methoxyphenyl)methyl]pyrido[4,3-d]pyrimidine-4,7-diamine",C17H17N2O2
+N-C7:0-glutamate,glutamate,7,short_medium_chain,C12H21N1O5,[M+Na]+,282.13119348559997,2221,282.1351,13.846446228771201,5.448231,True,False,True,14,asid_2221,True,Carboline alkaloids,"4-N-[(3-methoxyphenyl)methyl]pyrido[4,3-d]pyrimidine-4,7-diamine",C17H17N2O2
+N-C9:0-threonine,threonine,9,short_medium_chain,C13H25N1O4,[M+Na]+,282.16757899109996,8667,282.1728,18.503220386639562,1.33,True,False,True,34,asid_8667,True,,,
+N-C9:0-homoserine,homoserine,9,short_medium_chain,C13H25N1O4,[M+Na]+,282.16757899109996,8667,282.1728,18.503220386639562,1.33,True,False,True,34,asid_8667,True,,,
+N-C10:0-serine,serine,10,short_medium_chain,C13H25N1O4,[M+Na]+,282.16757899109996,8667,282.1728,18.503220386639562,1.33,True,False,True,34,asid_8667,True,,,
+N-C5:0-tyrosine,tyrosine,5,short_medium_chain,C14H19N1O4,[M+NH4]+,283.16523365250004,18482,283.1617,-12.479118479549614,1.039514,True,False,True,32,asid_18482,True,Aminoacids,"propyl 3-(1,3,6-trimethyl-2,4-dioxo-1,2,3,4-tetrahydropyrimidin-5-yl)butanoate",C14H22N2O4
+N-C6:0-phenylalanine,phenylalanine,6,short_medium_chain,C15H21N1O3,[M+Na]+,286.14136424139997,10019,286.1374,-13.85413608572682,0.538559,True,False,False,37,asid_1787,False,,,
+N-C6:0-phenylalanine,phenylalanine,6,short_medium_chain,C15H21N1O3,[M+Na]+,286.14136424139997,11244,286.1371,-14.902568914841623,0.802,True,False,False,30,asid_2233,False,Tripeptides,"(2S,4R)-1-((S)-1-(2-Aminoacetyl)pyrrolidine-2-carbonyl)-4-hydroxypyrrolidine-2-carboxylic acid",C12H19N3O5
+N-C10:0-asparagine,asparagine,10,short_medium_chain,C14H26N2O4,[M+H]+,287.1965337801,13459,287.1957,-2.9031690914361485,2.236,True,False,True,23,asid_13459,True,,,
+N-C9:0-glutamine,glutamine,9,short_medium_chain,C14H26N2O4,[M+H]+,287.1965337801,13459,287.1957,-2.9031690914361485,2.236,True,False,True,23,asid_13459,True,,,
+N-C9:0-lysine,lysine,9,short_medium_chain,C15H30N2O3,[M+H]+,287.2329192856,22109,287.2323,-2.156039779667539,2.470537,True,False,True,8,asid_22109,False,,,
+N-C9:0-lysine,lysine,9,short_medium_chain,C15H30N2O3,[M+H]+,287.2329192856,29191,287.2359,10.377342567173725,5.314519,True,False,True,10,asid_29191,True,,,
+N-C10:0-proline,proline,10,short_medium_chain,C15H27N1O3,[M+NH4]+,287.2329192856,22109,287.2323,-2.156039779667539,2.470537,True,False,True,8,asid_22109,False,,,
+N-C10:0-proline,proline,10,short_medium_chain,C15H27N1O3,[M+NH4]+,287.2329192856,29191,287.2359,10.377342567173725,5.314519,True,False,True,10,asid_29191,True,,,
+N-C11:0-homoserine,homoserine,11,short_medium_chain,C15H29N1O4,[M+H]+,288.2169348706,444,288.216,-3.243635216783316,2.654824,True,False,True,65,asid_444,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C11:0-homoserine,homoserine,11,short_medium_chain,C15H29N1O4,[M+H]+,288.2169348706,745,288.2162,-2.5497134661532472,2.572948,True,False,True,98,asid_745,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C12:0-serine,serine,12,long_chain,C15H29N1O4,[M+H]+,288.2169348706,444,288.216,-3.243635216783316,2.654824,True,False,True,65,asid_444,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C12:0-serine,serine,12,long_chain,C15H29N1O4,[M+H]+,288.2169348706,745,288.2162,-2.5497134661532472,2.572948,True,False,True,98,asid_745,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C11:0-threonine,threonine,11,short_medium_chain,C15H29N1O4,[M+H]+,288.2169348706,444,288.216,-3.243635216783316,2.654824,True,False,True,65,asid_444,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C11:0-threonine,threonine,11,short_medium_chain,C15H29N1O4,[M+H]+,288.2169348706,745,288.2162,-2.5497134661532472,2.572948,True,False,True,98,asid_745,True,Fatty acyl carnitines,Octanoylcarnitine,C15H29NO4
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+H]+,289.1546689666,9653,289.154,-2.313525153883304,2.028,True,True,True,7,asid_3987,False,,,
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+H]+,289.1546689666,12145,289.1536,-3.6968678522489395,2.051839,True,False,True,8,asid_12145,True,,,
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+H]+,289.1546689666,16005,289.1539,-2.6593608283764207,2.10514,True,False,True,8,asid_16005,True,,,
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+H]+,289.1546689666,39576,289.1541,-1.9676894791936028,1.241211,True,False,True,17,asid_39576,True,Tripeptides,Ala Ala Gly Ala,C16H20N2O3
+N-C7:0-histidine,histidine,7,short_medium_chain,C13H21N3O3,[M+Na]+,290.1475122518,16049,290.1467,-2.799444302200354,0.788,True,False,False,52,asid_5571,False,Dipeptides,Aspartylarginine,C13H21N3O3
+N-C9:0-aspartate,aspartate,9,short_medium_chain,C13H23N1O5,[M+NH4]+,291.1914484022,42049,291.1946,10.823112482352338,5.071,True,False,True,10,asid_42049,True,Wax monoesters,Ethyl beta-hexyl-2-oxocyclopentanepropionate,C18H26O3
+N-C8:0-glutamate,glutamate,8,short_medium_chain,C13H23N1O5,[M+NH4]+,291.1914484022,42049,291.1946,10.823112482352338,5.071,True,False,True,10,asid_42049,True,Wax monoesters,Ethyl beta-hexyl-2-oxocyclopentanepropionate,C18H26O3
+N-C10:0-homoserine,homoserine,10,short_medium_chain,C14H27N1O4,[M+NH4]+,291.2278339077,11423,291.2307,9.8414092552173,5.273,True,False,True,18,asid_11423,True,Unsaturated fatty acids,"methyl octadeca-11,17-dien-9-ynoate",C19H30O2
+N-C10:0-threonine,threonine,10,short_medium_chain,C14H27N1O4,[M+NH4]+,291.2278339077,11423,291.2307,9.8414092552173,5.273,True,False,True,18,asid_11423,True,Unsaturated fatty acids,"methyl octadeca-11,17-dien-9-ynoate",C19H30O2
+N-C11:0-serine,serine,11,short_medium_chain,C14H27N1O4,[M+NH4]+,291.2278339077,11423,291.2307,9.8414092552173,5.273,True,False,True,18,asid_11423,True,Unsaturated fatty acids,"methyl octadeca-11,17-dien-9-ynoate",C19H30O2
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+NH4]+,292.1655680037,10274,292.1689,11.404479736514197,2.557051,True,False,True,26,asid_10274,True,,,
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+NH4]+,292.1655680037,11867,292.1648,-2.628659171702648,0.668,True,False,True,61,asid_11867,True,Dipeptides,(2S)-2-amino-N-[(2S)-1-oxo-1-[[(2S)-1-oxo-3-phenylpropan-2-yl]amino]propan-2-yl]propanamide,C15H21N3O3
+N-C10:0-proline,proline,10,short_medium_chain,C15H27N1O3,[M+Na]+,292.1883144328,21998,292.1899,5.426525024165889,4.713918,True,False,True,30,asid_21998,True,,,
+N-C8:0-phenylalanine,phenylalanine,8,short_medium_chain,C17H25N1O3,[M+H]+,292.1907201209,21998,292.1899,-2.80679995456419,4.713918,True,False,True,30,asid_21998,True,,,
+N-C10:0-cysteine,cysteine,10,short_medium_chain,C13H25N1O3S1,[M+NH4]+,293.1893399118,24350,293.1851,-14.46134365356897,4.83,True,True,False,8,asid_1347,False,,,
+N-C8:0-methionine,methionine,8,short_medium_chain,C13H25N1O3S1,[M+NH4]+,293.1893399118,24350,293.1851,-14.46134365356897,4.83,True,True,False,8,asid_1347,False,,,
+N-C9:0-asparagine,asparagine,9,short_medium_chain,C13H24N2O4,[M+Na]+,295.1628279644,3350,295.1645,5.664790554848379,0.534218,True,False,True,22,asid_3350,True,,,
+N-C9:0-asparagine,asparagine,9,short_medium_chain,C13H24N2O4,[M+Na]+,295.1628279644,4159,295.1646,6.003586604206607,0.83365,True,False,True,85,asid_4159,True,Dipeptides,,C15H22N2O4
+N-C8:0-glutamine,glutamine,8,short_medium_chain,C13H24N2O4,[M+Na]+,295.1628279644,3350,295.1645,5.664790554848379,0.534218,True,False,True,22,asid_3350,True,,,
+N-C8:0-glutamine,glutamine,8,short_medium_chain,C13H24N2O4,[M+Na]+,295.1628279644,4159,295.1646,6.003586604206607,0.83365,True,False,True,85,asid_4159,True,Dipeptides,,C15H22N2O4
+N-C8:0-lysine,lysine,8,short_medium_chain,C14H28N2O3,[M+Na]+,295.1992134699,6705,295.2045,17.908347511777798,4.036786,True,True,False,68,asid_3434,False,,,
+N-C8:0-lysine,lysine,8,short_medium_chain,C14H28N2O3,[M+Na]+,295.1992134699,41858,295.2009,5.713193067801289,4.8,True,False,True,6,asid_41858,True,,,
+N-C8:0-lysine,lysine,8,short_medium_chain,C14H28N2O3,[M+Na]+,295.1992134699,52765,295.2008,5.374438777776413,4.726258,True,False,True,6,asid_52765,True,,,
+N-C7:0-phenylalanine,phenylalanine,7,short_medium_chain,C16H23N1O3,[M+NH4]+,295.201619158,6705,295.2045,9.758896337305782,4.036786,True,True,False,68,asid_3434,False,,,
+N-C7:0-phenylalanine,phenylalanine,7,short_medium_chain,C16H23N1O3,[M+NH4]+,295.201619158,41858,295.2009,-2.4361587246347898,4.8,True,False,True,6,asid_41858,True,,,
+N-C7:0-phenylalanine,phenylalanine,7,short_medium_chain,C16H23N1O3,[M+NH4]+,295.201619158,52765,295.2008,-2.774910254047557,4.726258,True,False,True,6,asid_52765,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+H]+,296.1968681313,30566,296.1962,-2.2557000829631346,1.1705,True,True,True,20,asid_3131,False,Dipeptides,Cyclo(L-Pro-L-Val-L-Val),C15H25N3O3
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+Na]+,297.12096315089997,4341,297.1261,17.28874679714685,1.00122,True,False,True,22,asid_4341,True,,,
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+Na]+,297.12096315089997,4646,297.1262,17.625310057155232,1.109784,True,False,False,27,asid_6377,False,,,
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+Na]+,297.12096315089997,5105,297.1262,17.625310057155232,0.837347,True,False,True,18,asid_5105,True,,,
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+Na]+,297.12096315089997,6471,297.1263,17.961873317354932,0.911822,True,False,True,22,asid_6471,True,,,
+N-C4:0-tryptophan,tryptophan,4,short_medium_chain,C15H18N2O3,[M+Na]+,297.12096315089997,8566,297.1171,-13.00194661126031,7.601108,True,False,False,16,asid_22139,False,,,
+N-C6:0-tyrosine,tyrosine,6,short_medium_chain,C15H21N1O4,[M+NH4]+,297.1808837163,17024,297.1802,-2.3006738907249065,1.523073,True,False,True,22,asid_17024,True,Aminoacids,"3,3-dipentyl-1-(2,2,2-trifluoroacetyl)urea",C12H28N2O4S
+N-C6:0-tyrosine,tyrosine,6,short_medium_chain,C15H21N1O4,[M+NH4]+,297.1808837163,45785,297.18,-2.9736646884693765,1.433613,True,False,True,9,asid_45785,True,,,
+N-C10:0-cysteine,cysteine,10,short_medium_chain,C13H25N1O3S1,[M+Na]+,298.14473505899997,44903,298.1426,-7.161149431438881,3.922,True,False,True,9,asid_44903,True,,,
+N-C8:0-methionine,methionine,8,short_medium_chain,C13H25N1O3S1,[M+Na]+,298.14473505899997,44903,298.1426,-7.161149431438881,3.922,True,False,True,9,asid_44903,True,,,
+N-C7:0-phenylalanine,phenylalanine,7,short_medium_chain,C16H23N1O3,[M+Na]+,300.1570143052,35401,300.1582,3.950248515008875,3.975756,True,True,True,12,asid_8483,False,,,
+N-C8:0-arginine,arginine,8,short_medium_chain,C14H28N4O3,[M+H]+,301.2234172322,25482,301.2225,-3.0450228883574644,2.125271,True,False,True,9,asid_25482,True,,,
+N-C6:0-tyrosine,tyrosine,6,short_medium_chain,C15H21N1O4,[M+Na]+,302.13627886349997,33916,302.1411,15.956827555307024,4.911,True,False,True,14,asid_33916,True,,,
+N-C10:0-glutamate,glutamate,10,short_medium_chain,C15H27N1O5,[M+H]+,302.1961994289,33440,302.1954,-2.6453969358518656,0.556406,True,True,True,18,asid_10211,False,,,
+N-C10:0-glutamate,glutamate,10,short_medium_chain,C15H27N1O5,[M+H]+,302.1961994289,47342,302.1956,-1.9835752439027092,0.847096,True,False,True,27,asid_47342,True,,,
+N-C11:0-aspartate,aspartate,11,short_medium_chain,C15H27N1O5,[M+H]+,302.1961994289,33440,302.1954,-2.6453969358518656,0.556406,True,True,True,18,asid_10211,False,,,
+N-C11:0-aspartate,aspartate,11,short_medium_chain,C15H27N1O5,[M+H]+,302.1961994289,47342,302.1956,-1.9835752439027092,0.847096,True,False,True,27,asid_47342,True,,,
+N-C13:0-serine,serine,13,long_chain,C16H31N1O4,[M+H]+,302.2325849344,33357,302.2316,-3.258862376451422,3.167404,True,False,True,11,asid_33357,True,,,
+N-C12:0-threonine,threonine,12,long_chain,C16H31N1O4,[M+H]+,302.2325849344,33357,302.2316,-3.258862376451422,3.167404,True,False,True,11,asid_33357,True,,,
+N-C12:0-homoserine,homoserine,12,long_chain,C16H31N1O4,[M+H]+,302.2325849344,33357,302.2316,-3.258862376451422,3.167404,True,False,True,11,asid_33357,True,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+H]+,303.17031903040004,3664,303.1654,-16.22530337333951,0.583748,True,True,False,54,asid_46105,False,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+H]+,303.17031903040004,48169,303.1697,-2.0418568745103816,1.190712,True,False,True,15,asid_48169,True,Dipeptides,"4-Isopropylphenyl (E)-3,6-dihydro-5-((methoxyimino)methyl)-1(2H)-pyridinecarboxylate",C17H22N2O3
+N-C8:0-histidine,histidine,8,short_medium_chain,C14H23N3O3,[M+Na]+,304.16316231559995,3047,304.1649,5.7130008341968095,0.878315,True,True,False,72,asid_5964,False,,,
+N-C8:0-histidine,histidine,8,short_medium_chain,C14H23N3O3,[M+Na]+,304.16316231559995,3545,304.1646,4.726688100933413,1.047,True,False,False,68,asid_1337,True,Dipeptides,Arginylglutamic acid,C13H22FN3O4
+N-C8:0-histidine,histidine,8,short_medium_chain,C14H23N3O3,[M+Na]+,304.16316231559995,3700,304.1631,-0.20487556575733437,0.706144,True,True,False,36,asid_4330,False,,,
+N-C8:0-histidine,histidine,8,short_medium_chain,C14H23N3O3,[M+Na]+,304.16316231559995,25520,304.1646,4.726688100933413,2.889179,True,False,True,12,asid_25520,True,,,
+N-C10:0-methionine,methionine,10,short_medium_chain,C15H29N1O3S1,[M+H]+,304.19409093850004,7833,304.1896,-14.763398217893249,4.037302,True,True,True,15,asid_3434,True,,,
+N-C10:0-methionine,methionine,10,short_medium_chain,C15H29N1O3S1,[M+H]+,304.19409093850004,8343,304.1898,-14.105923250547239,4.715069,True,False,False,23,asid_31513,True,N-acyl amines,"2-(Tetradeca-2,4-dienoylamino)acetic acid",C18H25NO3
+N-C12:0-cysteine,cysteine,12,long_chain,C15H29N1O3S1,[M+H]+,304.19409093850004,7833,304.1896,-14.763398217893249,4.037302,True,True,True,15,asid_3434,True,,,
+N-C12:0-cysteine,cysteine,12,long_chain,C15H29N1O3S1,[M+H]+,304.19409093850004,8343,304.1898,-14.105923250547239,4.715069,True,False,False,23,asid_31513,True,N-acyl amines,"2-(Tetradeca-2,4-dienoylamino)acetic acid",C18H25NO3
+N-C9:0-lysine,lysine,9,short_medium_chain,C15H30N2O3,[M+NH4]+,304.25946838650003,2259,304.2625,9.963908489137204,4.855,True,True,False,34,asid_402,False,N-acyl amines,"Hexadeca-2E,9Z,12Z,14E-Tetraenoic Acid Isobutylamide",C20H33NO
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+NH4]+,306.1812180675,41944,306.1799,-4.304860723888943,3.364313,True,False,True,10,asid_41944,True,,,
+N-C11:0-proline,proline,11,short_medium_chain,C16H29N1O3,[M+Na]+,306.2039644966,12279,306.2056,5.3412221578662855,4.704916,True,False,True,18,asid_12279,True,,,
+N-C9:0-phenylalanine,phenylalanine,9,short_medium_chain,C18H27N1O3,[M+H]+,306.2063701847,12279,306.2056,-2.515247150271736,4.704916,True,False,True,18,asid_12279,True,,,
+N-C10:0-leucine,leucine,10,short_medium_chain,C16H31N1O3,[M+Na]+,308.2196145604,49891,308.221,4.494975447958885,4.31121,True,False,True,8,asid_49891,True,Pyrrolidine alkaloids,"2-Undecyl-2-oxazoline-4,4-dimethanol",C18H29NO3
+N-C11:0-valine,valine,11,short_medium_chain,C16H31N1O3,[M+Na]+,308.2196145604,49891,308.221,4.494975447958885,4.31121,True,False,True,8,asid_49891,True,Pyrrolidine alkaloids,"2-Undecyl-2-oxazoline-4,4-dimethanol",C18H29NO3
+N-C14:0-glycine,glycine,14,long_chain,C16H31N1O3,[M+Na]+,308.2196145604,49891,308.221,4.494975447958885,4.31121,True,False,True,8,asid_49891,True,Pyrrolidine alkaloids,"2-Undecyl-2-oxazoline-4,4-dimethanol",C18H29NO3
+N-C13:0-alanine,alanine,13,long_chain,C16H31N1O3,[M+Na]+,308.2196145604,49891,308.221,4.494975447958885,4.31121,True,False,True,8,asid_49891,True,Pyrrolidine alkaloids,"2-Undecyl-2-oxazoline-4,4-dimethanol",C18H29NO3
+N-C10:0-isoleucine,isoleucine,10,short_medium_chain,C16H31N1O3,[M+Na]+,308.2196145604,49891,308.221,4.494975447958885,4.31121,True,False,True,8,asid_49891,True,Pyrrolidine alkaloids,"2-Undecyl-2-oxazoline-4,4-dimethanol",C18H29NO3
+N-C9:0-glutamine,glutamine,9,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,5525,309.1732,-17.071137142716584,0.601615,True,False,True,42,asid_5525,True,,,
+N-C9:0-glutamine,glutamine,9,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,8159,309.1733,-16.74769936460003,0.804329,True,False,True,61,asid_8159,True,,,
+N-C9:0-glutamine,glutamine,9,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,34788,309.1797,3.952318440190984,4.856,True,False,True,8,asid_34788,True,,,
+N-C9:0-glutamine,glutamine,9,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,37383,309.1797,3.952318440190984,3.656,True,False,True,24,asid_37383,True,,,
+N-C10:0-asparagine,asparagine,10,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,5525,309.1732,-17.071137142716584,0.601615,True,False,True,42,asid_5525,True,,,
+N-C10:0-asparagine,asparagine,10,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,8159,309.1733,-16.74769936460003,0.804329,True,False,True,61,asid_8159,True,,,
+N-C10:0-asparagine,asparagine,10,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,34788,309.1797,3.952318440190984,4.856,True,False,True,8,asid_34788,True,,,
+N-C10:0-asparagine,asparagine,10,short_medium_chain,C14H26N2O4,[M+Na]+,309.1784780282,37383,309.1797,3.952318440190984,3.656,True,False,True,24,asid_37383,True,,,
+N-C7:0-arginine,arginine,7,short_medium_chain,C13H26N4O3,[M+Na]+,309.18971141649996,5252,309.1881,-5.211740366645312,0.857499,True,False,False,27,asid_1009,False,,,
+N-C10:0-aspartate,aspartate,10,short_medium_chain,C14H25N1O5,[M+Na]+,310.16249361319996,572,310.1639,4.53435482695762,1.184254,True,False,True,128,asid_572,True,,,
+N-C9:0-glutamate,glutamate,9,short_medium_chain,C14H25N1O5,[M+Na]+,310.16249361319996,572,310.1639,4.53435482695762,1.184254,True,False,True,128,asid_572,True,,,
+N-C5:0-tryptophan,tryptophan,5,short_medium_chain,C16H20N2O3,[M+Na]+,311.1366132147,822,311.1381,4.77856104640097,2.183,True,False,False,101,asid_15555,True,,,
+N-C13:0-proline,proline,13,long_chain,C18H33N1O3,[M+H]+,312.25332037609996,35854,312.252,-4.228541423880287,4.893,True,False,True,35,asid_35854,True,,,
+N-C8:0-phenylalanine,phenylalanine,8,short_medium_chain,C17H25N1O3,[M+Na]+,314.17266436899996,47426,314.1704,-7.207402988213619,1.141781,True,False,False,22,asid_47426,False,,,
+N-C12:0-isoleucine,isoleucine,12,long_chain,C18H35N1O3,[M+H]+,314.2689704399,16741,314.2676,-4.360722912140566,5.384,True,False,True,6,asid_16741,True,N-acyl amines,Elmiric Acid,C18H35NO3
+N-C12:0-leucine,leucine,12,long_chain,C18H35N1O3,[M+H]+,314.2689704399,16741,314.2676,-4.360722912140566,5.384,True,False,True,6,asid_16741,True,N-acyl amines,Elmiric Acid,C18H35NO3
+N-C16:0-glycine,glycine,16,long_chain,C18H35N1O3,[M+H]+,314.2689704399,16741,314.2676,-4.360722912140566,5.384,True,False,True,6,asid_16741,True,N-acyl amines,Elmiric Acid,C18H35NO3
+N-C15:0-alanine,alanine,15,long_chain,C18H35N1O3,[M+H]+,314.2689704399,16741,314.2676,-4.360722912140566,5.384,True,False,True,6,asid_16741,True,N-acyl amines,Elmiric Acid,C18H35NO3
+N-C13:0-valine,valine,13,long_chain,C18H35N1O3,[M+H]+,314.2689704399,16741,314.2676,-4.360722912140566,5.384,True,False,True,6,asid_16741,True,N-acyl amines,Elmiric Acid,C18H35NO3
+N-C12:0-asparagine,asparagine,12,long_chain,C16H30N2O4,[M+H]+,315.2278339077,18425,315.231,10.043822148347179,5.576,True,True,True,7,asid_6025,True,Abietane diterpenoids,"5,9-dimethyl-14,15-dimethylidenetetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecane-5-carboxylic acid",C21H30O2
+N-C12:0-asparagine,asparagine,12,long_chain,C16H30N2O4,[M+H]+,315.2278339077,29630,315.2308,9.409360408318218,6.28703,True,True,False,7,asid_26126,False,,,
+N-C11:0-glutamine,glutamine,11,short_medium_chain,C16H30N2O4,[M+H]+,315.2278339077,18425,315.231,10.043822148347179,5.576,True,True,True,7,asid_6025,True,Abietane diterpenoids,"5,9-dimethyl-14,15-dimethylidenetetracyclo[11.2.1.0¹,¹⁰.0⁴,⁹]hexadecane-5-carboxylic acid",C21H30O2
+N-C11:0-glutamine,glutamine,11,short_medium_chain,C16H30N2O4,[M+H]+,315.2278339077,29630,315.2308,9.409360408318218,6.28703,True,True,False,7,asid_26126,False,,,
+N-C12:0-proline,proline,12,long_chain,C17H31N1O3,[M+NH4]+,315.2642194132,18300,315.2632,-3.233520130904641,3.524536,True,False,True,9,asid_18300,False,,,
+N-C11:0-lysine,lysine,11,short_medium_chain,C17H34N2O3,[M+H]+,315.2642194132,18300,315.2632,-3.233520130904641,3.524536,True,False,True,9,asid_18300,False,,,
+N-C12:0-aspartate,aspartate,12,long_chain,C16H29N1O5,[M+H]+,316.2118494927,9771,316.2112,-2.053979637538039,0.611523,True,False,True,28,asid_9771,True,,,
+N-C12:0-aspartate,aspartate,12,long_chain,C16H29N1O5,[M+H]+,316.2118494927,11671,316.2112,-2.053979637538039,0.867074,True,False,False,49,asid_8461,True,Polyamines,"3,6,9,12,15-Pentaazaheptadecane-1,17-diol",C16H29NO5
+N-C11:0-glutamate,glutamate,11,short_medium_chain,C16H29N1O5,[M+H]+,316.2118494927,9771,316.2112,-2.053979637538039,0.611523,True,False,True,28,asid_9771,True,,,
+N-C11:0-glutamate,glutamate,11,short_medium_chain,C16H29N1O5,[M+H]+,316.2118494927,11671,316.2112,-2.053979637538039,0.867074,True,False,False,49,asid_8461,True,Polyamines,"3,6,9,12,15-Pentaazaheptadecane-1,17-diol",C16H29NO5
+N-C7:0-tryptophan,tryptophan,7,short_medium_chain,C18H24N2O3,[M+H]+,317.1859690942,16004,317.1892,10.186156119232955,0.799523,True,False,True,48,asid_16004,True,,,
+N-C14:0-alanine,alanine,14,long_chain,C17H33N1O3,[M+NH4]+,317.27986947700003,26566,317.283,9.866755823941602,5.549,True,False,False,7,asid_8985,False,Fatty alcohols,"3,7,11,15-tetramethylhexadec-1-yn-3-ol",C22H36O
+N-C12:0-valine,valine,12,long_chain,C17H33N1O3,[M+NH4]+,317.27986947700003,26566,317.283,9.866755823941602,5.549,True,False,False,7,asid_8985,False,Fatty alcohols,"3,7,11,15-tetramethylhexadec-1-yn-3-ol",C22H36O
+N-C11:0-leucine,leucine,11,short_medium_chain,C17H33N1O3,[M+NH4]+,317.27986947700003,26566,317.283,9.866755823941602,5.549,True,False,False,7,asid_8985,False,Fatty alcohols,"3,7,11,15-tetramethylhexadec-1-yn-3-ol",C22H36O
+N-C15:0-glycine,glycine,15,long_chain,C17H33N1O3,[M+NH4]+,317.27986947700003,26566,317.283,9.866755823941602,5.549,True,False,False,7,asid_8985,False,Fatty alcohols,"3,7,11,15-tetramethylhexadec-1-yn-3-ol",C22H36O
+N-C11:0-isoleucine,isoleucine,11,short_medium_chain,C17H33N1O3,[M+NH4]+,317.27986947700003,26566,317.283,9.866755823941602,5.549,True,False,False,7,asid_8985,False,Fatty alcohols,"3,7,11,15-tetramethylhexadec-1-yn-3-ol",C22H36O
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,939,318.1805,5.3040005630891205,1.402907,True,True,True,25,asid_816,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,965,318.1806,5.618289246499317,1.521703,True,True,False,20,asid_2765,False,Dipeptides,,C17H23N3O3
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,1014,318.1805,5.3040005630891205,1.235037,True,False,True,81,asid_1014,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,1284,318.1802,4.361134513215838,1.392854,True,False,False,26,asid_1284,False,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,1437,318.1801,4.046845829805642,1.409275,True,True,False,25,asid_816,False,Dipeptides,2-[2-amino-3-(1H-indol-3-yl)propanamido]-4-methylpentanoic acid,C17H23N3O3
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,1583,318.1805,5.3040005630891205,1.559,True,True,False,21,asid_2058,False,Dipeptides,,C14H27N3O3S
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,2640,318.1803,4.6754231964473805,1.684723,True,False,False,30,asid_2640,True,Dipeptides,2-(2-amino-4-methylpentanamido)-3-(1H-indol-3-yl)propanoic acid,C17H23N3O3
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,3082,318.1801,4.046845829805642,1.713,True,True,True,142,asid_10935,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,6284,318.1803,4.6754231964473805,2.001409,True,True,True,104,asid_14545,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,7092,318.1839,15.989815795641386,0.53855,True,False,True,40,asid_7092,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,8676,318.1803,4.6754231964473805,2.103,True,False,True,88,asid_8676,True,,,
+N-C9:0-histidine,histidine,9,short_medium_chain,C15H25N3O3,[M+Na]+,318.1788123794,17199,318.1843,17.246970528924866,0.77605,True,False,True,62,asid_17199,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+H]+,318.2097410023,8933,318.2051,-14.584727310271795,4.036786,True,True,True,10,asid_3434,False,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+H]+,318.2097410023,11986,318.2056,-13.013436631321264,4.724065,True,False,True,20,asid_11986,True,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+H]+,318.2097410023,8933,318.2051,-14.584727310271795,4.036786,True,True,True,10,asid_3434,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+H]+,318.2097410023,11986,318.2056,-13.013436631321264,4.724065,True,False,True,20,asid_11986,True,,,
+N-C11:0-asparagine,asparagine,11,short_medium_chain,C15H28N2O4,[M+NH4]+,318.2387329448,3221,318.2392,1.4676252499333504,5.110988,True,False,True,49,asid_3221,True,,,
+N-C10:0-glutamine,glutamine,10,short_medium_chain,C15H28N2O4,[M+NH4]+,318.2387329448,3221,318.2392,1.4676252499333504,5.110988,True,False,True,49,asid_3221,True,,,
+N-C10:0-glutamate,glutamate,10,short_medium_chain,C15H27N1O5,[M+NH4]+,319.2227485298,22315,319.2237,2.9805839476521143,5.109518,True,False,True,42,asid_22315,True,,,
+N-C11:0-aspartate,aspartate,11,short_medium_chain,C15H27N1O5,[M+NH4]+,319.2227485298,22315,319.2237,2.9805839476521143,5.109518,True,False,True,42,asid_22315,True,,,
+N-C11:0-asparagine,asparagine,11,short_medium_chain,C15H28N2O4,[M+Na]+,323.19412809199997,48182,323.1954,3.9354304100262705,4.102,True,False,True,22,asid_48182,True,,,
+N-C10:0-glutamine,glutamine,10,short_medium_chain,C15H28N2O4,[M+Na]+,323.19412809199997,48182,323.1954,3.9354304100262705,4.102,True,False,True,22,asid_48182,True,,,
+N-C11:0-aspartate,aspartate,11,short_medium_chain,C15H27N1O5,[M+Na]+,324.178143677,27258,324.1794,3.875409322038207,3.478422,True,False,True,14,asid_27258,True,,,
+N-C11:0-aspartate,aspartate,11,short_medium_chain,C15H27N1O5,[M+Na]+,324.178143677,37662,324.1794,3.875409322038207,3.546549,True,False,True,9,asid_37662,True,,,
+N-C10:0-glutamate,glutamate,10,short_medium_chain,C15H27N1O5,[M+Na]+,324.178143677,27258,324.1794,3.875409322038207,3.478422,True,False,True,14,asid_27258,True,,,
+N-C10:0-glutamate,glutamate,10,short_medium_chain,C15H27N1O5,[M+Na]+,324.178143677,37662,324.1794,3.875409322038207,3.546549,True,False,True,9,asid_37662,True,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+Na]+,325.1522632785,10880,325.1535,3.8035149671813158,3.541,True,True,True,26,asid_7573,True,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+Na]+,325.1522632785,12071,325.1538,4.726159628967295,3.201,True,False,True,14,asid_12071,True,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+Na]+,325.1522632785,12191,325.1538,4.726159628967295,3.349222,True,False,True,12,asid_12191,True,,,
+N-C6:0-tryptophan,tryptophan,6,short_medium_chain,C17H22N2O3,[M+Na]+,325.1522632785,12987,325.1539,5.0337078496791685,3.651791,True,False,True,25,asid_12987,True,,,
+N-C8:0-tyrosine,tyrosine,8,short_medium_chain,C17H25N1O4,[M+NH4]+,325.2121838439,5113,325.2061,-18.707306190351833,0.532218,True,False,False,48,asid_28862,True,,,
+N-C14:0-proline,proline,14,long_chain,C19H35N1O3,[M+H]+,326.2689704399,1502,326.2679,-3.28085106759406,7.568,True,True,False,24,asid_2103,False,N-acyl amines,,C19H35NO3
+N-C14:0-proline,proline,14,long_chain,C19H35N1O3,[M+H]+,326.2689704399,27571,326.2678,-3.587346655697552,4.847014,True,False,True,103,asid_27571,True,,,
+N-C16:0-alanine,alanine,16,long_chain,C19H37N1O3,[M+H]+,328.2846205037,7827,328.2834,-3.717821743118005,5.409,True,False,True,9,asid_7827,True,N-acyl amines,Palmitoyl sarcosine,C19H37NO3
+N-C14:0-valine,valine,14,long_chain,C19H37N1O3,[M+H]+,328.2846205037,7827,328.2834,-3.717821743118005,5.409,True,False,True,9,asid_7827,True,N-acyl amines,Palmitoyl sarcosine,C19H37NO3
+N-C13:0-leucine,leucine,13,long_chain,C19H37N1O3,[M+H]+,328.2846205037,7827,328.2834,-3.717821743118005,5.409,True,False,True,9,asid_7827,True,N-acyl amines,Palmitoyl sarcosine,C19H37NO3
+N-C17:0-glycine,glycine,17,long_chain,C19H37N1O3,[M+H]+,328.2846205037,7827,328.2834,-3.717821743118005,5.409,True,False,True,9,asid_7827,True,N-acyl amines,Palmitoyl sarcosine,C19H37NO3
+N-C13:0-isoleucine,isoleucine,13,long_chain,C19H37N1O3,[M+H]+,328.2846205037,7827,328.2834,-3.717821743118005,5.409,True,False,True,9,asid_7827,True,N-acyl amines,Palmitoyl sarcosine,C19H37NO3
+N-C10:0-arginine,arginine,10,short_medium_chain,C16H32N4O3,[M+H]+,329.2547173598,15922,329.2542,-1.5713056569698807,3.074599,True,False,True,15,asid_15922,True,,,
+N-C8:0-tyrosine,tyrosine,8,short_medium_chain,C17H25N1O4,[M+Na]+,330.16757899109996,31101,330.1653,-6.90252842789801,1.306267,True,False,True,6,asid_31101,True,,,
+N-C8:0-tryptophan,tryptophan,8,short_medium_chain,C19H26N2O3,[M+H]+,331.20161915799997,10873,331.1964,-15.758250256315044,1.152235,True,False,True,16,asid_10873,True,Tripeptides,2-[[2-[2-[(2-Amino-3-methylpentanoyl)amino]propanoylamino]acetyl]amino]propanoic acid,C12H28N4O5
+N-C14:0-cysteine,cysteine,14,long_chain,C17H33N1O3S1,[M+H]+,332.22539106610003,10712,332.2211,-12.91612927682028,4.724065,True,False,False,19,asid_10712,True,,,
+N-C14:0-cysteine,cysteine,14,long_chain,C17H33N1O3S1,[M+H]+,332.22539106610003,29652,332.2212,-12.61512880328379,4.665908,True,False,True,6,asid_29652,True,,,
+N-C12:0-methionine,methionine,12,long_chain,C17H33N1O3S1,[M+H]+,332.22539106610003,10712,332.2211,-12.91612927682028,4.724065,True,False,False,19,asid_10712,True,,,
+N-C12:0-methionine,methionine,12,long_chain,C17H33N1O3S1,[M+H]+,332.22539106610003,29652,332.2212,-12.61512880328379,4.665908,True,False,True,6,asid_29652,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,4625,335.236,-0.8653693188772265,3.636708,True,True,False,80,asid_1828,False,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,9538,335.2359,-1.163666379568698,4.152397,True,False,False,8,asid_6362,False,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,17344,335.2359,-1.163666379568698,3.866372,True,True,True,28,asid_33638,True,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,4625,335.236,-0.8653693188772265,3.636708,True,True,False,80,asid_1828,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,9538,335.2359,-1.163666379568698,4.152397,True,False,False,8,asid_6362,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+NH4]+,335.2362901032,17344,335.2359,-1.163666379568698,3.866372,True,True,True,28,asid_33638,True,,,
+N-C13:0-valine,valine,13,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,15638,336.2525,4.71466970283936,4.815091,True,False,False,11,asid_11364,False,Nitro fatty acids,Elmiric Acid,C20H33NO3
+N-C13:0-valine,valine,13,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,38425,336.2494,-4.504636073307206,4.2755,True,False,True,24,asid_38425,True,,,
+N-C12:0-isoleucine,isoleucine,12,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,15638,336.2525,4.71466970283936,4.815091,True,False,False,11,asid_11364,False,Nitro fatty acids,Elmiric Acid,C20H33NO3
+N-C12:0-isoleucine,isoleucine,12,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,38425,336.2494,-4.504636073307206,4.2755,True,False,True,24,asid_38425,True,,,
+N-C12:0-leucine,leucine,12,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,15638,336.2525,4.71466970283936,4.815091,True,False,False,11,asid_11364,False,Nitro fatty acids,Elmiric Acid,C20H33NO3
+N-C12:0-leucine,leucine,12,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,38425,336.2494,-4.504636073307206,4.2755,True,False,True,24,asid_38425,True,,,
+N-C16:0-glycine,glycine,16,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,15638,336.2525,4.71466970283936,4.815091,True,False,False,11,asid_11364,False,Nitro fatty acids,Elmiric Acid,C20H33NO3
+N-C16:0-glycine,glycine,16,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,38425,336.2494,-4.504636073307206,4.2755,True,False,True,24,asid_38425,True,,,
+N-C15:0-alanine,alanine,15,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,15638,336.2525,4.71466970283936,4.815091,True,False,False,11,asid_11364,False,Nitro fatty acids,Elmiric Acid,C20H33NO3
+N-C15:0-alanine,alanine,15,long_chain,C18H35N1O3,[M+Na]+,336.25091468799997,38425,336.2494,-4.504636073307206,4.2755,True,False,True,24,asid_38425,True,,,
+N-C11:0-lysine,lysine,11,short_medium_chain,C17H34N2O3,[M+Na]+,337.2461636613,339,337.2512,14.933716799971691,4.036786,True,True,False,140,asid_3434,False,,,
+N-C11:0-lysine,lysine,11,short_medium_chain,C17H34N2O3,[M+Na]+,337.2461636613,6544,337.2516,16.119794042988172,4.56495,True,True,False,20,asid_41224,False,,,
+N-C11:0-lysine,lysine,11,short_medium_chain,C17H34N2O3,[M+Na]+,337.2461636613,11046,337.2516,16.119794042988172,4.245467,True,True,True,17,asid_27218,True,,,
+N-C10:0-phenylalanine,phenylalanine,10,short_medium_chain,C19H29N1O3,[M+NH4]+,337.2485693494,339,337.2512,7.80033138486486,4.036786,True,True,False,140,asid_3434,False,,,
+N-C10:0-phenylalanine,phenylalanine,10,short_medium_chain,C19H29N1O3,[M+NH4]+,337.2485693494,6544,337.2516,8.986400167261579,4.56495,True,True,False,20,asid_41224,False,,,
+N-C10:0-phenylalanine,phenylalanine,10,short_medium_chain,C19H29N1O3,[M+NH4]+,337.2485693494,11046,337.2516,8.986400167261579,4.245467,True,True,True,17,asid_27218,True,,,
+N-C7:0-tryptophan,tryptophan,7,short_medium_chain,C18H24N2O3,[M+Na]+,339.1679133423,19784,339.1693,4.088410623439716,2.893692,True,False,True,7,asid_19784,True,,,
+N-C7:0-tryptophan,tryptophan,7,short_medium_chain,C18H24N2O3,[M+Na]+,339.1679133423,22741,339.1689,2.9090537790038313,3.056876,True,False,True,7,asid_22741,True,,,
+N-C7:0-tryptophan,tryptophan,7,short_medium_chain,C18H24N2O3,[M+Na]+,339.1679133423,33435,339.1693,4.088410623439716,2.995447,True,True,True,10,asid_15863,False,,,
+N-C7:0-tryptophan,tryptophan,7,short_medium_chain,C18H24N2O3,[M+Na]+,339.1679133423,37776,339.1698,5.562606678900774,3.152503,True,False,True,9,asid_37776,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1568,340.1911,-1.7203548039343015,1.773812,True,True,True,43,asid_5662,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1664,340.1914,-0.8384990355879336,1.698302,True,True,False,100,asid_1884,False,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1748,340.1914,-0.8384990355879336,1.717703,True,True,True,16,asid_1884,False,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,2055,340.1913,-1.132450958314359,1.853103,True,False,False,29,asid_1413,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,11201,340.1859,-17.005854789551538,2.664,True,True,True,21,asid_13534,True,,,
+N-C11:0-methionine,methionine,11,short_medium_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,44189,340.1857,-17.59375863517148,1.570665,True,False,False,36,asid_44189,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1568,340.1911,-1.7203548039343015,1.773812,True,True,True,43,asid_5662,True,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1664,340.1914,-0.8384990355879336,1.698302,True,True,False,100,asid_1884,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,1748,340.1914,-0.8384990355879336,1.717703,True,True,True,16,asid_1884,False,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,2055,340.1913,-1.132450958314359,1.853103,True,False,False,29,asid_1413,True,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,11201,340.1859,-17.005854789551538,2.664,True,True,True,21,asid_13534,True,,,
+N-C13:0-cysteine,cysteine,13,long_chain,C16H31N1O3S1,[M+Na]+,340.1916852504,44189,340.1857,-17.59375863517148,1.570665,True,False,False,36,asid_44189,False,,,
+N-C15:0-proline,proline,15,long_chain,C20H37N1O3,[M+H]+,340.2846205037,11195,340.2914,19.923017061314955,7.552,True,False,True,15,asid_3144,True,Dipeptides,"1-[(2S,3S,4S)-4-ethyl-2-(hydroxymethyl)-3-[(4-methylpiperazin-1-yl)methyl]pyrrolidin-1-yl]-3,3-dimethylbutan-1-one",C19H37N3O2
+N-C15:0-proline,proline,15,long_chain,C20H37N1O3,[M+H]+,340.2846205037,32077,340.2833,-3.8805858991221687,4.181147,True,False,False,17,asid_4583,False,,,
+N-C15:0-proline,proline,15,long_chain,C20H37N1O3,[M+H]+,340.2846205037,47309,340.2837,-2.7050993331375355,4.668174,True,True,False,26,asid_15057,False,Sphingoid bases,Phytosphingosine,C20H37NO3
+N-C11:0-histidine,histidine,11,short_medium_chain,C17H29N3O3,[M+NH4]+,341.2547173598,19887,341.2501,-13.530537645737587,5.018,True,False,True,34,asid_19887,True,,,
+N-C10:0-phenylalanine,phenylalanine,10,short_medium_chain,C19H29N1O3,[M+Na]+,342.20396449659995,5263,342.2011,-8.370728855139118,1.939621,True,False,False,95,asid_5263,False,Tripeptides,Cyclo(L-Leu-L-Leu-L-betaAsp-),C16H27N3O5
+N-C10:0-phenylalanine,phenylalanine,10,short_medium_chain,C19H29N1O3,[M+Na]+,342.20396449659995,52820,342.2012,-8.078505472742004,1.830877,True,False,True,6,asid_52820,True,,,
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+H]+,342.3002705675,854,342.299,-3.711850703168236,5.111222,True,False,False,18,asid_690,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+H]+,342.3002705675,971,342.2991,-3.4197095375595983,5.272875,True,True,False,48,asid_1069,True,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+H]+,342.3002705675,3363,342.2991,-3.4197095375595983,5.376,True,True,True,8,asid_5310,False,N-acyl amines,N-Palmitoyl GABA,C20H39NO3
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+H]+,342.3002705675,7982,342.2991,-3.4197095375595983,4.698049,True,False,False,16,asid_7831,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,854,342.299,-3.711850703168236,5.111222,True,False,False,18,asid_690,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,971,342.2991,-3.4197095375595983,5.272875,True,True,False,48,asid_1069,True,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,3363,342.2991,-3.4197095375595983,5.376,True,True,True,8,asid_5310,False,N-acyl amines,N-Palmitoyl GABA,C20H39NO3
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,7982,342.2991,-3.4197095375595983,4.698049,True,False,False,16,asid_7831,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+H]+,342.3002705675,854,342.299,-3.711850703168236,5.111222,True,False,False,18,asid_690,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+H]+,342.3002705675,971,342.2991,-3.4197095375595983,5.272875,True,True,False,48,asid_1069,True,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+H]+,342.3002705675,3363,342.2991,-3.4197095375595983,5.376,True,True,True,8,asid_5310,False,N-acyl amines,N-Palmitoyl GABA,C20H39NO3
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+H]+,342.3002705675,7982,342.2991,-3.4197095375595983,4.698049,True,False,False,16,asid_7831,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,854,342.299,-3.711850703168236,5.111222,True,False,False,18,asid_690,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,971,342.2991,-3.4197095375595983,5.272875,True,True,False,48,asid_1069,True,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,3363,342.2991,-3.4197095375595983,5.376,True,True,True,8,asid_5310,False,N-acyl amines,N-Palmitoyl GABA,C20H39NO3
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+H]+,342.3002705675,7982,342.2991,-3.4197095375595983,4.698049,True,False,False,16,asid_7831,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+H]+,342.3002705675,854,342.299,-3.711850703168236,5.111222,True,False,False,18,asid_690,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+H]+,342.3002705675,971,342.2991,-3.4197095375595983,5.272875,True,True,False,48,asid_1069,True,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+H]+,342.3002705675,3363,342.2991,-3.4197095375595983,5.376,True,True,True,8,asid_5310,False,N-acyl amines,N-Palmitoyl GABA,C20H39NO3
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+H]+,342.3002705675,7982,342.2991,-3.4197095375595983,4.698049,True,False,False,16,asid_7831,False,Ceramides,"N-(1,3-dihydroxyoctadec-4-en-2-yl)acetamide",C20H39NO3
+N-C14:0-proline,proline,14,long_chain,C19H35N1O3,[M+NH4]+,343.2955195408,3254,343.2944,-3.261157621580362,4.357783,True,False,False,42,asid_3254,False,N-acyl amines,"2-[Dimethyl-[3-(2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosadeuteriododecanoylamino)propyl]azaniumyl]acetate",C19H38N2O3
+N-C13:0-lysine,lysine,13,long_chain,C19H38N2O3,[M+H]+,343.2955195408,3254,343.2944,-3.261157621580362,4.357783,True,False,False,42,asid_3254,False,N-acyl amines,"2-[Dimethyl-[3-(2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosadeuteriododecanoylamino)propyl]azaniumyl]acetate",C19H38N2O3
+N-C9:0-tyrosine,tyrosine,9,short_medium_chain,C18H27N1O4,[M+Na]+,344.1832290549,23384,344.181,-6.476361169949613,1.398714,True,False,False,8,asid_23384,False,,,
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+H]+,345.2172692218,5684,345.2127,-13.23578571347656,0.586599,True,False,True,57,asid_5684,True,Tripeptides,"2-[[2-[(2,4-Diamino-4-oxobutanoyl)amino]-3-methylbutanoyl]amino]-4-methylpentanoic acid",C15H28N4O5
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+H]+,345.2172692218,13246,345.2126,-13.525458359924176,0.568,True,False,True,10,asid_13246,True,,,
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+H]+,345.2172692218,21055,345.2124,-14.104803652984067,1.485,True,False,True,26,asid_21055,True,Dipeptides,2-[[2-[[2-[(2-Amino-3-methylbutanoyl)amino]-3-methylpentanoyl]amino]acetyl]amino]acetic acid,C15H28N4O5
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+H]+,345.2172692218,26797,345.2123,-14.394476299431684,1.314,True,False,True,17,asid_26797,True,Dipeptides,H-Ala-Ile-Ala-Ser-al,C15H28N4O5
+N-C12:0-glutamate,glutamate,12,long_chain,C17H31N1O5,[M+NH4]+,347.2540486574,2654,347.2569,8.211114056097855,5.3765,True,True,False,40,asid_3577,False,Labdane diterpenoids,"13Z-Labdene-8Alpha,15,16-Triol",C22H34O3
+N-C12:0-glutamate,glutamate,12,long_chain,C17H31N1O5,[M+NH4]+,347.2540486574,5866,347.2568,7.923140451869102,5.255,True,False,False,36,asid_1036,True,Catechols with side chains,Ginkgoic Acid,C22H34O3
+N-C13:0-aspartate,aspartate,13,long_chain,C17H31N1O5,[M+NH4]+,347.2540486574,2654,347.2569,8.211114056097855,5.3765,True,True,False,40,asid_3577,False,Labdane diterpenoids,"13Z-Labdene-8Alpha,15,16-Triol",C22H34O3
+N-C13:0-aspartate,aspartate,13,long_chain,C17H31N1O5,[M+NH4]+,347.2540486574,5866,347.2568,7.923140451869102,5.255,True,False,False,36,asid_1036,True,Catechols with side chains,Ginkgoic Acid,C22H34O3
+N-C14:0-proline,proline,14,long_chain,C19H35N1O3,[M+Na]+,348.25091468799997,6223,348.2518,2.5421670488069674,5.197248,True,True,True,28,asid_240,True,N-acyl amines,,C21H33NO3
+N-C12:0-phenylalanine,phenylalanine,12,long_chain,C21H33N1O3,[M+H]+,348.2533203761,6223,348.2518,-4.365718892144479,5.197248,True,True,True,28,asid_240,True,N-acyl amines,,C21H33NO3
+N-C14:0-valine,valine,14,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,7044,350.2677,3.2410978216122364,5.418,True,True,True,40,asid_427,True,Aminoacids,"3-methyl-4-(15-oxohexadecyl)-2,5-dihydro-1H-pyrrole-2,5-dione",C21H35NO3
+N-C14:0-valine,valine,14,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,17748,350.2677,3.2410978216122364,5.23471,True,False,True,23,asid_17748,True,,,
+N-C14:0-valine,valine,14,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,23781,350.2677,3.2410978216122364,5.301605,True,True,True,17,asid_1322,False,N-acyl amines,2-heptadecanamidoacetic acid,C21H35NO3
+N-C13:0-leucine,leucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,7044,350.2677,3.2410978216122364,5.418,True,True,True,40,asid_427,True,Aminoacids,"3-methyl-4-(15-oxohexadecyl)-2,5-dihydro-1H-pyrrole-2,5-dione",C21H35NO3
+N-C13:0-leucine,leucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,17748,350.2677,3.2410978216122364,5.23471,True,False,True,23,asid_17748,True,,,
+N-C13:0-leucine,leucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,23781,350.2677,3.2410978216122364,5.301605,True,True,True,17,asid_1322,False,N-acyl amines,2-heptadecanamidoacetic acid,C21H35NO3
+N-C17:0-glycine,glycine,17,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,7044,350.2677,3.2410978216122364,5.418,True,True,True,40,asid_427,True,Aminoacids,"3-methyl-4-(15-oxohexadecyl)-2,5-dihydro-1H-pyrrole-2,5-dione",C21H35NO3
+N-C17:0-glycine,glycine,17,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,17748,350.2677,3.2410978216122364,5.23471,True,False,True,23,asid_17748,True,,,
+N-C17:0-glycine,glycine,17,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,23781,350.2677,3.2410978216122364,5.301605,True,True,True,17,asid_1322,False,N-acyl amines,2-heptadecanamidoacetic acid,C21H35NO3
+N-C13:0-isoleucine,isoleucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,7044,350.2677,3.2410978216122364,5.418,True,True,True,40,asid_427,True,Aminoacids,"3-methyl-4-(15-oxohexadecyl)-2,5-dihydro-1H-pyrrole-2,5-dione",C21H35NO3
+N-C13:0-isoleucine,isoleucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,17748,350.2677,3.2410978216122364,5.23471,True,False,True,23,asid_17748,True,,,
+N-C13:0-isoleucine,isoleucine,13,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,23781,350.2677,3.2410978216122364,5.301605,True,True,True,17,asid_1322,False,N-acyl amines,2-heptadecanamidoacetic acid,C21H35NO3
+N-C16:0-alanine,alanine,16,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,7044,350.2677,3.2410978216122364,5.418,True,True,True,40,asid_427,True,Aminoacids,"3-methyl-4-(15-oxohexadecyl)-2,5-dihydro-1H-pyrrole-2,5-dione",C21H35NO3
+N-C16:0-alanine,alanine,16,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,17748,350.2677,3.2410978216122364,5.23471,True,False,True,23,asid_17748,True,,,
+N-C16:0-alanine,alanine,16,long_chain,C19H37N1O3,[M+Na]+,350.2665647518,23781,350.2677,3.2410978216122364,5.301605,True,True,True,17,asid_1322,False,N-acyl amines,2-heptadecanamidoacetic acid,C21H35NO3
+N-C8:0-tryptophan,tryptophan,8,short_medium_chain,C19H26N2O3,[M+Na]+,353.18356340609995,28967,353.1806,-8.390554960553036,3.061373,True,False,True,7,asid_28967,True,Tripeptides,2-[2-[2-(2-Aminopropanoylamino)propanoylamino]propanoylamino]-3-methylbutanoic acid,C16H24N4O5
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+NH4]+,353.2434839715,2717,353.2463,7.9719191657122614,4.161404,True,False,False,96,asid_6362,True,,,
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+NH4]+,353.2434839715,6680,353.2464,8.25501002092239,3.636708,True,True,False,24,asid_1828,False,,,
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+NH4]+,353.2434839715,18760,353.2465,8.53810087629344,3.855751,True,True,True,25,asid_3287,True,,,
+N-C16:0-proline,proline,16,long_chain,C21H39N1O3,[M+H]+,354.3002705675,17038,354.2988,-4.150624829032641,5.442,True,False,True,27,asid_17038,True,N-acyl amines,,C21H39NO3
+N-C16:0-proline,proline,16,long_chain,C21H39N1O3,[M+H]+,354.3002705675,27695,354.2991,-3.3038854249079628,4.908152,True,False,True,8,asid_27695,True,Ceramides,"N-[(E,2S,3R)-1,3-dihydroxyoctadec-4-en-2-yl]prop-2-enamide",C21H39NO3
+N-C16:0-proline,proline,16,long_chain,C21H39N1O3,[M+H]+,354.3002705675,39955,354.299,-3.586131893056481,4.683,True,False,True,6,asid_39955,True,Ceramides,"N-(1,3-dihydroxypropan-2-yl)octadeca-9,12-dienamide",C21H39NO3
+N-C11:0-phenylalanine,phenylalanine,11,short_medium_chain,C20H31N1O3,[M+Na]+,356.2196145604,2212,356.2168,-7.901194333363017,2.488016,True,True,False,66,asid_11579,False,Tripeptides,(2S)-2-[[2-[2-(cyclopentanecarbonylamino)propanoylamino]acetyl]amino]-4-methylpentanoic acid,C17H29N3O5
+N-C11:0-phenylalanine,phenylalanine,11,short_medium_chain,C20H31N1O3,[M+Na]+,356.2196145604,4384,356.2173,-6.497565842377041,2.354404,True,False,False,15,asid_4384,False,,,
+N-C15:0-isoleucine,isoleucine,15,long_chain,C21H41N1O3,[M+H]+,356.3159206313,15502,356.3147,-3.4256995809333004,5.21165,True,False,False,7,asid_10684,False,,,
+N-C15:0-leucine,leucine,15,long_chain,C21H41N1O3,[M+H]+,356.3159206313,15502,356.3147,-3.4256995809333004,5.21165,True,False,False,7,asid_10684,False,,,
+N-C18:0-alanine,alanine,18,long_chain,C21H41N1O3,[M+H]+,356.3159206313,15502,356.3147,-3.4256995809333004,5.21165,True,False,False,7,asid_10684,False,,,
+N-C16:0-valine,valine,16,long_chain,C21H41N1O3,[M+H]+,356.3159206313,15502,356.3147,-3.4256995809333004,5.21165,True,False,False,7,asid_10684,False,,,
+N-C14:0-glutamine,glutamine,14,long_chain,C19H36N2O4,[M+H]+,357.2747840991,752,357.2776,7.881611088597992,4.959,True,True,False,71,asid_7500,False,,,
+N-C14:0-glutamine,glutamine,14,long_chain,C19H36N2O4,[M+H]+,357.2747840991,1697,357.2776,7.881611088597992,4.925,True,False,True,13,asid_1697,True,,,
+N-C15:0-asparagine,asparagine,15,long_chain,C19H36N2O4,[M+H]+,357.2747840991,752,357.2776,7.881611088597992,4.959,True,True,False,71,asid_7500,False,,,
+N-C15:0-asparagine,asparagine,15,long_chain,C19H36N2O4,[M+H]+,357.2747840991,1697,357.2776,7.881611088597992,4.925,True,False,True,13,asid_1697,True,,,
+N-C14:0-lysine,lysine,14,long_chain,C20H40N2O3,[M+H]+,357.3111696046,23414,357.31,-3.273350232282829,5.058,True,False,True,7,asid_23414,True,,,
+N-C15:0-proline,proline,15,long_chain,C20H37N1O3,[M+NH4]+,357.3111696046,23414,357.31,-3.273350232282829,5.058,True,False,True,7,asid_23414,True,,,
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+Na]+,358.19887911869995,18173,358.1965,-6.641893201308111,0.640262,True,False,True,34,asid_18173,True,Dipeptides,2-[[1-(2-Amino-4-methylpentanoyl)pyrrolidine-2-carbonyl]amino]pentanedioic acid,C16H27N3O6
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+Na]+,358.19887911869995,31429,358.1961,-7.758591279753875,3.222006,True,False,True,30,asid_31429,True,Tripeptides,2-[[4-Carboxy-2-(pyrrolidine-2-carbonylamino)butanoyl]amino]-4-methylpentanoic acid,C16H27N3O6
+N-C10:0-tyrosine,tyrosine,10,short_medium_chain,C19H29N1O4,[M+Na]+,358.19887911869995,52879,358.196,-8.03776579928597,3.342,True,False,True,7,asid_52879,True,,,
+N-C15:0-aspartate,aspartate,15,long_chain,C19H35N1O5,[M+H]+,358.2587996841,36258,358.2632,12.282506120938104,5.044933,True,False,False,13,asid_29235,False,,,
+N-C14:0-glutamate,glutamate,14,long_chain,C19H35N1O5,[M+H]+,358.2587996841,36258,358.2632,12.282506120938104,5.044933,True,False,False,13,asid_29235,False,,,
+N-C16:0-threonine,threonine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,6759,358.2938,-3.866056975528582,4.171149,True,False,False,26,asid_4583,False,,,
+N-C16:0-threonine,threonine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,10732,358.294,-3.3078580148006984,5.159,True,False,True,8,asid_10732,True,,,
+N-C16:0-threonine,threonine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,17711,358.2941,-3.028758534357432,4.678166,True,True,False,22,asid_15057,False,,,
+N-C16:0-homoserine,homoserine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,6759,358.2938,-3.866056975528582,4.171149,True,False,False,26,asid_4583,False,,,
+N-C16:0-homoserine,homoserine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,10732,358.294,-3.3078580148006984,5.159,True,False,True,8,asid_10732,True,,,
+N-C16:0-homoserine,homoserine,16,long_chain,C20H39N1O4,[M+H]+,358.2951851896,17711,358.2941,-3.028758534357432,4.678166,True,True,False,22,asid_15057,False,,,
+N-C17:0-serine,serine,17,long_chain,C20H39N1O4,[M+H]+,358.2951851896,6759,358.2938,-3.866056975528582,4.171149,True,False,False,26,asid_4583,False,,,
+N-C17:0-serine,serine,17,long_chain,C20H39N1O4,[M+H]+,358.2951851896,10732,358.294,-3.3078580148006984,5.159,True,False,True,8,asid_10732,True,,,
+N-C17:0-serine,serine,17,long_chain,C20H39N1O4,[M+H]+,358.2951851896,17711,358.2941,-3.028758534357432,4.678166,True,True,False,22,asid_15057,False,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+H]+,359.2329192856,909,359.2281,-13.415489898920049,1.127151,True,False,True,138,asid_909,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+H]+,359.2329192856,1072,359.2279,-13.972231748760468,1.226761,True,False,True,134,asid_1072,True,Tripeptides,"2-[[2-[(2,4-Diamino-4-oxobutanoyl)amino]-3-methylpentanoyl]amino]-4-methylpentanoic acid",C16H30N4O5
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+H]+,359.2329192856,2581,359.2279,-13.972231748760468,1.351276,True,False,False,50,asid_11051,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+H]+,359.2329192856,5728,359.2285,-12.302006199239207,0.536582,True,False,True,42,asid_5728,True,Tripeptides,2-[[4-Amino-2-[(2-amino-4-methylpentanoyl)amino]-4-oxobutanoyl]amino]-4-methylpentanoic acid,C16H30N4O5
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+H]+,359.2329192856,20459,359.2397,18.87553739087491,4.929,True,False,True,7,asid_20459,True,Dipeptides,(NE)-N-[1-[3-[bis[(2E)-2-hydroxyiminopropyl]amino]propyl-[(2E)-2-hydroxyiminopropyl]amino]propan-2-ylidene]hydroxylamine,C15H30N6O4
+N-C12:0-histidine,histidine,12,long_chain,C18H31N3O3,[M+Na]+,360.2257625708,4728,360.2316,16.204918710889665,1.108774,True,False,True,80,asid_909,False,,,
+N-C12:0-histidine,histidine,12,long_chain,C18H31N3O3,[M+Na]+,360.2257625708,5524,360.2314,15.649711335994233,1.249255,True,False,True,95,asid_1072,False,,,
+N-C13:0-lysine,lysine,13,long_chain,C19H38N2O3,[M+NH4]+,360.3220686417,2317,360.3225,1.1971464906470357,5.816982,True,False,False,8,asid_94,True,,,
+N-C13:0-lysine,lysine,13,long_chain,C19H38N2O3,[M+NH4]+,360.3220686417,6186,360.3247,7.302795273996587,5.683748,True,False,True,10,asid_6186,True,N-acyl amines,N-(2-phenylethyl)hexadecanamide,C24H41NO
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+NH4]+,362.2438183227,17082,362.2404,-9.436524592230857,1.456382,True,False,False,12,asid_6825,False,,,
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,1840,364.2808,-3.8838448390185634,5.375,True,False,True,8,asid_1840,True,,,
+N-C15:0-valine,valine,15,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,4385,364.2833,2.9789661858436554,5.192634,True,False,False,15,asid_4385,True,N-acyl amines,N-Palmitoyl GABA,C22H37NO3
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,1840,364.2808,-3.8838448390185634,5.375,True,False,True,8,asid_1840,True,,,
+N-C18:0-glycine,glycine,18,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,4385,364.2833,2.9789661858436554,5.192634,True,False,False,15,asid_4385,True,N-acyl amines,N-Palmitoyl GABA,C22H37NO3
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,1840,364.2808,-3.8838448390185634,5.375,True,False,True,8,asid_1840,True,,,
+N-C17:0-alanine,alanine,17,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,4385,364.2833,2.9789661858436554,5.192634,True,False,False,15,asid_4385,True,N-acyl amines,N-Palmitoyl GABA,C22H37NO3
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,1840,364.2808,-3.8838448390185634,5.375,True,False,True,8,asid_1840,True,,,
+N-C14:0-isoleucine,isoleucine,14,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,4385,364.2833,2.9789661858436554,5.192634,True,False,False,15,asid_4385,True,N-acyl amines,N-Palmitoyl GABA,C22H37NO3
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,1840,364.2808,-3.8838448390185634,5.375,True,False,True,8,asid_1840,True,,,
+N-C14:0-leucine,leucine,14,long_chain,C20H39N1O3,[M+Na]+,364.28221481559996,4385,364.2833,2.9789661858436554,5.192634,True,False,False,15,asid_4385,True,N-acyl amines,N-Palmitoyl GABA,C22H37NO3
+N-C13:0-lysine,lysine,13,long_chain,C19H38N2O3,[M+Na]+,365.2774637889,13159,365.2763,-3.1860407918833795,4.345339,True,False,False,15,asid_3254,False,N-acyl amines,"2-[Dimethyl-[3-(2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosadeuteriododecanoylamino)propyl]azaniumyl]acetate",C19H38N2O3
+N-C12:0-phenylalanine,phenylalanine,12,long_chain,C21H33N1O3,[M+NH4]+,365.27986947700003,13159,365.2763,-9.771896286407856,4.345339,True,False,False,15,asid_3254,False,N-acyl amines,"2-[Dimethyl-[3-(2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-tricosadeuteriododecanoylamino)propyl]azaniumyl]acetate",C19H38N2O3
+N-C13:0-glutamate,glutamate,13,long_chain,C18H33N1O5,[M+Na]+,366.22509386839994,35976,366.2238,-3.5329867385329585,4.321205,True,False,True,7,asid_35976,True,Tripeptides,"(2R,5R)-2-(6-amino-8-ethylpurin-9-yl)-5-[[3-aminopropyl(methyl)amino]methyl]oxolane-3,4-diol",C16H27N7O3
+N-C14:0-aspartate,aspartate,14,long_chain,C18H33N1O5,[M+Na]+,366.22509386839994,35976,366.2238,-3.5329867385329585,4.321205,True,False,True,7,asid_35976,True,Tripeptides,"(2R,5R)-2-(6-amino-8-ethylpurin-9-yl)-5-[[3-aminopropyl(methyl)amino]methyl]oxolane-3,4-diol",C16H27N7O3
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+Na]+,367.1992134699,5287,367.1964,-7.661971477020268,1.878,True,False,True,49,asid_5287,True,Tripeptides,"2-[[2-[(2,4-Diamino-4-oxobutanoyl)amino]-4-methylpentanoyl]amino]-3-methylbutanoic acid",C17H26N4O5
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+Na]+,367.1992134699,12617,367.2046,14.66923103988547,1.643654,True,False,True,31,asid_12617,True,,,
+N-C9:0-tryptophan,tryptophan,9,short_medium_chain,C20H28N2O3,[M+Na]+,367.1992134699,45944,367.2,2.141971091339616,4.255528,True,False,True,8,asid_45944,True,,,
+N-C13:0-methionine,methionine,13,long_chain,C18H35N1O3S1,[M+Na]+,368.222985378,6493,368.2172,-15.711615596309354,1.748643,True,False,True,13,asid_6493,True,,,
+N-C13:0-methionine,methionine,13,long_chain,C18H35N1O3S1,[M+Na]+,368.222985378,6504,368.2168,-16.797913888097572,1.866382,True,False,True,15,asid_6504,True,,,
+N-C15:0-cysteine,cysteine,15,long_chain,C18H35N1O3S1,[M+Na]+,368.222985378,6493,368.2172,-15.711615596309354,1.748643,True,False,True,13,asid_6493,True,,,
+N-C15:0-cysteine,cysteine,15,long_chain,C18H35N1O3S1,[M+Na]+,368.222985378,6504,368.2168,-16.797913888097572,1.866382,True,False,True,15,asid_6504,True,,,
+N-C17:0-proline,proline,17,long_chain,C22H41N1O3,[M+H]+,368.3159206313,2308,368.3146,-3.585593850395236,5.393,True,True,False,10,asid_5317,False,N-acyl amines,4-[[(E)-octadec-9-enoyl]amino]butanoic acid,C22H41NO3
+N-C17:0-proline,proline,17,long_chain,C22H41N1O3,[M+H]+,368.3159206313,2926,368.3146,-3.585593850395236,5.553,True,True,True,16,asid_6821,True,Ceramides,[(2R)-3-hexadecoxy-2-isocyanopropyl] acetate,C22H41NO3
+N-C12:0-phenylalanine,phenylalanine,12,long_chain,C21H33N1O3,[M+Na]+,370.2352646242,7821,370.2302,-13.679475414410023,1.058567,True,False,True,14,asid_7821,False,Dipeptides,alpha-((Bis(2-methylpropyl)amino)methyl)-4-chloro-gamma-hydroxybenzenebutanoic acid hydrazide,C14H27N9O3
+N-C12:0-phenylalanine,phenylalanine,12,long_chain,C21H33N1O3,[M+Na]+,370.2352646242,8301,370.23,-14.219672470489067,1.15418,True,False,True,24,asid_3074,True,,,
+N-C12:0-phenylalanine,phenylalanine,12,long_chain,C21H33N1O3,[M+Na]+,370.2352646242,9472,370.2361,2.2563377393844615,4.036786,True,True,True,10,asid_3434,False,,,
+N-C16:0-leucine,leucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,4313,370.3302,-3.701264511168339,5.307437,True,False,False,16,asid_3002,False,Ceramides,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C16:0-leucine,leucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,6673,370.3301,-3.9712927990272466,5.530379,True,False,False,12,asid_6673,True,N-acyl amines,N-palmitoyl leucine,C22H43NO3
+N-C16:0-leucine,leucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,21593,370.3302,-3.701264511168339,4.715,True,False,True,14,asid_21593,True,N-acyl amines,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C17:0-valine,valine,17,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,4313,370.3302,-3.701264511168339,5.307437,True,False,False,16,asid_3002,False,Ceramides,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C17:0-valine,valine,17,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,6673,370.3301,-3.9712927990272466,5.530379,True,False,False,12,asid_6673,True,N-acyl amines,N-palmitoyl leucine,C22H43NO3
+N-C17:0-valine,valine,17,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,21593,370.3302,-3.701264511168339,4.715,True,False,True,14,asid_21593,True,N-acyl amines,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C16:0-isoleucine,isoleucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,4313,370.3302,-3.701264511168339,5.307437,True,False,False,16,asid_3002,False,Ceramides,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C16:0-isoleucine,isoleucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,6673,370.3301,-3.9712927990272466,5.530379,True,False,False,12,asid_6673,True,N-acyl amines,N-palmitoyl leucine,C22H43NO3
+N-C16:0-isoleucine,isoleucine,16,long_chain,C22H43N1O3,[M+H]+,370.33157069509997,21593,370.3302,-3.701264511168339,4.715,True,False,True,14,asid_21593,True,N-acyl amines,"N-[(E)-1,3-dihydroxyundec-4-en-2-yl]undecanamide",C22H43NO3
+N-C16:0-proline,proline,16,long_chain,C21H39N1O3,[M+NH4]+,371.3268196684,6227,371.3257,-3.0153178836050727,4.79516,True,False,False,10,asid_6227,False,N-acyl amines,3-(Tetradecanoylamino)propyl(carboxymethyl)dimethylammonium,C21H42N2O3
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+H]+,371.3268196684,6227,371.3257,-3.0153178836050727,4.79516,True,False,False,10,asid_6227,False,N-acyl amines,3-(Tetradecanoylamino)propyl(carboxymethyl)dimethylammonium,C21H42N2O3
+N-C11:0-tyrosine,tyrosine,11,short_medium_chain,C20H31N1O4,[M+Na]+,372.2145291825,5611,372.2123,-5.988972286604775,1.760562,True,False,True,24,asid_5611,True,,,
+N-C11:0-tyrosine,tyrosine,11,short_medium_chain,C20H31N1O4,[M+Na]+,372.2145291825,8369,372.2073,-19.422085741455305,2.004,True,False,True,21,asid_8369,True,Dipeptides,"N,N-Diethyl-L-alanyl-N-(1-methyl-1-phenylethyl)-L-alaninamide",C19H25N5O3
+N-C11:0-tyrosine,tyrosine,11,short_medium_chain,C20H31N1O4,[M+Na]+,372.2145291825,13759,372.2114,-8.40693270845649,3.231957,True,False,False,38,asid_13759,True,,,
+N-C11:0-tyrosine,tyrosine,11,short_medium_chain,C20H31N1O4,[M+Na]+,372.2145291825,22922,372.2118,-7.33228363219673,3.287362,True,False,True,27,asid_22922,True,Dipeptides,N-tert-butyl-2-[4-[2-(5-cyclopropyltetrazol-2-yl)acetyl]piperazin-1-yl]acetamide,C17H29N3O6
+N-C15:0-glutamate,glutamate,15,long_chain,C20H37N1O5,[M+H]+,372.2744497479,11364,372.2731,-3.6256796589774107,4.816,True,False,False,9,asid_11364,False,,,
+N-C16:0-aspartate,aspartate,16,long_chain,C20H37N1O5,[M+H]+,372.2744497479,11364,372.2731,-3.6256796589774107,4.816,True,False,False,9,asid_11364,False,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,3980,373.2436,-13.31378016701611,1.261017,True,False,True,35,asid_3980,True,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,4059,373.2433,-14.11753408511231,1.35939,True,False,True,35,asid_4059,True,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,4654,373.2519,8.923411564034351,2.208451,True,False,True,8,asid_1010,False,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,5221,373.2437,-13.045862194418907,1.158348,True,False,True,39,asid_5221,True,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,6189,373.2436,-13.31378016701611,1.369,True,False,True,31,asid_6189,True,,,
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+H]+,373.2485693494,9212,373.2435,-13.581698139765608,1.421169,True,False,True,14,asid_9212,True,Tripeptides,5-Amino-2-[[2-[(2-amino-4-methylpentanoyl)amino]-3-methylpentanoyl]amino]-5-oxopentanoic acid,C17H32N4O5
+N-C13:0-histidine,histidine,13,long_chain,C19H33N3O3,[M+Na]+,374.2414126346,7061,374.2388,-6.981147761258286,0.550562,True,True,True,45,asid_2832,True,,,
+N-C13:0-histidine,histidine,13,long_chain,C19H33N3O3,[M+Na]+,374.2414126346,10563,374.2388,-6.981147761258286,0.775,True,True,True,47,asid_5964,True,,,
+N-C15:0-asparagine,asparagine,15,long_chain,C19H36N2O4,[M+NH4]+,374.3013332,8435,374.3039,6.857576429308245,5.091,True,False,True,27,asid_8435,True,N-acyl ethanolamines (endocannabinoids),"N-(2-hydroxyethyl)icosa-11,14-dienamide",C19H39N3O4
+N-C15:0-asparagine,asparagine,15,long_chain,C19H36N2O4,[M+NH4]+,374.3013332,11873,374.3018,1.2471235302202333,5.3985,True,False,True,15,asid_11873,True,,,
+N-C14:0-glutamine,glutamine,14,long_chain,C19H36N2O4,[M+NH4]+,374.3013332,8435,374.3039,6.857576429308245,5.091,True,False,True,27,asid_8435,True,N-acyl ethanolamines (endocannabinoids),"N-(2-hydroxyethyl)icosa-11,14-dienamide",C19H39N3O4
+N-C14:0-glutamine,glutamine,14,long_chain,C19H36N2O4,[M+NH4]+,374.3013332,11873,374.3018,1.2471235302202333,5.3985,True,False,True,15,asid_11873,True,,,
+N-C14:0-glutamate,glutamate,14,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,7676,375.2879,6.798067146085845,5.501,True,True,False,30,asid_256,False,Ergostane steroids,"(1r,3r,7e,17beta)-17-[(2r)-5-Hydroxypentan-2-Yl]-2-Methylidene-9,10-Secoestra-5,7-Diene-1,3-Diol",C24H38O3
+N-C14:0-glutamate,glutamate,14,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,8090,375.2879,6.798067146085845,5.409,True,True,False,10,asid_214,False,Ergostane steroids,"(1r,3r,7e,17beta)-17-[(2r)-5-Hydroxypentan-2-Yl]-2-Methylidene-9,10-Secoestra-5,7-Diene-1,3-Diol",C24H38O3
+N-C14:0-glutamate,glutamate,14,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,33186,375.2881,7.330994958626747,4.959,True,False,False,8,asid_33186,True,,,
+N-C15:0-aspartate,aspartate,15,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,7676,375.2879,6.798067146085845,5.501,True,True,False,30,asid_256,False,Ergostane steroids,"(1r,3r,7e,17beta)-17-[(2r)-5-Hydroxypentan-2-Yl]-2-Methylidene-9,10-Secoestra-5,7-Diene-1,3-Diol",C24H38O3
+N-C15:0-aspartate,aspartate,15,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,8090,375.2879,6.798067146085845,5.409,True,True,False,10,asid_214,False,Ergostane steroids,"(1r,3r,7e,17beta)-17-[(2r)-5-Hydroxypentan-2-Yl]-2-Methylidene-9,10-Secoestra-5,7-Diene-1,3-Diol",C24H38O3
+N-C15:0-aspartate,aspartate,15,long_chain,C19H35N1O5,[M+NH4]+,375.285348785,33186,375.2881,7.330994958626747,4.959,True,False,False,8,asid_33186,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+NH4]+,376.25946838650003,63,376.2579,-4.168364205560619,4.83,True,True,False,119,asid_1347,False,,,
+N-C16:0-proline,proline,16,long_chain,C21H39N1O3,[M+Na]+,376.28221481559996,40823,376.2808,-3.7599853095665465,5.086256,True,True,True,10,asid_19752,False,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+H]+,376.2846205037,40823,376.2808,-10.153228412307529,5.086256,True,True,True,10,asid_19752,False,,,
+N-C13:0-tyrosine,tyrosine,13,long_chain,C22H35N1O4,[M+H]+,378.263885062,9656,378.261,-7.627114598817053,5.064,True,False,True,14,asid_9656,True,Terpenoid alkaloids,Ethyl 2-(2-oxohexadecanamido)acetate,C17H35N3O6
+N-C12:0-arginine,arginine,12,long_chain,C18H36N4O3,[M+Na]+,379.26796173549997,30081,379.2681,0.3645562346076746,4.831985,True,False,False,6,asid_63,False,,,
+N-C14:0-lysine,lysine,14,long_chain,C20H40N2O3,[M+Na]+,379.2931138527,14862,379.2916,-3.991247519917233,5.054,True,False,True,9,asid_14862,True,,,
+N-C13:0-phenylalanine,phenylalanine,13,long_chain,C22H35N1O3,[M+NH4]+,379.2955195408,14862,379.2916,-10.333738728918776,5.054,True,False,True,9,asid_14862,True,,,
+N-C14:0-glutamate,glutamate,14,long_chain,C19H35N1O5,[M+Na]+,380.24074393219996,33322,380.2396,-3.0084419363801134,4.657284,True,False,True,6,asid_33322,True,Open-chain polyketides,"1-(piperidin-1-yl)octadeca-2,8,10-trien-12-yn-1-one",C17H29N7O3
+N-C15:0-aspartate,aspartate,15,long_chain,C19H35N1O5,[M+Na]+,380.24074393219996,33322,380.2396,-3.0084419363801134,4.657284,True,False,True,6,asid_33322,True,Open-chain polyketides,"1-(piperidin-1-yl)octadeca-2,8,10-trien-12-yn-1-one",C17H29N7O3
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,3239,381.2122,-6.986961828591312,2.331384,True,False,True,74,asid_3239,True,Tripeptides,2-[[4-Amino-2-[(2-amino-4-methylpentanoyl)amino]-4-oxobutanoyl]amino]-3-methylpentanoic acid,C18H28N4O5
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,4517,381.2122,-6.986961828591312,2.287,True,True,True,37,asid_16081,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,7810,381.2201,13.73625952426154,1.668325,True,False,True,38,asid_1421,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,8883,381.2201,13.73625952426154,1.495389,True,False,False,42,asid_1645,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,25504,381.2117,-8.298558116714467,3.16824,True,False,False,45,asid_25504,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,39871,381.2161,3.243489218978065,4.64465,True,False,False,17,asid_17416,False,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,41641,381.2159,2.7188507036989797,4.724065,True,False,True,11,asid_41641,True,,,
+N-C10:0-tryptophan,tryptophan,10,short_medium_chain,C21H30N2O3,[M+Na]+,381.2148635337,52507,381.2162,3.5058084766921627,4.494435,True,False,True,8,asid_52507,True,,,
+N-C16:0-cysteine,cysteine,16,long_chain,C19H37N1O3S1,[M+Na]+,382.2386354418,3778,382.2442,14.557812015906563,0.56254,True,True,False,106,asid_4044,True,,,
+N-C16:0-cysteine,cysteine,16,long_chain,C19H37N1O3S1,[M+Na]+,382.2386354418,15497,382.2444,15.08104536141983,0.82299,True,False,True,73,asid_15497,True,Tripeptides,(S)-2-((S)-2-((S)-2-Amino-4-methylpentanamido)-3-(1H-imidazol-4-yl)Propanamido)-4-methylpentanoic acid,C18H31N5O4
+N-C14:0-methionine,methionine,14,long_chain,C19H37N1O3S1,[M+Na]+,382.2386354418,3778,382.2442,14.557812015906563,0.56254,True,True,False,106,asid_4044,True,,,
+N-C14:0-methionine,methionine,14,long_chain,C19H37N1O3S1,[M+Na]+,382.2386354418,15497,382.2444,15.08104536141983,0.82299,True,False,True,73,asid_15497,True,Tripeptides,(S)-2-((S)-2-((S)-2-Amino-4-methylpentanamido)-3-(1H-imidazol-4-yl)Propanamido)-4-methylpentanoic acid,C18H31N5O4
+N-C17:0-asparagine,asparagine,17,long_chain,C21H40N2O4,[M+H]+,385.3060842267,22286,385.309,7.567420861923975,4.771929,True,False,False,15,asid_22286,True,,,
+N-C17:0-asparagine,asparagine,17,long_chain,C21H40N2O4,[M+H]+,385.3060842267,22631,385.3088,7.048353013805161,4.369851,True,False,False,14,asid_41225,True,,,
+N-C16:0-glutamine,glutamine,16,long_chain,C21H40N2O4,[M+H]+,385.3060842267,22286,385.309,7.567420861923975,4.771929,True,False,False,15,asid_22286,True,,,
+N-C16:0-glutamine,glutamine,16,long_chain,C21H40N2O4,[M+H]+,385.3060842267,22631,385.3088,7.048353013805161,4.369851,True,False,False,14,asid_41225,True,,,
+N-C14:0-arginine,arginine,14,long_chain,C20H40N4O3,[M+H]+,385.31731761500004,51126,385.3157,-4.198137291248347,4.54209,True,False,True,9,asid_51126,True,N-acyl amines,N2-(1-Oxotetradecyl)-L-arginine,C20H40N4O3
+N-C17:0-proline,proline,17,long_chain,C22H41N1O3,[M+NH4]+,385.3424697322,51152,385.341,-3.8140934764571126,4.743,True,False,True,6,asid_51152,True,N-acyl amines,N6-Palmitoyl lysine,C22H44N2O3
+N-C16:0-lysine,lysine,16,long_chain,C22H44N2O3,[M+H]+,385.3424697322,51152,385.341,-3.8140934764571126,4.743,True,False,True,6,asid_51152,True,N-acyl amines,N6-Palmitoyl lysine,C22H44N2O3
+N-C12:0-tyrosine,tyrosine,12,long_chain,C21H33N1O4,[M+Na]+,386.2301792463,23559,386.2273,-7.454741899252385,3.102,True,False,False,23,asid_23559,False,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+H]+,386.2900998117,14630,386.2946,11.649763486617534,6.911,True,False,True,85,asid_3506,True,,,C20H43O5
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+H]+,386.2900998117,33377,386.2885,-4.141477352785387,5.258896,True,False,True,6,asid_33377,True,,,
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+H]+,386.2900998117,14630,386.2946,11.649763486617534,6.911,True,False,True,85,asid_3506,True,,,C20H43O5
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+H]+,386.2900998117,33377,386.2885,-4.141477352785387,5.258896,True,False,True,6,asid_33377,True,,,
+N-C18:0-threonine,threonine,18,long_chain,C22H43N1O4,[M+H]+,386.32648531719997,5317,386.325,-3.8447200915033393,5.421538,True,False,False,23,asid_5317,True,Ceramides,"1,2-Diacetylsphingosine",C22H43NO4
+N-C18:0-homoserine,homoserine,18,long_chain,C22H43N1O4,[M+H]+,386.32648531719997,5317,386.325,-3.8447200915033393,5.421538,True,False,False,23,asid_5317,True,Ceramides,"1,2-Diacetylsphingosine",C22H43NO4
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+H]+,387.2642194132,4243,387.2707,16.734277206880442,0.722408,True,False,True,109,asid_4243,True,,,
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+H]+,387.2642194132,5255,387.2592,-12.961210843579648,1.139,True,False,True,70,asid_5255,True,Tripeptides,2-[2-(2-amino-4-methylpentanamido)-3-methylbutanamido]-5-carbamimidamidopentanoic acid,C17H34N6O4
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+H]+,387.2642194132,6130,387.2592,-12.961210843579648,1.225252,True,False,True,51,asid_6130,False,Tripeptides,Ala-leu-ala-leu,C18H34N4O5
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+H]+,387.2642194132,13662,387.2706,16.476055571722867,0.566348,True,False,True,14,asid_13662,True,,,
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+H]+,387.2642194132,22697,387.2702,15.443169030799009,4.97961,True,False,True,10,asid_22697,True,,,
+N-C14:0-histidine,histidine,14,long_chain,C20H35N3O3,[M+Na]+,388.2570626984,18186,388.2531,-10.206378146526871,1.413842,True,False,False,15,asid_18186,False,,,
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+H]+,388.2879913213,12456,388.2807,-18.778127222467905,5.291,True,False,False,12,asid_2098,False,,,
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+H]+,388.2879913213,12456,388.2807,-18.778127222467905,5.291,True,False,False,12,asid_2098,False,,,
+N-C17:0-proline,proline,17,long_chain,C22H41N1O3,[M+Na]+,390.2978648794,3633,390.2964,-3.7532344698530604,5.401,True,False,False,7,asid_2308,True,,,
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+H]+,390.3002705675,3633,390.2964,-9.916896789093785,5.401,True,False,False,7,asid_2308,True,,,
+N-C16:0-leucine,leucine,16,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,2482,392.3145,2.510891831509235,5.379,True,False,False,25,asid_2482,True,N-acyl amines,"1,3-Bis(2-ethylhexyl)hexahydro-5-methyl-5-nitropyrimidine",C23H41N3O2
+N-C16:0-leucine,leucine,16,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,24947,392.312,-3.861562608047053,5.525966,True,False,False,7,asid_6673,False,,,
+N-C16:0-isoleucine,isoleucine,16,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,2482,392.3145,2.510891831509235,5.379,True,False,False,25,asid_2482,True,N-acyl amines,"1,3-Bis(2-ethylhexyl)hexahydro-5-methyl-5-nitropyrimidine",C23H41N3O2
+N-C16:0-isoleucine,isoleucine,16,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,24947,392.312,-3.861562608047053,5.525966,True,False,False,7,asid_6673,False,,,
+N-C17:0-valine,valine,17,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,2482,392.3145,2.510891831509235,5.379,True,False,False,25,asid_2482,True,N-acyl amines,"1,3-Bis(2-ethylhexyl)hexahydro-5-methyl-5-nitropyrimidine",C23H41N3O2
+N-C17:0-valine,valine,17,long_chain,C22H43N1O3,[M+Na]+,392.31351494319995,24947,392.312,-3.861562608047053,5.525966,True,False,False,7,asid_6673,False,,,
+N-C13:0-arginine,arginine,13,long_chain,C19H38N4O3,[M+Na]+,393.2836117993,2246,393.2844,2.0041534311810434,4.83598,True,False,False,34,asid_63,True,,,
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,10168,393.3137,12.550148770803625,4.9848,True,False,False,43,asid_11442,True,Cholestane steroids,"9a,11a-dimethyl-1-(5-methylhex-3-en-2-yl)-1H,2H,3H,3aH,3bH,4H,6H,7H,8H,9H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-7-ol",C28H40O
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,13197,393.3136,12.295895600904446,5.564,True,False,True,7,asid_13197,True,Ergostane steroids,"9a,11a-dimethyl-1-(5-methylhex-3-en-2-yl)-1H,2H,3H,3aH,3bH,4H,6H,7H,8H,9H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-7-ol",C28H40O
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,13625,393.3139,13.058655110746509,5.518143,True,False,True,31,asid_13625,False,,,
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,15714,393.3137,12.550148770803625,5.631,True,False,False,14,asid_789,False,,,
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,15960,393.3138,12.804401940847331,5.043079,True,False,False,11,asid_15960,True,,,
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,18509,393.3139,13.058655110746509,4.855,True,False,True,18,asid_18509,True,Ergostane steroids,"(2E,6E,10Z)-2,7-dimethyl-11-[2-(2,6,6-trimethylcyclohexen-1-yl)ethyl]trideca-2,6,10,12-tetraen-1-ol",C28H40O
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,41488,393.3076,-2.9592945969485,4.79207,True,False,True,6,asid_41488,True,N-acyl amines,3-(Tetradecanoylamino)propyl(carboxymethyl)dimethylammonium,C21H42N2O3
+N-C15:0-lysine,lysine,15,long_chain,C21H42N2O3,[M+Na]+,393.30876391649997,44297,393.314,13.312908280790214,4.475127,True,False,True,6,asid_44297,True,Apocarotenoids (β-),Ergone,C23H40N2O3
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,10168,393.3137,6.433571165807687,4.9848,True,False,False,43,asid_11442,True,Cholestane steroids,"9a,11a-dimethyl-1-(5-methylhex-3-en-2-yl)-1H,2H,3H,3aH,3bH,4H,6H,7H,8H,9H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-7-ol",C28H40O
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,13197,393.3136,6.179319551048237,5.564,True,False,True,7,asid_13197,True,Ergostane steroids,"9a,11a-dimethyl-1-(5-methylhex-3-en-2-yl)-1H,2H,3H,3aH,3bH,4H,6H,7H,8H,9H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-7-ol",C28H40O
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,13625,393.3139,6.942074395471116,5.518143,True,False,True,31,asid_13625,False,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,15714,393.3137,6.433571165807687,5.631,True,False,False,14,asid_789,False,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,15960,393.3138,6.687822780711664,5.043079,True,False,False,11,asid_15960,True,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,18509,393.3139,6.942074395471116,4.855,True,False,True,18,asid_18509,True,Ergostane steroids,"(2E,6E,10Z)-2,7-dimethyl-11-[2-(2,6,6-trimethylcyclohexen-1-yl)ethyl]trideca-2,6,10,12-tetraen-1-ol",C28H40O
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,41488,393.3076,-9.07577733842102,4.79207,True,False,True,6,asid_41488,True,N-acyl amines,3-(Tetradecanoylamino)propyl(carboxymethyl)dimethylammonium,C21H42N2O3
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+NH4]+,393.3111696046,44297,393.314,7.196326010375092,4.475127,True,False,True,6,asid_44297,True,Apocarotenoids (β-),Ergone,C23H40N2O3
+N-C16:0-aspartate,aspartate,16,long_chain,C20H37N1O5,[M+Na]+,394.256393996,6244,394.2552,-3.028475931314162,4.815091,True,False,False,9,asid_11364,False,,,
+N-C15:0-glutamate,glutamate,15,long_chain,C20H37N1O5,[M+Na]+,394.256393996,6244,394.2552,-3.028475931314162,4.815091,True,False,False,9,asid_11364,False,,,
+N-C16:0-histidine,histidine,16,long_chain,C22H39N3O3,[M+H]+,394.3064185779,24998,394.305,-3.5976535839800508,4.778,True,False,False,7,asid_24998,False,N-acyl amines,,C22H39N3O3
+N-C11:0-tryptophan,tryptophan,11,short_medium_chain,C22H32N2O3,[M+Na]+,395.23051359749996,6396,395.2278,-6.865860318482065,3.421001,True,False,False,77,asid_6396,False,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+Na]+,398.2665647518,9056,398.2652,-3.4267295343950863,4.791,True,False,False,8,asid_6227,False,Sphingoid bases,Phytosphingosine 1-Phosphate,C22H39NO3S
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+Na]+,398.2665647518,9524,398.2603,-15.7300470450534,5.083,True,False,False,29,asid_27788,False,,,
+N-C14:0-phenylalanine,phenylalanine,14,long_chain,C23H37N1O3,[M+Na]+,398.2665647518,42811,398.2678,3.101561389674298,3.836747,True,False,True,9,asid_42811,True,,,
+N-C18:0-asparagine,asparagine,18,long_chain,C22H42N2O4,[M+H]+,399.3217342905,16383,399.3242,6.17474404294651,5.506218,True,False,False,10,asid_22607,True,Ergostane steroids,"(1S,5Z)-5-[(2E)-2-[(7aR)-7a-methyl-1-[(E,2S)-6-methylhept-3-en-2-yl]-2,3,3a,5,6,7-hexahydro-1H-inden-4-ylidene]ethylidene]-4-methylidenecyclohexane-1,3-diol",C27H42O2
+N-C18:0-asparagine,asparagine,18,long_chain,C22H42N2O4,[M+H]+,399.3217342905,34357,399.3246,7.176442587272279,4.497876,True,False,False,7,asid_32677,False,,,
+N-C17:0-glutamine,glutamine,17,long_chain,C22H42N2O4,[M+H]+,399.3217342905,16383,399.3242,6.17474404294651,5.506218,True,False,False,10,asid_22607,True,Ergostane steroids,"(1S,5Z)-5-[(2E)-2-[(7aR)-7a-methyl-1-[(E,2S)-6-methylhept-3-en-2-yl]-2,3,3a,5,6,7-hexahydro-1H-inden-4-ylidene]ethylidene]-4-methylidenecyclohexane-1,3-diol",C27H42O2
+N-C17:0-glutamine,glutamine,17,long_chain,C22H42N2O4,[M+H]+,399.3217342905,34357,399.3246,7.176442587272279,4.497876,True,False,False,7,asid_32677,False,,,
+N-C18:0-proline,proline,18,long_chain,C23H43N1O3,[M+NH4]+,399.358119796,15710,399.3568,-3.3047932032426144,4.977628,True,False,True,7,asid_15710,False,,,C19H42N8O
+N-C17:0-lysine,lysine,17,long_chain,C23H46N2O3,[M+H]+,399.358119796,15710,399.3568,-3.3047932032426144,4.977628,True,False,True,7,asid_15710,False,,,C19H42N8O
+N-C17:0-glutamate,glutamate,17,long_chain,C22H41N1O5,[M+H]+,400.3057498755,4889,400.3122,16.112994884600596,5.384,True,False,False,20,asid_2909,False,Fatty alcohols,3-[3-[3-[3-[3-(3-Methoxypropylamino)propoxy]propylamino]propoxy]propylamino]propan-1-ol,C21H41N3O4
+N-C17:0-glutamate,glutamate,17,long_chain,C22H41N1O5,[M+H]+,400.3057498755,11478,400.3042,-3.871729298167941,5.155,True,False,True,10,asid_11478,True,Phenylethylamines,(2S)-2-(octadecanoylamino)butanedioate,C22H41NO5
+N-C17:0-glutamate,glutamate,17,long_chain,C22H41N1O5,[M+H]+,400.3057498755,21769,400.3044,-3.3721111935845274,4.678166,True,False,False,17,asid_15057,False,,,
+N-C18:0-aspartate,aspartate,18,long_chain,C22H41N1O5,[M+H]+,400.3057498755,4889,400.3122,16.112994884600596,5.384,True,False,False,20,asid_2909,False,Fatty alcohols,3-[3-[3-[3-[3-(3-Methoxypropylamino)propoxy]propylamino]propoxy]propylamino]propan-1-ol,C21H41N3O4
+N-C18:0-aspartate,aspartate,18,long_chain,C22H41N1O5,[M+H]+,400.3057498755,11478,400.3042,-3.871729298167941,5.155,True,False,True,10,asid_11478,True,Phenylethylamines,(2S)-2-(octadecanoylamino)butanedioate,C22H41NO5
+N-C18:0-aspartate,aspartate,18,long_chain,C22H41N1O5,[M+H]+,400.3057498755,21769,400.3044,-3.3721111935845274,4.678166,True,False,False,17,asid_15057,False,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,779,401.2863,16.025032624704046,0.567116,True,True,False,124,asid_7129,False,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,4258,401.2862,15.775829991875163,0.83017,True,False,True,93,asid_4258,False,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,5369,401.2748,-12.633270157699986,1.630674,True,False,True,37,asid_5369,True,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,5415,401.2743,-13.879283322269355,1.137222,True,False,False,77,asid_3599,False,Tripeptides,"(5R,10S)-7-(2-ethylbutanoyl)-16-propan-2-yl-2-oxa-7,13-diazatricyclo[12.4.0.05,10]octadeca-1(14),15,17-trien-12-one",C24H36N2O3
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,6814,401.2743,-13.879283322269355,1.320108,True,False,True,21,asid_6814,True,Tripeptides,"(5R,10S)-7-(2-ethylbutanoyl)-16-propan-2-yl-2-oxa-7,13-diazatricyclo[12.4.0.05,10]octadeca-1(14),15,17-trien-12-one",C24H36N2O3
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,7160,401.2746,-13.131675423499402,1.757358,True,False,True,36,asid_7160,False,,,C16H38ClFN6O2
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,7721,401.2748,-12.633270157699986,1.729476,True,False,False,20,asid_7721,False,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,8948,401.2746,-13.131675423499402,1.882696,True,False,True,10,asid_8948,True,Dipeptides,,C24H36N2O3
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,9399,401.2859,15.028222093246868,5.044,True,False,False,11,asid_20729,False,,,C20H42O6
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,10111,401.2747,-12.882472790670523,1.544154,True,False,True,19,asid_10111,True,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+H]+,401.279869477,34313,401.2859,15.028222093246868,5.043361,True,False,True,9,asid_34313,True,,,
+N-C17:0-leucine,leucine,17,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,42340,401.3724,-3.41292805570643,4.655011,True,False,True,10,asid_42340,True,Sphingoid bases,"Hexadecanamide, N-[3-[bis(2-hydroxyethyl)amino]propyl]-",C23H48N2O3
+N-C17:0-leucine,leucine,17,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,45545,401.3806,17.016907214426585,5.073011,True,False,True,15,asid_16967,False,,,
+N-C17:0-isoleucine,isoleucine,17,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,42340,401.3724,-3.41292805570643,4.655011,True,False,True,10,asid_42340,True,Sphingoid bases,"Hexadecanamide, N-[3-[bis(2-hydroxyethyl)amino]propyl]-",C23H48N2O3
+N-C17:0-isoleucine,isoleucine,17,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,45545,401.3806,17.016907214426585,5.073011,True,False,True,15,asid_16967,False,,,
+N-C18:0-valine,valine,18,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,42340,401.3724,-3.41292805570643,4.655011,True,False,True,10,asid_42340,True,Sphingoid bases,"Hexadecanamide, N-[3-[bis(2-hydroxyethyl)amino]propyl]-",C23H48N2O3
+N-C18:0-valine,valine,18,long_chain,C23H45N1O3,[M+NH4]+,401.3737698598,45545,401.3806,17.016907214426585,5.073011,True,False,True,15,asid_16967,False,,,
+N-C17:0-asparagine,asparagine,17,long_chain,C21H40N2O4,[M+NH4]+,402.33263332760004,1733,402.3349,5.633826869130689,5.51,True,False,True,14,asid_1733,True,N-acyl amines,N-(4-methoxybenzyl)oleamide,C26H43NO2
+N-C16:0-glutamine,glutamine,16,long_chain,C21H40N2O4,[M+NH4]+,402.33263332760004,1733,402.3349,5.633826869130689,5.51,True,False,True,14,asid_1733,True,N-acyl amines,N-(4-methoxybenzyl)oleamide,C26H43NO2
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+NH4]+,403.3166489126,41225,403.3195,7.0691041584932055,4.369851,True,False,False,11,asid_41225,False,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+NH4]+,403.3166489126,41225,403.3195,7.0691041584932055,4.369851,True,False,False,11,asid_41225,False,,,
+N-C18:0-proline,proline,18,long_chain,C23H43N1O3,[M+Na]+,404.31351494319995,2262,404.3143,1.9417030869354102,5.522103,True,False,True,14,asid_2262,True,N-acyl amines,2-(14-methylpentadecanamido)-3-phenylpropanoic acid,C25H41NO3
+N-C16:0-phenylalanine,phenylalanine,16,long_chain,C25H41N1O3,[M+H]+,404.3159206313,2262,404.3143,-4.00832917355648,5.522103,True,False,True,14,asid_2262,True,N-acyl amines,2-(14-methylpentadecanamido)-3-phenylpropanoic acid,C25H41NO3
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+NH4]+,405.3145404222,7409,405.3177,7.795372445029188,5.522103,True,False,True,10,asid_2262,False,Dicarboxylic acids,Methyl 3-[2-[2-(2-dodecoxyethoxy)ethoxy]ethoxy]propanoate,C22H44O6
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+NH4]+,405.3145404222,7409,405.3177,7.795372445029188,5.522103,True,False,True,10,asid_2262,False,Dicarboxylic acids,Methyl 3-[2-[2-(2-dodecoxyethoxy)ethoxy]ethoxy]propanoate,C22H44O6
+N-C18:0-valine,valine,18,long_chain,C23H45N1O3,[M+Na]+,406.329165007,9461,406.3277,-3.6054684874850915,5.574114,True,False,False,11,asid_19500,True,,,C23H45NO3
+N-C17:0-leucine,leucine,17,long_chain,C23H45N1O3,[M+Na]+,406.329165007,9461,406.3277,-3.6054684874850915,5.574114,True,False,False,11,asid_19500,True,,,C23H45NO3
+N-C17:0-isoleucine,isoleucine,17,long_chain,C23H45N1O3,[M+Na]+,406.329165007,9461,406.3277,-3.6054684874850915,5.574114,True,False,False,11,asid_19500,True,,,C23H45NO3
+N-C16:0-lysine,lysine,16,long_chain,C22H44N2O3,[M+Na]+,407.3244139803,37872,407.3257,3.157236973406007,4.772286,True,False,True,6,asid_37872,True,N-acyl amines,N6-Palmitoyl lysine,C24H42N2O3
+N-C16:0-lysine,lysine,16,long_chain,C22H44N2O3,[M+Na]+,407.3244139803,50119,407.3254,2.4207233010484095,4.573047,True,False,True,6,asid_50119,True,N-acyl amines,6-amino-2-hexadecanamidohexanoic acid,C24H42N2O3
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+NH4]+,407.3268196684,37872,407.3257,-2.748820715807104,4.772286,True,False,True,6,asid_37872,True,N-acyl amines,N6-Palmitoyl lysine,C24H42N2O3
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+NH4]+,407.3268196684,50119,407.3254,-3.4853300382861976,4.573047,True,False,True,6,asid_50119,True,N-acyl amines,6-amino-2-hexadecanamidohexanoic acid,C24H42N2O3
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,3115,408.2677,-10.640110835817401,0.991202,True,False,True,45,asid_711,False,,,
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,5547,408.2679,-10.150241389901224,0.83217,True,False,True,47,asid_1140,False,,,
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,6955,408.2675,-11.129980281733577,1.066,True,False,False,66,asid_1648,False,,,
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,7563,408.2679,-10.150241389901224,0.787846,True,False,True,44,asid_1394,True,,,
+N-C16:0-glutamate,glutamate,16,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,19014,408.2729,2.09649475758552,5.103,True,False,True,10,asid_19014,True,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,3115,408.2677,-10.640110835817401,0.991202,True,False,True,45,asid_711,False,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,5547,408.2679,-10.150241389901224,0.83217,True,False,True,47,asid_1140,False,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,6955,408.2675,-11.129980281733577,1.066,True,False,False,66,asid_1648,False,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,7563,408.2679,-10.150241389901224,0.787846,True,False,True,44,asid_1394,True,,,
+N-C17:0-aspartate,aspartate,17,long_chain,C21H39N1O5,[M+Na]+,408.27204405979995,19014,408.2729,2.09649475758552,5.103,True,False,True,10,asid_19014,True,,,
+N-C18:0-homoserine,homoserine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,10152,408.3069,-3.7461026743670427,5.519,True,False,True,10,asid_10152,True,N-acyl amines,,C22H43NO4
+N-C18:0-homoserine,homoserine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,13023,408.307,-3.501189778157173,5.427,True,False,False,10,asid_5317,False,,,
+N-C18:0-homoserine,homoserine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,32444,408.3094,2.3767197289306736,4.340223,True,False,True,7,asid_32444,True,,,
+N-C18:0-threonine,threonine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,10152,408.3069,-3.7461026743670427,5.519,True,False,True,10,asid_10152,True,N-acyl amines,,C22H43NO4
+N-C18:0-threonine,threonine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,13023,408.307,-3.501189778157173,5.427,True,False,False,10,asid_5317,False,,,
+N-C18:0-threonine,threonine,18,long_chain,C22H43N1O4,[M+Na]+,408.30842956529995,32444,408.3094,2.3767197289306736,4.340223,True,False,True,7,asid_32444,True,,,
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+Na]+,409.2461636613,3006,409.2518,13.772490008432719,1.290748,True,False,False,91,asid_18098,False,,,
+N-C12:0-tryptophan,tryptophan,12,long_chain,C23H34N2O3,[M+Na]+,409.2461636613,26138,409.2431,-7.486108782432082,4.258223,True,False,False,15,asid_26138,False,Tripeptides,2-[[2-[2-(2-Aminopropanoylamino)propanoylamino]-3-methylpentanoyl]amino]-3-methylpentanoic acid,C20H32N4O5
+N-C14:0-tyrosine,tyrosine,14,long_chain,C23H37N1O4,[M+NH4]+,409.3060842267,2604,409.3084,5.657803265638298,5.477,True,True,False,30,asid_2033,False,Cholestane steroids,"(3S,10R,13R,17R)-17-[4-(1-hydroxycyclopropyl)butan-2-yl]-10,13-dimethyl-2,3,4,7,8,9,11,12,14,15,16,17-dodecahydro-1H-cyclopenta[a]phenanthren-3-ol",C26H42O2
+N-C14:0-tyrosine,tyrosine,14,long_chain,C23H37N1O4,[M+NH4]+,409.3060842267,6900,409.3086,6.146435142158039,5.554605,True,False,False,66,asid_6025,False,Apocarotenoids (β-),"3,3',5,5'-Tetra-tert-butyldiphenoquinone",C28H40O2
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,3109,410.2676,-5.69276273371882,3.636708,True,False,False,57,asid_1828,False,,,
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,5931,410.2651,-11.786311841888445,4.907605,True,False,True,22,asid_5931,True,N-acyl amines,3-Hydroxy-2-(octadecanoylamino)propanoic acid,C21H41NO4
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,11328,410.2679,-4.961536840782802,3.95477,True,False,False,16,asid_22363,False,N-acyl amines,3-Hydroxy-2-(octadecanoylamino)propanoic acid,C26H35NO3
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,13705,410.2651,-11.786311841888445,4.498865,True,False,True,19,asid_13705,True,,,
+N-C18:0-cysteine,cysteine,18,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,49113,410.2651,-11.786311841888445,4.377788,True,False,True,7,asid_49113,True,,,
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,3109,410.2676,-5.69276273371882,3.636708,True,False,False,57,asid_1828,False,,,
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,5931,410.2651,-11.786311841888445,4.907605,True,False,True,22,asid_5931,True,N-acyl amines,3-Hydroxy-2-(octadecanoylamino)propanoic acid,C21H41NO4
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,11328,410.2679,-4.961536840782802,3.95477,True,False,False,16,asid_22363,False,N-acyl amines,3-Hydroxy-2-(octadecanoylamino)propanoic acid,C26H35NO3
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,13705,410.2651,-11.786311841888445,4.498865,True,False,True,19,asid_13705,True,,,
+N-C16:0-methionine,methionine,16,long_chain,C21H41N1O3S1,[M+Na]+,410.2699355694,49113,410.2651,-11.786311841888445,4.377788,True,False,True,7,asid_49113,True,,,
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+Na]+,412.28221481559996,25,412.2827,1.1768259279314188,4.036786,True,True,False,231,asid_3434,False,,,
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+Na]+,412.28221481559996,17509,412.2833,2.6321397359458585,5.557,True,False,True,6,asid_17509,True,,,
+N-C15:0-phenylalanine,phenylalanine,15,long_chain,C24H39N1O3,[M+Na]+,412.28221481559996,50274,412.284,4.330005845227101,3.299649,True,False,True,7,asid_50274,True,,,
+N-C18:0-glutamine,glutamine,18,long_chain,C23H44N2O4,[M+H]+,413.3373843543,6451,413.34,6.328113059619795,5.74,True,False,True,37,asid_6451,True,Prenyl quinone meroterpenoids,7-Hydroxyergosterol,C26H46O2
+N-C18:0-glutamine,glutamine,18,long_chain,C23H44N2O4,[M+H]+,413.3373843543,35014,413.3397,5.602313721507213,5.253594,True,False,False,13,asid_3176,False,Ergostane steroids,7-Hydroxyergosterol,C28H44O2
+N-C16:0-arginine,arginine,16,long_chain,C22H44N4O3,[M+H]+,413.3486177426,4109,413.347,-3.913748663009118,4.781,True,False,False,26,asid_24998,True,N-acyl amines,Palmitoyl arginine,C22H44N4O3
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,206,415.3023,16.326829645306233,4.724065,True,False,False,69,asid_651,False,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,776,415.3024,16.56762203354454,4.658277,True,False,True,7,asid_209,False,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,2695,415.2904,-12.327464562306718,1.69467,True,False,True,51,asid_2695,True,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,2773,415.2899,-13.531426503772005,1.562,True,False,True,74,asid_2773,True,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,7426,415.2904,-12.327464562306718,2.082428,True,False,True,47,asid_7426,True,Tripeptides,H-DL-xiIle-Gly-DL-Leu-DL-Leu-OH,C20H38N4O5
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,8562,415.2917,-9.197163514387475,4.031643,True,False,False,11,asid_553,False,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,8589,415.2903,-12.568256950545026,2.133328,True,False,True,47,asid_8589,True,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,9143,415.29,-13.290634115396823,1.990033,True,False,True,64,asid_9143,True,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,9492,415.3014,14.159698150613966,5.220039,True,False,True,18,asid_9492,True,,,
+N-C14:0-tryptophan,tryptophan,14,long_chain,C25H38N2O3,[M+H]+,415.2955195408,21242,415.3022,16.086037257067925,4.350847,True,False,True,8,asid_21242,True,,,
+N-C16:0-histidine,histidine,16,long_chain,C22H39N3O3,[M+Na]+,416.28836282599997,40740,416.2894,2.4914796872807483,4.613134,True,False,True,6,asid_40740,True,N-acyl amines,,C22H39N3O3
+N-C18:0-methionine,methionine,18,long_chain,C23H45N1O3S1,[M+H]+,416.3192914489,1844,416.3118,-17.99447936684792,5.46,True,False,False,21,asid_879,False,,,
+N-C18:0-methionine,methionine,18,long_chain,C23H45N1O3S1,[M+H]+,416.3192914489,13257,416.3145,-11.509072479726116,5.006,True,False,True,11,asid_13257,True,,,
+N-C18:0-aspartate,aspartate,18,long_chain,C22H41N1O5,[M+NH4]+,417.3322989764,32677,417.3351,6.7117345263478025,4.498158,True,False,False,7,asid_32677,False,,,
+N-C17:0-glutamate,glutamate,17,long_chain,C22H41N1O5,[M+NH4]+,417.3322989764,32677,417.3351,6.7117345263478025,4.498158,True,False,False,7,asid_32677,False,,,
+N-C13:0-tryptophan,tryptophan,13,long_chain,C24H36N2O3,[M+NH4]+,418.3064185779,19293,418.3051,-3.1521818491118063,4.732857,True,False,False,7,asid_385,False,N-acyl amines,N-Linoleoyl Histidine,C24H39N3O3
+N-C17:0-phenylalanine,phenylalanine,17,long_chain,C26H43N1O3,[M+H]+,418.33157069509997,5503,418.3274,-9.969831091228034,5.570165,True,False,False,7,asid_1532,True,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+H]+,420.3108352534,13022,420.3094,-3.4147428037463254,5.359,True,False,True,10,asid_13022,True,N-acyl amines,2-hexadecanamido-3-(4-hydroxyphenyl)propanoic acid,C25H41NO4
+N-C18:0-asparagine,asparagine,18,long_chain,C22H42N2O4,[M+Na]+,421.30367853859997,9041,421.3022,-3.5094367204886137,5.209269,True,False,True,6,asid_9041,True,,,
+N-C18:0-asparagine,asparagine,18,long_chain,C22H42N2O4,[M+Na]+,421.30367853859997,40588,421.3086,11.681505884582219,4.552647,True,False,False,9,asid_49661,True,,,
+N-C17:0-glutamine,glutamine,17,long_chain,C22H42N2O4,[M+Na]+,421.30367853859997,9041,421.3022,-3.5094367204886137,5.209269,True,False,True,6,asid_9041,True,,,
+N-C17:0-glutamine,glutamine,17,long_chain,C22H42N2O4,[M+Na]+,421.30367853859997,40588,421.3086,11.681505884582219,4.552647,True,False,False,9,asid_49661,True,,,
+N-C15:0-arginine,arginine,15,long_chain,C21H42N4O3,[M+Na]+,421.3149119269,1347,421.3156,1.6331562936843644,4.83,True,False,False,43,asid_1347,False,,,
+N-C15:0-arginine,arginine,15,long_chain,C21H42N4O3,[M+Na]+,421.3149119269,40588,421.3086,-14.981494177599057,4.552647,True,False,False,9,asid_49661,True,,,
+N-C18:0-aspartate,aspartate,18,long_chain,C22H41N1O5,[M+Na]+,422.2876941236,10249,422.287,-1.6437220635553516,5.193,True,False,True,12,asid_10249,True,,,
+N-C17:0-glutamate,glutamate,17,long_chain,C22H41N1O5,[M+Na]+,422.2876941236,10249,422.287,-1.6437220635553516,5.193,True,False,True,12,asid_10249,True,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+NH4]+,423.3217342905,21077,423.3299,19.28960608107112,5.094149,True,False,True,13,asid_21077,True,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+NH4]+,423.3217342905,28767,423.3301,19.76205997088107,5.026,True,False,False,12,asid_28767,False,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+NH4]+,423.3217342905,30656,423.3245,6.533351056605406,4.625167,True,False,True,25,asid_30656,True,Lupane triterpenoids,"(1R,3aS,5aR,5bR,7aR,11aR,11bR)-5a,5b,11a-trimethyl-8-methylidene-9-oxo-1-prop-1-en-2-yl-2,3,4,5,6,7,7a,10,11,11b,12,13,13a,13b-tetradecahydro-1H-cyclopenta[a]chrysene-3a-carbaldehyde",C27H44O2
+N-C16:0-phenylalanine,phenylalanine,16,long_chain,C25H41N1O3,[M+Na]+,426.2978648794,1073,426.2986,1.7244294672898233,5.379,True,False,False,34,asid_1073,True,N-acyl amines,N-palmitoyl phenylalanine,C27H39NO3
+N-C16:0-phenylalanine,phenylalanine,16,long_chain,C25H41N1O3,[M+Na]+,426.2978648794,3013,426.2989,2.4281627596590156,4.234824,True,True,False,53,asid_3792,False,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+Na]+,428.27712943769995,1929,428.2781,2.266201562792499,3.636708,True,False,False,70,asid_1828,False,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+Na]+,428.27712943769995,5623,428.2707,-15.012330236778494,5.266,True,False,False,12,asid_26522,False,,,
+N-C15:0-tyrosine,tyrosine,15,long_chain,C24H39N1O4,[M+Na]+,428.27712943769995,6461,428.2855,19.544733362363495,1.109227,True,False,False,65,asid_13111,True,,,
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,233,429.3193,18.938234026060396,5.326,True,False,False,230,asid_233,True,Wax monoesters,"2-(3,4-dihydroxyoxolan-2-yl)-2-hydroxyethyl octadec-9-enoate",C24H44O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,328,429.3194,19.171165305409588,5.167,True,True,False,17,asid_4071,False,Wax monoesters,"2-(3,4-dihydroxyoxolan-2-yl)-2-hydroxyethyl octadec-9-enoate",C24H44O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,1722,429.3175,14.745470996715671,5.468,True,False,True,205,asid_532,True,Open-chain polyketides,rickiol a2,C24H44O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,2401,429.3172,14.046677158535685,7.364818,True,True,False,207,asid_43952,True,,,C22H46O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,3113,429.317,13.580814599704892,7.530604,True,True,True,12,asid_25735,False,,,
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,3436,429.3172,14.046677158535685,6.803,True,True,False,161,asid_40257,False,,,C22H46O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,7290,429.3059,-12.27455741454345,1.590325,True,False,True,24,asid_7290,True,Tripeptides,H-Thr-Leu-Val-Ile-al,C21H40N4O5
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,10125,429.3059,-12.27455741454345,1.479181,True,False,True,9,asid_10125,False,Tripeptides,H-Thr-Leu-Val-Ile-al,C21H40N4O5
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,14408,429.3059,-12.27455741454345,2.184339,True,False,True,39,asid_14408,True,,,
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,17540,429.3168,13.1149520408741,7.007124,True,False,True,76,asid_17540,True,,,C22H46O6
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+H]+,429.3111696046,19767,429.3056,-12.973351252723436,1.937791,True,False,True,18,asid_19767,True,,,
+N-C17:0-histidine,histidine,17,long_chain,C23H41N3O3,[M+Na]+,430.3040128898,4043,430.3015,-5.839800988934139,0.535,True,False,False,77,asid_4043,False,,,
+N-C17:0-histidine,histidine,17,long_chain,C23H41N3O3,[M+Na]+,430.3040128898,9947,430.3016,-5.607407153329006,0.796861,True,False,True,66,asid_9947,True,,,
+N-C18:0-glutamate,glutamate,18,long_chain,C23H43N1O5,[M+NH4]+,431.3479490402,3176,431.3502,5.218431674482017,5.258896,True,False,False,22,asid_3176,True,Ergostane steroids,"5-{7-hydroxy-9a,11a-dimethyl-1H,2H,3H,3aH,3bH,4H,6H,7H,8H,9H,9aH,9bH,10H,11H,11aH-cyclopenta[a]phenanthren-1-yl}-2-(prop-1-en-2-yl)hexane-1,2-diol",C28H46O3
+N-C18:0-phenylalanine,phenylalanine,18,long_chain,C27H45N1O3,[M+H]+,432.3472207589,33362,432.3454,-4.211334808198595,5.667966,True,False,True,6,asid_33362,True,N-acyl amines,N-stearoyl phenylalanine,C27H45NO3
+N-C16:0-arginine,arginine,16,long_chain,C22H44N4O3,[M+Na]+,435.3305619907,4166,435.331,1.0061533424377667,4.642026,True,True,True,28,asid_6014,True,N-acyl amines,Palmitoyl arginine,C24H42N4O3
+N-C18:0-glutamate,glutamate,18,long_chain,C23H43N1O5,[M+Na]+,436.30334418739994,19752,436.3019,-3.3100534735625136,5.077,True,False,True,11,asid_19752,True,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+NH4]+,437.3373843543,24329,437.3399,5.752185360738874,4.769283,True,False,False,15,asid_34847,True,,,
+N-C18:0-methionine,methionine,18,long_chain,C23H45N1O3S1,[M+Na]+,438.301235697,6438,438.3065,12.010696231954059,0.540778,True,True,False,57,asid_4044,False,,,
+N-C18:0-methionine,methionine,18,long_chain,C23H45N1O3S1,[M+Na]+,438.301235697,7715,438.3064,11.782542642852906,0.75,True,True,True,78,asid_2359,False,,,
+N-C18:0-methionine,methionine,18,long_chain,C23H45N1O3S1,[M+Na]+,438.301235697,14076,438.2961,-11.717277027043913,5.084,True,False,True,15,asid_14076,True,N-acyl amines,N-(1-Oxooctadecyl)-DL-methionine,C23H45NO4
+N-C18:0-histidine,histidine,18,long_chain,C24H43N3O3,[M+NH4]+,439.3642678064,5051,439.3627,-3.568352082437921,4.802,True,False,False,11,asid_12616,True,N-acyl amines,(2S)-5-(diaminomethylideneamino)-2-[[(E)-octadec-9-enoyl]amino]pentanoic acid,C24H46N4O3
+N-C18:0-histidine,histidine,18,long_chain,C24H43N3O3,[M+NH4]+,439.3642678064,22471,439.3556,-19.728064012323998,4.769283,True,False,True,33,asid_22471,True,Lupane triterpenoids,"4,5,11,15,15,19,20-heptamethyl-24-oxahexacyclo[12.8.2.0¹,⁶.0⁷,²⁰.0¹⁰,¹⁹.0¹¹,¹⁶]tetracos-7-en-23-one",C30H46O2
+N-C18:0-histidine,histidine,18,long_chain,C24H43N3O3,[M+NH4]+,439.3642678064,48822,439.3555,-19.955665588742956,5.004523,True,False,True,10,asid_48822,True,,,
+N-C17:0-phenylalanine,phenylalanine,17,long_chain,C26H43N1O3,[M+Na]+,440.31351494319995,20243,440.3145,2.23717139408866,5.552502,True,False,True,8,asid_20243,True,,,
+N-C17:0-phenylalanine,phenylalanine,17,long_chain,C26H43N1O3,[M+Na]+,440.31351494319995,32437,440.3144,2.0100604909753605,4.752,True,False,True,6,asid_32437,True,,,
+N-C17:0-phenylalanine,phenylalanine,17,long_chain,C26H43N1O3,[M+Na]+,440.31351494319995,35828,440.3144,2.0100604909753605,4.133381,True,False,True,6,asid_35828,True,,,
+N-C18:0-arginine,arginine,18,long_chain,C24H48N4O3,[M+H]+,441.3799178702,9812,441.3714,-19.298273109308965,4.651649,True,True,False,14,asid_13104,False,Oleanane triterpenoids,"8a-(hydroxymethyl)-4,4,6a,6b,12,14b-hexamethyl-11-methylidene-1,2,3,4,4a,5,6,6a,6b,7,8,8a,9,10,11,12,12a,14,14a,14b-icosahydropicen-3-ol",C25H48N2O4
+N-C18:0-arginine,arginine,18,long_chain,C24H48N4O3,[M+H]+,441.3799178702,9901,441.3711,-19.977959673729778,4.560932,True,True,False,13,asid_1880,False,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+Na]+,442.2927795015,8683,442.2843,-19.171693260655342,1.532,True,False,True,16,asid_2136,False,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+Na]+,442.2927795015,15804,442.2939,2.5333863720134353,3.865753,True,False,False,12,asid_33638,False,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+Na]+,442.2927795015,16704,442.2932,0.9507243154820744,5.213269,True,False,True,8,asid_16704,True,,,
+N-C16:0-tyrosine,tyrosine,16,long_chain,C25H41N1O4,[M+Na]+,442.2927795015,40012,442.2937,2.0811972129861154,4.438864,True,False,True,10,asid_40012,True,,,
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+H]+,443.3268196684,1253,443.3335,15.068638538539126,5.394,True,False,False,217,asid_2013,True,Monoacylglycerols,"Octadecanoic acid, 2,3-bis(acetyloxy)propyl ester",C25H46O6
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+H]+,443.3268196684,4791,443.3213,-12.45056277919857,1.982405,True,False,True,36,asid_4791,True,Tripeptides,H-Val-Leu-Val-Leu-OH,C22H42N4O5
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+H]+,443.3268196684,5396,443.3213,-12.45056277919857,1.826254,True,False,True,42,asid_5396,True,,,
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+H]+,443.3268196684,7941,443.3216,-11.773861107492959,1.762626,True,False,True,13,asid_7941,True,,,
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+H]+,443.3268196684,33296,443.3326,13.03853352329408,7.140627,True,False,True,77,asid_33296,True,,,
+N-C18:0-histidine,histidine,18,long_chain,C24H43N3O3,[M+Na]+,444.31966295359996,7492,444.3173,-5.318138711806365,0.539,True,False,False,58,asid_5560,False,,,
+N-C15:0-tryptophan,tryptophan,15,long_chain,C26H40N2O3,[M+NH4]+,446.33771870550004,21637,446.3459,18.329829985380073,4.926,True,False,True,9,asid_21637,True,,,
+N-C17:0-arginine,arginine,17,long_chain,C23H46N4O3,[M+Na]+,449.3462120545,27194,449.3374,-19.610835172459183,5.650914,True,False,False,10,asid_29695,False,,,C29H46O2
+N-C17:0-arginine,arginine,17,long_chain,C23H46N4O3,[M+Na]+,449.3462120545,34868,449.3471,1.976083198698426,4.831,True,False,True,8,asid_34868,True,,,
+N-C18:0-phenylalanine,phenylalanine,18,long_chain,C27H45N1O3,[M+NH4]+,449.3737698598,22650,449.3819,18.092155673668355,5.595,True,False,False,6,asid_13695,False,Fatty alcohols,"3,6,9,12,15-Pentaoxatriacontan-1-ol",C25H52O6
+N-C17:0-tyrosine,tyrosine,17,long_chain,C26H43N1O4,[M+NH4]+,451.3530344181,26382,451.3614,18.534453658449394,7.401932,True,False,False,37,asid_26382,False,,,
+N-C17:0-tyrosine,tyrosine,17,long_chain,C26H43N1O4,[M+NH4]+,451.3530344181,27293,451.362,19.8637900188296,5.307634,True,False,True,7,asid_27293,True,Open-chain polyketides,4-[4-[4-[4-[4-(4-Hydroxybutoxy)butoxy]butoxy]butoxy]butoxy]butan-1-ol,C23H48N4O3
+N-C17:0-tyrosine,tyrosine,17,long_chain,C26H43N1O4,[M+NH4]+,451.3530344181,35756,451.3618,19.420677898702863,6.803901,True,False,False,36,asid_35756,False,,,
+N-C18:0-phenylalanine,phenylalanine,18,long_chain,C27H45N1O3,[M+Na]+,454.329165007,539,454.3226,-14.449891192541138,5.409,True,False,True,61,asid_140,True,N-acyl ethanolamines (endocannabinoids),Decyl 4-(decanoylamino)benzoate,C22H45N3O5
+N-C17:0-tyrosine,tyrosine,17,long_chain,C26H43N1O4,[M+Na]+,456.30842956529995,284,456.3019,-14.309543451075381,5.409,True,False,False,58,asid_52,True,Purine alkaloids,"N,N-Dimethyl-9-[12-(thymine-1-yl)dodecyl]-9H-purine-6-amine",C23H41N3O6
+N-C17:0-tyrosine,tyrosine,17,long_chain,C26H43N1O4,[M+Na]+,456.30842956529995,6380,456.3172,19.22040911762954,0.613,True,False,True,85,asid_6380,True,Tripeptides,,C27H41N3O3
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,2202,457.3493,14.934689542416189,5.487,True,False,False,167,asid_2202,True,,,C24H50O6
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,6520,457.3373,-11.303853331214455,2.241458,True,False,True,25,asid_6520,True,Tripeptides,H-DL-Leu-DL-xiIle-DL-Val-DL-Leu-OH,C23H44N4O5
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,7943,457.3483,12.748144302874465,6.107627,True,False,True,193,asid_7943,True,,,C24H50O6
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,8041,457.3485,13.18545335078281,7.408,True,False,True,51,asid_8041,True,,,
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,12306,457.3372,-11.522507855230772,2.360482,True,False,True,32,asid_12306,True,,,
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+H]+,457.3424697322,33931,457.3484,12.966798826890782,5.719,True,False,True,33,asid_33931,True,,,C24H50O6
+N-C18:0-arginine,arginine,18,long_chain,C24H48N4O3,[M+Na]+,463.3618621183,19693,463.3531,-18.90988235405388,5.711,True,False,False,7,asid_19693,False,,,C30H48O2
+N-C18:0-arginine,arginine,18,long_chain,C24H48N4O3,[M+Na]+,463.3618621183,46797,463.3628,2.0240804793673974,4.83605,True,False,True,8,asid_46797,True,,,
+N-C16:0-tryptophan,tryptophan,16,long_chain,C27H42N2O3,[M+Na]+,465.30876391649997,10500,465.3093,1.1521027360955132,5.325,True,False,True,12,asid_10500,True,N-acyl amines,Trp-C16,C29H40N2O3
+N-C18:0-tyrosine,tyrosine,18,long_chain,C27H45N1O4,[M+NH4]+,465.3686844819,21074,465.3775,18.94308404057695,5.346,True,True,True,11,asid_23003,False,,,
+N-C18:0-tyrosine,tyrosine,18,long_chain,C27H45N1O4,[M+Na]+,470.32407962909997,2014,470.3326,18.115957207130624,1.041,True,False,True,115,asid_2014,True,Cyclic peptides,"N-(3-methoxypropyl)-3-methyl-N-[(octahydro-1H-quinolizin-1-yl)methyl]-2-(1-oxo-2,3-dihydro-1H-isoindol-2-yl)pentanamide",C28H43N3O3
+N-C18:0-tryptophan,tryptophan,18,long_chain,C29H46N2O3,[M+H]+,471.358119796,7700,471.3637,11.838565552719784,5.587,True,False,False,10,asid_3911,True,Fatty alcohols,"3,6,9,12,15-Pentaoxatriacontan-1-ol",C34H46O
+N-C18:0-tryptophan,tryptophan,18,long_chain,C29H46N2O3,[M+H]+,471.358119796,12683,471.3526,-11.71040821865174,2.606532,True,False,True,32,asid_12683,False,,,
+N-C18:0-tryptophan,tryptophan,18,long_chain,C29H46N2O3,[M+H]+,471.358119796,13724,471.353,-10.86179655118668,2.513041,True,False,True,21,asid_13724,True,,,
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+NH4]+,474.36901883310003,2758,474.3768,16.403193697419805,5.105,True,False,False,33,asid_2758,True,,,
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+Na]+,479.3244139803,5225,479.331,13.740213325111483,5.013,True,False,False,33,asid_5,False,Fatty alcohols,"6-(2,4,6,10-tetrahydroxyhenicosyl)-5,6-dihydro-2H-pyran-2-one",C24H42N6O4
+N-C17:0-tryptophan,tryptophan,17,long_chain,C28H44N2O3,[M+Na]+,479.3244139803,7824,479.3196,-10.043261222683853,5.14,True,False,False,13,asid_7824,False,,,

@@ -1140,3 +1140,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: this is the fourth independent line of evidence against the AHL/morphology hypothesis (alongside the null mass-search detection, the discounted bioreporter-based literature premise, and the absent fungal AHL biosynthesis pathway). None of the four lines individually disproves the hypothesis, but together they leave it with no positive support anywhere it's been tested.
 
 **Tags**: gwas, texture, ahl-autoinducer-search, near-clone-artifact, cross-project, hypothesis-closure
+
+## 2026-09-16: Expanded AHL search to N-acyl amino acids -- produced the first structurally-corroborated candidates in this investigation
+
+**Context**: PI noted N-acyl amino acids have documented evidence as quorum-signal-like molecules in some bacteria (chemically related to AHLs via shared acyl-CoA donor chemistry), and asked to expand the mass search to cover them.
+
+**Decision**: built a systematic (not cherry-picked) target list -- all 20 standard proteinogenic amino acids plus homoserine (motivated by this project's own lactonase-activity finding), crossed with acyl chain length C4-C18 and 3 positive-mode adducts (945 targets), searched the same raw EB feature table at 20 ppm as the AHL search. Checked and confirmed the feature table has no negative-mode data (a real gap, not fixable with current data).
+
+**Result**: 918 raw matches (541 distinct rows) -- same unfiltered caveat as AHLs. But filtering to exact SIRIUS-formula matches surfaced 3 rows (4109, 51126, 51152) where SIRIUS's own independent structure call names the exact target compound (e.g. "Palmitoyl arginine" for N-C16:0-arginine) -- not just a matching formula. This is the first time in this investigation a candidate has cleared a real structural-plausibility bar, materially stronger than anything found for AHLs.
+
+**Why**: N-acyl amino acids are ordinary fungal/microbial lipid chemistry (unlike AHLs, which have no known fungal biosynthetic route), so a real hit here is chemically much less surprising -- but for the same reason it is much weaker evidence of a signaling function specifically. Reported as a lead, not a finding.
+
+**Consequences**: no strain-level or MS2 follow-up has been done yet for these 3 rows. If pursued, priority is: MS2 spectral check first (since these candidates, unlike every prior one in this investigation, are worth the effort), then the Phase-2-style strain-detection-vs-morphology analysis, then the still-outstanding decoy/permutation null (now owed for both searches).
+
+**Tags**: n-acyl-amino-acid, quorum-sensing, mass-search, sirius, ahl-autoinducer-search, palmitoyl-arginine, lead
