@@ -1,0 +1,169 @@
+query_row,query_label,component_index,member_row,member_mz,member_rt,is_query_row,sirius_npc_class,sirius_structure_name
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,25482,301.2225,2.125271,False,,
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,15922,329.2542,3.074599,False,,
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,51126,385.3157,4.54209,True,N-acyl amines,N2-(1-Oxotetradecyl)-L-arginine
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,4109,413.347,4.781,True,N-acyl amines,Palmitoyl arginine
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,37158,429.342,4.633034,False,N-acyl amines,[2-Amino-5-(diaminomethylideneamino)pentanoyl] hexadecaneperoxoate
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,4166,435.331,4.642026,False,N-acyl amines,Palmitoyl arginine
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,14277,436.3345,4.632032,False,N-acyl amines,"1,3,5-Tris[3-(2-methoxyethoxy)propyl]-hexahydro-s-triazine"
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,4349,437.3467,4.731,False,N-acyl amines,
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,14873,438.3502,4.741,False,,
+4109,N-C16:0-arginine (Palmitoyl arginine),1696,5051,439.3627,4.802,False,N-acyl amines,(2S)-5-(diaminomethylideneamino)-2-[[(E)-octadec-9-enoyl]amino]pentanoic acid
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,25482,301.2225,2.125271,False,,
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,15922,329.2542,3.074599,False,,
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,51126,385.3157,4.54209,True,N-acyl amines,N2-(1-Oxotetradecyl)-L-arginine
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,4109,413.347,4.781,True,N-acyl amines,Palmitoyl arginine
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,37158,429.342,4.633034,False,N-acyl amines,[2-Amino-5-(diaminomethylideneamino)pentanoyl] hexadecaneperoxoate
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,4166,435.331,4.642026,False,N-acyl amines,Palmitoyl arginine
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,14277,436.3345,4.632032,False,N-acyl amines,"1,3,5-Tris[3-(2-methoxyethoxy)propyl]-hexahydro-s-triazine"
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,4349,437.3467,4.731,False,N-acyl amines,
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,14873,438.3502,4.741,False,,
+51126,N-C14:0-arginine (N-myristoyl-arginine),1696,5051,439.3627,4.802,False,N-acyl amines,(2S)-5-(diaminomethylideneamino)-2-[[(E)-octadec-9-enoyl]amino]pentanoic acid
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,4239,335.1447,1.951996,False,Dipeptides,"2-amino-6-[5-(1,2-dithiolan-3-yl)pentanamido]hexanoic acid"
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,13831,367.1168,2.76313,False,,
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,51152,385.341,4.743,True,N-acyl amines,N6-Palmitoyl lysine
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,42473,395.3253,4.693015,False,N-acyl amines,1-(10-Iminooctadecanoyl)pyrrolidine-2-carboxylic acid
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,35030,397.3411,4.782,False,N-acyl amines,(2S)-5-amino-2-(octadec-9-enoylamino)pentanoic acid
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,50119,407.3254,4.573047,False,N-acyl amines,6-amino-2-hexadecanamidohexanoic acid
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,37872,407.3257,4.772286,False,N-acyl amines,N6-Palmitoyl lysine
+51152,N-C16:0-lysine (N6-Palmitoyl lysine),2820,37482,409.3409,4.704,False,N-acyl amines,"6-amino-2-[[(9Z,12Z)-octadeca-9,12-dienoyl]amino]hexanoic acid"
+24998,N-C16:0-histidine (supplementary),1604,5287,367.1964,1.878,False,Tripeptides,"2-[[2-[(2,4-Diamino-4-oxobutanoyl)amino]-4-methylpentanoyl]amino]-3-methylbutanoic acid"
+24998,N-C16:0-histidine (supplementary),1604,4517,381.2122,2.287,False,,
+24998,N-C16:0-histidine (supplementary),1604,3239,381.2122,2.331384,False,Tripeptides,2-[[4-Amino-2-[(2-amino-4-methylpentanoyl)amino]-4-oxobutanoyl]amino]-3-methylpentanoic acid
+24998,N-C16:0-histidine (supplementary),1604,12022,382.2155,2.35837,False,,
+24998,N-C16:0-histidine (supplementary),1604,24998,394.305,4.778,True,N-acyl amines,
+24998,N-C16:0-histidine (supplementary),1604,2500,414.1759,0.981003,False,,
+24998,N-C16:0-histidine (supplementary),1604,901,414.1763,0.887456,False,,
+24998,N-C16:0-histidine (supplementary),1604,10458,414.1973,0.808527,False,Tripeptides,H-His-His-His-al
+24998,N-C16:0-histidine (supplementary),1604,21753,415.1962,2.485015,False,Dipeptides,"N-[3-(1H-indol-3-yl)-1-[2-(4-methyl-5-sulfanylidene-1H-1,2,4-triazol-3-yl)ethylamino]-1-oxopropan-2-yl]-2-methylpropanamide"
+24998,N-C16:0-histidine (supplementary),1604,7638,415.1965,2.665,False,,
+24998,N-C16:0-histidine (supplementary),1604,40740,416.2894,4.613134,True,N-acyl amines,
+24998,N-C16:0-histidine (supplementary),1604,19293,418.3051,4.732857,False,N-acyl amines,N-Linoleoyl Histidine
+24998,N-C16:0-histidine (supplementary),1604,6438,438.3065,0.540778,False,,
+24998,N-C16:0-histidine (supplementary),1604,3747,439.2655,0.551887,False,Tripeptides,2-{[1-(2-amino-4-methylpentanoyl)piperidin-4-yl]formamido}-N-[(4-methylphenyl)methyl]propanamide
+24998,N-C16:0-histidine (supplementary),1604,11837,452.2491,2.383026,False,,
+24998,N-C16:0-histidine (supplementary),1604,3916,453.1866,1.023,False,,
+24998,N-C16:0-histidine (supplementary),1604,3714,453.1866,1.015243,False,Tripeptides,H-DL-Gln-DL-Phe-DL-His-OH
+24998,N-C16:0-histidine (supplementary),1604,3389,453.1869,1.055432,False,,
+24998,N-C16:0-histidine (supplementary),1604,3457,453.187,1.061,False,,
+24998,N-C16:0-histidine (supplementary),1604,2476,463.2292,0.616368,False,Tripeptides,Debromosceptrin
+24998,N-C16:0-histidine (supplementary),1604,3276,466.2649,2.391588,False,,
+24998,N-C16:0-histidine (supplementary),1604,704,477.2444,1.112,False,Tripeptides,Provipeptide B
+24998,N-C16:0-histidine (supplementary),1604,2968,477.7668,1.058,False,,
+24998,N-C16:0-histidine (supplementary),1604,2617,478.2478,1.098119,False,Tripeptides,
+24998,N-C16:0-histidine (supplementary),1604,6360,478.2687,1.043797,False,,
+24998,N-C16:0-histidine (supplementary),1604,9191,478.2761,0.543666,False,Tripeptides,H-Ala-Leu-Phe-Gln-OH
+24998,N-C16:0-histidine (supplementary),1604,26240,478.3013,0.576528,False,Tripeptides,(R)-N1-((S)-5-Oxohexan-2-Yl)-2-Tetradecanamidosuccinamide
+24998,N-C16:0-histidine (supplementary),1604,20028,478.3015,0.772,False,Tripeptides,(R)-N1-((S)-5-Oxohexan-2-Yl)-2-Tetradecanamidosuccinamide
+24998,N-C16:0-histidine (supplementary),1604,2002,479.2488,1.106127,False,Tripeptides,H-DL-Tyr-DL-xiThr-DL-Pro-DL-Val-OH
+24998,N-C16:0-histidine (supplementary),1604,3583,479.2488,1.336182,False,Tripeptides,H-DL-Asp-DL-Phe-DL-Val-DL-Val-OH
+24998,N-C16:0-histidine (supplementary),1604,825,479.2603,0.922811,False,Tripeptides,H-DL-xiIle-DL-Pro-DL-Val-DL-Leu-OH
+24998,N-C16:0-histidine (supplementary),1604,8350,480.2531,0.779523,False,Tripeptides,Cyclo(ornithyl)phenylalanyl-prolyl-valine
+24998,N-C16:0-histidine (supplementary),1604,15951,480.2538,1.351842,False,,
+24998,N-C16:0-histidine (supplementary),1604,3216,480.264,0.922811,False,Tripeptides,H-Gly-Arg-Leu-Leu-al
+24998,N-C16:0-histidine (supplementary),1604,8296,480.2802,2.710881,False,Tripeptides,Glycyl-L-valyl-L-valyl-L-isoleucyl-L-alanine
+24998,N-C16:0-histidine (supplementary),1604,26249,482.2589,2.413496,False,,
+24998,N-C16:0-histidine (supplementary),1604,13880,482.2598,2.335476,False,Tripeptides,Leucylarginylarginine
+24998,N-C16:0-histidine (supplementary),1604,8126,486.2333,2.287468,False,,
+24998,N-C16:0-histidine (supplementary),1604,810,493.275,1.436468,False,Tripeptides,Ile-Ile-Ile-Pro
+24998,N-C16:0-histidine (supplementary),1604,1783,493.2754,1.521,False,,
+24998,N-C16:0-histidine (supplementary),1604,684,493.2756,1.45991,False,,
+24998,N-C16:0-histidine (supplementary),1604,2270,493.2758,1.3271,False,Tripeptides,Ile-Ile-Ile-Pro
+24998,N-C16:0-histidine (supplementary),1604,5877,494.2789,1.332545,False,,
+24998,N-C16:0-histidine (supplementary),1604,5726,494.279,1.521,False,Tripeptides,H-DL-Gln-DL-Leu-DL-Pro-DL-His-OH
+24998,N-C16:0-histidine (supplementary),1604,2309,494.2794,1.460701,False,,
+24998,N-C16:0-histidine (supplementary),1604,17831,494.2956,3.08863,False,,
+24998,N-C16:0-histidine (supplementary),1604,16925,494.2957,3.117275,False,,
+24998,N-C16:0-histidine (supplementary),1604,29444,494.2957,3.00568,False,Dipeptides,"2,2-dimethyl-N-{2-[2-(5-methyl-3,6-dioxopiperazin-2-yl)acetyl]-4,6-bis(3-methylbut-2-en-1-yl)phenyl}but-3-enamide"
+24998,N-C16:0-histidine (supplementary),1604,21957,494.2958,3.186984,False,,
+24998,N-C16:0-histidine (supplementary),1604,3106,511.2287,1.383027,False,,
+24998,N-C16:0-histidine (supplementary),1604,1667,513.2443,1.332545,False,Tripeptides,Wss2217
+24998,N-C16:0-histidine (supplementary),1604,432,527.2601,1.779728,False,,
+24998,N-C16:0-histidine (supplementary),1604,6173,561.244,2.074383,False,,
+24998,N-C16:0-histidine (supplementary),1604,5915,561.2441,2.096858,False,,
+24998,N-C16:0-histidine (supplementary),1604,3671,562.2966,0.991,False,Tripeptides,Val-Leu-Pro-Val-Pro
+24998,N-C16:0-histidine (supplementary),1604,10796,566.2702,1.894162,False,,
+24998,N-C16:0-histidine (supplementary),1604,2742,576.312,1.463598,False,Tripeptides,H-Val-Leu-Pro-Ile-Pro-OH
+24998,N-C16:0-histidine (supplementary),1604,5419,576.3129,1.349724,False,Tripeptides,H-Val-Leu-Pro-Ile-Pro-OH
+24998,N-C16:0-histidine (supplementary),1604,7227,578.2916,0.824,False,Tripeptides,"[(2R,3S,4R,5R)-5-(4-aminopyrrolo[2,3-d]pyrimidin-7-yl)-3,4-dihydroxyoxolan-2-yl]methyl-[3-[(4-tert-butylphenyl)carbamoylamino]propyl]-propan-2-ylazanium"
+24998,N-C16:0-histidine (supplementary),1604,6964,578.3281,1.423541,False,,
+24998,N-C16:0-histidine (supplementary),1604,3761,590.3276,1.739429,False,,
+24998,N-C16:0-histidine (supplementary),1604,3729,590.3279,1.640973,False,,
+24998,N-C16:0-histidine (supplementary),1604,8702,590.3287,1.867,False,,
+24998,N-C16:0-histidine (supplementary),1604,3355,607.3185,1.362113,False,Tripeptides,H-Asp-Leu-Thr-Arg-Pro-al
+24998,N-C16:0-histidine (supplementary),1604,4157,612.3123,1.755514,False,Tripeptides,Ile-Phe-Phe-Trp
+24998,N-C16:0-histidine (supplementary),1604,3987,612.3125,2.032101,False,,
+24998,N-C16:0-histidine (supplementary),1604,5018,624.314,2.119031,False,,
+24998,N-C16:0-histidine (supplementary),1604,2188,628.3076,1.26974,False,,
+24998,N-C16:0-histidine (supplementary),1604,2673,642.2867,1.879319,False,,
+24998,N-C16:0-histidine (supplementary),1604,10431,687.381,2.122433,False,,
+40740,N-C16:0-histidine (supplementary),1604,5287,367.1964,1.878,False,Tripeptides,"2-[[2-[(2,4-Diamino-4-oxobutanoyl)amino]-4-methylpentanoyl]amino]-3-methylbutanoic acid"
+40740,N-C16:0-histidine (supplementary),1604,4517,381.2122,2.287,False,,
+40740,N-C16:0-histidine (supplementary),1604,3239,381.2122,2.331384,False,Tripeptides,2-[[4-Amino-2-[(2-amino-4-methylpentanoyl)amino]-4-oxobutanoyl]amino]-3-methylpentanoic acid
+40740,N-C16:0-histidine (supplementary),1604,12022,382.2155,2.35837,False,,
+40740,N-C16:0-histidine (supplementary),1604,24998,394.305,4.778,True,N-acyl amines,
+40740,N-C16:0-histidine (supplementary),1604,2500,414.1759,0.981003,False,,
+40740,N-C16:0-histidine (supplementary),1604,901,414.1763,0.887456,False,,
+40740,N-C16:0-histidine (supplementary),1604,10458,414.1973,0.808527,False,Tripeptides,H-His-His-His-al
+40740,N-C16:0-histidine (supplementary),1604,21753,415.1962,2.485015,False,Dipeptides,"N-[3-(1H-indol-3-yl)-1-[2-(4-methyl-5-sulfanylidene-1H-1,2,4-triazol-3-yl)ethylamino]-1-oxopropan-2-yl]-2-methylpropanamide"
+40740,N-C16:0-histidine (supplementary),1604,7638,415.1965,2.665,False,,
+40740,N-C16:0-histidine (supplementary),1604,40740,416.2894,4.613134,True,N-acyl amines,
+40740,N-C16:0-histidine (supplementary),1604,19293,418.3051,4.732857,False,N-acyl amines,N-Linoleoyl Histidine
+40740,N-C16:0-histidine (supplementary),1604,6438,438.3065,0.540778,False,,
+40740,N-C16:0-histidine (supplementary),1604,3747,439.2655,0.551887,False,Tripeptides,2-{[1-(2-amino-4-methylpentanoyl)piperidin-4-yl]formamido}-N-[(4-methylphenyl)methyl]propanamide
+40740,N-C16:0-histidine (supplementary),1604,11837,452.2491,2.383026,False,,
+40740,N-C16:0-histidine (supplementary),1604,3916,453.1866,1.023,False,,
+40740,N-C16:0-histidine (supplementary),1604,3714,453.1866,1.015243,False,Tripeptides,H-DL-Gln-DL-Phe-DL-His-OH
+40740,N-C16:0-histidine (supplementary),1604,3389,453.1869,1.055432,False,,
+40740,N-C16:0-histidine (supplementary),1604,3457,453.187,1.061,False,,
+40740,N-C16:0-histidine (supplementary),1604,2476,463.2292,0.616368,False,Tripeptides,Debromosceptrin
+40740,N-C16:0-histidine (supplementary),1604,3276,466.2649,2.391588,False,,
+40740,N-C16:0-histidine (supplementary),1604,704,477.2444,1.112,False,Tripeptides,Provipeptide B
+40740,N-C16:0-histidine (supplementary),1604,2968,477.7668,1.058,False,,
+40740,N-C16:0-histidine (supplementary),1604,2617,478.2478,1.098119,False,Tripeptides,
+40740,N-C16:0-histidine (supplementary),1604,6360,478.2687,1.043797,False,,
+40740,N-C16:0-histidine (supplementary),1604,9191,478.2761,0.543666,False,Tripeptides,H-Ala-Leu-Phe-Gln-OH
+40740,N-C16:0-histidine (supplementary),1604,26240,478.3013,0.576528,False,Tripeptides,(R)-N1-((S)-5-Oxohexan-2-Yl)-2-Tetradecanamidosuccinamide
+40740,N-C16:0-histidine (supplementary),1604,20028,478.3015,0.772,False,Tripeptides,(R)-N1-((S)-5-Oxohexan-2-Yl)-2-Tetradecanamidosuccinamide
+40740,N-C16:0-histidine (supplementary),1604,2002,479.2488,1.106127,False,Tripeptides,H-DL-Tyr-DL-xiThr-DL-Pro-DL-Val-OH
+40740,N-C16:0-histidine (supplementary),1604,3583,479.2488,1.336182,False,Tripeptides,H-DL-Asp-DL-Phe-DL-Val-DL-Val-OH
+40740,N-C16:0-histidine (supplementary),1604,825,479.2603,0.922811,False,Tripeptides,H-DL-xiIle-DL-Pro-DL-Val-DL-Leu-OH
+40740,N-C16:0-histidine (supplementary),1604,8350,480.2531,0.779523,False,Tripeptides,Cyclo(ornithyl)phenylalanyl-prolyl-valine
+40740,N-C16:0-histidine (supplementary),1604,15951,480.2538,1.351842,False,,
+40740,N-C16:0-histidine (supplementary),1604,3216,480.264,0.922811,False,Tripeptides,H-Gly-Arg-Leu-Leu-al
+40740,N-C16:0-histidine (supplementary),1604,8296,480.2802,2.710881,False,Tripeptides,Glycyl-L-valyl-L-valyl-L-isoleucyl-L-alanine
+40740,N-C16:0-histidine (supplementary),1604,26249,482.2589,2.413496,False,,
+40740,N-C16:0-histidine (supplementary),1604,13880,482.2598,2.335476,False,Tripeptides,Leucylarginylarginine
+40740,N-C16:0-histidine (supplementary),1604,8126,486.2333,2.287468,False,,
+40740,N-C16:0-histidine (supplementary),1604,810,493.275,1.436468,False,Tripeptides,Ile-Ile-Ile-Pro
+40740,N-C16:0-histidine (supplementary),1604,1783,493.2754,1.521,False,,
+40740,N-C16:0-histidine (supplementary),1604,684,493.2756,1.45991,False,,
+40740,N-C16:0-histidine (supplementary),1604,2270,493.2758,1.3271,False,Tripeptides,Ile-Ile-Ile-Pro
+40740,N-C16:0-histidine (supplementary),1604,5877,494.2789,1.332545,False,,
+40740,N-C16:0-histidine (supplementary),1604,5726,494.279,1.521,False,Tripeptides,H-DL-Gln-DL-Leu-DL-Pro-DL-His-OH
+40740,N-C16:0-histidine (supplementary),1604,2309,494.2794,1.460701,False,,
+40740,N-C16:0-histidine (supplementary),1604,17831,494.2956,3.08863,False,,
+40740,N-C16:0-histidine (supplementary),1604,16925,494.2957,3.117275,False,,
+40740,N-C16:0-histidine (supplementary),1604,29444,494.2957,3.00568,False,Dipeptides,"2,2-dimethyl-N-{2-[2-(5-methyl-3,6-dioxopiperazin-2-yl)acetyl]-4,6-bis(3-methylbut-2-en-1-yl)phenyl}but-3-enamide"
+40740,N-C16:0-histidine (supplementary),1604,21957,494.2958,3.186984,False,,
+40740,N-C16:0-histidine (supplementary),1604,3106,511.2287,1.383027,False,,
+40740,N-C16:0-histidine (supplementary),1604,1667,513.2443,1.332545,False,Tripeptides,Wss2217
+40740,N-C16:0-histidine (supplementary),1604,432,527.2601,1.779728,False,,
+40740,N-C16:0-histidine (supplementary),1604,6173,561.244,2.074383,False,,
+40740,N-C16:0-histidine (supplementary),1604,5915,561.2441,2.096858,False,,
+40740,N-C16:0-histidine (supplementary),1604,3671,562.2966,0.991,False,Tripeptides,Val-Leu-Pro-Val-Pro
+40740,N-C16:0-histidine (supplementary),1604,10796,566.2702,1.894162,False,,
+40740,N-C16:0-histidine (supplementary),1604,2742,576.312,1.463598,False,Tripeptides,H-Val-Leu-Pro-Ile-Pro-OH
+40740,N-C16:0-histidine (supplementary),1604,5419,576.3129,1.349724,False,Tripeptides,H-Val-Leu-Pro-Ile-Pro-OH
+40740,N-C16:0-histidine (supplementary),1604,7227,578.2916,0.824,False,Tripeptides,"[(2R,3S,4R,5R)-5-(4-aminopyrrolo[2,3-d]pyrimidin-7-yl)-3,4-dihydroxyoxolan-2-yl]methyl-[3-[(4-tert-butylphenyl)carbamoylamino]propyl]-propan-2-ylazanium"
+40740,N-C16:0-histidine (supplementary),1604,6964,578.3281,1.423541,False,,
+40740,N-C16:0-histidine (supplementary),1604,3761,590.3276,1.739429,False,,
+40740,N-C16:0-histidine (supplementary),1604,3729,590.3279,1.640973,False,,
+40740,N-C16:0-histidine (supplementary),1604,8702,590.3287,1.867,False,,
+40740,N-C16:0-histidine (supplementary),1604,3355,607.3185,1.362113,False,Tripeptides,H-Asp-Leu-Thr-Arg-Pro-al
+40740,N-C16:0-histidine (supplementary),1604,4157,612.3123,1.755514,False,Tripeptides,Ile-Phe-Phe-Trp
+40740,N-C16:0-histidine (supplementary),1604,3987,612.3125,2.032101,False,,
+40740,N-C16:0-histidine (supplementary),1604,5018,624.314,2.119031,False,,
+40740,N-C16:0-histidine (supplementary),1604,2188,628.3076,1.26974,False,,
+40740,N-C16:0-histidine (supplementary),1604,2673,642.2867,1.879319,False,,
+40740,N-C16:0-histidine (supplementary),1604,10431,687.381,2.122433,False,,

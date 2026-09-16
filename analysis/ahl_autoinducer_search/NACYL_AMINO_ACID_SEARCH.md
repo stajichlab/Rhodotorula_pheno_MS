@@ -397,29 +397,87 @@ in individual strains — but pooled-QC dilution/matrix effects for a
 compound restricted to particular strains is a plausible, non-alarming
 explanation, not itself a red flag.)
 
+### 5. Molecular-network corroboration (2026-09-16, additional check)
+
+`analysis/scripts/nacyl_amino_acid_network_component_check.py` -- a third
+independent method, using neither our own target list nor a fresh SIRIUS
+run: the raw EB pipeline's own upstream MS2 cosine-similarity molecular
+network (`nf_output/networking/filtered_pairs.tsv`, the same network this
+project's `analysis/network_components/` already uses elsewhere), built
+before and independent of this whole investigation.
+
+**Rows 4109 and 51126 (both arginine candidates) sit in the same
+10-member component (1696)**, alongside other members independently
+called "N-acyl amines" by SIRIUS -- including **row 5051, independently
+named "(2S)-5-(diaminomethylideneamino)-2-[(E)-octadec-9-enoylamino]-
+pentanoic acid" (= N-oleoyl-arginine, a C18:1 homolog)** and row 37158 (an
+oxidized/peroxide arginine-backbone variant). Row 4109 and row 51126's
+network edge has DeltaMZ=28.031 -- almost exactly 2xCH2 (28.0313), the
+expected mass step between their C16 and C14 acyl chains. This is an
+internally consistent, chemically coherent homologous series, identified
+by an algorithm (cosine spectral similarity) that has no knowledge of our
+target list or formulas.
+
+**Row 51152 (lysine candidate) sits in a separate 8-member component
+(2820)**, which includes **row 37872, independently ALSO named "N6-
+Palmitoyl lysine"** (a second, independent naming of the identical
+compound on a different feature), row 50119 ("6-amino-2-hexadecanamido-
+hexanoic acid" -- the systematic-nomenclature name for the same
+compound), row 37482 (N-linoleoyl-lysine, a C18:2 homolog), and **row
+35030, named "(2S)-5-amino-2-(octadec-9-enoylamino)pentanoic acid" --
+N-oleoyl-ORNITHINE, not lysine**. This last one is a notable, unprompted
+tie-back to the literature review: ornithine lipids and lysine lipids are
+made by the SAME bacterial biosynthetic pathway (OlsB->OlsA) in the
+aminolipid literature already found for this investigation -- finding an
+ornithine conjugate clustering spectrally with our lysine candidate is
+exactly what that documented pathway predicts, independent confirmation
+that this network component is the real natural-product family the
+literature describes, not a coincidental grouping.
+
+**The 2 weak supplementary histidine candidates (24998, 40740) sit in a
+much less convincing component (1604, 70 members)** -- overwhelmingly
+dominated by unrelated tripeptide/dipeptide chemistry (random-looking
+sequences like "Ile-Ile-Ile-Pro", "H-Val-Leu-Pro-Ile-Pro-OH"), with only
+one other "N-acyl amines"-class neighbor (row 19293, "N-Linoleoyl
+Histidine"). This is a much noisier, less chemically coherent network
+neighborhood than the arginine/lysine components -- consistent with
+these two rows already being flagged as the least credible candidates in
+this search.
+
+Full detail: `nacyl_amino_acid_network_components.csv`.
+
 ## Bottom line (updated 2026-09-16)
 
 **This is now the best-supported candidate in this entire AHL/quorum-
-sensing investigation.** Three N-acyl-arginine/lysine features have: a
-SIRIUS structure call naming the exact compound, MS2 fragments matching
-the expected amino-acid-backbone chemistry at sub-5-ppm accuracy, no
-detectable background/reagent contamination, and no detectable
-colony-size confound. That said, three things still argue against a
-**signaling** role specifically, independent of whether the compound
-identity itself is now well-supported: (1) these compounds are almost
-entirely cell-associated, not released into the supernatant, which is
-what a membrane lipid looks like, not a diffusible signal; (2) the
-closest literature-documented relative class (bacterial ornithine/lysine
-aminolipids) has a described membrane-lipid, phosphate-stress role, not
-a signaling one; (3) neither of two independent phylogenetic-signal tests
-finds species-level production differences structured by the species
-tree. **Fungal-vs-bacterial origin remains unresolved** — MS2 confirms
-the compound's identity, not its producing organism. The one remaining
-step from the original priority list, authentic chemical standards for
-retention-time/MS2 matching, is the only test that could move this
-further; item 6 (the `phase2_color_metabolome_association.py`
-phenotype-association design) remains available if a different question
-(does this track color/copper resistance) becomes of interest.
+sensing investigation, by three independent computational methods.**
+Three N-acyl-arginine/lysine features have: (a) a SIRIUS structure call
+naming the exact compound, (b) MS2 fragments matching the expected
+amino-acid-backbone chemistry at sub-5-ppm accuracy, and (c) independent
+placement in a chemically coherent molecular-network family alongside
+other, differently-named homologs (C18:1/C18:2 chain variants, and in
+the lysine case an ornithine analog matching the exact biosynthetic
+pathway the literature describes). No detectable background/reagent
+contamination and no detectable colony-size confound either.
+
+That said, the same three things still argue against a **signaling**
+role specifically, independent of how well-supported the compound
+identity now is: (1) these compounds are almost entirely cell-associated,
+not released into the supernatant -- what a membrane lipid looks like,
+not a diffusible signal; (2) the closest literature-documented relative
+class (bacterial ornithine/lysine aminolipids) has a described
+membrane-lipid, phosphate-stress role, not a signaling one -- and the
+network result just strengthened this specific match, not weakened it;
+(3) neither of two independent phylogenetic-signal tests finds
+species-level production differences structured by the species tree.
+
+**Fungal-vs-bacterial origin remains unresolved** — every computational
+check confirms WHAT these molecules are with increasing confidence, none
+can establish WHO made them. The one remaining step from the original
+priority list, authentic chemical standards for retention-time/MS2
+matching, is the only test that could move this further; item 6 (the
+`phase2_color_metabolome_association.py` phenotype-association design)
+remains available if a different question (does this track color/copper
+resistance) becomes of interest.
 
 ## Files
 - `analysis/scripts/nacyl_amino_acid_mass_remining.py` — target-list builder + search
@@ -437,3 +495,5 @@ phenotype-association design) remains available if a different question
 - `nacyl_amino_acid_ms2_fragment_check.csv` — fragment match results (4/4 for all 3 strong candidates)
 - `analysis/scripts/mass_search_decoy_null.py` — decoy/permutation null, reused for both the AHL and this search (validation step 2)
 - `ahl_decoy_null.csv` / `nacyl_amino_acid_decoy_null.csv` — per-permutation null match counts
+- `analysis/scripts/nacyl_amino_acid_network_component_check.py` — molecular-network (GNPS-style) corroboration check
+- `nacyl_amino_acid_network_components.csv` — full component membership for all 5 candidates

@@ -373,12 +373,30 @@ deep phylogenetic conservation (or with limited power at n=16 species).
 4. **Blank/QC_Mix presence — absent.** Exact zero in every blank and
    QC_Mix sample for all 5 candidates; no reagent/background signal.
 
+**A fifth check followed naturally: molecular-network corroboration.**
+This project's raw pipeline already builds an upstream MS2 cosine-
+similarity molecular network (used elsewhere in
+`analysis/network_components/`), untouched by this investigation. Rows
+4109/51126 (arginine) sit in a 10-member component alongside other,
+independently-SIRIUS-named homologs — an N-oleoyl-arginine (C18:1) and
+an oxidized variant — with a consistent 28.03 Da (2×CH2) mass step
+between the C14/C16 members. Row 51152 (lysine) sits in an 8-member
+component that includes a SECOND independent "N6-Palmitoyl lysine"
+naming on a different feature, a C18:2 lysine homolog, and an
+N-oleoyl-ornithine analog — ornithine and lysine lipids come from the
+same bacterial biosynthetic pathway (OlsB→OlsA) per the literature check
+above, so finding them cluster together spectrally is exactly what that
+documented pathway predicts. The 2 weak histidine candidates sit in a
+much noisier, tripeptide-dominated 70-member component — consistent with
+them being the least credible candidates throughout.
+
 **Net effect of this round of validation**: compound identity for the 3
 strong candidates (Palmitoyl arginine, N-myristoyl-arginine, N6-Palmitoyl
-lysine) is now well-supported by real fragment-level chemistry, not just
-mass matching. Fungal-vs-bacterial origin, and any signaling role, remain
-open — MS2 confirms what the molecule is, not who made it or what it's
-for.
+lysine) is now supported by three independent computational methods
+(SIRIUS structure calls, MS2 fragment chemistry, and network clustering),
+not just mass matching. Fungal-vs-bacterial origin, and any signaling
+role, remain open — every check confirms what the molecule is, none can
+establish who made it or what it's for.
 
 Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
 

@@ -1198,3 +1198,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: compound identity for Palmitoyl arginine, N-myristoyl-arginine, and N6-Palmitoyl lysine is now well-supported by real chemistry, not just mass/SIRIUS-class matching -- the strongest positive result across the whole AHL/quorum-sensing investigation. Fungal-vs-bacterial origin and any signaling role remain unresolved; MS2 confirms identity, not origin or function. Remaining open step: authentic chemical standards for retention-time/MS2 matching, if pursued further.
 
 **Tags**: n-acyl-amino-acid, ms2-confirmation, decoy-null, biomass-confound, blank-contamination, ahl-autoinducer-search, validation
+
+## 2026-09-16 (follow-up 4): Molecular-network clustering independently corroborates the N-acyl-arginine/lysine candidates
+
+**Context**: after validation steps 1-4, PI asked if there was any more computational validation available before requiring physical standards. Checked whether this project's existing upstream GNPS-style MS2 molecular network (built before and independent of this investigation, already used in `analysis/network_components/`) had anything to say about the 3 strong candidates.
+
+**Decision**: pulled network component membership (`filtered_pairs.tsv`, cosine-similarity edges) for rows 4109, 51126, 51152, and the 2 weak histidine candidates, cross-referenced each component's other members against SIRIUS annotations.
+
+**Result**: rows 4109/51126 (arginine) sit in a 10-member component with other independently-named "N-acyl amines" homologs, including an N-oleoyl-arginine (C18:1) and an oxidized variant, with a 28.03 Da (2xCH2) mass step matching the C14/C16 chain-length difference between the two query rows themselves. Row 51152 (lysine) sits in an 8-member component including a SECOND independent "N6-Palmitoyl lysine" call on a different feature, a C18:2 lysine homolog, and -- notably -- an N-oleoyl-ornithine analog, which ties directly back to the earlier literature finding that ornithine lipids and lysine lipids share the same bacterial biosynthetic pathway (OlsB->OlsA). The 2 weak histidine candidates sit in a much noisier 70-member component dominated by unrelated tripeptide/dipeptide chemistry.
+
+**Rationale**: this is a genuinely independent method (unsupervised spectral cosine similarity, no knowledge of our target list or SIRIUS's own calls) rather than a re-analysis of the same evidence already used -- finding chemically coherent homologous families this way is meaningfully different corroboration than a repeated formula/name match.
+
+**Consequences**: three independent computational methods (SIRIUS structure calls, MS2 diagnostic fragments, network clustering) now agree on compound identity for the 3 strong candidates -- as strong as this investigation can get without wet-lab standards. None of the three can resolve fungal-vs-bacterial origin or establish a signaling function; the network result, if anything, strengthens the bacterial-aminolipid interpretation (via the ornithine-lipid tie-in) rather than supporting novel fungal biosynthesis. Authentic chemical standards remain the only further step.
+
+**Tags**: n-acyl-amino-acid, molecular-networking, gnps, ornithine-lipid, ahl-autoinducer-search, validation
