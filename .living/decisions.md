@@ -1168,3 +1168,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: this compound class is real and variable across the strain panel, but the compartment pattern argues against a signaling role specifically, on top of the already-thin case for a fungal biosynthetic route. Not proof of contamination or of a novel undocumented fungal membrane lipid -- both remain open, compound identity alone can't distinguish them. MS2 confirmation and the still-outstanding decoy null remain the next real steps if pursued further.
 
 **Tags**: n-acyl-amino-acid, cell-vs-supernatant, compartment, species-variation, membrane-lipid, ahl-autoinducer-search
+
+## 2026-09-16 (follow-up 2): No phylogenetic signal in N-acyl amino acid candidate production, by two independent methods
+
+**Context**: PI asked to apply the phase2_metabolome_phenotype framework to test for phylogenetic signal in production of the 3 structurally-corroborated N-acyl amino acid candidates, and requested additional validation-test suggestions.
+
+**Decision**: ran two complementary tests rather than picking one. (1) Blomberg's K / Pagel's lambda (this project's dedicated phylogenetic-signal tool, `phylogenetic_signal.R`, previously used for color phenotype) at the species level (n=16 species). (2) A block-permutation test reusing `phase2_color_metabolome_association.py`'s own species-tree clade-construction code (not its full association design, which tests compound-vs-external-phenotype correlation -- a different question), at strain level (n=265) as a non-parametric complement better suited to these zero-inflated compounds.
+
+**Result**: both methods agree -- no significant phylogenetic signal for any of the 3 strong candidates (K~0.35-0.38, all p>0.5; lambda~0, all p>0.9; block-permutation p=0.06-0.38). The weakest, unnamed-structure supplementary candidate (row 40740) is nominally significant (p=0.01) but doesn't survive Bonferroni correction for 5 tests and is the least credible candidate in this search anyway.
+
+**Rationale**: species differences found earlier (Kruskal-Wallis) are real but don't track the species tree -- using two independent methods (one parametric/species-level, one permutation-based/strain-level) guards against either method's specific assumptions (Brownian-motion continuity for K/lambda; small species n) driving the conclusion.
+
+**Consequences**: production variation across species is more consistent with strain-level or ecological drivers than deep phylogenetic conservation, though limited power at n=16 species (several single-strain) can't be ruled out as an alternative explanation for a true-but-undetected signal. Suggested next validation steps (documented in NACYL_AMINO_ACID_SEARCH.md): MS2 fragment confirmation (highest priority), the still-outstanding decoy/permutation null, checking the known colony-area/biomass confound against these species differences, checking Blank/QC_Mix presence directly, and authentic chemical standards if pursued further.
+
+**Tags**: n-acyl-amino-acid, phylogenetic-signal, blomberg-k, pagel-lambda, block-permutation, ahl-autoinducer-search

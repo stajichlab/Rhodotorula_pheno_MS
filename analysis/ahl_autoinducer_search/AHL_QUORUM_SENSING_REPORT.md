@@ -46,8 +46,9 @@ lysine "aminolipids") describes a membrane-lipid, phosphate-stress role,
 not signaling. Consistent with that, all candidates are almost entirely
 cell-associated, not present in the supernatant (p<0.0001) — the opposite
 compartment pattern from what a diffusible quorum signal would need.
-Production does vary significantly by species in the cell fraction. See
-section 8.
+Production does vary significantly by species in the cell fraction, but
+two independent phylogenetic-signal tests find that variation is NOT
+structured by the species tree. See section 8.
 
 ## 1. Where the hypothesis came from, and why it is weak on its own terms
 
@@ -333,7 +334,23 @@ relative class, not a signaling role. Production does vary significantly
 across species in the cell fraction (Kruskal-Wallis p=0.001-0.009,
 descriptive, not phylogenetically corrected) — *R. taiwanensis* and
 *R. paludigena* consistently highest, some species near-absent for some
-compounds. Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
+compounds.
+
+**Phylogenetic signal test**: two independent methods (Blomberg's
+K/Pagel's lambda at species level; a block-permutation test at strain
+level) both find no significant phylogenetic signal in production of
+any candidate. Species differ, but that difference does not track the
+species tree — consistent with strain-level or ecological drivers, not
+deep phylogenetic conservation (or with limited power at n=16 species).
+
+**Suggested next steps, in order**: MS2 fragment confirmation for rows
+4109/51126/51152 (highest priority — the only step that can confirm
+structure); the decoy/permutation null still owed to both searches;
+checking the known colony-area/biomass confound against the cell-
+fraction species differences; checking Blank/QC_Mix presence directly;
+authentic chemical standards if pursued further.
+
+Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
 
 ## Files in this analysis
 

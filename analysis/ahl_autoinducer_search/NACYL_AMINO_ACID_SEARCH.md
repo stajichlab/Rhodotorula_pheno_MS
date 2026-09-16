@@ -186,6 +186,82 @@ Full per-strain/species/fraction data:
 `nacyl_amino_acid_compartment_species.csv`; full test output:
 `nacyl_amino_acid_compartment_species_diagnostics.txt`.
 
+## Phylogenetic signal test (2026-09-16, PI request)
+
+The Kruskal-Wallis species comparison above is descriptive and not
+phylogenetically aware — species differences could reflect shared
+ancestry, or could be phylogenetically random noise that happens to
+differ by species. Two independent methods were run to test this
+directly, both against the species-level tree
+(`analysis/integrated_analysis/phase1_phenotype/species_tree.nwk`,
+16 tips), cell fraction only (supernatant is not tested — essentially
+absent per the compartment analysis above).
+
+**Method 1 — Blomberg's K / Pagel's lambda** (this project's dedicated
+phylogenetic-signal tool, `phylogenetic_signal.R`, previously used for
+color phenotype; reused here as
+`nacyl_amino_acid_phylogenetic_signal.R`). Species-level mean
+log10(peak_area+1), via `nacyl_amino_acid_build_species_table.py`.
+
+| compound | K | K p-value | lambda | lambda p-value |
+|---|---|---|---|---|
+| Palmitoyl arginine (4109) | 0.36 | 0.51 | 0.03 | 0.90 |
+| N-myristoyl-arginine (51126) | 0.38 | 0.58 | ~0 | 1.00 |
+| N6-Palmitoyl lysine (51152) | 0.37 | 0.62 | ~0 | 1.00 |
+| histidine (24998, supplementary) | 0.35 | 0.69 | 0.06 | 0.76 |
+| histidine (40740, supplementary) | 0.33 | 0.78 | 0.09 | 0.71 |
+
+K well below the Brownian-motion expectation of 1 for all 5 compounds,
+none significant; lambda near 0 (no phylogenetic correlation structure)
+for all 5, none significant. **No detectable phylogenetic signal by
+this method for any candidate.**
+
+**Method 2 — block-permutation test** (per PI request, reusing this
+project's `phase2_color_metabolome_association.py` block-construction
+method directly — its own use of that method tests compound abundance
+against an EXTERNAL phenotype while controlling for phylogeny, a
+different question from "is production itself phylogenetically
+structured"; this repurposes the same species-tree clade construction,
+`analysis/scripts/nacyl_amino_acid_block_permutation_signal.py`, as a
+non-parametric complement to K/lambda that uses strain-level data (n=265,
+more power) and makes no Brownian-motion assumption — better suited to
+these compounds' zero-inflated distributions). Six species-tree clades
+(same default as phase2), one-way ANOVA F-statistic on log-abundance by
+clade, 2000-permutation empirical null (shuffling clade labels across
+strains).
+
+| compound | F (observed) | empirical p |
+|---|---|---|
+| Palmitoyl arginine (4109) | 1.55 | 0.18 |
+| N-myristoyl-arginine (51126) | 1.06 | 0.38 |
+| N6-Palmitoyl lysine (51152) | 1.84 | 0.06 |
+| histidine (24998, supplementary) | 1.38 | 0.20 |
+| histidine (40740, supplementary) | 2.65 | 0.01 |
+
+**None of the 3 strong candidates reach significance** (all p>0.05);
+none would survive correction for testing 5 compounds either way.
+`row_51152` is the closest to a signal (p=0.06) but does not clear even
+an uncorrected 0.05 threshold. `row_40740` (the weakest, unnamed-
+structure supplementary candidate) is nominally significant (p=0.01) but
+does not survive a Bonferroni correction for 5 tests (0.05/5=0.01,
+right at the boundary) and is the least structurally credible candidate
+in this whole search.
+
+**Conclusion: two independent methods (parametric species-level K/lambda,
+non-parametric strain-level block-permutation) agree that none of the 3
+structurally-corroborated candidates show a detectable phylogenetic
+signal in production.** The species-level differences found earlier
+(Kruskal-Wallis) are real in the sense that species DO differ, but that
+difference does not track the species tree's clade structure in a
+way distinguishable from chance — consistent with production being
+driven by strain-level or ecological factors uncorrelated with deep
+phylogeny, or (the honest alternative) with limited power at n=16
+species (several contributing only 1 strain) and n=6 clades.
+
+Full output: `nacyl_amino_acid_species_table.csv`,
+`nacyl_amino_acid_phylogenetic_signal.csv`,
+`nacyl_amino_acid_block_permutation_signal.csv`.
+
 ## Caveats — what this does and does not show
 
 1. **This is not decoy-null-controlled.** Same open item as the AHL
@@ -208,34 +284,67 @@ Full per-strain/species/fraction data:
    membrane-lipid contaminant, or (b) a structurally analogous but
    previously undocumented fungal membrane lipid, than with a fungal
    signaling molecule.
-4. **Species-level variation is descriptive, not phylogenetically
-   corrected.** The Kruskal-Wallis tests above do not account for shared
-   ancestry between species; a real phylogenetic signal or a lineage
-   effect could look like "species variation" without being trait-
-   specific. This project's established block-permutation framework
-   (used elsewhere, e.g. `phase2_metabolome_phenotype`) has not been
-   applied here.
+4. **Species-level variation is real but not phylogenetically
+   structured** (resolved 2026-09-16, see phylogenetic signal section
+   above) — species differ, but that difference doesn't track the
+   species tree by either of two independent methods tested.
 5. **MS2 fragment confirmation has not been attempted** on any row here.
+6. **The cell-vs-supernatant compartment bias has not been checked
+   against the known colony-area/biomass confound** documented elsewhere
+   in this project (`.living/findings/biomass-scaling-artifacts-in-
+   extraction-based-metabolomics.md`) — raw peak area in the cell
+   fraction is known to broadly correlate with colony size for unrelated
+   reasons; whether that confound explains any of the cell-fraction
+   species variation above has not been checked.
 
 ## Bottom line
 
 This remains a more promising exploratory lead than the AHL search
 produced — real, chemically coherent SIRIUS structure calls for
 N-acyl-arginine and N-acyl-lysine at long acyl chain lengths (C14, C16),
-not just formula coincidences, and real, statistically clear variation
-across strains and species in the cell fraction. **But the new
-compartment result points away from a quorum-sensing interpretation
-specifically**: these compounds are almost entirely cell-associated, not
-released into the supernatant, which is what a membrane lipid looks like,
-not what a diffusible signal looks like — and that is exactly the role
-documented in the literature for the closest known relative compound
-class (bacterial phosphate-stress aminolipids). The next concrete steps,
-if pursued, are: (1) the same decoy/permutation null owed to the AHL
-search, (2) MS2 spectral inspection of rows 4109/51126/51152 to confirm
-structure, and (3) if a signaling role is still of interest, checking
-whether ANY signal is detectable in the supernatant fraction specifically
-(the 1-10 strains where it was) rather than the cell fraction, since that
-is where a real quorum signal would have to be.
+not just formula coincidences. **But two results now argue against a
+quorum-sensing interpretation specifically**: (1) these compounds are
+almost entirely cell-associated, not released into the supernatant —
+what a membrane lipid looks like, not what a diffusible signal looks
+like, matching the role documented in the literature for the closest
+known relative compound class (bacterial phosphate-stress aminolipids);
+and (2) despite real species-level differences in abundance, neither of
+two independent phylogenetic-signal tests finds those differences
+structured by the species tree — i.e., production does not look like a
+trait tracking deep ancestry.
+
+## Suggested additional validation, in priority order
+
+1. **MS2 fragment confirmation** (still not done) for rows 4109, 51126,
+   and 51152 — check for the expected fatty-acyl and amino-acid-backbone
+   fragment ions. This is the single highest-value remaining step: it is
+   the only test that can move these from "mass + SIRIUS class match" to
+   an actual confirmed structure.
+2. **The decoy/permutation null**, still owed to both the AHL and
+   N-acyl-amino-acid searches — quantifies how many "hits" a random
+   20 ppm search of this size would produce by chance in this feature
+   table.
+3. **Check the colony-area/biomass confound** (caveat 6 above) on the
+   cell-fraction species differences before reading them as biology —
+   this project has an established precedent of naive cell-fraction
+   abundance differences turning out to be a size/biomass artifact, and
+   it has not been ruled out here.
+4. **Check presence in Blank and QC_Mix samples directly** (beyond the
+   blank-floor threshold already applied) — if these features are also
+   substantial in pooled QC injections, that points toward a reagent/
+   extraction-background signal rather than strain-specific biology.
+5. **If MS2 confirms structure and a biological question is still worth
+   pursuing**: authentic chemical standards (Palmitoyl-arginine,
+   myristoyl-arginine, N6-Palmitoyl-lysine are commercially available)
+   would let retention time and MS2 be matched directly, the only way to
+   fully rule out an isobaric misassignment the way this project's other
+   searches have repeatedly found.
+6. **Run the original `phase2_color_metabolome_association.py` design**
+   (not done here) if the question of interest shifts from "is this
+   phylogenetically structured" to "does this compound's abundance
+   track an existing phenotype (color, copper resistance) once phylogeny
+   is controlled for" — a legitimately different question from what this
+   section tested, using the same block-permutation infrastructure.
 
 ## Files
 - `analysis/scripts/nacyl_amino_acid_mass_remining.py` — target-list builder + search
@@ -243,3 +352,9 @@ is where a real quorum signal would have to be.
 - `nacyl_amino_acid_mass_matches.csv` — 918 raw, unfiltered feature matches at 20 ppm (541 distinct rows)
 - `analysis/scripts/nacyl_amino_acid_compartment_species_analysis.py` — cell-vs-supernatant + species-variation follow-up
 - `nacyl_amino_acid_compartment_species.csv` / `_diagnostics.txt` — full per-strain/species/fraction data and test output
+- `analysis/scripts/nacyl_amino_acid_build_species_table.py` — species-level table builder for the phylogenetic signal test
+- `nacyl_amino_acid_species_table.csv` — 16-species mean log-abundance table
+- `analysis/scripts/nacyl_amino_acid_phylogenetic_signal.R` — Blomberg's K / Pagel's lambda test
+- `nacyl_amino_acid_phylogenetic_signal.csv` — K/lambda results
+- `analysis/scripts/nacyl_amino_acid_block_permutation_signal.py` — block-permutation phylogenetic signal test
+- `nacyl_amino_acid_block_permutation_signal.csv` — block-permutation results
