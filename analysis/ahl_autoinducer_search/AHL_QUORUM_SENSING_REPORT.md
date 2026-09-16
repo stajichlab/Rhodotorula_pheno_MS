@@ -400,6 +400,27 @@ establish who made it or what it's for.
 
 Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
 
+## 9. Structurally similar lipid classes (2026-09-16, PI request)
+
+Three chemically related classes were searched: **diacylated ornithine/
+lysine lipids** (the mature form of the same bacterial pathway behind
+the confirmed candidates) — negative, no support. **Fungal ceramides**
+(N-acyl sphingoid bases, genuine textbook fungal chemistry) — positive:
+7 features exact-match SIRIUS's own "Ceramides" class, including a real
+published natural product name ("Armillaramide," from the fungus
+*Armillaria*). **The broader N-acyl amide family** (ethanolamine,
+taurine, GABA, biogenic amines) — mostly isobaric noise like the earlier
+searches, but one genuine, MS2-confirmed exception: **Palmitoylethanolamide**
+(the real spectrum's base peak is the free-ethanolamine headgroup ion,
+plus the classic water-loss fragment). N-acylethanolamines are broadly
+conserved across plants, fungi, and animals — unlike the aminolipids,
+this is the first candidate in this investigation where genuine fungal
+biosynthesis is chemically the more parsimonious explanation, not merely
+un-excluded. None of these three classes (ceramides, NAEs, aminolipids)
+are documented quorum-sensing molecules; this answers "what real lipid
+chemistry is in this data," a separate question from the original AHL
+hypothesis. Full detail: `LIPID_CLASS_EXPANSION_SEARCH.md`.
+
 ## Files in this analysis
 
 | File | Contents |

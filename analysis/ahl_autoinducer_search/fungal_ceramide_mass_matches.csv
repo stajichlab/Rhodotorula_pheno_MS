@@ -1,0 +1,24 @@
+compound,lcb,fa_variant,acyl_n,formula,adduct,target_mz,row_id,observed_mz,ppm_error,rt_min,has_ms2,is_isf,total_scans,dedup_group_id,sirius_formula,sirius_structure_name,sirius_npc_class
+dihydrosphingosine/plain-C14:0-ceramide,dihydrosphingosine,plain,14,C32H65N1O3,[M+Na]+,534.485665645,41699,534.4861,0.8126597733929304,5.895897,True,False,10,asid_41699,C32H65NO3,"N-(1,3-dihydroxyoctadecan-2-yl)tetradecanamide",Ceramides
+dihydrosphingosine/plain-C14:0-ceramide,dihydrosphingosine,plain,14,C32H65N1O3,[M+Na]+,534.485665645,42657,534.4863,1.1868512866903527,6.301425,True,False,7,asid_42657,C32H65NO3,,Ceramides
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+H]+,540.5350215245,6274,540.5332,-3.369854731984046,7.299264,True,False,28,asid_6274,C34H69NO3,"2-Octadecanoylaminohexadecane-1,3-diol",Ceramides
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+H]+,540.5350215245,14537,540.5342,-1.5198358427922116,5.451,True,False,41,asid_14537,C34H69NO3,"2-Octadecanoylaminohexadecane-1,3-diol",Ceramides
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+H]+,540.5350215245,27685,540.5429,14.575328491683457,5.624,True,False,14,asid_321,C29H65N9,,
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+H]+,540.5350215245,34067,540.5439,16.42534738066497,5.714,True,False,17,asid_13621,C33H70N3P,,
+phytosphingosine/plain-C16:0-ceramide,phytosphingosine,plain,16,C34H69N1O4,[M+H]+,556.5299361466,31296,556.5279,-3.6586470335212913,6.629698,True,False,11,asid_31296,C34H69NO4,Armillaramide,Ceramides
+dihydrosphingosine/2-hydroxy-C16:0-ceramide,dihydrosphingosine,2-hydroxy,16,C34H69N1O4,[M+H]+,556.5299361466,31296,556.5279,-3.6586470335212913,6.629698,True,False,11,asid_31296,C34H69NO4,Armillaramide,Ceramides
+phytosphingosine/2-hydroxy-C14:0-ceramide,phytosphingosine,2-hydroxy,14,C32H65N1O5,[M+NH4]+,561.520099742,8067,561.5219,3.2060437388262693,5.591084,True,False,162,asid_462,C35H70O3,,
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+Na]+,562.5169657726001,9698,562.515,-3.494601442645407,7.299264,True,True,22,asid_21654,C34H69NO3,,
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+Na]+,562.5169657726001,37800,562.5171,0.23861929169636423,6.146352,True,True,13,asid_40194,C34H69NO3,"2-Octadecanoylaminohexadecane-1,3-diol",Ceramides
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+Na]+,562.5169657726001,39241,562.517,0.060846875823447444,5.845023,True,False,12,asid_39241,,,
+dihydrosphingosine/plain-C16:0-ceramide,dihydrosphingosine,plain,16,C34H69N1O3,[M+Na]+,562.5169657726001,44251,562.5248,13.927095317346721,5.598542,True,False,13,asid_462,C33H69N3O2,Diheptadecylmethylamine oxide,Sphingoid bases
+phytosphingosine/2-hydroxy-C16:0-ceramide,phytosphingosine,2-hydroxy,16,C34H69N1O5,[M+H]+,572.5248507687,42817,572.5229,-3.407308341951382,6.364676,True,False,9,asid_42817,,,
+phytosphingosine/2-hydroxy-C16:0-ceramide,phytosphingosine,2-hydroxy,16,C34H69N1O5,[M+NH4]+,589.5513998696,8278,589.5526,2.035667119516673,7.033,True,False,60,asid_1224,,,
+dihydrosphingosine/plain-C18:0-ceramide,dihydrosphingosine,plain,18,C36H73N1O3,[M+Na]+,590.5482659002,5436,590.5461,-3.667609110148293,6.295433,True,False,18,asid_5436,,,
+dihydrosphingosine/plain-C18:0-ceramide,dihydrosphingosine,plain,18,C36H73N1O3,[M+Na]+,590.5482659002,42439,590.5555,12.249802798087481,7.09117,True,False,14,asid_1224,,,
+phytosphingosine/plain-C18:0-ceramide,phytosphingosine,plain,18,C36H73N1O4,[M+Na]+,606.5431805223,50047,606.5433,0.19698135914912518,6.882126,True,False,8,asid_50047,,,
+dihydrosphingosine/2-hydroxy-C18:0-ceramide,dihydrosphingosine,2-hydroxy,18,C36H73N1O4,[M+Na]+,606.5431805223,50047,606.5433,0.19698135914912518,6.882126,True,False,8,asid_50047,,,
+phytosphingosine/2-hydroxy-C18:0-ceramide,phytosphingosine,2-hydroxy,18,C36H73N1O5,[M+NH4]+,617.5826999971999,10207,617.5864,5.991104997119102,7.229351,True,False,48,asid_2814,,,
+phytosphingosine/2-hydroxy-C18:0-ceramide,phytosphingosine,2-hydroxy,18,C36H73N1O5,[M+Na]+,622.5380951444,50344,622.5379,-0.3134657967175621,6.318112,True,False,10,asid_50344,,,
+dihydrosphingosine/plain-C26:0-ceramide,dihydrosphingosine,plain,26,C44H89N1O3,[M+Na]+,702.6734664106001,9301,702.6794,8.444305475483143,1.866908,True,False,11,asid_9301,,,
+phytosphingosine/2-hydroxy-C26:0-ceramide,phytosphingosine,2-hydroxy,26,C44H89N1O5,[M+H]+,712.6813514067001,5418,712.6934,16.906003329756786,1.566281,True,False,24,asid_5418,,,

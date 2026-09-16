@@ -1212,3 +1212,18 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: three independent computational methods (SIRIUS structure calls, MS2 diagnostic fragments, network clustering) now agree on compound identity for the 3 strong candidates -- as strong as this investigation can get without wet-lab standards. None of the three can resolve fungal-vs-bacterial origin or establish a signaling function; the network result, if anything, strengthens the bacterial-aminolipid interpretation (via the ornithine-lipid tie-in) rather than supporting novel fungal biosynthesis. Authentic chemical standards remain the only further step.
 
 **Tags**: n-acyl-amino-acid, molecular-networking, gnps, ornithine-lipid, ahl-autoinducer-search, validation
+
+## 2026-09-16 (follow-up 5): Expanded to 3 structurally-related lipid classes -- ceramides and Palmitoylethanolamide confirmed, diacyl aminolipids negative
+
+**Context**: PI asked what other structurally similar lipids were worth considering. Presented 3 options (diacylated ornithine/lysine lipids, fungal ceramides, broader N-acyl amide family); PI selected all 3.
+
+**Decision and results**:
+1. **Diacylated ornithine/lysine lipids** (mature form of the pathway behind the confirmed candidates): 294 targets, 53 raw matches, 8 rows -- zero SIRIUS annotations, no network ties to the confirmed candidates, mediocre ppm fits. Negative result.
+2. **Fungal ceramides** (N-acyl sphingoid bases -- genuine fungal chemistry, unlike the bacterial aminolipids): 84 targets, 23 raw matches. Caught and fixed a formula-comparison bug (SIRIUS omits "1" subscripts, e.g. "NO3" vs this project's "N1O3") that had hidden real hits on first pass -- corrected count is 7 exact-formula matches, 6 independently classed "Ceramides" by SIRIUS, including "Armillaramide" (a real published natural product name from the fungus Armillaria). Positive, fungal-plausible finding, separate from the arginine/lysine story.
+3. **Broader N-acyl amide family** (ethanolamine, taurine, GABA, biogenic amines, from gut-microbiome literature): 270 targets, 191 raw matches, 29 exact-formula SIRIUS matches -- mostly the same isobaric-coincidence pattern as everywhere else in this investigation, but ONE genuine exception: Palmitoylethanolamide (row 19360), MS2-confirmed (base peak = free ethanolamine headgroup ion at m/z 62.06, plus the classic water-loss fragment).
+
+**Rationale**: applied the same formula-exact-match + MS2 confirmation discipline used throughout this investigation rather than reporting raw hit counts. The formula-comparison bug was caught by manually reconciling a "0 matches" result against visibly ceramide-consistent SIRIUS names -- a reminder to distrust a script's own "no match" output when the underlying data looks otherwise, and check the comparison logic itself.
+
+**Consequences**: the picture is now more nuanced than "everything traces to bacterial aminolipids" -- ceramides and Palmitoylethanolamide are both plausible genuine fungal chemistry, structurally and (in Palmitoylethanolamide's case) fragment-confirmed. None of the 3 new classes are documented quorum-sensing molecules; this expands "what real lipid chemistry exists in this data" without bearing on the original AHL hypothesis.
+
+**Tags**: lipid-class-expansion, ceramide, armillaramide, palmitoylethanolamide, diacyl-aminolipid, formula-comparison-bug, ahl-autoinducer-search
