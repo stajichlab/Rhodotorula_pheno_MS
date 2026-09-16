@@ -1,0 +1,30 @@
+compound,formula,adduct,target_mz,row_id,observed_mz,ppm_error,rt_min,has_ms2,is_isf,total_scans,dedup_group_id,sirius_formula,sirius_structure_name,sirius_npc_class
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,782,184.0728,-2.6330719356868757,4.926,True,True,311,asid_3878,C5H14NO4P,Chop,Sphingoid bases
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,1318,184.0728,-2.6330719356868757,4.838,True,True,17,asid_11884,C5H14NO4P,Chop,Sphingoid bases
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,2864,184.0727,-3.1763338228104816,5.48756,True,True,226,asid_4151,C7H15NO2,Chop,Sphingoid bases
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,7362,184.0727,-3.1763338228104816,5.578,True,False,164,asid_7362,C5H14NO4P,Chop,Sphingoid bases
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,7495,184.0727,-3.1763338228104816,7.557006,True,True,8,asid_730,C7H15NO2,Chop,Sphingoid bases
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,37641,184.075,9.318689580569242,4.022,True,False,29,asid_37641,C7H12FNO2,Trimethyl-[2-(2-oxoethoxy)ethyl]azanium,Aminoacids
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,38844,184.0751,9.861951467692846,4.355891,True,False,31,asid_38844,C12H9NO,Propynyl isocarbostyril,Quinazoline alkaloids
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,50192,184.0752,10.405213354816452,4.615944,True,False,11,asid_50192,,,
+tryptophol,C10H11N1O1,[M+Na]+,184.0732846782,52488,184.075,9.318689580569242,3.911996,True,True,25,asid_7215,C12H9NO,4-(Dimethylamino)-3-fluorobenzoate,Aminoacids
+farnesol,C15H26O1,[M+H]+,223.2056419034,37002,223.2049,-3.323855945831766,5.024,True,False,7,asid_37002,C15H26O,"pentadeca-8,13-dien-2-one",Fatty alcohols
+farnesol,C15H26O1,[M+NH4]+,240.2321910043,2066,240.2314,-3.292665719324697,4.354234,True,True,42,asid_3254,C15H29NO,Tetradecyl isocyanate,Primary amides
+farnesol,C15H26O1,[M+NH4]+,240.2321910043,6681,240.2313,-3.708929666238996,3.947611,True,True,44,asid_6773,C15H29NO,Tetradecyl isocyanate,Primary amides
+farnesol,C15H26O1,[M+NH4]+,240.2321910043,8574,240.2315,-2.8764017724103983,4.987,True,True,16,asid_2967,C15H29NO,Tetradecyl isocyanate,Primary amides
+farnesol,C15H26O1,[M+NH4]+,240.2321910043,24104,240.2316,-2.460137825614409,5.810102,True,False,9,asid_24104,,,
+farnesol,C15H26O1,[M+Na]+,245.1875861515,456,245.1855,-8.508389567162734,0.811368,True,True,229,asid_4258,C12H24N2O3,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,Dipeptides
+farnesol,C15H26O1,[M+Na]+,245.1875861515,536,245.1855,-8.508389567162734,0.936817,True,True,263,asid_4125,C12H24N2O3,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,Dipeptides
+farnesol,C15H26O1,[M+Na]+,245.1875861515,578,245.1855,-8.508389567162734,0.62851,True,False,28,asid_578,C12H24N2O3,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,Dipeptides
+farnesol,C15H26O1,[M+Na]+,245.1875861515,3721,245.1855,-8.508389567162734,1.65934,True,True,45,asid_521,,,
+farnesol,C15H26O1,[M+Na]+,245.1875861515,3937,245.1853,-9.32409154913273,1.752,True,True,98,asid_7160,,,
+farnesol,C15H26O1,[M+Na]+,245.1875861515,29560,245.1854,-8.916240558205692,1.030727,True,False,14,asid_29560,C12H24N2O3,2-[(2-amino-1-hydroxy-4-methylpentylidene)amino]-3-methylpentanoic acid,Dipeptides
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,2442,259.169,8.293075268394341,5.064,True,True,29,asid_8222,,,
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,3595,259.1646,-8.68440463663564,0.906,True,False,46,asid_3595,C12H22N2O4,2-amino-6-(cyclopentyloxycarbonylamino)hexanoic Acid,Dipeptides
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,8755,259.1685,6.363816188312192,5.609,True,True,121,asid_18281,C17H22O2,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",Chalcones
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,13744,259.1685,6.363816188312192,4.555135,True,True,14,asid_235,,,
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,23461,259.1683,5.592112556235466,5.970813,True,True,27,asid_6338,,,
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,30278,259.1689,7.907223452465645,4.175549,True,False,6,asid_30278,C11H22BNO5,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",Pinane monoterpenoids
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,34196,259.1683,5.592112556235466,5.199,True,False,10,asid_974,C7H18BN7O3,"({3-[(Tert-butoxy)carbonyl]-2,2-dimethyl-1,3-oxazolidin-4-yl}methyl)boronic acid",Aminoacids
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,42242,259.1684,5.977964372383494,6.214238,True,True,8,asid_15530,,,
+farnesoic_acid,C15H24O2,[M+Na]+,259.1668507098,44520,259.1683,5.592112556235466,5.312105,True,False,26,asid_44520,C17H22O2,"4-hydroxy-3,5-bis(3-methylbut-2-en-1-yl)benzaldehyde",Chalcones

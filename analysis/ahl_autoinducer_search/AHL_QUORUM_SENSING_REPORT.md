@@ -421,6 +421,37 @@ are documented quorum-sensing molecules; this answers "what real lipid
 chemistry is in this data," a separate question from the original AHL
 hypothesis. Full detail: `LIPID_CLASS_EXPANSION_SEARCH.md`.
 
+## 10. The actual biofilm-signaling question — farnesol/tyrosol search, clean null
+
+The PI's underlying goal throughout has been understanding what induces
+*Rhodotorula* biofilm formation. A literature check (verified this
+session) confirmed farnesol and tyrosol as the established fungal
+density-dependent signals for coordinating exactly this kind of
+morphogenesis — but every citation found is Ascomycota (*Candida*-clade);
+no Basidiomycota/*Rhodotorula* precedent exists. Searched farnesol,
+farnesoic acid, tyrosol, tryptophol, and phenylethanol in this dataset.
+
+**Clean null.** Tyrosol and phenylethanol: zero matches at any adduct.
+Farnesol/farnesoic-acid/tryptophol matches exist but show no real
+structural corroboration — the one row with a formula-matching SIRIUS
+call names a completely different compound class (a linear dienone, not
+a terpenoid), and 15 of the 29 raw matches are the exact same recurring
+feature rows that already matched in both the AHL and N-acyl-amino-acid
+searches — the signature of a generic noisy mass region, not real signal.
+
+**This closes out the most mechanistically-motivated candidate.**
+Combined with the rest of this investigation, no plausible coordinating
+(diffusible) signal for biofilm formation has been identified in this MS
+data — every confirmed compound (the aminolipids, ceramides,
+Palmitoylethanolamide) is cell-associated/structural, consistent with
+membrane lipid biology, not signaling. Two directions remain, neither a
+mass-search question: whether sphingolipid-pathway activity is a
+required-machinery marker for biofilm-competent strains, and whether
+*Rhodotorula*'s behavior responds to bacterial lipids in its environment
+(interkingdom signaling, documented for *P. aeruginosa* AHL affecting
+*C. albicans*, no *Rhodotorula*-specific precedent found). Full detail:
+`FUNGAL_QS_ALCOHOL_SEARCH.md`.
+
 ## Files in this analysis
 
 | File | Contents |

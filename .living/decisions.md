@@ -1227,3 +1227,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: the picture is now more nuanced than "everything traces to bacterial aminolipids" -- ceramides and Palmitoylethanolamide are both plausible genuine fungal chemistry, structurally and (in Palmitoylethanolamide's case) fragment-confirmed. None of the 3 new classes are documented quorum-sensing molecules; this expands "what real lipid chemistry exists in this data" without bearing on the original AHL hypothesis.
 
 **Tags**: lipid-class-expansion, ceramide, armillaramide, palmitoylethanolamide, diacyl-aminolipid, formula-comparison-bug, ahl-autoinducer-search
+
+## 2026-09-16 (follow-up 6): Farnesol/tyrosol/tryptophol/phenylethanol search -- clean null, closes out the most mechanistically-motivated biofilm-signal candidate
+
+**Context**: PI's underlying goal is understanding what induces Rhodotorula biofilm formation. A verified literature check (background fork) confirmed farnesol/tyrosol as the established Candida albicans quorum-sensing mechanism for coordinating yeast-hyphal/biofilm morphogenesis, but found no Basidiomycota/Rhodotorula-specific precedent. Searched for this chemistry directly.
+
+**Decision**: built `fungal_qs_alcohol_mass_remining.py` targeting 5 specific named compounds (farnesol, farnesoic acid, tyrosol, tryptophol, phenylethanol) rather than a combinatorial sweep, since these are known single compounds, not a homolog family.
+
+**Result**: tyrosol and phenylethanol have zero matches at any adduct. Farnesol/farnesoic-acid/tryptophol have matches but no real corroboration -- the one formula-matching SIRIUS call names an unrelated compound class (a linear dienone), and critically, 15 of the 29 raw matches are literally the SAME feature rows that already matched in both the original AHL search and the N-acyl amino acid search (verified by direct set intersection) -- a clear signature of a generic, recurring noisy mass region (~m/z 245/259, [M+Na]+) rather than real, repeated signal.
+
+**Rationale**: this was the single most mechanistically-motivated candidate for the PI's actual question (coordinating biofilm signal) of anything searched in this investigation -- worth testing directly rather than assuming absence, and worth flagging the recurring-row-cluster pattern explicitly since it's now been seen across three independent searches.
+
+**Consequences**: no plausible coordinating/diffusible biofilm signal has been identified anywhere in this MS dataset across the whole investigation (AHLs null; aminolipids/ceramides/PEA all cell-associated, not secreted; farnesol-family now also null). This is a meaningful, cumulative negative result for the biofilm-signal question specifically. Remaining productive directions are non-mass-search questions: sphingolipid-pathway-as-required-machinery, and interkingdom signaling (bacterial lipids affecting Rhodotorula without Rhodotorula producing them).
+
+**Tags**: farnesol, tyrosol, quorum-sensing, biofilm, fungal-morphogenesis, ahl-autoinducer-search, null-result, recurring-noisy-region
