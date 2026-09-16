@@ -1154,3 +1154,17 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: no strain-level or MS2 follow-up has been done yet for these 3 rows. If pursued, priority is: MS2 spectral check first (since these candidates, unlike every prior one in this investigation, are worth the effort), then the Phase-2-style strain-detection-vs-morphology analysis, then the still-outstanding decoy/permutation null (now owed for both searches).
 
 **Tags**: n-acyl-amino-acid, quorum-sensing, mass-search, sirius, ahl-autoinducer-search, palmitoyl-arginine, lead
+
+## 2026-09-16 (follow-up): N-acyl amino acid candidates are cell-associated, not supernatant -- argues against a signaling role
+
+**Context**: after the N-acyl amino acid mass search turned up 3 structurally-corroborated candidates (Palmitoyl arginine, N-myristoyl-arginine, N6-Palmitoyl lysine), PI asked what's known about these compounds and whether they differ between cell and supernatant fractions and across strains/species.
+
+**Decision**: ran a background literature check (not specific to this dataset) and a compartment/species analysis (pairing cell vs. supernatant peak areas per strain, Wilcoxon signed-rank; Kruskal-Wallis across species).
+
+**Result**: literature -- no fungal precedent for these exact compounds; closest documented relatives (bacterial ornithine/lysine "aminolipids") are described as exclusively bacterial, phosphate-stress membrane lipids, not signals. Empirically -- all 5 candidates tested (3 strong + 2 supplementary) are overwhelmingly cell-associated (155-252/265 cell samples detected) vs. essentially absent from supernatant (1-10/266), paired Wilcoxon p<0.0001 for every candidate. Production varies significantly across species in the cell fraction (Kruskal-Wallis p=0.001-0.009, descriptive/not phylogenetically corrected).
+
+**Rationale**: a diffusible quorum signal must be extracellular to function; a membrane lipid should not be. The compartment result and the literature-documented role of the closest relative class point the same direction independently of each other -- a rare case in this investigation where two independent lines of evidence agree.
+
+**Consequences**: this compound class is real and variable across the strain panel, but the compartment pattern argues against a signaling role specifically, on top of the already-thin case for a fungal biosynthetic route. Not proof of contamination or of a novel undocumented fungal membrane lipid -- both remain open, compound identity alone can't distinguish them. MS2 confirmation and the still-outstanding decoy null remain the next real steps if pursued further.
+
+**Tags**: n-acyl-amino-acid, cell-vs-supernatant, compartment, species-variation, membrane-lipid, ahl-autoinducer-search

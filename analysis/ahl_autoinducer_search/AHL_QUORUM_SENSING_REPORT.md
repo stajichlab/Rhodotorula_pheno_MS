@@ -36,13 +36,18 @@ This does not prove *Rhodotorula* cannot make AHLs. It means nothing found
 so far supports that it does. The one remaining un-run check is MS2
 fragment confirmation (below).
 
-**N-acyl amino acids**: a more promising, but still unconfirmed, lead.
-Three long-chain (C14-C16) N-acyl-arginine/lysine candidates have an
-independent SIRIUS structure call that names the exact target compound
-(e.g. "Palmitoyl arginine"), not merely a matching mass. This is stronger
-correspondence than anything found for AHLs. It is not evidence of a
-signaling function, and no strain- or morphology-level analysis has been
-run on these candidates yet. See section 8.
+**N-acyl amino acids**: a real, variable compound class, but a follow-up
+argues against a signaling role. Three long-chain (C14-C16) N-acyl-
+arginine/lysine candidates have an independent SIRIUS structure call that
+names the exact target compound (e.g. "Palmitoyl arginine"), not merely a
+matching mass — stronger correspondence than anything found for AHLs.
+Literature on the closest known relative class (bacterial ornithine/
+lysine "aminolipids") describes a membrane-lipid, phosphate-stress role,
+not signaling. Consistent with that, all candidates are almost entirely
+cell-associated, not present in the supernatant (p<0.0001) — the opposite
+compartment pattern from what a diffusible quorum signal would need.
+Production does vary significantly by species in the cell fraction. See
+section 8.
 
 ## 1. Where the hypothesis came from, and why it is weak on its own terms
 
@@ -304,9 +309,31 @@ lipid chemistry for a fungus (related to ceramide/sphingolipid
 acyltransferase activity), so finding one is far less surprising than
 finding an AHL — but that also makes it much weaker evidence of a
 *signaling* function specifically. This result says "this chemical class
-plausibly exists in the extract," not "this strain uses it to signal,"
-and it has not been tested against strain identity or colony morphology
-at all yet.
+plausibly exists in the extract," not "this strain uses it to signal."
+
+**Follow-up literature check and compartment/species analysis
+(2026-09-16)**: no paper documents Palmitoyl arginine, N-myristoyl-
+arginine, or N6-Palmitoyl lysine as characterized natural products from
+any organism, fungal or bacterial. The closest documented relatives are
+ornithine lipids and lysine lipids — a real, established bacterial
+"aminolipid" class, described in the literature as **exclusively
+bacterial** and produced as a **membrane-lipid substitute under phosphate
+starvation**, not as a signal. No quorum-sensing role is documented for
+this compound class in any organism.
+
+Pulling per-sample data for these three rows (plus two weaker histidine
+candidates) and mapping to strain, species, and fraction (cell vs.
+supernatant) found: **all 5 candidates are overwhelmingly cell-
+associated**, detected in 155-252 of 265 cell samples but only 1-10 of
+266 supernatant samples (paired Wilcoxon signed-rank p<0.0001 for every
+candidate, same direction each time). A diffusible quorum signal has to
+leave the cell to work; a membrane lipid does not. This compartment
+pattern matches the membrane-lipid role documented for the closest known
+relative class, not a signaling role. Production does vary significantly
+across species in the cell fraction (Kruskal-Wallis p=0.001-0.009,
+descriptive, not phylogenetically corrected) — *R. taiwanensis* and
+*R. paludigena* consistently highest, some species near-absent for some
+compounds. Full detail: `NACYL_AMINO_ACID_SEARCH.md`.
 
 ## Files in this analysis
 

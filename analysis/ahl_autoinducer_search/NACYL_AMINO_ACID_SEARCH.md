@@ -101,50 +101,145 @@ library reference entry (e.g. an isotope-labeled internal standard used
 in this or another LC-MS run) rather than the true identity of the
 detected ion. Flagged, not treated as supporting evidence.
 
+## What is known about these specific compounds (literature, 2026-09-16)
+
+Background research (not specific to this dataset) on Palmitoyl arginine,
+N-myristoyl-arginine, and N6-Palmitoyl lysine as natural products:
+
+- **No paper documents these exact compounds as characterized natural
+  products from a named organism.** No fungal biosynthetic route is
+  documented for any of them.
+- **The closest well-characterized relatives are ornithine lipids (OL)
+  and lysine lipids (LL)** — a genuine, established bacterial "aminolipid"
+  class (OlsB→OlsA biosynthetic pathway: N-acylation of ornithine or
+  lysine, then a second acylation). One review states these lipids are
+  **"phosphorus-free and found exclusively in bacteria."** Their
+  documented biological role is a **phosphate-starvation response**:
+  bacteria substitute these phosphorus-free lipids for phospholipids
+  when phosphate is scarce, and separately they have been linked to
+  cationic-antimicrobial-peptide/colistin resistance. This is a
+  **membrane-lipid role, not a signaling role.**
+- **A separate, unrelated documented role exists for N-acyl glycines**
+  specifically (e.g. "commendamide," N-3-hydroxypalmitoyl-glycine): human
+  gut bacteria produce these as **host-GPCR-mimicking metabolites**
+  (agonists of human GPR132/GPR119) — a form of host-microbiome chemical
+  communication, but not a bacterium-to-bacterium density-dependent
+  quorum signal (Cohen, Fischbach et al., *Nature* 2017, "Commensal
+  bacteria make GPCR ligands that mimic human signalling molecules").
+- **No literature source directly supports a quorum-sensing role for
+  N-acyl-arginine or N-acyl-lysine specifically.** The two documented
+  roles found (phosphate-stress membrane lipid; host-GPCR ligand) are
+  both real and published, but neither is "quorum sensing" in the sense
+  this investigation set out to test.
+- **Bottom line on origin**: as with AHLs, the literature-documented
+  biology of this compound class is bacterial, with no fungal precedent.
+  Compound identity alone cannot distinguish genuine fungal biosynthesis
+  from bacterial contamination — but nothing found makes fungal
+  production more likely than the contamination explanation already
+  reached for AHLs.
+
+## Compartment (cell vs. supernatant) and species-variation follow-up (2026-09-16)
+
+`analysis/scripts/nacyl_amino_acid_compartment_species_analysis.py` pulled
+raw per-sample peak areas for the 3 strong candidates (rows 4109, 51126,
+51152) plus the 2 supplementary histidine rows, mapped to strain_code,
+species, and fraction (cell/supernatant) via the Cu_AUC crosswalk (ID
+lookup only).
+
+**All 5 candidates are overwhelmingly cell-associated, not
+supernatant-associated.** Paired Wilcoxon signed-rank tests (log10 peak
+area + 1, paired by strain, n=265 strains with both fractions) are
+significant for every candidate (p<0.0001), all in the same direction:
+
+| row | detected in cell (of 265) | detected in supernatant (of 266) |
+|---|---|---|
+| 4109 (Palmitoyl arginine) | 252 | 10 |
+| 51126 (N-myristoyl-arginine) | 164 | 2 |
+| 51152 (N6-Palmitoyl lysine) | 155 | 1 |
+| 24998 (histidine, supplementary) | 139 | 7 |
+| 40740 (histidine, supplementary) | 94 | 3 |
+
+**This is directly relevant to the quorum-sensing question, and it argues
+against it.** A quorum signal has to leave the cell to be sensed by
+neighbors — it should be detectable extracellularly (supernatant), not
+almost exclusively intracellular/cell-pellet-associated. This compartment
+pattern is, however, exactly what the aminolipid (ornithine-lipid/
+lysine-lipid) literature above predicts: a phosphorus-free **membrane**
+lipid stays with the cell fraction. The MS compartment data and the
+literature-documented biology of the closest-known relative compound
+class point the same direction, independently of each other.
+
+**Production does vary across species, in the cell fraction.**
+Kruskal-Wallis tests across species (n>=3 strains/species, descriptive —
+NOT phylogenetically corrected) are significant for all 3 strong
+candidates (p=0.001–0.009) and both supplementary rows (p<0.0001 and
+p=0.049). *R. taiwanensis* and *R. paludigena* consistently rank highest;
+*R. mucilaginosa* (this panel's dominant species by strain count) sits
+mid-to-low; some species show near-total absence for some compounds —
+e.g. row 51152 (N6-Palmitoyl lysine) is essentially undetected in *R.
+toruloides* and *R. sp. clade I* (median log-peak = 0) while present in
+most other species tested. Supernatant-fraction species comparisons are
+not meaningful for any candidate — almost every strain's supernatant
+value is 0, so there is essentially nothing to compare there.
+
+Full per-strain/species/fraction data:
+`nacyl_amino_acid_compartment_species.csv`; full test output:
+`nacyl_amino_acid_compartment_species_diagnostics.txt`.
+
 ## Caveats — what this does and does not show
 
 1. **This is not decoy-null-controlled.** Same open item as the AHL
    search. Until a permutation/decoy control is run, the false-positive
    rate of a 945-target, 20 ppm search in this feature table is unknown.
 2. **N-acyl amino acids, unlike AHLs, are chemically unremarkable for a
-   fungus to make.** Fatty-acid amide conjugation is ordinary lipid
-   chemistry (related to ceramide/sphingolipid biosynthesis and other
-   acyltransferase activity fungi are known to have). Detecting one is
-   therefore much less surprising, on priors, than detecting an AHL — but
-   it is also much weaker evidence of a *signaling* function. The
-   detection of Palmitoyl-arginine-like compounds says "this chemical
-   class exists in the extract," not "this strain uses it to signal."
-3. **Fungal-vs-bacterial origin is not resolved.** N-acyl-arginine and
-   N-acyl-lysine are documented bacterial lipoamino acids (membrane/
-   stress-response lipids in several bacterial genera). The same trace-
-   contamination caveat that applies to the AHL search applies here,
-   though less severely, since fungi/other eukaryotes are not excluded
-   from making this compound class the way they effectively are for
-   AHLs (no known LuxI-type synthase in any fungal genome, see
-   `AHL_AUTOINDUCER_SEARCH.md`).
-4. **No strain-level detection-vs-morphology analysis has been run yet**
-   for these candidates. The AHL search's Phase 2 (detection vs.
-   colony-texture proxy) has not been repeated here. If this line is
-   pursued further, that is the natural next step for rows 4109, 51126,
-   and 51152 specifically.
-5. **MS2 fragment confirmation has not been attempted** on any row here
-   either.
+   fungus to make** in the sense that fatty-acid amide conjugation is
+   ordinary lipid chemistry fungi are known to do (e.g. ceramide/
+   sphingolipid biosynthesis) — but no fungal precedent exists for THIS
+   specific compound family (see literature section above). Detecting a
+   member of this class is less surprising on priors than detecting an
+   AHL, but it is not evidence of a signaling function, and the
+   compartment result above (below) argues specifically against a
+   signaling role.
+3. **Fungal-vs-bacterial origin is not resolved by compound identity
+   alone.** The literature-documented biology of the closest-known
+   relative class (ornithine/lysine aminolipids) is described as
+   exclusive to bacteria. Combined with the cell-restricted compartment
+   pattern, this is more consistent with either (a) a bacterial
+   membrane-lipid contaminant, or (b) a structurally analogous but
+   previously undocumented fungal membrane lipid, than with a fungal
+   signaling molecule.
+4. **Species-level variation is descriptive, not phylogenetically
+   corrected.** The Kruskal-Wallis tests above do not account for shared
+   ancestry between species; a real phylogenetic signal or a lineage
+   effect could look like "species variation" without being trait-
+   specific. This project's established block-permutation framework
+   (used elsewhere, e.g. `phase2_metabolome_phenotype`) has not been
+   applied here.
+5. **MS2 fragment confirmation has not been attempted** on any row here.
 
 ## Bottom line
 
-This is a more promising exploratory lead than the AHL search produced —
-real, chemically coherent SIRIUS structure calls for N-acyl-arginine and
-N-acyl-lysine at long acyl chain lengths (C14, C16), not just formula
-coincidences. It is not evidence of quorum sensing, and not yet evidence
-of anything strain- or morphology-specific. The next concrete steps, if
-pursued, are: (1) the same decoy/permutation null owed to the AHL search,
-(2) strain-level detection of rows 4109/51126/51152 against the texture
-proxy (the Phase 2 pattern already built for AHLs), and (3) MS2 spectral
-inspection of these three rows specifically, since they are the first
-candidates in this whole investigation to clear a basic structural
-plausibility bar.
+This remains a more promising exploratory lead than the AHL search
+produced — real, chemically coherent SIRIUS structure calls for
+N-acyl-arginine and N-acyl-lysine at long acyl chain lengths (C14, C16),
+not just formula coincidences, and real, statistically clear variation
+across strains and species in the cell fraction. **But the new
+compartment result points away from a quorum-sensing interpretation
+specifically**: these compounds are almost entirely cell-associated, not
+released into the supernatant, which is what a membrane lipid looks like,
+not what a diffusible signal looks like — and that is exactly the role
+documented in the literature for the closest known relative compound
+class (bacterial phosphate-stress aminolipids). The next concrete steps,
+if pursued, are: (1) the same decoy/permutation null owed to the AHL
+search, (2) MS2 spectral inspection of rows 4109/51126/51152 to confirm
+structure, and (3) if a signaling role is still of interest, checking
+whether ANY signal is detectable in the supernatant fraction specifically
+(the 1-10 strains where it was) rather than the cell fraction, since that
+is where a real quorum signal would have to be.
 
 ## Files
 - `analysis/scripts/nacyl_amino_acid_mass_remining.py` — target-list builder + search
 - `nacyl_amino_acid_target_list.csv` — 945 target m/z values (21 amino acids x 15 chain lengths x 3 adducts)
 - `nacyl_amino_acid_mass_matches.csv` — 918 raw, unfiltered feature matches at 20 ppm (541 distinct rows)
+- `analysis/scripts/nacyl_amino_acid_compartment_species_analysis.py` — cell-vs-supernatant + species-variation follow-up
+- `nacyl_amino_acid_compartment_species.csv` / `_diagnostics.txt` — full per-strain/species/fraction data and test output

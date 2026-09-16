@@ -1,0 +1,161 @@
+Wrote /bigdata/stajichlab/shared/projects/Rhodotorula/Rhodotorula_Metabolites/Rhodotorula_pheno_MS/analysis/ahl_autoinducer_search/nacyl_amino_acid_compartment_species.csv (2655 strain x fraction x candidate rows)
+
+======================================================================
+row 4109 [STRONG] -- N-C16:0-arginine (Palmitoyl arginine)
+======================================================================
+Detected (peak area > 0): cell 252/265, supernatant 10/266
+Paired Wilcoxon signed-rank (n=265 strains with both fractions): stat=0.0, p=0.0000, median log10(peak+1): cell=5.64, sup=0.00 (cell > supernatant)
+[cell] Kruskal-Wallis across 10 species (n>=3 each): H=27.91, p=0.0010
+                              median  count
+species                                    
+Rhodotorula taiwanensis     6.500658      7
+Rhodotorula paludigena      6.297854      8
+Rhodotorula sphaerocarpa    6.100418      4
+Rhodotorula diobovata       5.957005      7
+Rhodotorula dairenensis     5.919885      6
+Rhodotorula kratochvilovae  5.840093      3
+Rhodotorula toruloides      5.725759      8
+Rhodotorula mucilaginosa    5.603366    206
+Rhodotorula sp_clade_I      5.595086      5
+Rhodotorula graminis        5.258666      3
+[supernatant] Kruskal-Wallis across 10 species (n>=3 each): H=9.92, p=0.3566
+                            median  count
+species                                  
+Rhodotorula dairenensis        0.0      7
+Rhodotorula diobovata          0.0      7
+Rhodotorula graminis           0.0      3
+Rhodotorula kratochvilovae     0.0      3
+Rhodotorula mucilaginosa       0.0    206
+Rhodotorula paludigena         0.0      8
+Rhodotorula sp_clade_I         0.0      5
+Rhodotorula sphaerocarpa       0.0      4
+Rhodotorula taiwanensis        0.0      7
+Rhodotorula toruloides         0.0      8
+
+======================================================================
+row 51126 [STRONG] -- N-C14:0-arginine (N-myristoyl-arginine)
+======================================================================
+Detected (peak area > 0): cell 164/265, supernatant 2/266
+Paired Wilcoxon signed-rank (n=265 strains with both fractions): stat=94.0, p=0.0000, median log10(peak+1): cell=4.56, sup=0.00 (cell > supernatant)
+[cell] Kruskal-Wallis across 10 species (n>=3 each): H=27.43, p=0.0012
+                              median  count
+species                                    
+Rhodotorula paludigena      5.360793      8
+Rhodotorula taiwanensis     5.251132      7
+Rhodotorula diobovata       4.911413      7
+Rhodotorula kratochvilovae  4.848238      3
+Rhodotorula sphaerocarpa    4.824072      4
+Rhodotorula mucilaginosa    4.552501    206
+Rhodotorula toruloides      4.550499      8
+Rhodotorula sp_clade_I      4.486133      5
+Rhodotorula dairenensis     2.408740      6
+Rhodotorula graminis        0.000000      3
+[supernatant] Kruskal-Wallis across 10 species (n>=3 each): H=85.00, p=0.0000
+                            median  count
+species                                  
+Rhodotorula dairenensis        0.0      7
+Rhodotorula diobovata          0.0      7
+Rhodotorula graminis           0.0      3
+Rhodotorula kratochvilovae     0.0      3
+Rhodotorula mucilaginosa       0.0    206
+Rhodotorula paludigena         0.0      8
+Rhodotorula sp_clade_I         0.0      5
+Rhodotorula sphaerocarpa       0.0      4
+Rhodotorula taiwanensis        0.0      7
+Rhodotorula toruloides         0.0      8
+
+======================================================================
+row 51152 [STRONG] -- N-C16:0-lysine (N6-Palmitoyl lysine)
+======================================================================
+Detected (peak area > 0): cell 155/265, supernatant 1/266
+Paired Wilcoxon signed-rank (n=265 strains with both fractions): stat=0.0, p=0.0000, median log10(peak+1): cell=4.62, sup=0.00 (cell > supernatant)
+[cell] Kruskal-Wallis across 10 species (n>=3 each): H=22.01, p=0.0089
+                              median  count
+species                                    
+Rhodotorula taiwanensis     5.359908      7
+Rhodotorula diobovata       5.267240      7
+Rhodotorula paludigena      4.902663      8
+Rhodotorula sphaerocarpa    4.787875      4
+Rhodotorula kratochvilovae  4.743180      3
+Rhodotorula mucilaginosa    4.618659    206
+Rhodotorula graminis        4.593408      3
+Rhodotorula dairenensis     2.647834      6
+Rhodotorula sp_clade_I      0.000000      5
+Rhodotorula toruloides      0.000000      8
+[supernatant] Kruskal-Wallis across 10 species (n>=3 each): H=0.25, p=1.0000
+                            median  count
+species                                  
+Rhodotorula dairenensis        0.0      7
+Rhodotorula diobovata          0.0      7
+Rhodotorula graminis           0.0      3
+Rhodotorula kratochvilovae     0.0      3
+Rhodotorula mucilaginosa       0.0    206
+Rhodotorula paludigena         0.0      8
+Rhodotorula sp_clade_I         0.0      5
+Rhodotorula sphaerocarpa       0.0      4
+Rhodotorula taiwanensis        0.0      7
+Rhodotorula toruloides         0.0      8
+
+======================================================================
+row 24998 [supplementary] -- N-C16:0-histidine [M+H]+ (class match only, no named structure)
+======================================================================
+Detected (peak area > 0): cell 139/265, supernatant 7/266
+Paired Wilcoxon signed-rank (n=265 strains with both fractions): stat=273.0, p=0.0000, median log10(peak+1): cell=4.59, sup=0.00 (cell > supernatant)
+[cell] Kruskal-Wallis across 10 species (n>=3 each): H=42.25, p=0.0000
+                              median  count
+species                                    
+Rhodotorula taiwanensis     5.852147      7
+Rhodotorula paludigena      5.554971      8
+Rhodotorula sphaerocarpa    5.228282      4
+Rhodotorula diobovata       5.141951      7
+Rhodotorula kratochvilovae  5.102187      3
+Rhodotorula dairenensis     5.067103      6
+Rhodotorula toruloides      4.683116      8
+Rhodotorula graminis        4.507802      3
+Rhodotorula mucilaginosa    0.000000    206
+Rhodotorula sp_clade_I      0.000000      5
+[supernatant] Kruskal-Wallis across 10 species (n>=3 each): H=11.83, p=0.2232
+                            median  count
+species                                  
+Rhodotorula dairenensis        0.0      7
+Rhodotorula diobovata          0.0      7
+Rhodotorula graminis           0.0      3
+Rhodotorula kratochvilovae     0.0      3
+Rhodotorula mucilaginosa       0.0    206
+Rhodotorula paludigena         0.0      8
+Rhodotorula sp_clade_I         0.0      5
+Rhodotorula sphaerocarpa       0.0      4
+Rhodotorula taiwanensis        0.0      7
+Rhodotorula toruloides         0.0      8
+
+======================================================================
+row 40740 [supplementary] -- N-C16:0-histidine [M+Na]+ (class match only, no named structure)
+======================================================================
+Detected (peak area > 0): cell 94/265, supernatant 3/266
+Paired Wilcoxon signed-rank (n=265 strains with both fractions): stat=48.0, p=0.0000, median log10(peak+1): cell=0.00, sup=0.00 (supernatant > cell)
+[cell] Kruskal-Wallis across 10 species (n>=3 each): H=44.39, p=0.0000
+                              median  count
+species                                    
+Rhodotorula taiwanensis     5.669248      7
+Rhodotorula paludigena      5.408096      8
+Rhodotorula sphaerocarpa    4.830759      4
+Rhodotorula diobovata       4.795658      7
+Rhodotorula graminis        4.562959      3
+Rhodotorula dairenensis     2.375216      6
+Rhodotorula kratochvilovae  0.000000      3
+Rhodotorula mucilaginosa    0.000000    206
+Rhodotorula sp_clade_I      0.000000      5
+Rhodotorula toruloides      0.000000      8
+[supernatant] Kruskal-Wallis across 10 species (n>=3 each): H=16.98, p=0.0490
+                            median  count
+species                                  
+Rhodotorula dairenensis        0.0      7
+Rhodotorula diobovata          0.0      7
+Rhodotorula graminis           0.0      3
+Rhodotorula kratochvilovae     0.0      3
+Rhodotorula mucilaginosa       0.0    206
+Rhodotorula paludigena         0.0      8
+Rhodotorula sp_clade_I         0.0      5
+Rhodotorula sphaerocarpa       0.0      4
+Rhodotorula taiwanensis        0.0      7
+Rhodotorula toruloides         0.0      8
