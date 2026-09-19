@@ -2,6 +2,13 @@
 
 <!-- Add entries below using the appropriate manifest entry template. -->
 
+### siderophore_abundance (rhodotorulic acid / siderophore feature survey)
+- **Path**: `analysis/siderophore_abundance/`
+- **Scripts**: `scripts/siderophore_abundance_table.py` (`run.sh`)
+- **Parent analysis**: builds on `analysis/sirius_annotation/` (SIRIUS/CANOPUS structure calls) joined to the raw MZmine/GNPS aligned feature quant matrix in `data/processed/EB_20260130_ExFAB_Rhodo_Sup_and_Pellet/`
+- **Status**: done
+- **Summary**: keyword-searched SIRIUS structure names/classes for siderophore chemistry; found 12 candidate features. Only rhodotorulic acid (row ID 562, SIRIUS structure confidence 0.969) is a confident identification — detected in 90-100% of samples across all 17+ species/outgroups, ~50-100x more abundant in cell pellet than supernatant in every species, consistent with a cell-associated hydroxamate siderophore. The other 11 hits (desferrioxamine/ferrioxamine family) have low structure confidence (0.018-0.44) and are unconfirmed candidates only — no GNPS spectral library match checked. See `SIDEROPHORE_ABUNDANCE.md` for the full table and caveats.
+
 ### integrated_analysis (Phase 1: color phenotype characterization)
 - **Path**: `analysis/integrated_analysis/phase1_phenotype/`
 - **Scripts**: `analysis/scripts/build_strain_phenotype_table.py`, `build_species_level_tables.py`, `prune_species_tree.R`, `phylogenetic_signal.R`, `convergent_color_test.R`

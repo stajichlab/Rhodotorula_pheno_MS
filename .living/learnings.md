@@ -175,3 +175,11 @@ Built a per-feature "peak area > max blank peak area" detection rule for 41 AHL-
 **Resolution**: pivoted to a continuous check (max raw peak area vs. the trait of interest) instead of trusting the binary call; flagged the binary result explicitly as uninformative rather than reporting the 100% figure as a finding. For future targeted-mass searches in this project, a blank-floor-only rule should not be treated as sufficient evidence of detection on its own -- pair it with either a continuous intensity comparison or a decoy/permutation null (see [[ahl-autoinducer-search]] decision entry, same date) before calling anything "detected."
 
 **Tags**: targeted-mass-search, detection-threshold, blank-floor, false-positive-saturation, ahl-autoinducer-search, methodology
+
+## 2026-09-18: Row IDs are not stable across copies of the same aligned MZmine feature table
+
+Building the siderophore abundance table, found that the "top-level" merged/curated feature table used for the SIRIUS submission (`data/processed/EB_20260130_ExFAB_Rhodo_Sup_and_Pellet/<hash>/aligned_features_ms2.csv.zst`) and the raw per-run nextflow output copy (`.../<hash>/<hash>/nf_output/feature_finding/feature_finding_results/aligned_features_ms2.csv`, used by the earlier `siderophore_mass_remining.py` exact-mass search) assign different `row ID` numbers to the same underlying features. A prior finding (F-001 in `.living/findings/siderophore-detectability-rhodotorulic-acid.md`) called row 2190 (m/z 442.26) the best rhodotorulic-acid candidate; this session's SIRIUS-annotation search found row 562 (m/z 345.18, exact [M+H]+ match to C14H24N4O6) is the real, chemically consistent hit -- a completely different feature that happens to share no numeric relationship with row 2190.
+
+**Resolution**: never cross-reference a `row ID` between the two file locations without re-checking `row m/z`/`row retention time` first; treat row ID as scoped to one specific file path, not a stable feature identifier across the pipeline's intermediate copies. Documented in F-005 of the siderophore findings file.
+
+**Tags**: mzmine, row-id-instability, feature-id-reconciliation, sirius-annotation, siderophore, gnps-pipeline

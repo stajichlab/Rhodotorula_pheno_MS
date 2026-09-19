@@ -1,0 +1,409 @@
+row_ID	compound_name	sirius_confidence	species	source	n_samples	n_detected	mean_peak_area	median_peak_area	max_peak_area	detection_rate
+562	Rhodotorulic Acid	0.969	Rhodotorula paludigena	cell_pellett	10	9	84134886.0	89056024.0	135227680	0.9
+562	Rhodotorulic Acid	0.969	Rhodotorula kratochvilovae	cell_pellett	3	3	69829507.33333333	76555040.0	101297760	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula mucilaginosa	cell_pellett	208	204	54395377.60576923	44921096.0	160899392	0.9807692307692307
+562	Rhodotorulic Acid	0.969	Pseudomicrostroma phylloplanum	cell_pellett	1	1	54235360.0	54235360.0	54235360	1.0
+562	Rhodotorulic Acid	0.969	Cystobasidium sp.	cell_pellett	1	1	50757388.0	50757388.0	50757388	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula diobovata	cell_pellett	9	9	50015987.0	46527588.0	99431688	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula pacifica	cell_pellett	3	3	46406715.333333336	46772544.0	73055864	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade XIII	cell_pellett	1	1	45201232.0	45201232.0	45201232	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula dairenensis	cell_pellett	7	7	42432812.428571425	38006776.0	100271952	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sphaerocarpa	cell_pellett	6	6	41352945.166666664	33826563.0	85792240	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula taiwanensis	cell_pellett	6	6	38168386.333333336	37207906.0	60409824	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula toruloides	cell_pellett	10	10	33517079.1	28358461.0	124096896	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula glutinis	cell_pellett	2	2	28587214.0	28587214.0	57130508	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula graminis	cell_pellett	3	3	27195528.666666668	24744414.0	35695908	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade XI	cell_pellett	2	2	26975879.0	26975879.0	31570178	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade I	cell_pellett	5	4	22800205.8	23174796.0	50373440	0.8
+562	Rhodotorulic Acid	0.969	Rhodotorula araucariae	cell_pellett	1	1	18291294.0	18291294.0	18291294	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula diobovata	supernatant	9	9	1108706.4444444445	1071304.0	2007810	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula kratochvilovae	supernatant	3	3	950700.0	829414.0	1634424	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula paludigena	supernatant	10	10	854620.9	713013.0	2182451	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula pacifica	supernatant	3	3	784273.6666666666	644754.0	1107054	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade XI	supernatant	2	2	751918.5	751918.5	869935	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula toruloides	supernatant	10	10	687023.3	692826.0	911239	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula mucilaginosa	supernatant	208	204	671778.3317307692	625440.5	2130632	0.9807692307692307
+562	Rhodotorulic Acid	0.969	Cystobasidium sp.	supernatant	1	1	657892.0	657892.0	657892	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula araucariae	supernatant	1	1	619330.0	619330.0	619330	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sphaerocarpa	supernatant	6	6	606476.6666666666	560751.5	1088294	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula dairenensis	supernatant	8	8	584350.375	370717.0	1251974	1.0
+562	Rhodotorulic Acid	0.969	Pseudomicrostroma phylloplanum	supernatant	1	1	569872.0	569872.0	569872	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula taiwanensis	supernatant	6	6	504237.0	369936.0	1173323	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula graminis	supernatant	3	3	491991.0	511225.0	547797	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade XIII	supernatant	1	1	450914.0	450914.0	450914	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula sp. clade I	supernatant	5	5	445382.6	420169.0	650440	1.0
+562	Rhodotorulic Acid	0.969	Rhodotorula glutinis	supernatant	2	2	412530.5	412530.5	538964	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula kratochvilovae	cell_pellett	3	3	228703.0	245242.0	340937	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade I	cell_pellett	5	5	208587.6	202946.0	328006	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula diobovata	cell_pellett	9	8	164074.33333333334	110863.0	395438	0.8888888888888888
+46831	Desferrioxamine D1	0.44	Rhodotorula pacifica	cell_pellett	3	3	160745.66666666666	177946.0	196857	1.0
+46831	Desferrioxamine D1	0.44	Pseudomicrostroma phylloplanum	cell_pellett	1	1	157835.0	157835.0	157835	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula glutinis	cell_pellett	2	2	141585.5	141585.5	220326	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula sphaerocarpa	cell_pellett	6	4	126326.16666666667	114963.0	315971	0.6666666666666666
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade XIII	cell_pellett	1	1	121135.0	121135.0	121135	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula dairenensis	cell_pellett	7	5	119969.42857142857	147295.0	217656	0.7142857142857143
+46831	Desferrioxamine D1	0.44	Rhodotorula araucariae	cell_pellett	1	1	109120.0	109120.0	109120	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula mucilaginosa	cell_pellett	208	151	102339.80769230769	117819.0	252567	0.7259615384615384
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade XI	cell_pellett	2	2	101868.5	101868.5	136974	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula diobovata	supernatant	9	9	91306.0	97506.0	138954	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula paludigena	cell_pellett	10	6	89897.0	108388.5	185179	0.6
+46831	Desferrioxamine D1	0.44	Rhodotorula toruloides	cell_pellett	10	5	72396.9	38759.0	218579	0.5
+46831	Desferrioxamine D1	0.44	Rhodotorula kratochvilovae	supernatant	3	3	70655.66666666667	66644.0	108462	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula taiwanensis	supernatant	6	4	60443.5	33546.0	199373	0.6666666666666666
+46831	Desferrioxamine D1	0.44	Rhodotorula graminis	cell_pellett	3	2	57195.0	79678.0	91907	0.6666666666666666
+46831	Desferrioxamine D1	0.44	Rhodotorula paludigena	supernatant	10	8	55753.4	41841.5	176528	0.8
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade I	supernatant	5	3	53898.0	30395.0	157048	0.6
+46831	Desferrioxamine D1	0.44	Rhodotorula glutinis	supernatant	2	1	53767.5	53767.5	107535	0.5
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade XI	supernatant	2	2	50878.0	50878.0	50994	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula sp. clade XIII	supernatant	1	1	45397.0	45397.0	45397	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula dairenensis	supernatant	8	5	40030.875	37042.5	137170	0.625
+46831	Desferrioxamine D1	0.44	Cystobasidium sp.	supernatant	1	1	34954.0	34954.0	34954	1.0
+46831	Desferrioxamine D1	0.44	Rhodotorula taiwanensis	cell_pellett	6	1	24398.333333333332	0.0	146390	0.16666666666666666
+46831	Desferrioxamine D1	0.44	Rhodotorula mucilaginosa	supernatant	208	108	24232.826923076922	31198.0	120752	0.5192307692307693
+46831	Desferrioxamine D1	0.44	Rhodotorula graminis	supernatant	3	2	23419.0	34478.0	35779	0.6666666666666666
+46831	Desferrioxamine D1	0.44	Rhodotorula toruloides	supernatant	10	4	20422.5	0.0	66510	0.4
+46831	Desferrioxamine D1	0.44	Rhodotorula sphaerocarpa	supernatant	6	2	17705.166666666668	0.0	67242	0.3333333333333333
+46831	Desferrioxamine D1	0.44	Rhodotorula pacifica	supernatant	3	1	15923.333333333334	0.0	47770	0.3333333333333333
+46831	Desferrioxamine D1	0.44	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+46831	Desferrioxamine D1	0.44	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+46831	Desferrioxamine D1	0.44	Rhodotorula araucariae	supernatant	1	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula toruloides	supernatant	10	10	9251571.3	7963056.0	14093841	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula kratochvilovae	supernatant	3	3	8997776.333333334	8947927.0	9455070	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula pacifica	supernatant	3	3	8828201.333333334	9134928.0	9542883	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula mucilaginosa	supernatant	208	205	8817174.399038462	8556517.0	16897682	0.9855769230769231
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade XI	supernatant	2	2	8421753.5	8421753.5	9003600	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade I	supernatant	5	5	7883355.8	8544913.0	11650900	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula araucariae	supernatant	1	1	7865368.0	7865368.0	7865368	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula graminis	supernatant	3	3	7527890.333333333	9520419.0	10450552	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula diobovata	supernatant	9	9	7504523.444444444	7815959.0	11152712	1.0
+6976	Desferrioxamine X5	0.129	Pseudomicrostroma phylloplanum	supernatant	1	1	7224068.0	7224068.0	7224068	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula dairenensis	supernatant	8	8	6908742.625	6478180.0	9909608	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula paludigena	supernatant	10	10	6873601.9	7053265.5	9410951	1.0
+6976	Desferrioxamine X5	0.129	Cystobasidium sp.	supernatant	1	1	6858513.0	6858513.0	6858513	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sphaerocarpa	supernatant	6	6	6342117.5	6364218.5	7638196	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula glutinis	supernatant	2	2	6131930.0	6131930.0	10105814	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula taiwanensis	supernatant	6	6	6044861.333333333	5988078.0	7038246	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade XIII	supernatant	1	1	5961764.0	5961764.0	5961764	1.0
+6976	Desferrioxamine X5	0.129	Rhodotorula mucilaginosa	cell_pellett	208	7	1505.3701923076924	0.0	75824	0.03365384615384615
+6976	Desferrioxamine X5	0.129	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Pseudomicrostroma phylloplanum	cell_pellett	1	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula araucariae	cell_pellett	1	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula dairenensis	cell_pellett	7	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula diobovata	cell_pellett	9	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula glutinis	cell_pellett	2	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula graminis	cell_pellett	3	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula kratochvilovae	cell_pellett	3	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula pacifica	cell_pellett	3	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula paludigena	cell_pellett	10	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade I	cell_pellett	5	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade XI	cell_pellett	2	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sp. clade XIII	cell_pellett	1	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula sphaerocarpa	cell_pellett	6	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula taiwanensis	cell_pellett	6	0	0.0	0.0	0	0.0
+6976	Desferrioxamine X5	0.129	Rhodotorula toruloides	cell_pellett	10	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula diobovata	cell_pellett	9	8	3483030.222222222	3116839.0	6464196	0.8888888888888888
+11834	Proferrioxamine-D2	0.115	Rhodotorula kratochvilovae	cell_pellett	3	2	2398672.0	2921418.0	4274598	0.6666666666666666
+11834	Proferrioxamine-D2	0.115	Rhodotorula paludigena	cell_pellett	10	6	1537802.7	1275334.5	4651010	0.6
+11834	Proferrioxamine-D2	0.115	Rhodotorula graminis	cell_pellett	3	2	1519827.6666666667	175379.0	4384104	0.6666666666666666
+11834	Proferrioxamine-D2	0.115	Rhodotorula kratochvilovae	supernatant	3	2	1201173.3333333333	1147113.0	2456407	0.6666666666666666
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade XIII	cell_pellett	1	1	1024492.0	1024492.0	1024492	1.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula diobovata	supernatant	9	7	812718.7777777778	864922.0	1469999	0.7777777777777778
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade I	cell_pellett	5	1	681500.2	0.0	3407501	0.2
+11834	Proferrioxamine-D2	0.115	Rhodotorula paludigena	supernatant	10	4	389412.8	0.0	1439216	0.4
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade I	supernatant	5	1	232888.2	0.0	1164441	0.2
+11834	Proferrioxamine-D2	0.115	Rhodotorula dairenensis	cell_pellett	7	2	197946.2857142857	0.0	819537	0.2857142857142857
+11834	Proferrioxamine-D2	0.115	Rhodotorula dairenensis	supernatant	8	5	130566.0	47494.0	427092	0.625
+11834	Proferrioxamine-D2	0.115	Rhodotorula graminis	supernatant	3	1	87708.66666666667	0.0	263126	0.3333333333333333
+11834	Proferrioxamine-D2	0.115	Rhodotorula taiwanensis	supernatant	6	2	26511.5	0.0	80143	0.3333333333333333
+11834	Proferrioxamine-D2	0.115	Rhodotorula mucilaginosa	supernatant	208	17	18400.697115384617	0.0	2817987	0.08173076923076923
+11834	Proferrioxamine-D2	0.115	Rhodotorula mucilaginosa	cell_pellett	208	28	18141.033653846152	0.0	480970	0.1346153846153846
+11834	Proferrioxamine-D2	0.115	Rhodotorula toruloides	cell_pellett	10	1	8221.0	0.0	82210	0.1
+11834	Proferrioxamine-D2	0.115	Rhodotorula toruloides	supernatant	10	1	3322.4	0.0	33224	0.1
+11834	Proferrioxamine-D2	0.115	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Pseudomicrostroma phylloplanum	cell_pellett	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula araucariae	cell_pellett	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula araucariae	supernatant	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula glutinis	cell_pellett	2	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula glutinis	supernatant	2	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula pacifica	cell_pellett	3	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade XI	cell_pellett	2	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade XI	supernatant	2	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula sphaerocarpa	cell_pellett	6	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula sphaerocarpa	supernatant	6	0	0.0	0.0	0	0.0
+11834	Proferrioxamine-D2	0.115	Rhodotorula taiwanensis	cell_pellett	6	0	0.0	0.0	0	0.0
+67	desferrioxamine h	0.063	Rhodotorula paludigena	cell_pellett	10	10	384010314.1	459826736.0	947588928	1.0
+67	desferrioxamine h	0.063	Rhodotorula sp. clade XIII	cell_pellett	1	1	340458720.0	340458720.0	340458720	1.0
+67	desferrioxamine h	0.063	Rhodotorula kratochvilovae	cell_pellett	3	3	297227802.6666667	415519904.0	474866784	1.0
+67	desferrioxamine h	0.063	Rhodotorula dairenensis	cell_pellett	7	5	172798252.42857143	6059148.0	500056128	0.7142857142857143
+67	desferrioxamine h	0.063	Rhodotorula diobovata	cell_pellett	9	9	151735569.33333334	139801680.0	370671072	1.0
+67	desferrioxamine h	0.063	Rhodotorula kratochvilovae	supernatant	3	2	147420981.33333334	211424832.0	230838112	0.6666666666666666
+67	desferrioxamine h	0.063	Rhodotorula graminis	cell_pellett	3	3	128016531.33333333	60381828.0	302020640	1.0
+67	desferrioxamine h	0.063	Rhodotorula paludigena	supernatant	10	6	56045557.4	5667137.0	205723024	0.6
+67	desferrioxamine h	0.063	Rhodotorula diobovata	supernatant	9	7	23251313.111111112	19255414.0	51747280	0.7777777777777778
+67	desferrioxamine h	0.063	Rhodotorula sp. clade I	cell_pellett	5	5	21737055.8	491664.0	106007112	1.0
+67	desferrioxamine h	0.063	Pseudomicrostroma phylloplanum	cell_pellett	1	1	19777998.0	19777998.0	19777998	1.0
+67	desferrioxamine h	0.063	Rhodotorula dairenensis	supernatant	8	6	12676600.5	535420.0	56793048	0.75
+67	desferrioxamine h	0.063	Rhodotorula taiwanensis	cell_pellett	6	6	8138783.0	7161815.5	16057432	1.0
+67	desferrioxamine h	0.063	Rhodotorula graminis	supernatant	3	3	7792301.666666667	190414.0	23124586	1.0
+67	desferrioxamine h	0.063	Rhodotorula glutinis	cell_pellett	2	2	6083669.0	6083669.0	6644204	1.0
+67	desferrioxamine h	0.063	Rhodotorula sphaerocarpa	cell_pellett	6	6	5100723.0	4412430.0	11093608	1.0
+67	desferrioxamine h	0.063	Rhodotorula sp. clade XI	cell_pellett	2	2	4743659.0	4743659.0	7613172	1.0
+67	desferrioxamine h	0.063	Rhodotorula taiwanensis	supernatant	6	5	4054100.1666666665	3529599.5	8448568	0.8333333333333334
+67	desferrioxamine h	0.063	Rhodotorula sp. clade I	supernatant	5	3	3455489.0	30954.0	17180342	0.6
+67	desferrioxamine h	0.063	Rhodotorula pacifica	cell_pellett	3	3	2931965.0	1121691.0	7289798	1.0
+67	desferrioxamine h	0.063	Rhodotorula mucilaginosa	cell_pellett	208	154	1965208.6442307692	457759.0	43390176	0.7403846153846154
+67	desferrioxamine h	0.063	Rhodotorula mucilaginosa	supernatant	208	75	1651212.7788461538	0.0	303865856	0.3605769230769231
+67	desferrioxamine h	0.063	Rhodotorula araucariae	cell_pellett	1	1	1497726.0	1497726.0	1497726	1.0
+67	desferrioxamine h	0.063	Rhodotorula toruloides	cell_pellett	10	7	1387560.0	766392.5	4804958	0.7
+67	desferrioxamine h	0.063	Rhodotorula toruloides	supernatant	10	4	393521.6	0.0	3634944	0.4
+67	desferrioxamine h	0.063	Rhodotorula sphaerocarpa	supernatant	6	5	359726.8333333333	268358.0	881431	0.8333333333333334
+67	desferrioxamine h	0.063	Pseudomicrostroma phylloplanum	supernatant	1	1	325657.0	325657.0	325657	1.0
+67	desferrioxamine h	0.063	Rhodotorula sp. clade XI	supernatant	2	1	216064.5	216064.5	432129	0.5
+67	desferrioxamine h	0.063	Rhodotorula araucariae	supernatant	1	1	140512.0	140512.0	140512	1.0
+67	desferrioxamine h	0.063	Rhodotorula glutinis	supernatant	2	1	28582.5	28582.5	57165	0.5
+67	desferrioxamine h	0.063	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+67	desferrioxamine h	0.063	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+67	desferrioxamine h	0.063	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+67	desferrioxamine h	0.063	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+47668	Desferrioxamine X5	0.059	Pseudomicrostroma phylloplanum	cell_pellett	1	1	825622.0	825622.0	825622	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula graminis	cell_pellett	3	3	747370.0	807476.0	839516	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula taiwanensis	cell_pellett	6	5	665645.1666666666	723225.0	1106140	0.8333333333333334
+47668	Desferrioxamine X5	0.059	Rhodotorula dairenensis	cell_pellett	7	5	591378.4285714285	671114.0	1455675	0.7142857142857143
+47668	Desferrioxamine X5	0.059	Rhodotorula glutinis	cell_pellett	2	2	555940.0	555940.0	718785	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade I	cell_pellett	5	4	427800.6	515064.0	658192	0.8
+47668	Desferrioxamine X5	0.059	Cystobasidium sp.	cell_pellett	1	1	408836.0	408836.0	408836	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula mucilaginosa	cell_pellett	208	137	406621.2836538461	420984.5	2068993	0.6586538461538461
+47668	Desferrioxamine X5	0.059	Rhodotorula toruloides	cell_pellett	10	7	393873.0	463127.5	950300	0.7
+47668	Desferrioxamine X5	0.059	Rhodotorula sphaerocarpa	cell_pellett	6	5	379035.6666666667	387373.0	579573	0.8333333333333334
+47668	Desferrioxamine X5	0.059	Rhodotorula paludigena	cell_pellett	10	5	348356.8	195447.0	1413169	0.5
+47668	Desferrioxamine X5	0.059	Rhodotorula kratochvilovae	cell_pellett	3	2	347151.6666666667	442912.0	598543	0.6666666666666666
+47668	Desferrioxamine X5	0.059	Rhodotorula pacifica	supernatant	3	3	324029.0	302759.0	395506	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade XIII	cell_pellett	1	1	305527.0	305527.0	305527	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula toruloides	supernatant	10	10	286558.9	289918.5	405981	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade XI	cell_pellett	2	1	280677.5	280677.5	561355	0.5
+47668	Desferrioxamine X5	0.059	Rhodotorula diobovata	supernatant	9	9	276591.44444444444	233076.0	478808	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula mucilaginosa	supernatant	208	205	274437.20673076925	237542.0	679185	0.9855769230769231
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade I	supernatant	5	5	260125.2	243485.0	343991	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula taiwanensis	supernatant	6	6	252580.33333333334	255131.0	326513	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula araucariae	cell_pellett	1	1	251825.0	251825.0	251825	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula paludigena	supernatant	10	10	244058.8	265304.0	319196	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sphaerocarpa	supernatant	6	6	237081.83333333334	204253.0	368684	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade XI	supernatant	2	2	229218.0	229218.0	265992	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula dairenensis	supernatant	8	8	214273.625	179130.5	474379	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula graminis	supernatant	3	3	201912.33333333334	195721.0	225338	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula kratochvilovae	supernatant	3	3	189710.0	173543.0	250378	1.0
+47668	Desferrioxamine X5	0.059	Cystobasidium sp.	supernatant	1	1	161728.0	161728.0	161728	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula araucariae	supernatant	1	1	158366.0	158366.0	158366	1.0
+47668	Desferrioxamine X5	0.059	Pseudomicrostroma phylloplanum	supernatant	1	1	156395.0	156395.0	156395	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula sp. clade XIII	supernatant	1	1	150525.0	150525.0	150525	1.0
+47668	Desferrioxamine X5	0.059	Rhodotorula pacifica	cell_pellett	3	1	137091.0	0.0	411273	0.3333333333333333
+47668	Desferrioxamine X5	0.059	Rhodotorula glutinis	supernatant	2	1	120325.5	120325.5	240651	0.5
+47668	Desferrioxamine X5	0.059	Rhodotorula diobovata	cell_pellett	9	2	116341.44444444444	0.0	673226	0.2222222222222222
+249	desferrioxamine h	0.058	Rhodotorula kratochvilovae	cell_pellett	3	3	201033686.33333334	298157152.0	304821376	1.0
+249	desferrioxamine h	0.058	Rhodotorula paludigena	cell_pellett	10	8	99440246.8	77393178.0	349154304	0.8
+249	desferrioxamine h	0.058	Rhodotorula diobovata	cell_pellett	9	9	57514533.11111111	49830864.0	147678224	1.0
+249	desferrioxamine h	0.058	Rhodotorula sp. clade XIII	cell_pellett	1	1	40463336.0	40463336.0	40463336	1.0
+249	desferrioxamine h	0.058	Rhodotorula sp. clade I	cell_pellett	5	1	13952563.2	0.0	69762816	0.2
+249	desferrioxamine h	0.058	Rhodotorula graminis	cell_pellett	3	3	7797003.333333333	1208886.0	21464730	1.0
+249	desferrioxamine h	0.058	Rhodotorula kratochvilovae	supernatant	3	2	6118614.333333333	4383782.0	13972061	0.6666666666666666
+249	desferrioxamine h	0.058	Rhodotorula dairenensis	cell_pellett	7	4	5890237.857142857	119974.0	25462846	0.5714285714285714
+249	desferrioxamine h	0.058	Pseudomicrostroma phylloplanum	cell_pellett	1	1	1342086.0	1342086.0	1342086	1.0
+249	desferrioxamine h	0.058	Rhodotorula paludigena	supernatant	10	7	919501.8	72413.0	5253262	0.7
+249	desferrioxamine h	0.058	Rhodotorula glutinis	cell_pellett	2	2	271198.5	271198.5	463212	1.0
+249	desferrioxamine h	0.058	Rhodotorula taiwanensis	cell_pellett	6	5	260790.66666666666	129494.5	874252	0.8333333333333334
+249	desferrioxamine h	0.058	Rhodotorula diobovata	supernatant	9	8	243333.77777777778	195770.0	598416	0.8888888888888888
+249	desferrioxamine h	0.058	Rhodotorula araucariae	cell_pellett	1	1	195480.0	195480.0	195480	1.0
+249	desferrioxamine h	0.058	Rhodotorula sp. clade XI	cell_pellett	2	2	166343.5	166343.5	218995	1.0
+249	desferrioxamine h	0.058	Rhodotorula graminis	supernatant	3	2	116227.33333333333	47440.0	301242	0.6666666666666666
+249	desferrioxamine h	0.058	Rhodotorula sphaerocarpa	cell_pellett	6	6	115138.66666666667	111189.0	213448	1.0
+249	desferrioxamine h	0.058	Rhodotorula toruloides	cell_pellett	10	6	98421.0	51991.5	367047	0.6
+249	desferrioxamine h	0.058	Rhodotorula dairenensis	supernatant	8	4	98250.875	17939.0	316735	0.5
+249	desferrioxamine h	0.058	Rhodotorula mucilaginosa	supernatant	208	57	78351.47115384616	0.0	14114862	0.27403846153846156
+249	desferrioxamine h	0.058	Rhodotorula taiwanensis	supernatant	6	2	64356.666666666664	0.0	282727	0.3333333333333333
+249	desferrioxamine h	0.058	Cystobasidium sp.	cell_pellett	1	1	63539.0	63539.0	63539	1.0
+249	desferrioxamine h	0.058	Rhodotorula mucilaginosa	cell_pellett	208	90	60040.456730769234	0.0	1304061	0.4326923076923077
+249	desferrioxamine h	0.058	Rhodotorula pacifica	cell_pellett	3	2	46036.666666666664	41116.0	96994	0.6666666666666666
+249	desferrioxamine h	0.058	Rhodotorula araucariae	supernatant	1	1	38245.0	38245.0	38245	1.0
+249	desferrioxamine h	0.058	Rhodotorula sphaerocarpa	supernatant	6	2	13474.5	0.0	44128	0.3333333333333333
+249	desferrioxamine h	0.058	Rhodotorula sp. clade I	supernatant	5	1	8190.2	0.0	40951	0.2
+249	desferrioxamine h	0.058	Rhodotorula toruloides	supernatant	10	2	7889.8	0.0	45646	0.2
+249	desferrioxamine h	0.058	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+249	desferrioxamine h	0.058	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+249	desferrioxamine h	0.058	Rhodotorula glutinis	supernatant	2	0	0.0	0.0	0	0.0
+249	desferrioxamine h	0.058	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+249	desferrioxamine h	0.058	Rhodotorula sp. clade XI	supernatant	2	0	0.0	0.0	0	0.0
+249	desferrioxamine h	0.058	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula toruloides	cell_pellett	10	9	2567709.5	731487.5	10284781	0.9
+7498	Desferrioxamine X2	0.056	Rhodotorula sphaerocarpa	supernatant	6	4	1879638.5	1955622.0	3876762	0.6666666666666666
+7498	Desferrioxamine X2	0.056	Rhodotorula taiwanensis	cell_pellett	6	5	1619488.6666666667	848958.0	5788646	0.8333333333333334
+7498	Desferrioxamine X2	0.056	Cystobasidium sp.	cell_pellett	1	1	1583310.0	1583310.0	1583310	1.0
+7498	Desferrioxamine X2	0.056	Rhodotorula taiwanensis	supernatant	6	4	1338251.0	488913.5	6282314	0.6666666666666666
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade XIII	cell_pellett	1	1	1301129.0	1301129.0	1301129	1.0
+7498	Desferrioxamine X2	0.056	Rhodotorula diobovata	supernatant	9	7	774572.7777777778	487370.0	3281311	0.7777777777777778
+7498	Desferrioxamine X2	0.056	Rhodotorula glutinis	cell_pellett	2	1	671699.5	671699.5	1343399	0.5
+7498	Desferrioxamine X2	0.056	Rhodotorula mucilaginosa	cell_pellett	208	98	539998.8365384615	0.0	8587837	0.47115384615384615
+7498	Desferrioxamine X2	0.056	Rhodotorula pacifica	cell_pellett	3	2	537138.3333333334	376567.0	1234848	0.6666666666666666
+7498	Desferrioxamine X2	0.056	Rhodotorula dairenensis	supernatant	8	3	529032.375	0.0	2234518	0.375
+7498	Desferrioxamine X2	0.056	Pseudomicrostroma phylloplanum	cell_pellett	1	1	443839.0	443839.0	443839	1.0
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade XI	cell_pellett	2	1	433948.0	433948.0	867896	0.5
+7498	Desferrioxamine X2	0.056	Rhodotorula araucariae	cell_pellett	1	1	429833.0	429833.0	429833	1.0
+7498	Desferrioxamine X2	0.056	Rhodotorula dairenensis	cell_pellett	7	4	299236.14285714284	210923.0	846344	0.5714285714285714
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade I	supernatant	5	1	287440.2	0.0	1437201	0.2
+7498	Desferrioxamine X2	0.056	Rhodotorula kratochvilovae	cell_pellett	3	1	239359.0	0.0	718077	0.3333333333333333
+7498	Desferrioxamine X2	0.056	Rhodotorula paludigena	supernatant	10	5	234684.7	87459.5	1280644	0.5
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade I	cell_pellett	5	1	191601.2	0.0	958006	0.2
+7498	Desferrioxamine X2	0.056	Rhodotorula sphaerocarpa	cell_pellett	6	2	155467.16666666666	0.0	703566	0.3333333333333333
+7498	Desferrioxamine X2	0.056	Rhodotorula paludigena	cell_pellett	10	4	149523.4	0.0	628017	0.4
+7498	Desferrioxamine X2	0.056	Rhodotorula kratochvilovae	supernatant	3	2	147993.66666666666	205973.0	238008	0.6666666666666666
+7498	Desferrioxamine X2	0.056	Rhodotorula araucariae	supernatant	1	1	64697.0	64697.0	64697	1.0
+7498	Desferrioxamine X2	0.056	Rhodotorula graminis	cell_pellett	3	1	50054.0	0.0	150162	0.3333333333333333
+7498	Desferrioxamine X2	0.056	Rhodotorula toruloides	supernatant	10	1	39973.6	0.0	399736	0.1
+7498	Desferrioxamine X2	0.056	Rhodotorula graminis	supernatant	3	2	22841.0	32316.0	36207	0.6666666666666666
+7498	Desferrioxamine X2	0.056	Rhodotorula mucilaginosa	supernatant	208	13	14495.6875	0.0	1237963	0.0625
+7498	Desferrioxamine X2	0.056	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula diobovata	cell_pellett	9	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula glutinis	supernatant	2	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade XI	supernatant	2	0	0.0	0.0	0	0.0
+7498	Desferrioxamine X2	0.056	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula taiwanensis	cell_pellett	6	6	4082067.3333333335	4048793.0	6435182	1.0
+11582	Deferoxamine	0.056	Rhodotorula dairenensis	cell_pellett	7	5	2358964.714285714	1933939.0	6616859	0.7142857142857143
+11582	Deferoxamine	0.056	Rhodotorula sp. clade XIII	cell_pellett	1	1	1309110.0	1309110.0	1309110	1.0
+11582	Deferoxamine	0.056	Rhodotorula paludigena	cell_pellett	10	6	1230435.9	1675970.0	2537399	0.6
+11582	Deferoxamine	0.056	Rhodotorula taiwanensis	supernatant	6	4	622221.8333333334	850126.5	1076170	0.6666666666666666
+11582	Deferoxamine	0.056	Rhodotorula toruloides	cell_pellett	10	1	323079.0	0.0	3230790	0.1
+11582	Deferoxamine	0.056	Rhodotorula dairenensis	supernatant	8	3	312689.5	0.0	1626411	0.375
+11582	Deferoxamine	0.056	Rhodotorula sphaerocarpa	cell_pellett	6	5	270200.5	261700.0	616004	0.8333333333333334
+11582	Deferoxamine	0.056	Rhodotorula diobovata	cell_pellett	9	1	182180.33333333334	0.0	1639623	0.1111111111111111
+11582	Deferoxamine	0.056	Rhodotorula toruloides	supernatant	10	1	102492.7	0.0	1024927	0.1
+11582	Deferoxamine	0.056	Rhodotorula graminis	cell_pellett	3	1	93507.33333333333	0.0	280522	0.3333333333333333
+11582	Deferoxamine	0.056	Rhodotorula diobovata	supernatant	9	5	90648.0	103601.0	203397	0.5555555555555556
+11582	Deferoxamine	0.056	Rhodotorula araucariae	cell_pellett	1	1	86535.0	86535.0	86535	1.0
+11582	Deferoxamine	0.056	Rhodotorula glutinis	cell_pellett	2	1	83561.0	83561.0	167122	0.5
+11582	Deferoxamine	0.056	Rhodotorula sp. clade XI	cell_pellett	2	1	45561.5	45561.5	91123	0.5
+11582	Deferoxamine	0.056	Rhodotorula paludigena	supernatant	10	3	24972.9	0.0	102793	0.3
+11582	Deferoxamine	0.056	Rhodotorula sphaerocarpa	supernatant	6	2	20860.833333333332	0.0	85152	0.3333333333333333
+11582	Deferoxamine	0.056	Rhodotorula mucilaginosa	cell_pellett	208	21	16752.658653846152	0.0	382748	0.10096153846153846
+11582	Deferoxamine	0.056	Rhodotorula mucilaginosa	supernatant	208	8	2702.4278846153848	0.0	213270	0.038461538461538464
+11582	Deferoxamine	0.056	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Pseudomicrostroma phylloplanum	cell_pellett	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula araucariae	supernatant	1	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula glutinis	supernatant	2	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula graminis	supernatant	3	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula kratochvilovae	cell_pellett	3	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula kratochvilovae	supernatant	3	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula pacifica	cell_pellett	3	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula sp. clade I	cell_pellett	5	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula sp. clade I	supernatant	5	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula sp. clade XI	supernatant	2	0	0.0	0.0	0	0.0
+11582	Deferoxamine	0.056	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula toruloides	cell_pellett	10	10	3084348.4	740054.5	14912457	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula taiwanensis	cell_pellett	6	6	2099949.0	650162.0	9390766	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula mucilaginosa	cell_pellett	208	188	699815.9086538461	371759.5	19435156	0.9038461538461539
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula pacifica	cell_pellett	3	3	605792.0	403758.0	1304508	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade XI	cell_pellett	2	2	545264.5	545264.5	1002193	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade XIII	cell_pellett	1	1	459720.0	459720.0	459720	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula glutinis	cell_pellett	2	2	446034.0	446034.0	741153	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sphaerocarpa	cell_pellett	6	6	401435.0	344091.0	811924	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula dairenensis	cell_pellett	7	6	384785.14285714284	389705.0	784739	0.8571428571428571
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula paludigena	cell_pellett	10	10	375592.4	279107.0	1135002	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Cystobasidium sp.	cell_pellett	1	1	299701.0	299701.0	299701	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Pseudomicrostroma phylloplanum	cell_pellett	1	1	239374.0	239374.0	239374	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula diobovata	cell_pellett	9	6	218086.22222222222	145021.0	854270	0.6666666666666666
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula kratochvilovae	cell_pellett	3	2	193434.33333333334	250246.0	330057	0.6666666666666666
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula araucariae	cell_pellett	1	1	165039.0	165039.0	165039	1.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade I	cell_pellett	5	3	139463.2	33981.0	394629	0.6
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula graminis	cell_pellett	3	1	26738.666666666668	0.0	80216	0.3333333333333333
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula mucilaginosa	supernatant	208	2	815.3701923076923	0.0	122259	0.009615384615384616
+4253	N-Stearoyldesferrioxamine	0.03	Cystobasidium sp.	supernatant	1	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Pseudomicrostroma phylloplanum	supernatant	1	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula araucariae	supernatant	1	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula dairenensis	supernatant	8	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula diobovata	supernatant	9	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula glutinis	supernatant	2	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula graminis	supernatant	3	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula kratochvilovae	supernatant	3	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula pacifica	supernatant	3	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula paludigena	supernatant	10	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade I	supernatant	5	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade XI	supernatant	2	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sp. clade XIII	supernatant	1	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula sphaerocarpa	supernatant	6	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula taiwanensis	supernatant	6	0	0.0	0.0	0	0.0
+4253	N-Stearoyldesferrioxamine	0.03	Rhodotorula toruloides	supernatant	10	0	0.0	0.0	0	0.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade I	supernatant	5	5	8732949.2	7954578.0	13722850	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula toruloides	supernatant	10	10	8539470.3	8793029.5	15128846	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula taiwanensis	supernatant	6	6	7619674.333333333	7422189.0	9527846	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula mucilaginosa	supernatant	208	205	7492560.831730769	7255841.5	18774894	0.9855769230769231
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula dairenensis	supernatant	8	8	7041601.75	7465721.0	8897123	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula pacifica	supernatant	3	3	6093855.0	6152100.0	8525988	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula diobovata	supernatant	9	9	6079487.444444444	4941827.0	13289768	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula paludigena	supernatant	10	10	5678799.3	5118579.5	9205586	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula kratochvilovae	supernatant	3	3	5627224.333333333	6137585.0	6240210	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sphaerocarpa	supernatant	6	6	5414596.666666667	4185958.5	9322701	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade XIII	supernatant	1	1	4984061.0	4984061.0	4984061	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade XI	supernatant	2	2	4440665.5	4440665.5	5523921	1.0
+4788	ddesferrioxamine[-00]	0.028	Pseudomicrostroma phylloplanum	supernatant	1	1	4089432.0	4089432.0	4089432	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula graminis	supernatant	3	3	4031614.3333333335	4804074.0	5539742	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula glutinis	supernatant	2	2	3785130.0	3785130.0	4220048	1.0
+4788	ddesferrioxamine[-00]	0.028	Cystobasidium sp.	supernatant	1	1	3652948.0	3652948.0	3652948	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula araucariae	supernatant	1	1	2945508.0	2945508.0	2945508	1.0
+4788	ddesferrioxamine[-00]	0.028	Pseudomicrostroma phylloplanum	cell_pellett	1	1	40880.0	40880.0	40880	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula pacifica	cell_pellett	3	3	38632.333333333336	36528.0	45581	1.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula graminis	cell_pellett	3	2	27932.333333333332	36552.0	47245	0.6666666666666666
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula mucilaginosa	cell_pellett	208	85	22938.990384615383	0.0	238384	0.40865384615384615
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula toruloides	cell_pellett	10	3	21044.4	0.0	94272	0.3
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula diobovata	cell_pellett	9	2	19999.333333333332	0.0	112340	0.2222222222222222
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sphaerocarpa	cell_pellett	6	2	18732.5	0.0	72834	0.3333333333333333
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade XI	cell_pellett	2	1	17705.0	17705.0	35410	0.5
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula dairenensis	cell_pellett	7	2	14429.714285714286	0.0	56001	0.2857142857142857
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula kratochvilovae	cell_pellett	3	1	13470.0	0.0	40410	0.3333333333333333
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula paludigena	cell_pellett	10	2	12751.1	0.0	97109	0.2
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade I	cell_pellett	5	1	8098.0	0.0	40490	0.2
+4788	ddesferrioxamine[-00]	0.028	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula araucariae	cell_pellett	1	0	0.0	0.0	0	0.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula glutinis	cell_pellett	2	0	0.0	0.0	0	0.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula sp. clade XIII	cell_pellett	1	0	0.0	0.0	0	0.0
+4788	ddesferrioxamine[-00]	0.028	Rhodotorula taiwanensis	cell_pellett	6	0	0.0	0.0	0	0.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade XIII	supernatant	1	1	13322130.0	13322130.0	13322130	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula mucilaginosa	supernatant	208	205	10035955.572115384	8772971.0	27703876	0.9855769230769231
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula kratochvilovae	supernatant	3	3	8829606.0	9130563.0	9453481	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula pacifica	supernatant	3	3	8788622.333333334	8607904.0	9855599	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade XI	supernatant	2	2	8782502.0	8782502.0	11928110	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula glutinis	supernatant	2	2	8542236.0	8542236.0	12912694	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sphaerocarpa	supernatant	6	6	7606655.0	8095468.0	9700301	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula araucariae	supernatant	1	1	7391816.0	7391816.0	7391816	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula toruloides	supernatant	10	10	7226736.9	6172093.0	12722464	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula dairenensis	supernatant	8	8	6875673.5	6391019.5	10592900	1.0
+3295	ddesferrioxamine[-00]	0.018	Cystobasidium sp.	supernatant	1	1	6651762.0	6651762.0	6651762	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula graminis	supernatant	3	3	6583213.666666667	5725638.0	9237742	1.0
+3295	ddesferrioxamine[-00]	0.018	Pseudomicrostroma phylloplanum	supernatant	1	1	6503961.0	6503961.0	6503961	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula diobovata	supernatant	9	9	6287126.777777778	6890707.0	9541866	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade I	supernatant	5	5	6085045.2	6185951.0	6988044	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula paludigena	supernatant	10	10	5401318.9	5797545.5	8751204	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula taiwanensis	supernatant	6	6	5117470.5	5573196.0	6576322	1.0
+3295	ddesferrioxamine[-00]	0.018	Pseudomicrostroma phylloplanum	cell_pellett	1	1	60999.0	60999.0	60999	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade XI	cell_pellett	2	2	36009.5	36009.5	40915	1.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula pacifica	cell_pellett	3	2	31673.666666666668	46263.0	48758	0.6666666666666666
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula toruloides	cell_pellett	10	5	27106.6	15321.0	94789	0.5
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula mucilaginosa	cell_pellett	208	92	26090.235576923078	0.0	241143	0.4423076923076923
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula graminis	cell_pellett	3	2	25226.666666666668	31342.0	44338	0.6666666666666666
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade I	cell_pellett	5	3	25053.8	35961.0	49114	0.6
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula diobovata	cell_pellett	9	4	21335.555555555555	0.0	85756	0.4444444444444444
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula paludigena	cell_pellett	10	4	20569.6	0.0	101241	0.4
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sphaerocarpa	cell_pellett	6	2	17409.0	0.0	60562	0.3333333333333333
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula kratochvilovae	cell_pellett	3	1	10152.333333333334	0.0	30457	0.3333333333333333
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula dairenensis	cell_pellett	7	2	9539.42857142857	0.0	34147	0.2857142857142857
+3295	ddesferrioxamine[-00]	0.018	Cystobasidium sp.	cell_pellett	1	0	0.0	0.0	0	0.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula araucariae	cell_pellett	1	0	0.0	0.0	0	0.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula glutinis	cell_pellett	2	0	0.0	0.0	0	0.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula sp. clade XIII	cell_pellett	1	0	0.0	0.0	0	0.0
+3295	ddesferrioxamine[-00]	0.018	Rhodotorula taiwanensis	cell_pellett	6	0	0.0	0.0	0	0.0

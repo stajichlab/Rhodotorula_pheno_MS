@@ -2,7 +2,7 @@
 topic: siderophore-detectability-rhodotorulic-acid
 description: Whether rhodotorulic acid and related iron-sequestration chemistry is detectable in the untargeted LC-MS2 data, its strain-level presence/absence, and whether the known NRPS biosynthetic gene can be genotyped from current genome data.
 created: 2026-08-16
-last_updated: 2026-08-16
+last_updated: 2026-09-18
 status: active
 ---
 
@@ -179,3 +179,55 @@ a genuine, unexplained lead if that species becomes relevant elsewhere.
 | Date | Run/Session | Dataset | Project | Result | Direction |
 |------|-------------|---------|---------|--------|-----------|
 | 2026-08-16 | Monophyly + branch-length check (siderophore_nrps_tree_species_comparison.py) | F-003's gene tree | Rhodotorula_pheno_MS | Well-resolved species form clean clades; big-n species collapse into an unresolvable polytomy (resolution artifact); R. evergladensis flagged as a genuine branch-length outlier | refines |
+
+## F-005: SIRIUS structural annotation supersedes F-001's exact-mass candidate with a cleaner, chemically consistent identification (row 562, not row 2190)
+**Status:** preliminary
+**Claim:** `analysis/siderophore_abundance/` keyword-searched the SIRIUS/CANOPUS
+structure annotations (`analysis/sirius_annotation/sirius_annotations.tsv`,
+790 SIRIUS-annotated features) for siderophore chemistry and found row ID
+**562** named "Rhodotorulic Acid" with SIRIUS structure confidence **0.969**
+(the only high-confidence hit among 12 siderophore-keyword matches; the
+other 11 -- desferrioxamine/ferrioxamine family -- score 0.018-0.44 and are
+unconfirmed). Row 562's precursor m/z is 345.1758, exactly matching the
+[M+H]+ mass expected for rhodotorulic acid's formula (C14H24N4O6, SIRIUS
+formula call agrees). This is a **different, better-supported feature**
+than F-001's row 2190 (m/z 442.2647, adduct `[M-NH3+H2O+H]+` -- an
+in-source-fragment/water-adduct call, not a clean [M+H]+), which F-001
+flagged only as "the highest-intensity match" in a blind exact-mass search,
+not a structurally confirmed one. Row 562 shows the same near-universal
+detection pattern F-001 found for row 2190 (90-100% detection across all 17
+species/outgroups) and additionally shows a clear, consistent
+compartmentalization signal F-001 did not report: mean peak area is
+**~50-100x higher in cell pellet than in matched supernatant, in every
+species with both fractions sampled** (e.g. R. mucilaginosa: 54.4M vs.
+0.67M; R. diobovata: 50.0M vs. 1.1M) -- directionally consistent with a
+cell-associated/intracellularly-retained siderophore rather than a purely
+secreted one, though this has not been statistically tested (paired test
+not yet run) and peak areas are uncalibrated (relative, not absolute
+concentration).
+**Implications:** Future siderophore work in this repo should treat row
+562 (this file's feature table: `data/processed/EB_20260130_ExFAB_Rhodo_Sup_and_Pellet/b773ffa18c2b41e5a3484526293a54f9/aligned_features_ms2.csv.zst`)
+as the reference rhodotorulic acid feature, not F-001's row 2190. The two
+row-ID spaces differ because F-001 read the feature table from a different
+path (`.../nf_output/feature_finding/feature_finding_results/aligned_features_ms2.csv`,
+the raw per-run nextflow output) than this analysis (`data/processed/.../aligned_features_ms2.csv.zst`,
+the top-level merged/curated copy that also fed the SIRIUS run) --
+row-ID numbering is not guaranteed consistent across the two copies and
+should not be cross-referenced by ID without re-checking m/z. This has not
+yet been reconciled against F-002's diamond-ortholog gene calls (275/278
+strains positive) with a proper species x cell-pellet/supernatant
+breakdown -- worth doing as a follow-up.
+**Tags:** siderophore, rhodotorulic-acid, sirius-annotation, feature-id-reconciliation, cell-vs-supernatant-compartmentalization
+
+### Evidence Ledger
+| Date | Run/Session | Dataset | Project | Result | Direction |
+|------|-------------|---------|---------|--------|-----------|
+| 2026-09-18 | SIRIUS keyword search + quant join (siderophore_abundance_table.py) | sirius_annotations.tsv (790 annotated features) + aligned_features_ms2.csv.zst (16,332 features) + merged sample metadata | Rhodotorula_pheno_MS | Row 562 (conf. 0.969) identified as rhodotorulic acid, supersedes F-001's row 2190; 90-100% detection across species; 50-100x cell-pellet enrichment over supernatant in every species | refines |
+
+### Open Questions
+- Reconcile row 562 (this analysis) vs. row 2190 (F-001) against F-002's
+  gene-ortholog calls with a full species x fraction breakdown.
+- Run a paired statistical test (cell pellet vs. supernatant) rather than
+  reporting only descriptive means.
+- Check the 11 low-confidence desferrioxamine/ferrioxamine hits against a
+  GNPS spectral library match before treating any as real.

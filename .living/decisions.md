@@ -1241,3 +1241,15 @@ the *R. evergladensis* branch-length anomaly.
 **Consequences**: no plausible coordinating/diffusible biofilm signal has been identified anywhere in this MS dataset across the whole investigation (AHLs null; aminolipids/ceramides/PEA all cell-associated, not secreted; farnesol-family now also null). This is a meaningful, cumulative negative result for the biofilm-signal question specifically. Remaining productive directions are non-mass-search questions: sphingolipid-pathway-as-required-machinery, and interkingdom signaling (bacterial lipids affecting Rhodotorula without Rhodotorula producing them).
 
 **Tags**: farnesol, tyrosol, quorum-sensing, biofilm, fungal-morphogenesis, ahl-autoinducer-search, null-result, recurring-noisy-region
+
+## 2026-09-18: Siderophore abundance table built from SIRIUS structure keyword search, not the F-001 exact-mass row -- and confidence-gated the output
+
+**Context**: PI asked for a summarized abundance table of rhodotorulic acid and other siderophore/iron-related metabolites, referencing prior SIRIUS/CANOPUS structure-mapping work. Rather than reuse F-001's exact-mass search result (row 2190, from `.living/findings/siderophore-detectability-rhodotorulic-acid.md`), searched the SIRIUS structure-name/pathway/class annotations directly for siderophore keywords.
+
+**Decision**: (1) built `analysis/siderophore_abundance/scripts/siderophore_abundance_table.py` joining SIRIUS annotations -> aligned MS2 feature quant matrix -> sample metadata, aggregated by species/strain x cell-pellet-vs-supernatant fraction; (2) explicitly gated the output by SIRIUS structure confidence rather than reporting all 12 keyword hits as equally real -- only row 562 (Rhodotorulic Acid, confidence 0.969) is presented as an identification; the 11 desferrioxamine/ferrioxamine hits (confidence 0.018-0.44) are reported as unconfirmed candidates only.
+
+**Rationale**: reusing F-001's row 2190 would have been wrong -- it is a different feature (m/z 442.26, an in-source-fragment adduct call) than the SIRIUS-annotated row 562 (m/z 345.18, matches rhodotorulic acid's [M+H]+ mass exactly). Row-ID numbering differs between the raw per-run nextflow feature table F-001 read from and the top-level merged feature table used here and for the SIRIUS submission -- IDs are not safely cross-referenced between the two copies without re-checking m/z. Per the user's global "no inflated results" instruction, low SIRIUS-confidence hits (down to 0.018) are not reported as identified siderophores.
+
+**Consequences**: row 562 supersedes row 2190 as this repo's reference rhodotorulic-acid feature going forward (recorded as F-005 in the findings file). The new finding not previously captured: cell-pellet abundance is ~50-100x higher than supernatant for rhodotorulic acid in every species with both fractions sampled -- not yet statistically tested, and not yet cross-referenced against F-002's NRPS ortholog gene-presence calls by fraction.
+
+**Tags**: siderophore, rhodotorulic-acid, sirius-annotation, feature-id-reconciliation, confidence-gating, cell-vs-supernatant
